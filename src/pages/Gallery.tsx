@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
-import HeroSection from '@/components/HeroSection';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import heroGalleryImage from '@/assets/hero-gallery.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -116,14 +116,103 @@ const Gallery = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroSection
-        title="Découvrez Notre Univers Thérapeutique"
-        subtitle="Plongez au cœur de notre centre moderne et de nos techniques innovantes"
-        description="Explorez nos installations de pointe, découvrez nos équipements modernes et visualisez l'environnement chaleureux dans lequel nous vous accueillons."
-        ctaText="Visiter le Centre"
-        showStats={false}
-        backgroundType="gradient"
-      />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background with Mosaic Effect */}
+        <div className="absolute inset-0">
+          <div className="grid grid-cols-4 h-full">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="relative">
+                <img 
+                  src={heroGalleryImage} 
+                  alt="Medical facility" 
+                  className="w-full h-full object-cover"
+                  style={{ filter: `hue-rotate(${i * 45}deg) brightness(${0.7 + i * 0.1})` }}
+                />
+              </div>
+            ))}
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-secondary/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+        </div>
+
+        {/* Floating Gallery Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/6 w-20 h-20 border-2 border-white/30 rounded-lg rotate-12 animate-float opacity-40"></div>
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 border-2 border-accent/50 rounded-full animate-float-delay opacity-60"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-accent rounded-lg rotate-45 animate-float opacity-30"></div>
+          <div className="absolute bottom-1/4 right-1/5 w-14 h-14 border-2 border-secondary/40 rounded-full animate-float-delay opacity-50"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up" delay={200}>
+            <div className="mb-8">
+              <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
+                <Camera className="w-4 h-4 mr-2" />
+                Notre Galerie
+              </Badge>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
+                Découvrez Notre<br />
+                <span className="text-gradient-accent">Univers</span> <span className="text-secondary">Thérapeutique</span>
+              </h1>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="slide-left" delay={400}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+              Plongez au cœur de notre centre moderne et de nos techniques innovantes
+            </h2>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="fade-up" delay={600}>
+            <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+              Explorez nos installations de pointe, découvrez nos équipements modernes et visualisez 
+              l'environnement chaleureux dans lequel nous vous accueillons pour votre bien-être.
+            </p>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="scale-up" delay={800}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                <Eye className="w-5 h-5 mr-3" />
+                Visiter le Centre
+              </Button>
+              
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+                Visite virtuelle 360°
+              </Button>
+            </div>
+          </ScrollAnimation>
+
+          {/* Gallery Preview Thumbnails */}
+          <ScrollAnimation animation="fade-up" delay={1000}>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="relative group">
+                  <div className="aspect-square rounded-xl overflow-hidden glass-card">
+                    <img 
+                      src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png"
+                      alt={`Gallery preview ${i}`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-300"></div>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ZoomIn className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </ScrollAnimation>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Achievements Section */}
       <section className="py-20 bg-background relative">

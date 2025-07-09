@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
-import HeroSection from '@/components/HeroSection';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import heroIndexImage from '@/assets/hero-index.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
@@ -15,7 +15,8 @@ import {
   ChevronRight,
   Activity,
   Shield,
-  Zap
+  Zap,
+  Calendar
 } from 'lucide-react';
 
 const Index = () => {
@@ -75,15 +76,92 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroSection
-        title="Votre Bien-être, Notre Expertise"
-        subtitle="Centre de Kinésithérapie Premium à Casablanca"
-        description="Découvrez des soins de kinésithérapie exceptionnels avec Dr. Nawal El Ghorfi, alliant expertise médicale et technologies de pointe pour votre rétablissement optimal."
-        ctaText="Réservez Votre Consultation"
-        ctaAction={handleBookAppointment}
-        showStats={true}
-        backgroundType="gradient"
-      />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroIndexImage} 
+            alt="Modern medical clinic" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-secondary/90"></div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-accent rounded-full opacity-20 animate-float"></div>
+          <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-secondary rounded-full opacity-30 animate-float-delay"></div>
+          <div className="absolute bottom-32 left-40 w-20 h-20 bg-gradient-primary rounded-full opacity-25 animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-28 h-28 bg-gradient-accent rounded-full opacity-20 animate-float-delay"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up" delay={200}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
+              Votre <span className="text-gradient-accent">Bien-être</span>,<br />
+              Notre <span className="text-white">Expertise</span>
+            </h1>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="slide-left" delay={400}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+              Centre de Kinésithérapie Premium à Casablanca
+            </h2>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="fade-up" delay={600}>
+            <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+              Découvrez des soins de kinésithérapie exceptionnels avec Dr. Nawal El Ghorfi, alliant expertise médicale et technologies de pointe pour votre rétablissement optimal.
+            </p>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="scale-up" delay={800}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <Button onClick={handleBookAppointment} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 hover:shadow-accent-glow">
+                <Calendar className="w-5 h-5 mr-3" />
+                Réservez Votre Consultation
+              </Button>
+              
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+                En savoir plus
+              </Button>
+            </div>
+          </ScrollAnimation>
+
+          {/* Stats Section */}
+          <ScrollAnimation animation="fade-up" delay={1000}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {[
+                { icon: Star, value: '15+', label: 'Années d\'expérience' },
+                { icon: Users, value: '2000+', label: 'Patients satisfaits' },
+                { icon: Award, value: '98%', label: 'Taux de réussite' },
+                { icon: Calendar, value: '24/7', label: 'Disponibilité' }
+              ].map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
+                    <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
+                    <div className="text-3xl font-playfair font-bold text-white mb-2">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm font-montserrat text-neutral-lightest/80">
+                      {stat.label}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollAnimation>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section className="py-32 bg-neutral-lightest relative overflow-hidden">

@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
-import HeroSection from '@/components/HeroSection';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import heroBlogImage from '@/assets/hero-blog.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -127,14 +127,100 @@ const Blog = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroSection
-        title="Actualités & Conseils Santé"
-        subtitle="Restez informé avec nos derniers articles et conseils d'experts"
-        description="Découvrez nos publications spécialisées en kinésithérapie, nutrition et bien-être pour optimiser votre santé au quotidien."
-        ctaText="S'abonner à la Newsletter"
-        showStats={false}
-        backgroundType="gradient"
-      />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background with Article Elements */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroBlogImage} 
+            alt="Medical workspace" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-secondary/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        </div>
+
+        {/* Floating Article Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/6 w-24 h-32 bg-white/10 rounded-lg rotate-12 animate-float opacity-30 backdrop-blur-sm border border-white/20"></div>
+          <div className="absolute top-1/3 right-1/4 w-20 h-28 bg-white/15 rounded-lg -rotate-6 animate-float-delay opacity-40 backdrop-blur-sm border border-white/20"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-16 h-24 bg-white/20 rounded-lg rotate-45 animate-float opacity-35 backdrop-blur-sm border border-white/20"></div>
+          <div className="absolute bottom-1/4 right-1/5 w-18 h-26 bg-white/12 rounded-lg -rotate-12 animate-float-delay opacity-45 backdrop-blur-sm border border-white/20"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up" delay={200}>
+            <div className="mb-8">
+              <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
+                <BookOpen className="w-4 h-4 mr-2" />
+                Blog & Actualités
+              </Badge>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
+                <span className="text-gradient-accent">Actualités</span> &<br />
+                <span className="text-secondary">Conseils</span> Santé
+              </h1>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="slide-left" delay={400}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+              Restez informé avec nos derniers articles et conseils d'experts
+            </h2>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="fade-up" delay={600}>
+            <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+              Découvrez nos publications spécialisées en kinésithérapie, nutrition et bien-être pour 
+              optimiser votre santé au quotidien avec des conseils professionnels et scientifiques.
+            </p>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="scale-up" delay={800}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                <MessageCircle className="w-5 h-5 mr-3" />
+                S'abonner à la Newsletter
+              </Button>
+              
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+                Tous les articles
+              </Button>
+            </div>
+          </ScrollAnimation>
+
+          {/* Blog Categories Preview */}
+          <ScrollAnimation animation="fade-up" delay={1000}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+              {[
+                { icon: Heart, label: 'Conseils', count: '8' },
+                { icon: Activity, label: 'Exercices', count: '6' },
+                { icon: Shield, label: 'Nutrition', count: '5' },
+                { icon: Stethoscope, label: 'Actualités', count: '5' }
+              ].map((category, index) => {
+                const Icon = category.icon;
+                return (
+                  <div key={index} className="glass-card p-4 text-center transition-all duration-500 hover:scale-110 hover-glow">
+                    <Icon className="w-6 h-6 text-accent mx-auto mb-2" />
+                    <div className="text-white font-montserrat text-sm mb-1">
+                      {category.label}
+                    </div>
+                    <div className="text-white/70 font-montserrat text-xs">
+                      {category.count} articles
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollAnimation>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Categories */}
       <section className="py-16 bg-background">

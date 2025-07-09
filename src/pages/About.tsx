@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
-import HeroSection from '@/components/HeroSection';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import heroAboutImage from '@/assets/hero-about.jpg';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
   Award, 
@@ -95,14 +96,102 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroSection
-        title="L'Excellence au Service de Votre Santé"
-        subtitle="Découvrez l'histoire et l'expertise de Dr. Nawal El Ghorfi"
-        description="Plus de 15 années d'expérience dédiées à votre bien-être et votre rétablissement, avec une approche moderne et personnalisée."
-        ctaText="Prendre Rendez-vous"
-        showStats={false}
-        backgroundType="gradient"
-      />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background with parallax effect */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroAboutImage} 
+            alt="Professional physiotherapist" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+        </div>
+
+        {/* Animated particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-accent rounded-full opacity-60 animate-pulse"></div>
+          <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-secondary rounded-full opacity-40 animate-ping"></div>
+          <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-white rounded-full opacity-80 animate-bounce"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollAnimation animation="slide-left">
+              <div className="text-white">
+                <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-8 leading-tight">
+                  L'<span className="text-gradient-accent">Excellence</span><br />
+                  au Service de<br />
+                  <span className="text-secondary">Votre Santé</span>
+                </h1>
+                
+                <h2 className="text-2xl md:text-3xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+                  Découvrez l'histoire et l'expertise de Dr. Nawal El Ghorfi
+                </h2>
+                
+                <p className="text-lg md:text-xl text-neutral-lightest/80 mb-12 leading-relaxed">
+                  Plus de 15 années d'expérience dédiées à votre bien-être et votre rétablissement, 
+                  avec une approche moderne et personnalisée qui transforme des vies.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-6 mb-12">
+                  <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                    <Users className="w-5 h-5 mr-3" />
+                    Prendre Rendez-vous
+                  </Button>
+                  
+                  <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+                    Notre parcours
+                  </Button>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="fade-up" delay={400}>
+              <div className="relative">
+                {/* Main image with floating stats */}
+                <div className="glass-card p-3 rounded-3xl shadow-strong">
+                  <img 
+                    src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png"
+                    alt="Dr. Nawal El Ghorfi"
+                    className="w-full h-auto rounded-2xl"
+                  />
+                </div>
+                
+                {/* Floating achievement cards */}
+                <div className="absolute -top-8 -left-8 glass-card p-6 rounded-2xl shadow-glow animate-float">
+                  <div className="text-center">
+                    <div className="text-3xl font-playfair font-bold text-accent mb-1">15+</div>
+                    <div className="text-sm text-white/90">Années</div>
+                  </div>
+                </div>
+                
+                <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-glow animate-float-delay">
+                  <div className="text-center">
+                    <div className="text-3xl font-playfair font-bold text-secondary mb-1">2000+</div>
+                    <div className="text-sm text-white/90">Patients</div>
+                  </div>
+                </div>
+                
+                <div className="absolute top-1/2 -right-12 glass-card p-4 rounded-2xl shadow-glow animate-pulse-glow">
+                  <div className="text-center">
+                    <div className="text-2xl font-playfair font-bold text-white mb-1">98%</div>
+                    <div className="text-xs text-white/80">Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Introduction Section */}
       <section className="py-32 bg-background relative">

@@ -1,11 +1,9 @@
 import Layout from '@/components/Layout';
-import HeroSection from '@/components/HeroSection';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import heroContactImage from '@/assets/hero-contact.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+import { Badge } from '@/components/ui/badge';
 import { 
   Phone, 
   Mail, 
@@ -13,41 +11,40 @@ import {
   Clock, 
   Calendar,
   MessageCircle,
-  Send,
-  CheckCircle,
   Star,
   Navigation,
-  Smartphone
+  Heart,
+  ArrowRight,
+  ExternalLink
 } from 'lucide-react';
-import { useState } from 'react';
-
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    nom: '',
-    prenom: '',
-    email: '',
-    telephone: '',
-    service: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const contactInfo = [
+  const contactMethods = [
     {
       icon: Phone,
       title: 'Téléphone',
-      value: '+212 522 123 456',
-      description: 'Lun-Ven: 8h-18h | Sam: 8h-14h',
-      color: 'text-primary',
-      action: 'tel:+212522123456'
+      primary: '+212 5 22 XX XX XX',
+      secondary: '+212 6 XX XX XX XX',
+      description: 'Appelez-nous pour prendre rendez-vous',
+      action: 'Appeler maintenant',
+      gradient: 'from-primary to-primary-dark'
+    },
+    {
+      icon: MapPin,
+      title: 'Adresse',
+      primary: '123 Rue de la Santé',
+      secondary: 'Casablanca, Maroc',
+      description: 'Visitez notre centre moderne',
+      action: 'Voir l\'itinéraire',
+      gradient: 'from-secondary to-secondary-dark'
     },
     {
       icon: Mail,
       title: 'Email',
-      value: 'contact@nawal-kine.ma',
-      description: 'Réponse sous 24h garantie',
+      primary: 'contact@cabinet-nawal.ma',
+      secondary: 'rendez-vous@cabinet-nawal.ma',
+      description: 'Écrivez-nous à tout moment',
+      action: 'Envoyer un email',
+      gradient: 'from-accent to-accent-dark'
       color: 'text-secondary',
       action: 'mailto:contact@nawal-kine.ma'
     },

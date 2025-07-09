@@ -1,8 +1,9 @@
 import Layout from '@/components/Layout';
-import HeroSection from '@/components/HeroSection';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import heroServicesImage from '@/assets/hero-services.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { 
   Activity, 
   Heart, 
@@ -127,14 +128,104 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroSection
-        title="Des Soins Personnalisés pour Chaque Besoin"
-        subtitle="Découvrez notre gamme complète de services thérapeutiques"
-        description="Du traitement de la douleur à l'optimisation des performances, nos services s'adaptent à tous vos besoins de santé et de bien-être."
-        ctaText="Réserver une Consultation"
-        showStats={false}
-        backgroundType="gradient"
-      />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Dynamic Background */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroServicesImage} 
+            alt="Modern physiotherapy equipment" 
+            className="w-full h-full object-cover scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/80 to-primary/90"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
+        </div>
+
+        {/* Floating Service Icons */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-gradient-accent rounded-full opacity-20 animate-float flex items-center justify-center">
+            <Activity className="w-8 h-8 text-white" />
+          </div>
+          <div className="absolute top-1/3 right-1/4 w-12 h-12 bg-gradient-primary rounded-full opacity-30 animate-float-delay flex items-center justify-center">
+            <Heart className="w-6 h-6 text-white" />
+          </div>
+          <div className="absolute bottom-1/3 left-1/3 w-14 h-14 bg-gradient-secondary rounded-full opacity-25 animate-float flex items-center justify-center">
+            <Shield className="w-7 h-7 text-white" />
+          </div>
+          <div className="absolute bottom-1/4 right-1/3 w-10 h-10 bg-gradient-accent rounded-full opacity-40 animate-float-delay flex items-center justify-center">
+            <Zap className="w-5 h-5 text-white" />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up" delay={200}>
+            <div className="mb-8">
+              <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
+                Nos Services Spécialisés
+              </Badge>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
+                Des Soins <span className="text-gradient-accent">Personnalisés</span><br />
+                pour Chaque <span className="text-secondary">Besoin</span>
+              </h1>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="fade-up" delay={400}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+              Découvrez notre gamme complète de services thérapeutiques
+            </h2>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="fade-up" delay={600}>
+            <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+              Du traitement de la douleur à l'optimisation des performances, nos services s'adaptent 
+              à tous vos besoins de santé et de bien-être avec une approche scientifique et humaine.
+            </p>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="scale-up" delay={800}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                <Activity className="w-5 h-5 mr-3" />
+                Réserver une Consultation
+              </Button>
+              
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+                Voir tous nos services
+              </Button>
+            </div>
+          </ScrollAnimation>
+
+          {/* Quick Service Stats */}
+          <ScrollAnimation animation="fade-up" delay={1000}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {[
+                { icon: Activity, label: 'Rééducation' },
+                { icon: Heart, label: 'Thérapies' },
+                { icon: Zap, label: 'Bien-être' },
+                { icon: Shield, label: 'Prévention' }
+              ].map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
+                    <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
+                    <div className="text-white font-montserrat text-sm opacity-90">
+                      {service.label}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollAnimation>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Main Services Section */}
       <section className="py-32 bg-background relative">
