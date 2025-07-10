@@ -1,52 +1,35 @@
 import Layout from '@/components/Layout';
 import ScrollAnimation from '@/components/ScrollAnimation';
-import heroContactImage from '@/assets/hero-contact.jpg';
+import HeroSection from '@/components/HeroSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { 
   Phone, 
   Mail, 
   MapPin, 
   Clock, 
-  Calendar,
   MessageCircle,
   Star,
-  Navigation,
-  Heart,
-  ArrowRight,
-  ExternalLink
+  Navigation
 } from 'lucide-react';
+
 const Contact = () => {
-  const contactMethods = [
+  const contactInfo = [
     {
       icon: Phone,
       title: 'Téléphone',
-      primary: '+212 5 22 XX XX XX',
-      secondary: '+212 6 XX XX XX XX',
-      description: 'Appelez-nous pour prendre rendez-vous',
-      action: 'Appeler maintenant',
-      gradient: 'from-primary to-primary-dark'
-    },
-    {
-      icon: MapPin,
-      title: 'Adresse',
-      primary: '123 Rue de la Santé',
-      secondary: 'Casablanca, Maroc',
-      description: 'Visitez notre centre moderne',
-      action: 'Voir l\'itinéraire',
-      gradient: 'from-secondary to-secondary-dark'
+      value: '+212 5 22 XX XX XX',
+      description: 'Lun-Ven 8h-18h, Sam 8h-14h',
+      color: 'text-primary',
+      action: 'tel:+212522XXXXXX'
     },
     {
       icon: Mail,
       title: 'Email',
-      primary: 'contact@cabinet-nawal.ma',
-      secondary: 'rendez-vous@cabinet-nawal.ma',
-      description: 'Écrivez-nous à tout moment',
-      action: 'Envoyer un email',
-      gradient: 'from-accent to-accent-dark'
+      value: 'contact@cabinet-nawal.ma',
+      description: 'Réponse sous 24h',
       color: 'text-secondary',
-      action: 'mailto:contact@nawal-kine.ma'
+      action: 'mailto:contact@cabinet-nawal.ma'
     },
     {
       icon: MapPin,
@@ -57,7 +40,7 @@ const Contact = () => {
       action: 'https://maps.google.com'
     },
     {
-      icon: Smartphone,
+      icon: MessageCircle,
       title: 'WhatsApp',
       value: '+212 6 12 34 56 78',
       description: 'Messages et rendez-vous express',
@@ -66,49 +49,11 @@ const Contact = () => {
     }
   ];
 
-  const services = [
-    'Rééducation Fonctionnelle',
-    'Thérapies Manuelles',
-    'Amincissement & Bien-être',
-    'Gymnastique Médicale',
-    'Rééducation Respiratoire',
-    'Rééducation Périnéale',
-    'Autre (préciser dans le message)'
-  ];
-
   const horaires = [
     { jour: 'Lundi - Vendredi', heures: '8h00 - 18h00' },
     { jour: 'Samedi', heures: '8h00 - 14h00' },
     { jour: 'Dimanche', heures: 'Urgences uniquement' }
   ];
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after success message
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        nom: '',
-        prenom: '',
-        email: '',
-        telephone: '',
-        service: '',
-        message: ''
-      });
-    }, 3000);
-  };
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
 
   return (
     <Layout>
@@ -145,13 +90,13 @@ const Contact = () => {
                       <p className="text-neutral font-montserrat font-semibold mb-2">
                         {info.value}
                       </p>
-                      <p className="text-neutral-light text-sm">
+                      <p className="text-neutral-light text-sm mb-4">
                         {info.description}
                       </p>
                       
                       <Button
                         variant="ghost"
-                        className={`mt-4 ${info.color} hover:bg-current/10 w-full group-hover:translate-y-1 transition-all duration-300`}
+                        className={`${info.color} hover:bg-current/10 w-full group-hover:translate-y-1 transition-all duration-300`}
                         onClick={() => window.open(info.action, '_blank')}
                       >
                         Contacter
@@ -172,132 +117,36 @@ const Contact = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
-            {/* Contact Form */}
+            {/* Contact Information */}
             <ScrollAnimation animation="slide-left">
               <div className="glass-card p-10 rounded-3xl shadow-strong">
                 <h2 className="text-3xl font-playfair font-bold text-primary mb-8">
-                  Réservez Votre <span className="text-gradient-accent">Consultation</span>
+                  Informations <span className="text-gradient-accent">Contact</span>
                 </h2>
                 
-                {isSubmitted ? (
-                  <div className="text-center py-12">
-                    <div className="w-20 h-20 mx-auto mb-6 bg-gradient-secondary rounded-full flex items-center justify-center animate-scale-up">
-                      <CheckCircle className="w-10 h-10 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-playfair font-bold text-secondary mb-4">
-                      Message Envoyé !
-                    </h3>
-                    <p className="text-neutral-light">
-                      Nous vous contacterons dans les plus brefs délais.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <Label htmlFor="prenom" className="text-primary font-montserrat font-medium">
-                          Prénom *
-                        </Label>
-                        <Input
-                          id="prenom"
-                          value={formData.prenom}
-                          onChange={(e) => handleInputChange('prenom', e.target.value)}
-                          className="mt-2 glass-effect border-primary/20 focus:border-primary focus:ring-primary/20"
-                          required
-                        />
+                <div className="space-y-8">
+                  {contactInfo.map((info, index) => {
+                    const Icon = info.icon;
+                    return (
+                      <div key={index} className="flex items-start space-x-4 p-4 rounded-xl hover:bg-gradient-primary/5 transition-colors duration-300">
+                        <div className={`w-12 h-12 rounded-full bg-gradient-primary/10 flex items-center justify-center flex-shrink-0`}>
+                          <Icon className={`w-6 h-6 ${info.color}`} />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-playfair font-bold text-primary mb-1">
+                            {info.title}
+                          </h3>
+                          <p className="text-neutral font-montserrat font-semibold mb-1">
+                            {info.value}
+                          </p>
+                          <p className="text-neutral-light text-sm">
+                            {info.description}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <Label htmlFor="nom" className="text-primary font-montserrat font-medium">
-                          Nom *
-                        </Label>
-                        <Input
-                          id="nom"
-                          value={formData.nom}
-                          onChange={(e) => handleInputChange('nom', e.target.value)}
-                          className="mt-2 glass-effect border-primary/20 focus:border-primary focus:ring-primary/20"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <Label htmlFor="email" className="text-primary font-montserrat font-medium">
-                          Email *
-                        </Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => handleInputChange('email', e.target.value)}
-                          className="mt-2 glass-effect border-primary/20 focus:border-primary focus:ring-primary/20"
-                          required
-                        />
-                      </div>
-                      <div>
-                        <Label htmlFor="telephone" className="text-primary font-montserrat font-medium">
-                          Téléphone *
-                        </Label>
-                        <Input
-                          id="telephone"
-                          type="tel"
-                          value={formData.telephone}
-                          onChange={(e) => handleInputChange('telephone', e.target.value)}
-                          className="mt-2 glass-effect border-primary/20 focus:border-primary focus:ring-primary/20"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="service" className="text-primary font-montserrat font-medium">
-                        Service souhaité
-                      </Label>
-                      <select
-                        id="service"
-                        value={formData.service}
-                        onChange={(e) => handleInputChange('service', e.target.value)}
-                        className="mt-2 w-full px-4 py-3 glass-effect border border-primary/20 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
-                      >
-                        <option value="">Sélectionnez un service</option>
-                        {services.map((service, index) => (
-                          <option key={index} value={service}>{service}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message" className="text-primary font-montserrat font-medium">
-                        Message
-                      </Label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => handleInputChange('message', e.target.value)}
-                        className="mt-2 glass-effect border-primary/20 focus:border-primary focus:ring-primary/20 min-h-[120px]"
-                        placeholder="Décrivez votre besoin ou posez votre question..."
-                      />
-                    </div>
-
-                    <Button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full morph-button bg-gradient-primary hover-glow text-white font-montserrat font-semibold py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <div className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full mr-3"></div>
-                          Envoi en cours...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="w-5 h-5 mr-3" />
-                          Envoyer ma demande
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                )}
+                    );
+                  })}
+                </div>
               </div>
             </ScrollAnimation>
 
@@ -333,16 +182,16 @@ const Contact = () => {
                 </div>
 
                 {/* Urgences */}
-                <div className="glass-card p-8 rounded-3xl shadow-strong bg-gradient-to-br from-medical-red/5 to-medical-red/10">
+                <div className="glass-card p-8 rounded-3xl shadow-strong bg-gradient-to-br from-red-500/5 to-red-500/10">
                   <h3 className="text-2xl font-playfair font-bold text-primary mb-4 flex items-center">
-                    <Phone className="w-6 h-6 mr-3 text-medical-red" />
+                    <Phone className="w-6 h-6 mr-3 text-red-600" />
                     Urgences
                   </h3>
                   <p className="text-neutral-light mb-6">
                     Pour toute urgence en dehors des horaires d'ouverture, 
                     contactez-nous directement.
                   </p>
-                  <Button className="w-full bg-gradient-to-r from-medical-red to-red-600 hover:from-red-600 hover:to-red-700 text-white font-montserrat font-semibold py-3 rounded-full shadow-strong transition-all duration-300 hover:scale-105">
+                  <Button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-montserrat font-semibold py-3 rounded-full shadow-strong transition-all duration-300 hover:scale-105">
                     <Phone className="w-5 h-5 mr-3" />
                     Appel d'Urgence
                   </Button>
