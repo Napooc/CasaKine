@@ -79,21 +79,21 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Dynamic Background */}
       {renderBackground()}
 
-      {/* Floating Elements */}
+      {/* Floating Elements - Responsive sizes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-accent rounded-full opacity-20 animate-float"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-secondary rounded-full opacity-30 animate-float-delay"></div>
-        <div className="absolute bottom-32 left-40 w-20 h-20 bg-gradient-primary rounded-full opacity-25 animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-28 h-28 bg-gradient-accent rounded-full opacity-20 animate-float-delay"></div>
+        <div className="absolute top-10 left-4 md:top-20 md:left-20 w-16 h-16 md:w-32 md:h-32 bg-gradient-accent rounded-full opacity-20 animate-float"></div>
+        <div className="absolute top-20 right-8 md:top-40 md:right-32 w-12 h-12 md:w-24 md:h-24 bg-gradient-secondary rounded-full opacity-30 animate-float-delay"></div>
+        <div className="absolute bottom-20 left-8 md:bottom-32 md:left-40 w-10 h-10 md:w-20 md:h-20 bg-gradient-primary rounded-full opacity-25 animate-float"></div>
+        <div className="absolute bottom-10 right-4 md:bottom-20 md:right-20 w-14 h-14 md:w-28 md:h-28 bg-gradient-accent rounded-full opacity-20 animate-float-delay"></div>
       </div>
 
-      {/* Morphing Shape */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-premium opacity-10 animate-morphing pointer-events-none"></div>
+      {/* Morphing Shape - Responsive size */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-96 md:h-96 bg-gradient-premium opacity-10 animate-morphing pointer-events-none"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollAnimation animation="fade-up" delay={200}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-tight">
             {title.split(' ').map((word, index) => <span key={index} className={`inline-block ${index % 2 === 0 ? 'text-gradient-accent' : 'text-white'}`} style={{
             animationDelay: `${index * 200}ms`
           }}>
@@ -103,25 +103,25 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </ScrollAnimation>
 
         <ScrollAnimation animation="slide-left" delay={400}>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-montserrat font-light text-neutral-lightest mb-6 sm:mb-8 opacity-90 px-2">
             {subtitle}
           </h2>
         </ScrollAnimation>
 
         {description && <ScrollAnimation animation="fade-up" delay={600}>
-            <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2">
               {description}
             </p>
           </ScrollAnimation>}
 
         <ScrollAnimation animation="scale-up" delay={800}>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <Button onClick={ctaAction} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 hover:shadow-accent-glow">
-              <Calendar className="w-5 h-5 mr-3" />
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4">
+            <Button onClick={ctaAction} className="w-full sm:w-auto morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 hover:shadow-accent-glow">
+              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               {ctaText}
             </Button>
             
-            <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
+            <Button variant="outline" className="w-full sm:w-auto glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
               En savoir plus
             </Button>
           </div>
@@ -129,15 +129,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Stats Section */}
         {showStats && <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
               {stats.map((stat, index) => {
             const Icon = stat.icon;
-            return <div key={index} className={`glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow ${currentStat === index ? 'animate-pulse-glow' : ''}`}>
-                    <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
-                    <div className="text-3xl font-playfair font-bold text-white mb-2">
+            return <div key={index} className={`glass-card p-4 sm:p-6 text-center transition-all duration-500 hover:scale-110 hover-glow ${currentStat === index ? 'animate-pulse-glow' : ''}`}>
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent mx-auto mb-2 sm:mb-3" />
+                    <div className="text-xl sm:text-2xl lg:text-3xl font-playfair font-bold text-white mb-1 sm:mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-sm font-montserrat text-neutral-lightest/80">
+                    <div className="text-xs sm:text-sm font-montserrat text-neutral-lightest/80">
                       {stat.label}
                     </div>
                   </div>;

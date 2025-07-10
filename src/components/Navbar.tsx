@@ -104,7 +104,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-full glass-effect hover:bg-white/20 transition-colors duration-300"
+              className="lg:hidden p-3 rounded-full bg-white/90 hover:bg-white shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/20"
             >
               {isOpen ? (
                 <X className="w-6 h-6 text-primary" />
@@ -116,10 +116,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`lg:hidden absolute top-full left-0 right-0 glass-effect transition-all duration-500 ${
+        <div className={`lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-2xl border-t border-primary/10 transition-all duration-500 ${
           isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
         }`}>
-          <div className="px-6 py-8 space-y-4">
+          <div className="px-4 py-6 space-y-2">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
@@ -127,23 +127,23 @@ const Navbar = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`flex items-center space-x-4 p-4 rounded-2xl transition-all duration-300 ${
+                  className={`flex items-center space-x-4 p-4 rounded-xl transition-all duration-300 text-lg font-medium ${
                     isActive(item.path)
-                      ? 'bg-gradient-primary text-white shadow-glow'
-                      : 'text-neutral hover:bg-white/10'
-                  } ${item.color}`}
+                      ? 'bg-gradient-primary text-white shadow-lg scale-105'
+                      : 'text-primary hover:bg-primary/10 hover:text-primary'
+                  }`}
                 >
-                  <Icon className={`w-5 h-5 ${
+                  <Icon className={`w-6 h-6 ${
                     isActive(item.path) ? 'animate-pulse-glow' : ''
                   }`} />
-                  <span className="font-montserrat font-medium">{item.name}</span>
+                  <span className="font-montserrat font-semibold">{item.name}</span>
                 </Link>
               );
             })}
             
             {/* Mobile CTA */}
-            <div className="pt-4">
-              <Button className="w-full morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold py-4 rounded-full shadow-medium">
+            <div className="pt-4 px-2">
+              <Button className="w-full morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold py-4 text-lg rounded-xl shadow-lg">
                 Prendre Rendez-vous
               </Button>
             </div>

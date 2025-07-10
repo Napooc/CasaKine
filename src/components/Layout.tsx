@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Navbar from './Navbar';
+import WhatsAppContact from './WhatsAppContact';
 import { useCursorTrail } from '@/hooks/useScrollAnimation';
 import { useScrollToTop } from '@/hooks/useScrollToTop';
 
@@ -17,6 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="relative">
         {children}
       </main>
+      <WhatsAppContact />
     </div>
   );
 };
