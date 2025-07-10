@@ -222,7 +222,7 @@ const Services = () => {
                               <Clock className="w-4 h-4" />
                               <span className="text-sm">{service.duration}</span>
                             </div>
-                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 group-hover:translate-x-2 transition-all duration-300`}>
+                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`}>
                               Réserver
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
