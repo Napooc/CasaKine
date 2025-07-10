@@ -235,7 +235,7 @@ const Index = () => {
                 {/* Floating Stats */}
                 <div className="absolute -top-6 -left-6 glass-card p-4 rounded-2xl">
                   <div className="text-accent text-2xl font-playfair font-bold">2000+</div>
-                  <div className="text-white text-sm">Patients</div>
+                  <div className="text-black text-sm">Patients</div>
                 </div>
                 
                 <div className="absolute -bottom-6 -right-6 glass-card p-4 rounded-2xl">
