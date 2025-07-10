@@ -4,138 +4,81 @@ import heroServicesImage from '@/assets/hero-services.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Activity, 
-  Heart, 
-  Zap, 
-  Shield, 
-  Clock, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Stethoscope,
-  Target,
-  Users,
-  Award
-} from 'lucide-react';
-
+import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Stethoscope, Target, Users, Award } from 'lucide-react';
 const Services = () => {
-  const mainServices = [
-    {
-      icon: Activity,
-      title: 'Rééducation Fonctionnelle',
-      description: 'Récupération post-traumatique et rééducation neurologique avec des techniques de pointe',
-      features: [
-        'Rééducation post-opératoire',
-        'Récupération après accident',
-        'Rééducation neurologique',
-        'Reprise d\'activité sportive'
-      ],
-      duration: '45-60 minutes',
-      color: 'text-primary',
-      bgGradient: 'from-primary/10 to-primary/5'
-    },
-    {
-      icon: Heart,
-      title: 'Thérapies Manuelles',
-      description: 'Techniques manuelles spécialisées pour soulager douleurs et tensions',
-      features: [
-        'Massage thérapeutique',
-        'Ostéopathie moderne',
-        'Techniques myofasciales',
-        'Mobilisations articulaires'
-      ],
-      duration: '30-45 minutes',
-      color: 'text-medical-red',
-      bgGradient: 'from-red-500/10 to-red-500/5'
-    },
-    {
-      icon: Zap,
-      title: 'Amincissement & Bien-être',
-      description: 'Programmes personnalisés pour retrouver forme et bien-être',
-      features: [
-        'Drainage lymphatique',
-        'Électrothérapie',
-        'Programmes minceur',
-        'Remodelage corporel'
-      ],
-      duration: '60-90 minutes',
-      color: 'text-secondary',
-      bgGradient: 'from-secondary/10 to-secondary/5'
-    },
-    {
-      icon: Shield,
-      title: 'Gymnastique Médicale',
-      description: 'Renforcement musculaire et exercices thérapeutiques adaptés',
-      features: [
-        'Renforcement musculaire',
-        'Pilates thérapeutique',
-        'Yoga adapté',
-        'Prévention des blessures'
-      ],
-      duration: '45-60 minutes',
-      color: 'text-accent',
-      bgGradient: 'from-accent/10 to-accent/5'
-    }
-  ];
-
-  const specialties = [
-    {
-      icon: Stethoscope,
-      title: 'Rééducation Respiratoire',
-      description: 'Amélioration de la fonction respiratoire et de l\'endurance'
-    },
-    {
-      icon: Target,
-      title: 'Rééducation Périnéale',
-      description: 'Prise en charge spécialisée pré et post-natale'
-    },
-    {
-      icon: Users,
-      title: 'Pédiatrie',
-      description: 'Soins adaptés aux nourrissons et enfants'
-    },
-    {
-      icon: Award,
-      title: 'Gériatrie',
-      description: 'Maintien de l\'autonomie et prévention des chutes'
-    }
-  ];
-
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Consultation Initiale',
-      description: 'Évaluation complète de votre condition et définition d\'objectifs personnalisés'
-    },
-    {
-      step: '02',
-      title: 'Plan de Traitement',
-      description: 'Élaboration d\'un programme thérapeutique adapté à vos besoins spécifiques'
-    },
-    {
-      step: '03',
-      title: 'Suivi Personnalisé',
-      description: 'Accompagnement régulier avec ajustements selon votre progression'
-    },
-    {
-      step: '04',
-      title: 'Rétablissement',
-      description: 'Atteinte de vos objectifs et conseils pour maintenir les résultats'
-    }
-  ];
-
-  return (
-    <Layout>
+  const mainServices = [{
+    icon: Activity,
+    title: 'Rééducation Fonctionnelle',
+    description: 'Récupération post-traumatique et rééducation neurologique avec des techniques de pointe',
+    features: ['Rééducation post-opératoire', 'Récupération après accident', 'Rééducation neurologique', 'Reprise d\'activité sportive'],
+    duration: '45-60 minutes',
+    color: 'text-primary',
+    bgGradient: 'from-primary/10 to-primary/5'
+  }, {
+    icon: Heart,
+    title: 'Thérapies Manuelles',
+    description: 'Techniques manuelles spécialisées pour soulager douleurs et tensions',
+    features: ['Massage thérapeutique', 'Ostéopathie moderne', 'Techniques myofasciales', 'Mobilisations articulaires'],
+    duration: '30-45 minutes',
+    color: 'text-medical-red',
+    bgGradient: 'from-red-500/10 to-red-500/5'
+  }, {
+    icon: Zap,
+    title: 'Amincissement & Bien-être',
+    description: 'Programmes personnalisés pour retrouver forme et bien-être',
+    features: ['Drainage lymphatique', 'Électrothérapie', 'Programmes minceur', 'Remodelage corporel'],
+    duration: '60-90 minutes',
+    color: 'text-secondary',
+    bgGradient: 'from-secondary/10 to-secondary/5'
+  }, {
+    icon: Shield,
+    title: 'Gymnastique Médicale',
+    description: 'Renforcement musculaire et exercices thérapeutiques adaptés',
+    features: ['Renforcement musculaire', 'Pilates thérapeutique', 'Yoga adapté', 'Prévention des blessures'],
+    duration: '45-60 minutes',
+    color: 'text-accent',
+    bgGradient: 'from-accent/10 to-accent/5'
+  }];
+  const specialties = [{
+    icon: Stethoscope,
+    title: 'Rééducation Respiratoire',
+    description: 'Amélioration de la fonction respiratoire et de l\'endurance'
+  }, {
+    icon: Target,
+    title: 'Rééducation Périnéale',
+    description: 'Prise en charge spécialisée pré et post-natale'
+  }, {
+    icon: Users,
+    title: 'Pédiatrie',
+    description: 'Soins adaptés aux nourrissons et enfants'
+  }, {
+    icon: Award,
+    title: 'Gériatrie',
+    description: 'Maintien de l\'autonomie et prévention des chutes'
+  }];
+  const processSteps = [{
+    step: '01',
+    title: 'Consultation Initiale',
+    description: 'Évaluation complète de votre condition et définition d\'objectifs personnalisés'
+  }, {
+    step: '02',
+    title: 'Plan de Traitement',
+    description: 'Élaboration d\'un programme thérapeutique adapté à vos besoins spécifiques'
+  }, {
+    step: '03',
+    title: 'Suivi Personnalisé',
+    description: 'Accompagnement régulier avec ajustements selon votre progression'
+  }, {
+    step: '04',
+    title: 'Rétablissement',
+    description: 'Atteinte de vos objectifs et conseils pour maintenir les résultats'
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Dynamic Background */}
         <div className="absolute inset-0">
-          <img 
-            src={heroServicesImage} 
-            alt="Modern physiotherapy equipment" 
-            className="w-full h-full object-cover scale-105"
-          />
+          <img src={heroServicesImage} alt="Modern physiotherapy equipment" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/80 to-primary/90"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
         </div>
@@ -190,7 +133,7 @@ const Services = () => {
                 Réserver une Consultation
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 Voir tous nos services
               </Button>
             </div>
@@ -199,22 +142,27 @@ const Services = () => {
           {/* Quick Service Stats */}
           <ScrollAnimation animation="fade-up" delay={1000}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {[
-                { icon: Activity, label: 'Rééducation' },
-                { icon: Heart, label: 'Thérapies' },
-                { icon: Zap, label: 'Bien-être' },
-                { icon: Shield, label: 'Prévention' }
-              ].map((service, index) => {
-                const Icon = service.icon;
-                return (
-                  <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
+              {[{
+              icon: Activity,
+              label: 'Rééducation'
+            }, {
+              icon: Heart,
+              label: 'Thérapies'
+            }, {
+              icon: Zap,
+              label: 'Bien-être'
+            }, {
+              icon: Shield,
+              label: 'Prévention'
+            }].map((service, index) => {
+              const Icon = service.icon;
+              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
                     <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
                     <div className="text-white font-montserrat text-sm opacity-90">
                       {service.label}
                     </div>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </ScrollAnimation>
         </div>
@@ -243,13 +191,8 @@ const Services = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {mainServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <ScrollAnimation 
-                  key={index}
-                  animation={index % 2 === 0 ? "slide-left" : "slide-right"}
-                  delay={index * 200}
-                >
+            const Icon = service.icon;
+            return <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 200}>
                   <Card className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group bg-gradient-to-br ${service.bgGradient}`}>
                     <CardContent className="p-10">
                       <div className="flex items-start space-x-6">
@@ -268,12 +211,10 @@ const Services = () => {
                           </p>
                           
                           <div className="space-y-3 mb-6">
-                            {service.features.map((feature, featureIndex) => (
-                              <div key={featureIndex} className="flex items-center space-x-3">
+                            {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center space-x-3">
                                 <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
                                 <span className="text-neutral text-sm">{feature}</span>
-                              </div>
-                            ))}
+                              </div>)}
                           </div>
                           
                           <div className="flex items-center justify-between">
@@ -281,10 +222,7 @@ const Services = () => {
                               <Clock className="w-4 h-4" />
                               <span className="text-sm">{service.duration}</span>
                             </div>
-                            <Button 
-                              variant="ghost" 
-                              className={`${service.color} hover:bg-white/20 group-hover:translate-x-2 transition-all duration-300`}
-                            >
+                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 group-hover:translate-x-2 transition-all duration-300`}>
                               Réserver
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
@@ -293,9 +231,8 @@ const Services = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -319,12 +256,7 @@ const Services = () => {
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <ScrollAnimation 
-                key={index}
-                animation="scale-up"
-                delay={index * 150}
-              >
+            {processSteps.map((step, index) => <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                 <div className="text-center group">
                   <div className="relative mb-8">
                     <div className="w-20 h-20 mx-auto bg-gradient-accent rounded-full flex items-center justify-center shadow-accent-glow group-hover:scale-110 transition-transform duration-300">
@@ -332,9 +264,7 @@ const Services = () => {
                         {step.step}
                       </span>
                     </div>
-                    {index < processSteps.length - 1 && (
-                      <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-accent/50 to-transparent"></div>
-                    )}
+                    {index < processSteps.length - 1 && <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-accent/50 to-transparent"></div>}
                   </div>
                   
                   <h3 className="text-xl font-playfair font-bold text-white mb-4">
@@ -344,8 +274,7 @@ const Services = () => {
                     {step.description}
                   </p>
                 </div>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -368,13 +297,8 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {specialties.map((specialty, index) => {
-              const Icon = specialty.icon;
-              return (
-                <ScrollAnimation 
-                  key={index}
-                  animation="rotate-in"
-                  delay={index * 150}
-                >
+            const Icon = specialty.icon;
+            return <ScrollAnimation key={index} animation="rotate-in" delay={index * 150}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group text-center">
                     <CardContent className="p-8 h-full flex flex-col">
                       <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-secondary/10 flex items-center justify-center group-hover:animate-pulse-glow">
@@ -388,9 +312,8 @@ const Services = () => {
                       </p>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -419,18 +342,13 @@ const Services = () => {
                 Consultation Gratuite
               </Button>
               
-              <Button 
-                variant="outline"
-                className="glass-effect text-white border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
-              >
+              <Button variant="outline" className="glass-effect text-white border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
                 Voir nos tarifs
               </Button>
             </div>
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Services;
