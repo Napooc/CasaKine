@@ -3,87 +3,55 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import heroIndexImage from '@/assets/hero-index.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Heart, 
-  Stethoscope, 
-  Users, 
-  Award, 
-  Clock, 
-  MapPin,
-  Phone,
-  Star,
-  ChevronRight,
-  Activity,
-  Shield,
-  Zap,
-  Calendar
-} from 'lucide-react';
-
+import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar } from 'lucide-react';
 const Index = () => {
   const handleBookAppointment = () => {
     // Navigate to contact page or open booking modal
     console.log('Book appointment clicked');
   };
-
-  const services = [
-    {
-      icon: Activity,
-      title: 'Rééducation Fonctionnelle',
-      description: 'Récupération post-traumatique et rééducation neurologique personnalisée',
-      color: 'text-primary'
-    },
-    {
-      icon: Heart,
-      title: 'Thérapies Manuelles',
-      description: 'Massage thérapeutique, ostéopathie et techniques myofasciales',
-      color: 'text-medical-red'
-    },
-    {
-      icon: Zap,
-      title: 'Amincissement & Bien-être',
-      description: 'Programmes minceur, drainage lymphatique et électrothérapie',
-      color: 'text-secondary'
-    },
-    {
-      icon: Shield,
-      title: 'Gymnastique Médicale',
-      description: 'Renforcement musculaire, Pilates thérapeutique et yoga adapté',
-      color: 'text-accent'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah M.',
-      text: 'Un centre exceptionnel où professionnalisme rime avec bienveillance. Dr. Nawal est extraordinaire !',
-      rating: 5,
-      location: 'Casablanca'
-    },
-    {
-      name: 'Ahmed K.',
-      text: 'Des résultats visibles dès les premières séances. L\'équipe est à l\'écoute et utilise des techniques innovantes.',
-      rating: 5,
-      location: 'Rabat'
-    },
-    {
-      name: 'Fatima Z.',
-      text: 'Après mon accident, Dr. Nawal m\'a aidée à retrouver ma mobilité. Je recommande vivement !',
-      rating: 5,
-      location: 'Casablanca'
-    }
-  ];
-
-  return (
-    <Layout>
+  const services = [{
+    icon: Activity,
+    title: 'Rééducation Fonctionnelle',
+    description: 'Récupération post-traumatique et rééducation neurologique personnalisée',
+    color: 'text-primary'
+  }, {
+    icon: Heart,
+    title: 'Thérapies Manuelles',
+    description: 'Massage thérapeutique, ostéopathie et techniques myofasciales',
+    color: 'text-medical-red'
+  }, {
+    icon: Zap,
+    title: 'Amincissement & Bien-être',
+    description: 'Programmes minceur, drainage lymphatique et électrothérapie',
+    color: 'text-secondary'
+  }, {
+    icon: Shield,
+    title: 'Gymnastique Médicale',
+    description: 'Renforcement musculaire, Pilates thérapeutique et yoga adapté',
+    color: 'text-accent'
+  }];
+  const testimonials = [{
+    name: 'Sarah M.',
+    text: 'Un centre exceptionnel où professionnalisme rime avec bienveillance. Dr. Nawal est extraordinaire !',
+    rating: 5,
+    location: 'Casablanca'
+  }, {
+    name: 'Ahmed K.',
+    text: 'Des résultats visibles dès les premières séances. L\'équipe est à l\'écoute et utilise des techniques innovantes.',
+    rating: 5,
+    location: 'Rabat'
+  }, {
+    name: 'Fatima Z.',
+    text: 'Après mon accident, Dr. Nawal m\'a aidée à retrouver ma mobilité. Je recommande vivement !',
+    rating: 5,
+    location: 'Casablanca'
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src={heroIndexImage} 
-            alt="Modern medical clinic" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroIndexImage} alt="Modern medical clinic" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-secondary/90"></div>
         </div>
 
@@ -123,7 +91,7 @@ const Index = () => {
                 Réservez Votre Consultation
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 En savoir plus
               </Button>
             </div>
@@ -132,15 +100,25 @@ const Index = () => {
           {/* Stats Section */}
           <ScrollAnimation animation="fade-up" delay={1000}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {[
-                { icon: Star, value: '15+', label: 'Années d\'expérience' },
-                { icon: Users, value: '2000+', label: 'Patients satisfaits' },
-                { icon: Award, value: '98%', label: 'Taux de réussite' },
-                { icon: Calendar, value: '24/7', label: 'Disponibilité' }
-              ].map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
+              {[{
+              icon: Star,
+              value: '15+',
+              label: 'Années d\'expérience'
+            }, {
+              icon: Users,
+              value: '2000+',
+              label: 'Patients satisfaits'
+            }, {
+              icon: Award,
+              value: '98%',
+              label: 'Taux de réussite'
+            }, {
+              icon: Calendar,
+              value: '24/7',
+              label: 'Disponibilité'
+            }].map((stat, index) => {
+              const Icon = stat.icon;
+              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
                     <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
                     <div className="text-3xl font-playfair font-bold text-white mb-2">
                       {stat.value}
@@ -148,9 +126,8 @@ const Index = () => {
                     <div className="text-sm font-montserrat text-neutral-lightest/80">
                       {stat.label}
                     </div>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </ScrollAnimation>
         </div>
@@ -183,13 +160,8 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <ScrollAnimation 
-                  key={index}
-                  animation="scale-up"
-                  delay={index * 200}
-                >
+            const Icon = service.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
                   <Card className="group glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full">
                     <CardContent className="p-8 text-center h-full flex flex-col">
                       <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-accent/10 flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300`}>
@@ -201,18 +173,14 @@ const Index = () => {
                       <p className="text-neutral-light leading-relaxed flex-grow">
                         {service.description}
                       </p>
-                      <Button 
-                        variant="ghost" 
-                        className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300"
-                      >
+                      <Button variant="ghost" className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300">
                         En savoir plus
                         <ChevronRight className="w-4 h-4 ml-2" />
                       </Button>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -261,11 +229,7 @@ const Index = () => {
             <ScrollAnimation animation="slide-right">
               <div className="relative">
                 <div className="glass-card p-2 rounded-3xl">
-                  <img 
-                    src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png"
-                    alt="Dr. Nawal El Ghorfi"
-                    className="w-full h-auto rounded-2xl"
-                  />
+                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="w-full h-auto rounded-2xl" />
                 </div>
                 
                 {/* Floating Stats */}
@@ -299,18 +263,11 @@ const Index = () => {
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <ScrollAnimation 
-                key={index}
-                animation="rotate-in"
-                delay={index * 200}
-              >
+            {testimonials.map((testimonial, index) => <ScrollAnimation key={index} animation="rotate-in" delay={index * 200}>
                 <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full">
                   <CardContent className="p-8">
                     <div className="flex items-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-accent fill-current" />
-                      ))}
+                      {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-5 h-5 text-accent fill-current" />)}
                     </div>
                     <p className="text-neutral mb-6 leading-relaxed italic">
                       "{testimonial.text}"
@@ -333,8 +290,7 @@ const Index = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -358,10 +314,7 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                onClick={handleBookAppointment}
-                className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110"
-              >
+              <Button onClick={handleBookAppointment} className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                 <Phone className="w-5 h-5 mr-3" />
                 Prendre Rendez-vous
               </Button>
@@ -374,8 +327,6 @@ const Index = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
