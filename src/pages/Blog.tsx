@@ -4,30 +4,29 @@ import heroBlogImage from '@/assets/hero-blog.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Calendar, 
-  User, 
-  Clock, 
-  ArrowRight, 
-  Heart, 
-  Stethoscope, 
-  Activity,
-  Shield,
-  Eye,
-  MessageCircle,
-  Share2,
-  BookOpen
-} from 'lucide-react';
-
+import { Calendar, User, Clock, ArrowRight, Heart, Stethoscope, Activity, Shield, Eye, MessageCircle, Share2, BookOpen } from 'lucide-react';
 const Blog = () => {
-  const categories = [
-    { name: 'Tous', count: 24, active: true },
-    { name: 'Conseils', count: 8, active: false },
-    { name: 'Exercices', count: 6, active: false },
-    { name: 'Nutrition', count: 5, active: false },
-    { name: 'Actualités', count: 5, active: false }
-  ];
-
+  const categories = [{
+    name: 'Tous',
+    count: 24,
+    active: true
+  }, {
+    name: 'Conseils',
+    count: 8,
+    active: false
+  }, {
+    name: 'Exercices',
+    count: 6,
+    active: false
+  }, {
+    name: 'Nutrition',
+    count: 5,
+    active: false
+  }, {
+    name: 'Actualités',
+    count: 5,
+    active: false
+  }];
   const featuredPost = {
     id: 1,
     title: '10 Exercices Essentiels pour Renforcer Votre Dos',
@@ -40,101 +39,96 @@ const Blog = () => {
     views: 1250,
     likes: 89
   };
-
-  const posts = [
-    {
-      id: 2,
-      title: 'L\'Importance de la Rééducation Post-Opératoire',
-      excerpt: 'Comprendre pourquoi la kinésithérapie est cruciale après une intervention chirurgicale.',
-      author: 'Dr. Nawal El Ghorfi',
-      date: '12 Mars 2024',
-      readTime: '6 min',
-      category: 'Conseils',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 890,
-      likes: 65
-    },
-    {
-      id: 3,
-      title: 'Nutrition et Récupération Musculaire',
-      excerpt: 'Les aliments clés pour optimiser la récupération après vos séances de kinésithérapie.',
-      author: 'Dr. Nawal El Ghorfi',
-      date: '10 Mars 2024',
-      readTime: '5 min',
-      category: 'Nutrition',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 720,
-      likes: 52
-    },
-    {
-      id: 4,
-      title: 'Nouveautés Technologiques en Kinésithérapie',
-      excerpt: 'Les dernières innovations qui révolutionnent les soins de rééducation moderne.',
-      author: 'Dr. Nawal El Ghorfi',
-      date: '8 Mars 2024',
-      readTime: '7 min',
-      category: 'Actualités',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 950,
-      likes: 78
-    },
-    {
-      id: 5,
-      title: 'Prévenir les Blessures Sportives',
-      excerpt: 'Conseils pratiques pour éviter les blessures et optimiser vos performances sportives.',
-      author: 'Dr. Nawal El Ghorfi',
-      date: '5 Mars 2024',
-      readTime: '6 min',
-      category: 'Conseils',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 1120,
-      likes: 94
-    },
-    {
-      id: 6,
-      title: 'Exercices de Respiration Thérapeutique',
-      excerpt: 'Techniques de respiration pour améliorer votre bien-être et accélérer la guérison.',
-      author: 'Dr. Nawal El Ghorfi',
-      date: '3 Mars 2024',
-      readTime: '4 min',
-      category: 'Exercices',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 680,
-      likes: 41
-    }
-  ];
-
+  const posts = [{
+    id: 2,
+    title: 'L\'Importance de la Rééducation Post-Opératoire',
+    excerpt: 'Comprendre pourquoi la kinésithérapie est cruciale après une intervention chirurgicale.',
+    author: 'Dr. Nawal El Ghorfi',
+    date: '12 Mars 2024',
+    readTime: '6 min',
+    category: 'Conseils',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 890,
+    likes: 65
+  }, {
+    id: 3,
+    title: 'Nutrition et Récupération Musculaire',
+    excerpt: 'Les aliments clés pour optimiser la récupération après vos séances de kinésithérapie.',
+    author: 'Dr. Nawal El Ghorfi',
+    date: '10 Mars 2024',
+    readTime: '5 min',
+    category: 'Nutrition',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 720,
+    likes: 52
+  }, {
+    id: 4,
+    title: 'Nouveautés Technologiques en Kinésithérapie',
+    excerpt: 'Les dernières innovations qui révolutionnent les soins de rééducation moderne.',
+    author: 'Dr. Nawal El Ghorfi',
+    date: '8 Mars 2024',
+    readTime: '7 min',
+    category: 'Actualités',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 950,
+    likes: 78
+  }, {
+    id: 5,
+    title: 'Prévenir les Blessures Sportives',
+    excerpt: 'Conseils pratiques pour éviter les blessures et optimiser vos performances sportives.',
+    author: 'Dr. Nawal El Ghorfi',
+    date: '5 Mars 2024',
+    readTime: '6 min',
+    category: 'Conseils',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 1120,
+    likes: 94
+  }, {
+    id: 6,
+    title: 'Exercices de Respiration Thérapeutique',
+    excerpt: 'Techniques de respiration pour améliorer votre bien-être et accélérer la guérison.',
+    author: 'Dr. Nawal El Ghorfi',
+    date: '3 Mars 2024',
+    readTime: '4 min',
+    category: 'Exercices',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 680,
+    likes: 41
+  }];
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Exercices': return Activity;
-      case 'Conseils': return Heart;
-      case 'Nutrition': return Shield;
-      case 'Actualités': return Stethoscope;
-      default: return BookOpen;
+      case 'Exercices':
+        return Activity;
+      case 'Conseils':
+        return Heart;
+      case 'Nutrition':
+        return Shield;
+      case 'Actualités':
+        return Stethoscope;
+      default:
+        return BookOpen;
     }
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Exercices': return 'text-primary bg-primary/10';
-      case 'Conseils': return 'text-medical-red bg-red-500/10';
-      case 'Nutrition': return 'text-secondary bg-secondary/10';
-      case 'Actualités': return 'text-accent bg-accent/10';
-      default: return 'text-neutral bg-neutral/10';
+      case 'Exercices':
+        return 'text-primary bg-primary/10';
+      case 'Conseils':
+        return 'text-medical-red bg-red-500/10';
+      case 'Nutrition':
+        return 'text-secondary bg-secondary/10';
+      case 'Actualités':
+        return 'text-accent bg-accent/10';
+      default:
+        return 'text-neutral bg-neutral/10';
     }
   };
-
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background with Article Elements */}
         <div className="absolute inset-0">
-          <img 
-            src={heroBlogImage} 
-            alt="Medical workspace" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroBlogImage} alt="Medical workspace" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-secondary/90"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
@@ -182,7 +176,7 @@ const Blog = () => {
                 S'abonner à la Newsletter
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 Tous les articles
               </Button>
             </div>
@@ -191,15 +185,25 @@ const Blog = () => {
           {/* Blog Categories Preview */}
           <ScrollAnimation animation="fade-up" delay={1000}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-              {[
-                { icon: Heart, label: 'Conseils', count: '8' },
-                { icon: Activity, label: 'Exercices', count: '6' },
-                { icon: Shield, label: 'Nutrition', count: '5' },
-                { icon: Stethoscope, label: 'Actualités', count: '5' }
-              ].map((category, index) => {
-                const Icon = category.icon;
-                return (
-                  <div key={index} className="glass-card p-4 text-center transition-all duration-500 hover:scale-110 hover-glow">
+              {[{
+              icon: Heart,
+              label: 'Conseils',
+              count: '8'
+            }, {
+              icon: Activity,
+              label: 'Exercices',
+              count: '6'
+            }, {
+              icon: Shield,
+              label: 'Nutrition',
+              count: '5'
+            }, {
+              icon: Stethoscope,
+              label: 'Actualités',
+              count: '5'
+            }].map((category, index) => {
+              const Icon = category.icon;
+              return <div key={index} className="glass-card p-4 text-center transition-all duration-500 hover:scale-110 hover-glow">
                     <Icon className="w-6 h-6 text-accent mx-auto mb-2" />
                     <div className="text-white font-montserrat text-sm mb-1">
                       {category.label}
@@ -207,9 +211,8 @@ const Blog = () => {
                     <div className="text-white/70 font-montserrat text-xs">
                       {category.count} articles
                     </div>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </ScrollAnimation>
         </div>
@@ -227,25 +230,12 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {categories.map((category, index) => (
-                <Button
-                  key={index}
-                  variant={category.active ? "default" : "outline"}
-                  className={`morph-button font-montserrat font-medium px-6 py-3 rounded-full transition-all duration-300 ${
-                    category.active
-                      ? 'bg-gradient-primary text-white shadow-glow hover:scale-105'
-                      : 'glass-effect text-primary hover:bg-primary/10 hover:scale-105'
-                  }`}
-                >
+              {categories.map((category, index) => <Button key={index} variant={category.active ? "default" : "outline"} className={`morph-button font-montserrat font-medium px-6 py-3 rounded-full transition-all duration-300 ${category.active ? 'bg-gradient-primary text-white shadow-glow hover:scale-105' : 'glass-effect text-primary hover:bg-primary/10 hover:scale-105'}`}>
                   {category.name}
-                  <Badge 
-                    variant="secondary" 
-                    className="ml-2 bg-white/20 text-inherit border-0"
-                  >
+                  <Badge variant="secondary" className="ml-2 bg-white/20 text-inherit border-0">
                     {category.count}
                   </Badge>
-                </Button>
-              ))}
+                </Button>)}
             </div>
           </ScrollAnimation>
         </div>
@@ -266,11 +256,7 @@ const Blog = () => {
             <Card className="glass-card border-0 shadow-strong hover:shadow-accent-glow transition-all duration-500 hover:scale-[1.02] overflow-hidden group">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={featuredPost.image}
-                    alt={featuredPost.title}
-                    className="w-full h-80 lg:h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
+                  <img src={featuredPost.image} alt={featuredPost.title} className="w-full h-80 lg:h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute top-6 left-6">
                     <Badge className={`${getCategoryColor(featuredPost.category)} border-0 font-montserrat`}>
                       À la une
@@ -348,20 +334,11 @@ const Blog = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => {
-              const CategoryIcon = getCategoryIcon(post.category);
-              return (
-                <ScrollAnimation 
-                  key={post.id}
-                  animation="fade-up"
-                  delay={index * 150}
-                >
+            const CategoryIcon = getCategoryIcon(post.category);
+            return <ScrollAnimation key={post.id} animation="fade-up" delay={index * 150}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full">
                     <div className="relative overflow-hidden">
-                      <img 
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
+                      <img src={post.image} alt={post.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" />
                       <div className="absolute top-4 left-4">
                         <Badge className={`${getCategoryColor(post.category)} border-0 font-montserrat flex items-center space-x-1`}>
                           <CategoryIcon className="w-3 h-3" />
@@ -369,11 +346,7 @@ const Blog = () => {
                         </Badge>
                       </div>
                       <div className="absolute top-4 right-4">
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-8 h-8 p-0 rounded-full"
-                        >
+                        <Button variant="ghost" size="sm" className="bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-8 h-8 p-0 rounded-full">
                           <Share2 className="w-4 h-4" />
                         </Button>
                       </div>
@@ -414,11 +387,7 @@ const Blog = () => {
                             </div>
                           </div>
                           
-                          <Button 
-                            variant="ghost" 
-                            size="sm"
-                            className="text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-1 transition-all duration-300"
-                          >
+                          <Button variant="ghost" size="sm" className="text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-1 transition-all duration-300">
                             Lire
                             <ArrowRight className="w-3 h-3 ml-1" />
                           </Button>
@@ -426,9 +395,8 @@ const Blog = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
 
           <ScrollAnimation animation="fade-up" delay={600}>
@@ -460,11 +428,7 @@ const Blog = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Votre adresse email"
-                className="flex-1 px-6 py-4 rounded-full glass-effect border-white/20 text-white placeholder-white/60 focus:border-white focus:ring-2 focus:ring-white/20"
-              />
+              <input type="email" placeholder="Votre adresse email" className="flex-1 px-6 py-4 rounded-full glass-effect border-white/20 text-white placeholder-white/60 focus:border-white focus:ring-2 focus:ring-white/20" />
               <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105 whitespace-nowrap">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 S'abonner
@@ -473,8 +437,6 @@ const Blog = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Blog;
