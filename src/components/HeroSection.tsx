@@ -121,7 +121,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               {ctaText}
             </Button>
             
-            <Button variant="outline" className="w-full sm:w-auto glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+            <Button variant="outline" className="w-full sm:w-auto glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
               En savoir plus
             </Button>
           </div>
