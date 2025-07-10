@@ -3,107 +3,73 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import heroAboutImage from '@/assets/hero-about.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Award, 
-  GraduationCap, 
-  Heart, 
-  Users, 
-  Clock, 
-  Star,
-  Stethoscope,
-  Shield
-} from 'lucide-react';
-
+import { Award, GraduationCap, Heart, Users, Clock, Star, Stethoscope, Shield } from 'lucide-react';
 const About = () => {
-  const qualifications = [
-    {
-      icon: GraduationCap,
-      title: 'Diplôme d\'État',
-      description: 'Kinésithérapeute diplômée d\'État avec mention Très Bien',
-      year: '2008'
-    },
-    {
-      icon: Award,
-      title: 'Spécialisation',
-      description: 'Rééducation fonctionnelle et neurologique avancée',
-      year: '2012'
-    },
-    {
-      icon: Heart,
-      title: 'Formation Continue',
-      description: 'Thérapies manuelles et ostéopathie moderne',
-      year: '2018'
-    },
-    {
-      icon: Stethoscope,
-      title: 'Certification',
-      description: 'Techniques de drainage lymphatique et amincissement',
-      year: '2020'
-    }
-  ];
-
-  const values = [
-    {
-      icon: Heart,
-      title: 'Bienveillance',
-      description: 'Une approche humaine et empathique pour chaque patient'
-    },
-    {
-      icon: Star,
-      title: 'Excellence',
-      description: 'Des soins de la plus haute qualité avec des résultats prouvés'
-    },
-    {
-      icon: Shield,
-      title: 'Confiance',
-      description: 'Un environnement sécurisé et professionnel pour votre rétablissement'
-    },
-    {
-      icon: Users,
-      title: 'Personnalisation',
-      description: 'Des traitements adaptés à vos besoins spécifiques'
-    }
-  ];
-
-  const timeline = [
-    {
-      year: '2008',
-      title: 'Diplôme de Kinésithérapie',
-      description: 'Obtention du diplôme d\'État en kinésithérapie à l\'Institut de Formation en Masso-Kinésithérapie de Casablanca'
-    },
-    {
-      year: '2010',
-      title: 'Première Expérience',
-      description: 'Début de carrière au Centre Hospitalier Universitaire Ibn Rochd de Casablanca'
-    },
-    {
-      year: '2015',
-      title: 'Cabinet Privé',
-      description: 'Ouverture de son premier cabinet privé spécialisé en rééducation fonctionnelle'
-    },
-    {
-      year: '2020',
-      title: 'Centre Moderne',
-      description: 'Création du centre actuel avec équipements de dernière génération'
-    },
-    {
-      year: '2023',
-      title: 'Innovation Continue',
-      description: 'Intégration de nouvelles technologies et techniques thérapeutiques avancées'
-    }
-  ];
-
-  return (
-    <Layout>
+  const qualifications = [{
+    icon: GraduationCap,
+    title: 'Diplôme d\'État',
+    description: 'Kinésithérapeute diplômée d\'État avec mention Très Bien',
+    year: '2008'
+  }, {
+    icon: Award,
+    title: 'Spécialisation',
+    description: 'Rééducation fonctionnelle et neurologique avancée',
+    year: '2012'
+  }, {
+    icon: Heart,
+    title: 'Formation Continue',
+    description: 'Thérapies manuelles et ostéopathie moderne',
+    year: '2018'
+  }, {
+    icon: Stethoscope,
+    title: 'Certification',
+    description: 'Techniques de drainage lymphatique et amincissement',
+    year: '2020'
+  }];
+  const values = [{
+    icon: Heart,
+    title: 'Bienveillance',
+    description: 'Une approche humaine et empathique pour chaque patient'
+  }, {
+    icon: Star,
+    title: 'Excellence',
+    description: 'Des soins de la plus haute qualité avec des résultats prouvés'
+  }, {
+    icon: Shield,
+    title: 'Confiance',
+    description: 'Un environnement sécurisé et professionnel pour votre rétablissement'
+  }, {
+    icon: Users,
+    title: 'Personnalisation',
+    description: 'Des traitements adaptés à vos besoins spécifiques'
+  }];
+  const timeline = [{
+    year: '2008',
+    title: 'Diplôme de Kinésithérapie',
+    description: 'Obtention du diplôme d\'État en kinésithérapie à l\'Institut de Formation en Masso-Kinésithérapie de Casablanca'
+  }, {
+    year: '2010',
+    title: 'Première Expérience',
+    description: 'Début de carrière au Centre Hospitalier Universitaire Ibn Rochd de Casablanca'
+  }, {
+    year: '2015',
+    title: 'Cabinet Privé',
+    description: 'Ouverture de son premier cabinet privé spécialisé en rééducation fonctionnelle'
+  }, {
+    year: '2020',
+    title: 'Centre Moderne',
+    description: 'Création du centre actuel avec équipements de dernière génération'
+  }, {
+    year: '2023',
+    title: 'Innovation Continue',
+    description: 'Intégration de nouvelles technologies et techniques thérapeutiques avancées'
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background with parallax effect */}
         <div className="absolute inset-0">
-          <img 
-            src={heroAboutImage} 
-            alt="Professional physiotherapist" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroAboutImage} alt="Professional physiotherapist" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
@@ -141,7 +107,7 @@ const About = () => {
                     Prendre Rendez-vous
                   </Button>
                   
-                  <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+                  <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                     Notre parcours
                   </Button>
                 </div>
@@ -152,11 +118,7 @@ const About = () => {
               <div className="relative">
                 {/* Main image with floating stats */}
                 <div className="glass-card p-3 rounded-3xl shadow-strong">
-                  <img 
-                    src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png"
-                    alt="Dr. Nawal El Ghorfi"
-                    className="w-full h-auto rounded-2xl"
-                  />
+                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="w-full h-auto rounded-2xl" />
                 </div>
                 
                 {/* Floating achievement cards */}
@@ -200,11 +162,7 @@ const About = () => {
             <ScrollAnimation animation="slide-left">
               <div className="relative">
                 <div className="glass-card p-4 rounded-3xl shadow-strong">
-                  <img 
-                    src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png"
-                    alt="Dr. Nawal El Ghorfi - Kinésithérapeute"
-                    className="w-full h-auto rounded-2xl"
-                  />
+                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi - Kinésithérapeute" className="w-full h-auto rounded-2xl" />
                 </div>
                 
                 {/* Floating Achievement */}
@@ -273,13 +231,8 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {qualifications.map((qual, index) => {
-              const Icon = qual.icon;
-              return (
-                <ScrollAnimation 
-                  key={index}
-                  animation="scale-up"
-                  delay={index * 150}
-                >
+            const Icon = qual.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group">
                     <CardContent className="p-8 text-center h-full flex flex-col">
                       <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-primary/10 flex items-center justify-center group-hover:animate-pulse-glow">
@@ -294,9 +247,8 @@ const About = () => {
                       </p>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -323,18 +275,9 @@ const About = () => {
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-accent opacity-30"></div>
 
-            {timeline.map((item, index) => (
-              <ScrollAnimation 
-                key={index}
-                animation={index % 2 === 0 ? "slide-left" : "slide-right"}
-                delay={index * 200}
-              >
-                <div className={`flex items-center mb-16 ${
-                  index % 2 === 0 ? 'justify-start' : 'justify-end'
-                }`}>
-                  <div className={`w-full lg:w-5/12 ${
-                    index % 2 === 0 ? 'pr-8' : 'pl-8 order-2'
-                  }`}>
+            {timeline.map((item, index) => <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 200}>
+                <div className={`flex items-center mb-16 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                  <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8 order-2'}`}>
                     <div className="glass-card p-8 rounded-2xl shadow-strong hover:scale-105 transition-all duration-300">
                       <div className="text-accent font-montserrat font-bold text-lg mb-2">
                         {item.year}
@@ -351,8 +294,7 @@ const About = () => {
                   {/* Timeline Dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-accent rounded-full border-4 border-white shadow-glow"></div>
                 </div>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -373,13 +315,8 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <ScrollAnimation 
-                  key={index}
-                  animation="rotate-in"
-                  delay={index * 150}
-                >
+            const Icon = value.icon;
+            return <ScrollAnimation key={index} animation="rotate-in" delay={index * 150}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group text-center">
                     <CardContent className="p-8 h-full flex flex-col">
                       <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-secondary/10 flex items-center justify-center group-hover:animate-pulse-glow">
@@ -393,14 +330,11 @@ const About = () => {
                       </p>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default About;
