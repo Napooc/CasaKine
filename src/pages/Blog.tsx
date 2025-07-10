@@ -4,6 +4,7 @@ import heroBlogImage from '@/assets/hero-blog.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 import { Calendar, User, Clock, ArrowRight, Heart, Stethoscope, Activity, Shield, Eye, MessageCircle, Share2, BookOpen } from 'lucide-react';
 const Blog = () => {
   const categories = [{
@@ -42,7 +43,7 @@ const Blog = () => {
   const posts = [{
     id: 2,
     title: 'L\'Importance de la Rééducation Post-Opératoire',
-    excerpt: 'Comprendre pourquoi la kinésithérapie est cruciale après une intervention chirurgicale.',
+    excerpt: 'Découvrez pourquoi un suivi kinésithérapeutique rigoureux après chirurgie optimise votre récupération et prévient les complications à long terme.',
     author: 'Dr. Nawal El Ghorfi',
     date: '12 Mars 2024',
     readTime: '6 min',
@@ -53,7 +54,7 @@ const Blog = () => {
   }, {
     id: 3,
     title: 'Nutrition et Récupération Musculaire',
-    excerpt: 'Les aliments clés pour optimiser la récupération après vos séances de kinésithérapie.',
+    excerpt: 'Explorez les secrets d\'une alimentation ciblée qui booste vos performances et accélère la reconstruction tissulaire après l\'effort.',
     author: 'Dr. Nawal El Ghorfi',
     date: '10 Mars 2024',
     readTime: '5 min',
@@ -64,7 +65,7 @@ const Blog = () => {
   }, {
     id: 4,
     title: 'Nouveautés Technologiques en Kinésithérapie',
-    excerpt: 'Les dernières innovations qui révolutionnent les soins de rééducation moderne.',
+    excerpt: 'Plongez dans l\'univers des innovations révolutionnaires : réalité virtuelle, IA et capteurs intelligents transforment la rééducation moderne.',
     author: 'Dr. Nawal El Ghorfi',
     date: '8 Mars 2024',
     readTime: '7 min',
@@ -75,7 +76,7 @@ const Blog = () => {
   }, {
     id: 5,
     title: 'Prévenir les Blessures Sportives',
-    excerpt: 'Conseils pratiques pour éviter les blessures et optimiser vos performances sportives.',
+    excerpt: 'Maîtrisez les techniques d\'échauffement avancées et de renforcement préventif pour maintenir votre corps au top de sa forme.',
     author: 'Dr. Nawal El Ghorfi',
     date: '5 Mars 2024',
     readTime: '6 min',
@@ -86,7 +87,7 @@ const Blog = () => {
   }, {
     id: 6,
     title: 'Exercices de Respiration Thérapeutique',
-    excerpt: 'Techniques de respiration pour améliorer votre bien-être et accélérer la guérison.',
+    excerpt: 'Apprenez les protocoles respiratoires scientifiquement prouvés pour gérer le stress, optimiser l\'oxygénation et faciliter la guérison.',
     author: 'Dr. Nawal El Ghorfi',
     date: '3 Mars 2024',
     readTime: '4 min',
@@ -306,10 +307,12 @@ const Blog = () => {
                       </div>
                     </div>
                     
-                    <Button className="morph-button bg-gradient-primary hover-glow text-white font-montserrat font-semibold px-8 py-3 rounded-full shadow-medium transition-all duration-300 hover:scale-105">
-                      Lire l'article
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                    <Link to={`/blog/${featuredPost.id}`}>
+                      <Button className="morph-button bg-gradient-primary hover-glow text-white font-montserrat font-semibold px-8 py-3 rounded-full shadow-medium transition-all duration-300 hover:scale-105">
+                        Lire l'article
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </div>
@@ -335,8 +338,10 @@ const Blog = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => {
             const CategoryIcon = getCategoryIcon(post.category);
-            return <ScrollAnimation key={post.id} animation="fade-up" delay={index * 150}>
-                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full">
+            return (
+              <ScrollAnimation key={post.id} animation="fade-up" delay={index * 150}>
+                <Link to={`/blog/${post.id}`} className="block">
+                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full cursor-pointer">
                     <div className="relative overflow-hidden">
                       <img src={post.image} alt={post.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" />
                       <div className="absolute top-4 left-4">
@@ -395,7 +400,9 @@ const Blog = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>;
+                </Link>
+              </ScrollAnimation>
+            );
           })}
           </div>
 

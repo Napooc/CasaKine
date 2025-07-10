@@ -96,9 +96,11 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 py-3 rounded-full shadow-medium transition-all duration-300 hover:scale-105">
-                Rendez-vous
-              </Button>
+              <Link to="/contact">
+                <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 py-3 rounded-full shadow-medium transition-all duration-300 hover:scale-105">
+                  Rendez-vous
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -143,9 +145,11 @@ const Navbar = () => {
             
             {/* Mobile CTA */}
             <div className="pt-4 px-2">
-              <Button className="w-full morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold py-4 text-lg rounded-xl shadow-lg">
-                Prendre Rendez-vous
-              </Button>
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Button className="w-full morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold py-4 text-lg rounded-xl shadow-lg">
+                  Prendre Rendez-vous
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

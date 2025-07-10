@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import HeroSection from '@/components/HeroSection';
+import Map from '@/components/Map';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { 
@@ -234,22 +235,10 @@ const Contact = () => {
 
           <ScrollAnimation animation="scale-up" delay={200}>
             <div className="glass-card p-4 rounded-3xl shadow-strong overflow-hidden">
-              <div className="bg-gradient-primary/10 rounded-2xl h-96 flex items-center justify-center">
-                <div className="text-center">
-                  <Navigation className="w-16 h-16 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-playfair font-bold text-primary mb-2">
-                    Carte Interactive
-                  </h3>
-                  <p className="text-neutral-light mb-6">
-                    123 Boulevard Hassan II, Quartier Maarif<br />
-                    Casablanca, Maroc
-                  </p>
-                  <Button className="morph-button bg-gradient-primary hover-glow text-white font-montserrat font-semibold px-8 py-3 rounded-full shadow-medium transition-all duration-300 hover:scale-105">
-                    <MapPin className="w-5 h-5 mr-3" />
-                    Ouvrir dans Maps
-                  </Button>
-                </div>
-              </div>
+              <Map 
+                location="H8FJ+HP Casablanca"
+                address="123 Boulevard Hassan II, Quartier Maarif, Casablanca, Maroc"
+              />
             </div>
           </ScrollAnimation>
         </div>
