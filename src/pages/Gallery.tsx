@@ -5,131 +5,105 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useState } from 'react';
-import { 
-  Play, 
-  Camera, 
-  Award, 
-  Users, 
-  Stethoscope, 
-  Heart,
-  Activity,
-  Shield,
-  Eye,
-  ZoomIn
-} from 'lucide-react';
-
+import { Play, Camera, Award, Users, Stethoscope, Heart, Activity, Shield, Eye, ZoomIn } from 'lucide-react';
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('tous');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const filters = [
-    { id: 'tous', label: 'Tous', count: 24 },
-    { id: 'cabinet', label: 'Notre Cabinet', count: 8 },
-    { id: 'equipements', label: 'Équipements', count: 6 },
-    { id: 'soins', label: 'Soins', count: 10 }
-  ];
-
-  const galleryItems = [
-    {
-      id: 1,
-      type: 'image',
-      category: 'cabinet',
-      title: 'Salle d\'accueil moderne',
-      description: 'Espace d\'accueil confortable et apaisant',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      featured: true
-    },
-    {
-      id: 2,
-      type: 'image',
-      category: 'equipements',
-      title: 'Équipements de pointe',
-      description: 'Technologies modernes pour des soins optimaux',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      featured: false
-    },
-    {
-      id: 3,
-      type: 'video',
-      category: 'soins',
-      title: 'Séance de rééducation',
-      description: 'Démonstration d\'exercices thérapeutiques',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      featured: true
-    },
-    {
-      id: 4,
-      type: 'image',
-      category: 'cabinet',
-      title: 'Salle de consultation',
-      description: 'Environnement professionnel et chaleureux',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      featured: false
-    },
-    {
-      id: 5,
-      type: 'image',
-      category: 'equipements',
-      title: 'Matériel de rééducation',
-      description: 'Équipements spécialisés pour tous types de soins',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      featured: false
-    },
-    {
-      id: 6,
-      type: 'image',
-      category: 'soins',
-      title: 'Thérapie manuelle',
-      description: 'Techniques de massage thérapeutique',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      featured: true
-    }
-  ];
-
-  const filteredItems = activeFilter === 'tous' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeFilter);
-
-  const achievements = [
-    {
-      icon: Award,
-      title: 'Centre Certifié',
-      description: 'Certification qualité ISO 9001'
-    },
-    {
-      icon: Users,
-      title: '2000+ Patients',
-      description: 'Accompagnés vers la guérison'
-    },
-    {
-      icon: Stethoscope,
-      title: 'Équipements Modernes',
-      description: 'Technologies de dernière génération'
-    },
-    {
-      icon: Heart,
-      title: 'Approche Humaine',
-      description: 'Soins personnalisés et bienveillants'
-    }
-  ];
-
-  return (
-    <Layout>
+  const filters = [{
+    id: 'tous',
+    label: 'Tous',
+    count: 24
+  }, {
+    id: 'cabinet',
+    label: 'Notre Cabinet',
+    count: 8
+  }, {
+    id: 'equipements',
+    label: 'Équipements',
+    count: 6
+  }, {
+    id: 'soins',
+    label: 'Soins',
+    count: 10
+  }];
+  const galleryItems = [{
+    id: 1,
+    type: 'image',
+    category: 'cabinet',
+    title: 'Salle d\'accueil moderne',
+    description: 'Espace d\'accueil confortable et apaisant',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    featured: true
+  }, {
+    id: 2,
+    type: 'image',
+    category: 'equipements',
+    title: 'Équipements de pointe',
+    description: 'Technologies modernes pour des soins optimaux',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    featured: false
+  }, {
+    id: 3,
+    type: 'video',
+    category: 'soins',
+    title: 'Séance de rééducation',
+    description: 'Démonstration d\'exercices thérapeutiques',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    featured: true
+  }, {
+    id: 4,
+    type: 'image',
+    category: 'cabinet',
+    title: 'Salle de consultation',
+    description: 'Environnement professionnel et chaleureux',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    featured: false
+  }, {
+    id: 5,
+    type: 'image',
+    category: 'equipements',
+    title: 'Matériel de rééducation',
+    description: 'Équipements spécialisés pour tous types de soins',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    featured: false
+  }, {
+    id: 6,
+    type: 'image',
+    category: 'soins',
+    title: 'Thérapie manuelle',
+    description: 'Techniques de massage thérapeutique',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    featured: true
+  }];
+  const filteredItems = activeFilter === 'tous' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
+  const achievements = [{
+    icon: Award,
+    title: 'Centre Certifié',
+    description: 'Certification qualité ISO 9001'
+  }, {
+    icon: Users,
+    title: '2000+ Patients',
+    description: 'Accompagnés vers la guérison'
+  }, {
+    icon: Stethoscope,
+    title: 'Équipements Modernes',
+    description: 'Technologies de dernière génération'
+  }, {
+    icon: Heart,
+    title: 'Approche Humaine',
+    description: 'Soins personnalisés et bienveillants'
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background with Mosaic Effect */}
         <div className="absolute inset-0">
           <div className="grid grid-cols-4 h-full">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="relative">
-                <img 
-                  src={heroGalleryImage} 
-                  alt="Medical facility" 
-                  className="w-full h-full object-cover"
-                  style={{ filter: `hue-rotate(${i * 45}deg) brightness(${0.7 + i * 0.1})` }}
-                />
-              </div>
-            ))}
+            {[1, 2, 3, 4].map(i => <div key={i} className="relative">
+                <img src={heroGalleryImage} alt="Medical facility" className="w-full h-full object-cover" style={{
+              filter: `hue-rotate(${i * 45}deg) brightness(${0.7 + i * 0.1})`
+            }} />
+              </div>)}
           </div>
           <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-secondary/85"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
@@ -178,7 +152,7 @@ const Gallery = () => {
                 Visiter le Centre
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 Visite virtuelle 360°
               </Button>
             </div>
@@ -187,21 +161,15 @@ const Gallery = () => {
           {/* Gallery Preview Thumbnails */}
           <ScrollAnimation animation="fade-up" delay={1000}>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="relative group">
+              {[1, 2, 3, 4, 5, 6].map(i => <div key={i} className="relative group">
                   <div className="aspect-square rounded-xl overflow-hidden glass-card">
-                    <img 
-                      src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png"
-                      alt={`Gallery preview ${i}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
+                    <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt={`Gallery preview ${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-300"></div>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ZoomIn className="w-6 h-6 text-white" />
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </ScrollAnimation>
         </div>
@@ -219,13 +187,8 @@ const Gallery = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => {
-              const Icon = achievement.icon;
-              return (
-                <ScrollAnimation 
-                  key={index}
-                  animation="scale-up"
-                  delay={index * 150}
-                >
+            const Icon = achievement.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow text-center group">
                     <CardContent className="p-8">
                       <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-primary/10 flex items-center justify-center group-hover:animate-pulse-glow">
@@ -239,9 +202,8 @@ const Gallery = () => {
                       </p>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -260,26 +222,12 @@ const Gallery = () => {
               
               {/* Filters */}
               <div className="flex flex-wrap justify-center gap-4">
-                {filters.map((filter) => (
-                  <Button
-                    key={filter.id}
-                    onClick={() => setActiveFilter(filter.id)}
-                    variant={activeFilter === filter.id ? "default" : "outline"}
-                    className={`morph-button font-montserrat font-medium px-6 py-3 rounded-full transition-all duration-300 ${
-                      activeFilter === filter.id
-                        ? 'bg-gradient-primary text-white shadow-glow hover:scale-105'
-                        : 'glass-effect text-primary hover:bg-primary/10 hover:scale-105'
-                    }`}
-                  >
+                {filters.map(filter => <Button key={filter.id} onClick={() => setActiveFilter(filter.id)} variant={activeFilter === filter.id ? "default" : "outline"} className={`morph-button font-montserrat font-medium px-6 py-3 rounded-full transition-all duration-300 ${activeFilter === filter.id ? 'bg-gradient-primary text-white shadow-glow hover:scale-105' : 'glass-effect text-primary hover:bg-primary/10 hover:scale-105'}`}>
                     {filter.label}
-                    <Badge 
-                      variant="secondary" 
-                      className="ml-2 bg-white/20 text-inherit border-0"
-                    >
+                    <Badge variant="secondary" className="ml-2 bg-white/20 text-inherit border-0">
                       {filter.count}
                     </Badge>
-                  </Button>
-                ))}
+                  </Button>)}
               </div>
             </div>
           </ScrollAnimation>
@@ -290,27 +238,15 @@ const Gallery = () => {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item, index) => (
-              <ScrollAnimation 
-                key={item.id}
-                animation="fade-up"
-                delay={index * 100}
-              >
+            {filteredItems.map((item, index) => <ScrollAnimation key={item.id} animation="fade-up" delay={index * 100}>
                 <Card className="group glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden">
                   <div className="relative overflow-hidden">
-                    <img 
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
+                    <img src={item.image} alt={item.title} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" />
                     
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-4 left-4 right-4">
-                        <Button 
-                          onClick={() => setSelectedImage(item.image)}
-                          className="w-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0"
-                        >
+                        <Button onClick={() => setSelectedImage(item.image)} className="w-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0">
                           <ZoomIn className="w-4 h-4 mr-2" />
                           Voir en grand
                         </Button>
@@ -319,34 +255,25 @@ const Gallery = () => {
 
                     {/* Media Type Indicator */}
                     <div className="absolute top-4 right-4">
-                      {item.type === 'video' ? (
-                        <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center shadow-strong">
+                      {item.type === 'video' ? <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center shadow-strong">
                           <Play className="w-6 h-6 text-white" />
-                        </div>
-                      ) : (
-                        <div className="w-12 h-12 bg-gradient-primary/80 rounded-full flex items-center justify-center shadow-strong">
+                        </div> : <div className="w-12 h-12 bg-gradient-primary/80 rounded-full flex items-center justify-center shadow-strong">
                           <Camera className="w-6 h-6 text-white" />
-                        </div>
-                      )}
+                        </div>}
                     </div>
 
                     {/* Featured Badge */}
-                    {item.featured && (
-                      <div className="absolute top-4 left-4">
+                    {item.featured && <div className="absolute top-4 left-4">
                         <Badge className="bg-gradient-secondary text-white border-0 shadow-strong">
                           <Eye className="w-3 h-3 mr-1" />
                           À la une
                         </Badge>
-                      </div>
-                    )}
+                      </div>}
                   </div>
 
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-2 mb-3">
-                      <Badge 
-                        variant="outline" 
-                        className="text-xs font-montserrat bg-primary/10 text-primary border-primary/20"
-                      >
+                      <Badge variant="outline" className="text-xs font-montserrat bg-primary/10 text-primary border-primary/20">
                         {filters.find(f => f.id === item.category)?.label}
                       </Badge>
                     </div>
@@ -359,33 +286,20 @@ const Gallery = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>
 
       {/* Lightbox Modal */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
+      {selectedImage && <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
           <div className="relative max-w-5xl max-h-[90vh]">
-            <img 
-              src={selectedImage}
-              alt="Image agrandie"
-              className="w-full h-full object-contain rounded-2xl shadow-strong"
-            />
-            <Button 
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-12 h-12 rounded-full p-0"
-            >
+            <img src={selectedImage} alt="Image agrandie" className="w-full h-full object-contain rounded-2xl shadow-strong" />
+            <Button onClick={() => setSelectedImage(null)} className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-12 h-12 rounded-full p-0">
               ×
             </Button>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Virtual Tour CTA */}
       <section className="py-32 bg-gradient-premium relative overflow-hidden">
@@ -411,18 +325,13 @@ const Gallery = () => {
                 Réserver une Visite
               </Button>
               
-              <Button 
-                variant="outline"
-                className="glass-effect text-white border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
-              >
+              <Button variant="outline" className="glass-effect text-white border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
                 Visite Virtuelle 360°
               </Button>
             </div>
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Gallery;
