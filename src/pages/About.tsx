@@ -124,8 +124,8 @@ const About = () => {
                 {/* Floating achievement cards */}
                 <div className="absolute -top-8 -left-8 glass-card p-6 rounded-2xl shadow-glow animate-float">
                   <div className="text-center">
-                    <div className="text-3xl font-playfair font-bold text-accent mb-1">15+</div>
-                    <div className="text-sm text-white/90">Années</div>
+                    <div className="text-3xl font-playfair font-bold text-gold  ">15+</div>
+                    <div className="text-sm text-black/90">Années</div>
                   </div>
                 </div>
                 
@@ -138,8 +138,8 @@ const About = () => {
                 
                 <div className="absolute top-1/2 -right-12 glass-card p-4 rounded-2xl shadow-glow animate-pulse-glow">
                   <div className="text-center">
-                    <div className="text-2xl font-playfair font-bold text-white mb-1">98%</div>
-                    <div className="text-xs text-white/80">Satisfaction</div>
+                    <div className="text-2xl font-playfair font-bold text-black mb-1">98%</div>
+                    <div className="text-xs text-black/80">Satisfaction</div>
                   </div>
                 </div>
               </div>
