@@ -1,34 +1,161 @@
+import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import SpecialtyModal from '@/components/SpecialtyModal';
 import heroIndexImage from '@/assets/hero-index.jpg';
+import specialtyRehabilitationImage from '@/assets/specialty-rehabilitation.jpg';
+import specialtyManualTherapyImage from '@/assets/specialty-manual-therapy.jpg';
+import specialtyWellnessImage from '@/assets/specialty-wellness.jpg';
+import specialtyMedicalGymnasticsImage from '@/assets/specialty-medical-gymnastics.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar } from 'lucide-react';
 const Index = () => {
+  const [selectedSpecialty, setSelectedSpecialty] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleBookAppointment = () => {
     // Navigate to contact page or open booking modal
     console.log('Book appointment clicked');
+  };
+
+  const handleSpecialtyClick = (specialty) => {
+    setSelectedSpecialty(specialty);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedSpecialty(null);
   };
   const services = [{
     icon: Activity,
     title: 'Rééducation Fonctionnelle',
     description: 'Récupération post-traumatique et rééducation neurologique personnalisée',
-    color: 'text-primary'
+    color: 'text-primary',
+    detailedInfo: {
+      overview: 'La rééducation fonctionnelle est une approche thérapeutique complète visant à restaurer les capacités physiques et fonctionnelles après un traumatisme, une chirurgie ou une pathologie neurologique. Notre centre utilise des techniques avancées et des équipements de pointe pour optimiser votre récupération.',
+      benefits: [
+        'Récupération optimisée des fonctions motrices',
+        'Réduction significative de la douleur',
+        'Amélioration de la qualité de vie au quotidien',
+        'Prévention des récidives et complications',
+        'Renforcement musculaire ciblé et progressif'
+      ],
+      techniques: [
+        'Rééducation proprioceptive',
+        'Thérapie par ondes de choc',
+        'Électrostimulation thérapeutique',
+        'Mobilisation articulaire',
+        'Renforcement isokinétique'
+      ],
+      duration: '45-60 min',
+      sessions: '8-15 séances',
+      image: specialtyRehabilitationImage,
+      conditions: [
+        'Traumatismes sportifs et accidents',
+        'Post-chirurgie orthopédique',
+        'Pathologies neurologiques (AVC, sclérose)',
+        'Troubles de l\'équilibre et de la coordination',
+        'Rééducation post-fracture'
+      ]
+    }
   }, {
     icon: Heart,
     title: 'Thérapies Manuelles',
     description: 'Massage thérapeutique, ostéopathie et techniques myofasciales',
-    color: 'text-medical-red'
+    color: 'text-medical-red',
+    detailedInfo: {
+      overview: 'Nos thérapies manuelles combinent expertise traditionnelle et innovations modernes pour traiter les dysfonctions musculo-squelettiques. Chaque séance est personnalisée selon vos besoins spécifiques pour un soulagement durable et une récupération optimale.',
+      benefits: [
+        'Soulagement immédiat des tensions musculaires',
+        'Amélioration de la circulation sanguine',
+        'Réduction du stress et de l\'anxiété',
+        'Restauration de la mobilité articulaire',
+        'Détoxification et régénération tissulaire'
+      ],
+      techniques: [
+        'Massage thérapeutique suédois',
+        'Ostéopathie structurelle',
+        'Release myofascial',
+        'Trigger points therapy',
+        'Drainage lymphatique manuel'
+      ],
+      duration: '60-90 min',
+      sessions: '6-12 séances',
+      image: specialtyManualTherapyImage,
+      conditions: [
+        'Douleurs cervicales et lombaires',
+        'Tensions musculaires chroniques',
+        'Migraines et céphalées',
+        'Troubles de la posture',
+        'Stress et fatigue chronique'
+      ]
+    }
   }, {
     icon: Zap,
     title: 'Amincissement & Bien-être',
     description: 'Programmes minceur, drainage lymphatique et électrothérapie',
-    color: 'text-secondary'
+    color: 'text-secondary',
+    detailedInfo: {
+      overview: 'Nos programmes d\'amincissement et bien-être associent techniques manuelles et technologies avancées pour sculpter votre silhouette tout en améliorant votre bien-être général. Une approche holistique pour des résultats durables et visibles.',
+      benefits: [
+        'Réduction visible de la cellulite',
+        'Amélioration du tonus et de l\'élasticité',
+        'Stimulation du métabolisme',
+        'Élimination des toxines et rétention d\'eau',
+        'Relaxation profonde et revitalisation'
+      ],
+      techniques: [
+        'Drainage lymphatique Vodder',
+        'Électrolipolyse ciblée',
+        'Pressothérapie pneumatique',
+        'Radiofréquence esthétique',
+        'Massage palper-rouler'
+      ],
+      duration: '75-90 min',
+      sessions: '10-20 séances',
+      image: specialtyWellnessImage,
+      conditions: [
+        'Cellulite et rétention d\'eau',
+        'Surpoids localisé',
+        'Troubles circulatoires',
+        'Post-grossesse et vergetures',
+        'Jambes lourdes et œdèmes'
+      ]
+    }
   }, {
     icon: Shield,
     title: 'Gymnastique Médicale',
     description: 'Renforcement musculaire, Pilates thérapeutique et yoga adapté',
-    color: 'text-accent'
+    color: 'text-accent',
+    detailedInfo: {
+      overview: 'La gymnastique médicale combine exercices thérapeutiques, Pilates et yoga adaptés pour renforcer votre corps en douceur. Nos programmes sur-mesure améliorent votre condition physique tout en respectant vos limitations et objectifs personnels.',
+      benefits: [
+        'Renforcement musculaire progressif',
+        'Amélioration de la flexibilité et mobilité',
+        'Correction des déséquilibres posturaux',
+        'Prévention des blessures futures',
+        'Gestion du stress et relaxation mentale'
+      ],
+      techniques: [
+        'Pilates thérapeutique',
+        'Yoga médical adapté',
+        'Gymnastique corrective',
+        'Stretching postural',
+        'Renforcement fonctionnel'
+      ],
+      duration: '60 min',
+      sessions: '12-24 séances',
+      image: specialtyMedicalGymnasticsImage,
+      conditions: [
+        'Troubles posturaux et scoliose',
+        'Faiblesse musculaire généralisée',
+        'Prévention des chutes (seniors)',
+        'Rééducation post-traumatique',
+        'Stress et troubles anxieux'
+      ]
+    }
   }];
   const testimonials = [{
     name: 'Sarah M.',
@@ -173,7 +300,11 @@ const Index = () => {
                       <p className="text-neutral-light leading-relaxed flex-grow">
                         {service.description}
                       </p>
-                      <Button variant="ghost" className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300">
+                      <Button 
+                        variant="ghost" 
+                        className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300"
+                        onClick={() => handleSpecialtyClick(service)}
+                      >
                         En savoir plus
                         <ChevronRight className="w-4 h-4 ml-2" />
                       </Button>
@@ -327,6 +458,13 @@ const Index = () => {
           </ScrollAnimation>
         </div>
       </section>
+
+      {/* Specialty Modal */}
+      <SpecialtyModal 
+        specialty={selectedSpecialty}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </Layout>;
 };
 export default Index;
