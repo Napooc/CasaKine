@@ -80,8 +80,8 @@ const Contact = () => {
                   animation="scale-up"
                   delay={index * 150}
                 >
-                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow text-center group cursor-pointer">
-                    <CardContent className="p-8">
+                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow text-center group cursor-pointer h-full">
+                    <CardContent className="p-8 h-full flex flex-col">
                       <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-primary/10 flex items-center justify-center group-hover:animate-pulse-glow">
                         <Icon className={`w-8 h-8 ${info.color} group-hover:scale-110 transition-transform duration-300`} />
                       </div>
@@ -91,13 +91,13 @@ const Contact = () => {
                       <p className="text-neutral font-montserrat font-semibold mb-2">
                         {info.value}
                       </p>
-                      <p className="text-neutral-light text-sm mb-4">
+                      <p className="text-neutral-light text-sm mb-4 flex-grow">
                         {info.description}
                       </p>
                       
                       <Button
-                        variant="ghost"
-                        className={`${info.color} hover:bg-current/10 w-full group-hover:translate-y-1 transition-all duration-300`}
+                        variant="outline"
+                        className="w-full border-primary/20 text-primary hover:bg-primary hover:text-white transition-all duration-300 font-medium"
                         onClick={() => window.open(info.action, '_blank')}
                       >
                         Contacter
