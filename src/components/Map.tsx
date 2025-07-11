@@ -1,10 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { MapPin, Navigation } from 'lucide-react';
+import { MapPin, Navigation, ExternalLink, Phone, Clock } from 'lucide-react';
 
 interface MapProps {
   location?: string;
@@ -15,133 +11,109 @@ const Map: React.FC<MapProps> = ({
   location = "H8FJ+HP Casablanca", 
   address = "123 Boulevard Hassan II, Quartier Maarif, Casablanca, Maroc" 
 }) => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState<string>('');
-  const [tokenInputVisible, setTokenInputVisible] = useState(true);
-
-  // Coordinates for H8FJ+HP Casablanca (approximate location)
-  const coordinates: [number, number] = [-7.586, 33.577];
-
-  const initializeMap = (token: string) => {
-    if (!mapContainer.current || !token) return;
-
-    mapboxgl.accessToken = token;
-    
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/light-v11',
-      center: coordinates,
-      zoom: 15,
-    });
-
-    // Add marker for the clinic location
-    new mapboxgl.Marker({
-      color: '#0066cc',
-      scale: 1.2
-    })
-      .setLngLat(coordinates)
-      .setPopup(
-        new mapboxgl.Popup({ offset: 25 })
-          .setHTML(`
-            <div class="p-2">
-              <h3 class="font-bold text-primary">Dr. Nawal El Ghorfi</h3>
-              <p class="text-sm text-neutral-light">${address}</p>
-            </div>
-          `)
-      )
-      .addTo(map.current);
-
-    // Add navigation controls
-    map.current.addControl(
-      new mapboxgl.NavigationControl(),
-      'top-right'
-    );
-
-    setTokenInputVisible(false);
-  };
-
-  const handleTokenSubmit = () => {
-    if (mapboxToken.trim()) {
-      initializeMap(mapboxToken.trim());
-    }
-  };
-
   const openInGoogleMaps = () => {
     const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(location)}`;
     window.open(googleMapsUrl, '_blank');
   };
 
-  useEffect(() => {
-    return () => {
-      map.current?.remove();
-    };
-  }, []);
+  const getDirections = () => {
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location)}`;
+    window.open(directionsUrl, '_blank');
+  };
 
-  if (tokenInputVisible) {
-    return (
-      <Card className="glass-card p-8 rounded-3xl shadow-strong">
-        <CardContent className="text-center">
-          <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-          <h3 className="text-2xl font-playfair font-bold text-primary mb-4">
-            Configuration de la Carte
-          </h3>
-          <p className="text-neutral-light mb-6">
-            Pour afficher la carte interactive, veuillez entrer votre token Mapbox public.
-            <br />
-            <a 
-              href="https://mapbox.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              Obtenez votre token gratuit sur mapbox.com
-            </a>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <Input
-              type="text"
-              placeholder="Votre token Mapbox public"
-              value={mapboxToken}
-              onChange={(e) => setMapboxToken(e.target.value)}
-              className="flex-1"
-            />
-            <Button 
-              onClick={handleTokenSubmit}
-              disabled={!mapboxToken.trim()}
-              className="morph-button bg-gradient-primary hover-glow text-white"
-            >
-              Charger la Carte
-            </Button>
-          </div>
-          <div className="mt-6">
-            <Button 
-              variant="outline"
-              onClick={openInGoogleMaps}
-              className="w-full"
-            >
-              <Navigation className="w-4 h-4 mr-2" />
-              Ouvrir dans Google Maps
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
+  const embedMapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw&q=${encodeURIComponent(location)}&zoom=16&maptype=roadmap`;
 
   return (
-    <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-strong">
-      <div ref={mapContainer} className="absolute inset-0" />
-      <div className="absolute top-4 right-4 z-10">
-        <Button 
-          variant="outline"
+    <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-strong bg-gradient-to-br from-primary/5 to-accent/5">
+      {/* Google Maps Embed */}
+      <iframe
+        src={embedMapUrl}
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="absolute inset-0"
+        title="Localisation Dr. Nawal El Ghorfi"
+      />
+      
+      {/* Modern Glass Overlay Card */}
+      <div className="absolute bottom-6 left-6 right-6 lg:left-6 lg:right-auto lg:w-96">
+        <div className="glass-card p-6 rounded-2xl shadow-strong bg-white/95 backdrop-blur-md border border-white/20">
+          {/* Header */}
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center shadow-soft">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-playfair font-bold text-primary">
+                  Dr. Nawal El Ghorfi
+                </h3>
+                <p className="text-sm text-neutral-light">
+                  Cabinet de Kinésithérapie
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Address */}
+          <div className="mb-4">
+            <p className="text-neutral font-montserrat text-sm leading-relaxed">
+              {address}
+            </p>
+          </div>
+
+          {/* Info Pills */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex items-center space-x-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">
+              <Clock className="w-3 h-3" />
+              <span>Ouvert</span>
+            </div>
+            <div className="flex items-center space-x-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+              <Phone className="w-3 h-3" />
+              <span>Accessible</span>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="grid grid-cols-2 gap-3">
+            <Button
+              onClick={getDirections}
+              className="bg-gradient-primary hover:bg-gradient-primary/90 text-white font-montserrat font-semibold py-2.5 rounded-xl shadow-soft transition-all duration-300 hover:scale-105 hover:shadow-strong"
+              size="sm"
+            >
+              <Navigation className="w-4 h-4 mr-2" />
+              Itinéraire
+            </Button>
+            <Button
+              variant="outline"
+              onClick={openInGoogleMaps}
+              className="border-primary/20 text-primary hover:bg-primary hover:text-white font-montserrat font-semibold py-2.5 rounded-xl transition-all duration-300 hover:scale-105"
+              size="sm"
+            >
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Voir Plus
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Action Button - Top Right */}
+      <div className="absolute top-6 right-6">
+        <Button
           onClick={openInGoogleMaps}
-          className="glass-effect bg-white/90 hover:bg-white text-primary"
           size="sm"
+          className="w-12 h-12 rounded-full bg-white/90 hover:bg-white text-primary shadow-strong border border-white/20 backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:shadow-strong group"
         >
-          <Navigation className="w-4 h-4 mr-2" />
-          Google Maps
+          <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
         </Button>
+      </div>
+
+      {/* Background Pattern Overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-background/5 rounded-3xl" />
       </div>
     </div>
   );
