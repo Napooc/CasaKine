@@ -152,9 +152,7 @@ const Gallery = () => {
                 Visiter le Centre
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
-                Visite virtuelle 360°
-              </Button>
+              
             </div>
           </ScrollAnimation>
 
