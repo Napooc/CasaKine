@@ -7,24 +7,24 @@ import { Award, GraduationCap, Heart, Users, Clock, Star, Stethoscope, Shield } 
 const About = () => {
   const qualifications = [{
     icon: GraduationCap,
-    title: 'Diplôme d\'État',
-    description: 'Kinésithérapeute diplômée d\'État avec mention Très Bien',
-    year: '2008'
+    title: 'Kinésithérapeute D.E.',
+    description: 'Kinésithérapeute Diplômée d\'État avec plus de 25 ans d\'expertise',
+    year: '1998'
   }, {
     icon: Award,
-    title: 'Spécialisation',
-    description: 'Rééducation fonctionnelle et neurologique avancée',
-    year: '2012'
+    title: 'Spécialisations',
+    description: 'Traumatologie, rhumatologie, pathologies de la colonne vertébrale',
+    year: '2005'
   }, {
     icon: Heart,
-    title: 'Formation Continue',
-    description: 'Thérapies manuelles et ostéopathie moderne',
-    year: '2018'
+    title: 'Kinésithérapie Respiratoire',
+    description: 'Expertise chez le nourrisson et l\'adulte, possibilité à domicile',
+    year: '2008'
   }, {
     icon: Stethoscope,
-    title: 'Certification',
-    description: 'Techniques de drainage lymphatique et amincissement',
-    year: '2020'
+    title: 'Techniques Avancées',
+    description: 'Drainage lymphatique manuel, rééducation périnéale, amincissement',
+    year: '2010'
   }];
   const values = [{
     icon: Heart,
@@ -44,25 +44,25 @@ const About = () => {
     description: 'Des traitements adaptés à vos besoins spécifiques'
   }];
   const timeline = [{
-    year: '2008',
+    year: '1998',
     title: 'Diplôme de Kinésithérapie',
-    description: 'Obtention du diplôme d\'État en kinésithérapie à l\'Institut de Formation en Masso-Kinésithérapie de Casablanca'
+    description: 'Obtention du diplôme d\'État en kinésithérapie - Kinésithérapeute Diplômée d\'État'
+  }, {
+    year: '2001',
+    title: 'Centre Opérationnel',
+    description: 'Ouverture du Centre de Kinésithérapie et d\'Amincissement - Plus de 25 ans d\'expertise au service des patients'
+  }, {
+    year: '2005',
+    title: 'Spécialisations Avancées',
+    description: 'Développement des expertises en traumatologie, rhumatologie et pathologies de la colonne vertébrale'
   }, {
     year: '2010',
-    title: 'Première Expérience',
-    description: 'Début de carrière au Centre Hospitalier Universitaire Ibn Rochd de Casablanca'
+    title: 'Services d\'Amincissement',
+    description: 'Intégration des techniques modernes d\'amincissement : cryolipolyse, radiofréquence, cavitation'
   }, {
-    year: '2015',
-    title: 'Cabinet Privé',
-    description: 'Ouverture de son premier cabinet privé spécialisé en rééducation fonctionnelle'
-  }, {
-    year: '2020',
-    title: 'Centre Moderne',
-    description: 'Création du centre actuel avec équipements de dernière génération'
-  }, {
-    year: '2023',
-    title: 'Innovation Continue',
-    description: 'Intégration de nouvelles technologies et techniques thérapeutiques avancées'
+    year: '2024',
+    title: 'Excellence Continue',
+    description: 'Infrastructure moderne avec équipement complet et performant dans un environnement paisible'
   }];
   return <Layout>
       {/* Hero Section */}
@@ -93,12 +93,12 @@ const About = () => {
                 </h1>
                 
                 <h2 className="text-2xl md:text-3xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
-                  Découvrez l'histoire et l'expertise de Dr. Nawal El Ghorfi
+                  Découvrez l'histoire et l'expertise de Nawal EL GHORFI
                 </h2>
                 
                 <p className="text-lg md:text-xl text-neutral-lightest/80 mb-12 leading-relaxed">
-                  Plus de 15 années d'expérience dédiées à votre bien-être et votre rétablissement, 
-                  avec une approche moderne et personnalisée qui transforme des vies.
+                  Plus de 25 années d'expertise dédiées à votre bien-être et votre rétablissement, 
+                  avec une approche moderne et personnalisée. Centre opérationnel depuis 2001.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 mb-12">
@@ -122,12 +122,12 @@ const About = () => {
                 </div>
                 
                 {/* Floating achievement cards */}
-                <div className="absolute -top-8 -left-8 glass-card p-6 rounded-2xl shadow-glow animate-float">
-                  <div className="text-center">
-                    <div className="text-3xl font-playfair font-bold text-gold  ">15+</div>
-                    <div className="text-sm text-black/90">Années</div>
-                  </div>
-                </div>
+                 <div className="absolute -top-8 -left-8 glass-card p-6 rounded-2xl shadow-glow animate-float">
+                   <div className="text-center">
+                     <div className="text-3xl font-playfair font-bold text-gold  ">25+</div>
+                     <div className="text-sm text-black/90">Années</div>
+                   </div>
+                 </div>
                 
                 <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-glow animate-float-delay">
                   <div className="text-center">
@@ -136,12 +136,12 @@ const About = () => {
                   </div>
                 </div>
                 
-                <div className="absolute top-1/2 -right-12 glass-card p-4 rounded-2xl shadow-glow animate-pulse-glow">
-                  <div className="text-center">
-                    <div className="text-2xl font-playfair font-bold text-black mb-1">98%</div>
-                    <div className="text-xs text-black/80">Satisfaction</div>
-                  </div>
-                </div>
+                 <div className="absolute top-1/2 -right-12 glass-card p-4 rounded-2xl shadow-glow animate-pulse-glow">
+                   <div className="text-center">
+                     <div className="text-2xl font-playfair font-bold text-black mb-1">2001</div>
+                     <div className="text-xs text-black/80">Depuis</div>
+                   </div>
+                 </div>
               </div>
             </ScrollAnimation>
           </div>
@@ -166,45 +166,45 @@ const About = () => {
                 </div>
                 
                 {/* Floating Achievement */}
-                <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-glow">
-                  <div className="text-center">
-                    <div className="text-3xl font-playfair font-bold text-accent mb-1">15+</div>
-                    <div className="text-sm text-neutral">Années d'expérience</div>
-                  </div>
-                </div>
+                 <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-glow">
+                   <div className="text-center">
+                     <div className="text-3xl font-playfair font-bold text-accent mb-1">25+</div>
+                     <div className="text-sm text-neutral">Années d'expérience</div>
+                   </div>
+                 </div>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slide-right">
               <div>
                 <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-8">
-                  Dr. Nawal El Ghorfi
+                  Nawal EL GHORFI
                   <span className="block text-gradient-accent text-2xl md:text-3xl mt-2">
-                    Kinésithérapeute D.E.
+                    Kinésithérapeute Diplômée d'État
                   </span>
                 </h2>
                 
                 <p className="text-lg text-neutral-light mb-8 leading-relaxed">
                   Passionnée par l'art de soigner et le bien-être de ses patients, 
-                  Dr. Nawal El Ghorfi met son expertise au service de votre santé depuis plus de 15 ans. 
-                  Diplômée d'État en kinésithérapie, elle combine techniques traditionnelles 
+                  Nawal EL GHORFI met son expertise au service de votre santé depuis plus de 25 ans. 
+                  Kinésithérapeute Diplômée d'État, elle combine techniques traditionnelles 
                   et innovations technologiques pour vous offrir des soins d'exception.
                 </p>
 
                 <p className="text-lg text-neutral-light mb-10 leading-relaxed">
-                  Son approche personnalisée et bienveillante, alliée à une formation continue 
-                  dans les dernières techniques thérapeutiques, garantit à chaque patient 
-                  un accompagnement optimal vers la guérison et le bien-être.
+                  Son centre, opérationnel depuis 2001, dispose d'un équipement complet et performant, 
+                  installé dans un environnement paisible. Cette infrastructure moderne permet d'offrir 
+                  des soins de qualité dans des conditions optimales pour le bien-être des patients.
                 </p>
 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center glass-card p-4 rounded-2xl">
-                    <div className="text-2xl font-playfair font-bold text-primary mb-1">2000+</div>
-                    <div className="text-sm text-neutral-light">Patients traités</div>
+                    <div className="text-2xl font-playfair font-bold text-primary mb-1">25+</div>
+                    <div className="text-sm text-neutral-light">Années d'expérience</div>
                   </div>
                   <div className="text-center glass-card p-4 rounded-2xl">
-                    <div className="text-2xl font-playfair font-bold text-secondary mb-1">98%</div>
-                    <div className="text-sm text-neutral-light">Taux de satisfaction</div>
+                    <div className="text-2xl font-playfair font-bold text-secondary mb-1">2001</div>
+                    <div className="text-sm text-neutral-light">Centre opérationnel</div>
                   </div>
                 </div>
               </div>

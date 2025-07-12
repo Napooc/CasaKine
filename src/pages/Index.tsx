@@ -194,20 +194,20 @@ const Index = () => {
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
-              Votre <span className="text-gradient-accent">Bien-être</span>,<br />
-              Notre <span className="text-white">Expertise</span>
+              Centre de <span className="text-gradient-accent">Kinésithérapie</span><br />
+              et d'<span className="text-white">Amincissement</span>
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slide-left" delay={400}>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
-              Centre de Kinésithérapie Premium à Casablanca
+              Nawal EL GHORFI - Kinésithérapeute Diplômée d'État
             </h2>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={600}>
             <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
-              Découvrez des soins de kinésithérapie exceptionnels avec Dr. Nawal El Ghorfi, alliant expertise médicale et technologies de pointe pour votre rétablissement optimal.
+              Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Découvrez l'excellence en kinésithérapie et amincissement dans un environnement moderne et bienveillant.
             </p>
           </ScrollAnimation>
 
@@ -229,7 +229,7 @@ const Index = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[{
               icon: Star,
-              value: '15+',
+              value: '25+',
               label: 'Années d\'expérience'
             }, {
               icon: Users,
@@ -237,8 +237,8 @@ const Index = () => {
               label: 'Patients satisfaits'
             }, {
               icon: Award,
-              value: '98%',
-              label: 'Taux de réussite'
+              value: '2001',
+              label: 'Centre opérationnel'
             }, {
               icon: Calendar,
               value: '24/7',
@@ -331,9 +331,9 @@ const Index = () => {
                   <span className="text-gradient-accent block">Votre Santé</span>
                 </h2>
                 <p className="text-xl text-neutral-lightest/90 mb-8 leading-relaxed">
-                  Avec plus de 15 années d'expérience, Dr. Nawal El Ghorfi vous accompagne 
+                  Avec plus de 25 années d'expertise au service des patients, Nawal EL GHORFI vous accompagne 
                   vers un rétablissement optimal grâce à des techniques innovantes et 
-                  une approche personnalisée.
+                  une approche personnalisée. Centre opérationnel depuis 2001.
                 </p>
                 
                 <div className="space-y-4 mb-10">

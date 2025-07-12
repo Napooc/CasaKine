@@ -8,53 +8,53 @@ import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Ste
 const Services = () => {
   const mainServices = [{
     icon: Activity,
-    title: 'Rééducation Fonctionnelle',
-    description: 'Récupération post-traumatique et rééducation neurologique avec des techniques de pointe',
-    features: ['Rééducation post-opératoire', 'Récupération après accident', 'Rééducation neurologique', 'Reprise d\'activité sportive'],
+    title: 'Traumatologie, Neurologie, Rhumatologie',
+    description: 'Traitement des pathologies mécaniques et inflammatoires de l\'appareil locomoteur',
+    features: ['Arthrose et arthrite', 'Tendinites et entorses', 'Raideurs post-traumatiques', 'Prothèses PTH et PTG', 'Hémiplégie et paralysies', 'Maladie de Parkinson', 'Sclérose en plaques'],
     duration: '45-60 minutes',
     color: 'text-primary',
     bgGradient: 'from-primary/10 to-primary/5'
   }, {
     icon: Heart,
-    title: 'Thérapies Manuelles',
-    description: 'Techniques manuelles spécialisées pour soulager douleurs et tensions',
-    features: ['Massage thérapeutique', 'Ostéopathie moderne', 'Techniques myofasciales', 'Mobilisations articulaires'],
+    title: 'Kinésithérapie Respiratoire',
+    description: 'Amélioration de la respiration chez l\'adulte et l\'enfant',
+    features: ['Kinésithérapie respiratoire nourrisson', 'Kinésithérapie respiratoire adulte', 'Désencombrement bronchique', 'Possibilité à domicile'],
     duration: '30-45 minutes',
     color: 'text-medical-red',
     bgGradient: 'from-red-500/10 to-red-500/5'
   }, {
     icon: Zap,
-    title: 'Amincissement & Bien-être',
-    description: 'Programmes personnalisés pour retrouver forme et bien-être',
-    features: ['Drainage lymphatique', 'Électrothérapie', 'Programmes minceur', 'Remodelage corporel'],
+    title: 'Services d\'Amincissement et d\'Esthétique',
+    description: 'Techniques modernes d\'amincissement pour sculpter votre silhouette',
+    features: ['Cryothérapie/Cryolipolyse', 'Palper Rouler', 'Radiofréquence', 'Lipocavitation 40K', 'Lipolyse laser', 'Pressothérapie'],
     duration: '60-90 minutes',
     color: 'text-secondary',
     bgGradient: 'from-secondary/10 to-secondary/5'
   }, {
     icon: Shield,
-    title: 'Gymnastique Médicale',
-    description: 'Renforcement musculaire et exercices thérapeutiques adaptés',
-    features: ['Renforcement musculaire', 'Pilates thérapeutique', 'Yoga adapté', 'Prévention des blessures'],
+    title: 'Rééducation Spécialisée',
+    description: 'Programmes de rééducation personnalisés selon vos besoins',
+    features: ['Rééducation périnéale', 'Rééducation après AVC', 'Drainage lymphatique manuel', 'Réadaptation à l\'effort', 'Possibilité à domicile'],
     duration: '45-60 minutes',
     color: 'text-accent',
     bgGradient: 'from-accent/10 to-accent/5'
   }];
   const specialties = [{
     icon: Stethoscope,
-    title: 'Rééducation Respiratoire',
-    description: 'Amélioration de la fonction respiratoire et de l\'endurance'
+    title: 'Sauna Infrarouge',
+    description: 'Sudation intense pour une meilleure irrigation sanguine et élimination des toxines'
   }, {
     icon: Target,
-    title: 'Rééducation Périnéale',
-    description: 'Prise en charge spécialisée pré et post-natale'
+    title: 'Ondes de Choc',
+    description: 'Action antalgique prescrite par médecin avec libération d\'endorphines'
   }, {
     icon: Users,
-    title: 'Pédiatrie',
-    description: 'Soins adaptés aux nourrissons et enfants'
+    title: 'Cavitation',
+    description: 'Excellents résultats en un mois avec remodelage visible dès la première séance'
   }, {
     icon: Award,
-    title: 'Gériatrie',
-    description: 'Maintien de l\'autonomie et prévention des chutes'
+    title: 'Cryolipolyse',
+    description: 'Traitement d\'amincissement pour éliminer les bourrelets et améliorer la silhouette'
   }];
   const processSteps = [{
     step: '01',

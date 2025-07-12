@@ -49,10 +49,10 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-playfair text-xl font-bold text-primary">
-                  Dr. Nawal El Ghorfi
+                  Centre de Kinésithérapie
                 </span>
                 <span className="font-montserrat text-sm text-neutral-light">
-                  Kinésithérapeute D.E.
+                  Nawal EL GHORFI - Kinésithérapeute D.E.
                 </span>
               </div>
             </Link>

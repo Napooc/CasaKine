@@ -19,34 +19,34 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Téléphone',
-      value: '+212 5 22 XX XX XX',
+      value: '+212 522 39 88 74 / +212 661 67 70 96',
       description: 'Lun-Ven 8h-18h, Sam 8h-14h',
       color: 'text-primary',
-      action: 'tel:+212522XXXXXX'
+      action: 'tel:+212522398874'
     },
     {
       icon: Mail,
       title: 'Email',
-      value: 'contact@cabinet-nawal.ma',
+      value: 'info@casakine.com',
       description: 'Réponse sous 24h',
       color: 'text-secondary',
-      action: 'mailto:contact@cabinet-nawal.ma'
+      action: 'mailto:info@casakine.com'
     },
     {
       icon: MapPin,
       title: 'Adresse',
-      value: '123 Bd Hassan II, Casablanca',
-      description: 'Quartier Maarif, proche métro',
+      value: '19, rue Masmouda Hay Al Hana - Casablanca - 20210',
+      description: 'Quartier Hay Al Hana, Casablanca',
       color: 'text-accent',
-      action: 'https://maps.google.com'
+      action: 'https://maps.google.com/?q=19+rue+Masmouda+Hay+Al+Hana+Casablanca'
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      value: '+212 6 12 34 56 78',
+      value: '+212 661 67 70 96',
       description: 'Messages et rendez-vous express',
       color: 'text-green-600',
-      action: 'https://wa.me/212612345678'
+      action: 'https://wa.me/212661677096'
     }
   ];
 
@@ -60,9 +60,9 @@ const Contact = () => {
     <Layout>
       {/* Hero Section */}
       <HeroSection
-        title="Prenez Rendez-vous en Un Clic"
-        subtitle="Contactez-nous pour commencer votre parcours vers le bien-être"
-        description="Notre équipe est à votre disposition pour répondre à vos questions et planifier votre consultation personnalisée."
+        title="Centre de Kinésithérapie et d'Amincissement"
+        subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État"
+        description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement."
         ctaText="Appeler Maintenant"
         showStats={false}
         backgroundType="gradient"

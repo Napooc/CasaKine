@@ -27,7 +27,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   const scrollY = useParallax();
   const stats = [{
     icon: Star,
-    value: '15+',
+    value: '25+',
     label: 'Années d\'expérience'
   }, {
     icon: Users,
@@ -35,8 +35,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     label: 'Patients satisfaits'
   }, {
     icon: Award,
-    value: '98%',
-    label: 'Taux de réussite'
+    value: '2001',
+    label: 'Centre opérationnel'
   }, {
     icon: Calendar,
     value: '24/7',
