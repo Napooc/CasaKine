@@ -351,7 +351,12 @@ const Index = () => {
                   </div>
                 </div>
 
-                <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105">
+                <Button 
+                  className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105"
+                  onClick={() => {
+                    window.location.href = '/about#nawal-profile';
+                  }}
+                >
                   Découvrir notre histoire
                 </Button>
               </div>

@@ -176,7 +176,7 @@ const About = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="slide-right">
-              <div>
+              <div id="nawal-profile">
                 <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-8">
                   Nawal EL GHORFI
                   <span className="block text-gradient-accent text-2xl md:text-3xl mt-2">
