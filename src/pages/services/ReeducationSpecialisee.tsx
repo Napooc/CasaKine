@@ -5,90 +5,51 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Shield, Clock, CheckCircle, Heart, Brain, Home, ArrowLeft, Phone, Calendar, Users } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-manual-therapy.jpg';
-
 const ReeducationSpecialisee = () => {
-  const specializations = [
-    {
-      icon: Heart,
-      title: "Rééducation Périnéale",
-      description: "Restauration de la fonction périnéale après accouchement ou chirurgie",
-      details: ["Incontinence urinaire et fécale", "Post-partum et post-chirurgie", "Prolapsus et douleurs pelviennes", "Rééducation préventive"],
-      target: "Femmes et hommes",
-      duration: "30-45 min"
-    },
-    {
-      icon: Brain,
-      title: "Rééducation après AVC",
-      description: "Récupération fonctionnelle après accident vasculaire cérébral",
-      details: ["Récupération motrice", "Rééducation de la marche", "Travail de l'équilibre", "Réapprentissage gestuel"],
-      target: "Patients post-AVC",
-      duration: "60 min"
-    },
-    {
-      icon: Users,
-      title: "Drainage Lymphatique Manuel",
-      description: "Technique douce pour stimuler la circulation lymphatique",
-      details: ["Œdèmes et gonflements", "Post-chirurgie esthétique", "Jambes lourdes", "Récupération sportive"],
-      target: "Tous âges",
-      duration: "60 min"
-    }
-  ];
-
-  const additionalServices = [
-    {
-      title: "Réadaptation à l'Effort",
-      description: "Programme personnalisé pour retrouver une condition physique optimale",
-      icon: Shield
-    },
-    {
-      title: "Soins à Domicile",
-      description: "Possibilité de traitement dans le confort et la sécurité de votre domicile",
-      icon: Home
-    }
-  ];
-
-  const conditions = [
-    "Incontinence urinaire post-partum",
-    "Séquelles d'AVC et d'hémiplégie", 
-    "Lymphœdème et œdèmes",
-    "Troubles de l'équilibre",
-    "Rééducation post-chirurgicale",
-    "Pathologies neurologiques",
-    "Déconditionnement physique",
-    "Douleurs pelviennes chroniques"
-  ];
-
-  const benefits = [
-    "Récupération fonctionnelle optimale",
-    "Amélioration de la qualité de vie",
-    "Prévention des complications",
-    "Accompagnement personnalisé",
-    "Techniques innovantes",
-    "Suivi rigoureux",
-    "Résultats durables",
-    "Prise en charge globale"
-  ];
-
-  return (
-    <Layout>
+  const specializations = [{
+    icon: Heart,
+    title: "Rééducation Périnéale",
+    description: "Restauration de la fonction périnéale après accouchement ou chirurgie",
+    details: ["Incontinence urinaire et fécale", "Post-partum et post-chirurgie", "Prolapsus et douleurs pelviennes", "Rééducation préventive"],
+    target: "Femmes et hommes",
+    duration: "30-45 min"
+  }, {
+    icon: Brain,
+    title: "Rééducation après AVC",
+    description: "Récupération fonctionnelle après accident vasculaire cérébral",
+    details: ["Récupération motrice", "Rééducation de la marche", "Travail de l'équilibre", "Réapprentissage gestuel"],
+    target: "Patients post-AVC",
+    duration: "60 min"
+  }, {
+    icon: Users,
+    title: "Drainage Lymphatique Manuel",
+    description: "Technique douce pour stimuler la circulation lymphatique",
+    details: ["Œdèmes et gonflements", "Post-chirurgie esthétique", "Jambes lourdes", "Récupération sportive"],
+    target: "Tous âges",
+    duration: "60 min"
+  }];
+  const additionalServices = [{
+    title: "Réadaptation à l'Effort",
+    description: "Programme personnalisé pour retrouver une condition physique optimale",
+    icon: Shield
+  }, {
+    title: "Soins à Domicile",
+    description: "Possibilité de traitement dans le confort et la sécurité de votre domicile",
+    icon: Home
+  }];
+  const conditions = ["Incontinence urinaire post-partum", "Séquelles d'AVC et d'hémiplégie", "Lymphœdème et œdèmes", "Troubles de l'équilibre", "Rééducation post-chirurgicale", "Pathologies neurologiques", "Déconditionnement physique", "Douleurs pelviennes chroniques"];
+  const benefits = ["Récupération fonctionnelle optimale", "Amélioration de la qualité de vie", "Prévention des complications", "Accompagnement personnalisé", "Techniques innovantes", "Suivi rigoureux", "Résultats durables", "Prise en charge globale"];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={specialtyImage} 
-            alt="Rééducation Spécialisée" 
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src={specialtyImage} alt="Rééducation Spécialisée" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-accent/90 via-accent/75 to-teal-600/85"></div>
         </div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button 
-              variant="ghost" 
-              className="text-white/80 hover:text-white mb-8 p-0"
-              onClick={() => window.history.back()}
-            >
+            <Button variant="ghost" className="text-white/80 hover:text-white mb-8 p-0" onClick={() => window.history.back()}>
               <ArrowLeft className="w-5 h-5 mr-2" />
               Retour aux services
             </Button>
@@ -116,7 +77,7 @@ const ReeducationSpecialisee = () => {
                 Réserver un bilan
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 <Home className="w-5 h-5 mr-3" />
                 Soins à domicile
               </Button>
@@ -163,9 +124,8 @@ const ReeducationSpecialisee = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {specializations.map((specialization, index) => {
-              const Icon = specialization.icon;
-              return (
-                <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
+            const Icon = specialization.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full">
                     <CardContent className="p-8">
                       <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mb-6 mx-auto">
@@ -181,12 +141,10 @@ const ReeducationSpecialisee = () => {
                       </p>
                       
                       <div className="space-y-3 mb-6">
-                        {specialization.details.map((detail, detailIndex) => (
-                          <div key={detailIndex} className="flex items-start space-x-3">
+                        {specialization.details.map((detail, detailIndex) => <div key={detailIndex} className="flex items-start space-x-3">
                             <CheckCircle className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                             <span className="text-neutral text-sm">{detail}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
 
                       <div className="border-t pt-4 mt-4">
@@ -202,9 +160,8 @@ const ReeducationSpecialisee = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -221,9 +178,8 @@ const ReeducationSpecialisee = () => {
                 
                 <div className="space-y-8">
                   {additionalServices.map((service, index) => {
-                    const Icon = service.icon;
-                    return (
-                      <div key={index} className="flex items-start space-x-6">
+                  const Icon = service.icon;
+                  return <div key={index} className="flex items-start space-x-6">
                         <div className="w-12 h-12 bg-gradient-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
                           <Icon className="w-6 h-6 text-accent" />
                         </div>
@@ -235,9 +191,8 @@ const ReeducationSpecialisee = () => {
                             {service.description}
                           </p>
                         </div>
-                      </div>
-                    );
-                  })}
+                      </div>;
+                })}
                 </div>
               </div>
             </ScrollAnimation>
@@ -249,12 +204,10 @@ const ReeducationSpecialisee = () => {
                 </h3>
                 
                 <div className="grid grid-cols-1 gap-3">
-                  {conditions.map((condition, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                  {conditions.map((condition, index) => <div key={index} className="flex items-center space-x-3">
                       <Shield className="w-5 h-5 text-accent flex-shrink-0" />
                       <span className="text-neutral text-sm">{condition}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
 
                 <div className="mt-8 p-6 bg-white/50 rounded-2xl">
@@ -263,12 +216,10 @@ const ReeducationSpecialisee = () => {
                   </h4>
                   
                   <div className="grid grid-cols-2 gap-3">
-                    {benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-center space-x-2">
+                    {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
                         <span className="text-neutral text-xs">{benefit}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
               </div>
@@ -295,7 +246,7 @@ const ReeducationSpecialisee = () => {
                 Commencer ma rééducation
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 <Phone className="w-5 h-5 mr-3" />
                 05 37 78 48 94
               </Button>
@@ -303,8 +254,6 @@ const ReeducationSpecialisee = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default ReeducationSpecialisee;
