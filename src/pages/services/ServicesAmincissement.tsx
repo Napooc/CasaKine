@@ -5,81 +5,51 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Star } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-wellness.jpg';
-
 const ServicesAmincissement = () => {
-  const techniques = [
-    {
-      icon: Snowflake,
-      title: "Cryothérapie/Cryolipolyse",
-      description: "Destruction des cellules graisseuses par le froid contrôlé",
-      benefits: ["Réduction ciblée des graisses", "Pas de chirurgie", "Résultats durables", "Aucune éviction sociale"],
-      duration: "60 minutes",
-      sessions: "3-6 séances"
-    },
-    {
-      icon: Radio,
-      title: "Radiofréquence",
-      description: "Raffermissement cutané et réduction de la cellulite par ondes radio",
-      benefits: ["Raffermit la peau", "Stimule le collagène", "Améliore la texture", "Effet anti-âge"],
-      duration: "45 minutes", 
-      sessions: "8-12 séances"
-    },
-    {
-      icon: Waves,
-      title: "Lipocavitation 40K",
-      description: "Destruction des cellules graisseuses par ultrasons basse fréquence",
-      benefits: ["Réduit la cellulite", "Draine les toxines", "Améliore la circulation", "Résultats visibles"],
-      duration: "60 minutes",
-      sessions: "6-10 séances"
-    }
-  ];
-
-  const additionalServices = [
-    {
-      title: "Palper Rouler",
-      description: "Technique manuelle pour améliorer la circulation et réduire l'aspect peau d'orange"
-    },
-    {
-      title: "Lipolyse Laser",
-      description: "Technologie laser pour cibler et détruire les cellules graisseuses"
-    },
-    {
-      title: "Pressothérapie", 
-      description: "Drainage lymphatique mécanique pour éliminer les toxines et réduire la rétention d'eau"
-    }
-  ];
-
-  const results = [
-    "Réduction visible dès la première séance",
-    "Amélioration de la silhouette",
-    "Raffermissement cutané",
-    "Réduction de la cellulite",
-    "Meilleure circulation sanguine",
-    "Drainage des toxines",
-    "Résultats durables",
-    "Bien-être et confiance en soi"
-  ];
-
-  return (
-    <Layout>
+  const techniques = [{
+    icon: Snowflake,
+    title: "Cryothérapie/Cryolipolyse",
+    description: "Destruction des cellules graisseuses par le froid contrôlé",
+    benefits: ["Réduction ciblée des graisses", "Pas de chirurgie", "Résultats durables", "Aucune éviction sociale"],
+    duration: "60 minutes",
+    sessions: "3-6 séances"
+  }, {
+    icon: Radio,
+    title: "Radiofréquence",
+    description: "Raffermissement cutané et réduction de la cellulite par ondes radio",
+    benefits: ["Raffermit la peau", "Stimule le collagène", "Améliore la texture", "Effet anti-âge"],
+    duration: "45 minutes",
+    sessions: "8-12 séances"
+  }, {
+    icon: Waves,
+    title: "Lipocavitation 40K",
+    description: "Destruction des cellules graisseuses par ultrasons basse fréquence",
+    benefits: ["Réduit la cellulite", "Draine les toxines", "Améliore la circulation", "Résultats visibles"],
+    duration: "60 minutes",
+    sessions: "6-10 séances"
+  }];
+  const additionalServices = [{
+    title: "Palper Rouler",
+    description: "Technique manuelle pour améliorer la circulation et réduire l'aspect peau d'orange"
+  }, {
+    title: "Lipolyse Laser",
+    description: "Technologie laser pour cibler et détruire les cellules graisseuses"
+  }, {
+    title: "Pressothérapie",
+    description: "Drainage lymphatique mécanique pour éliminer les toxines et réduire la rétention d'eau"
+  }];
+  const results = ["Réduction visible dès la première séance", "Amélioration de la silhouette", "Raffermissement cutané", "Réduction de la cellulite", "Meilleure circulation sanguine", "Drainage des toxines", "Résultats durables", "Bien-être et confiance en soi"];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={specialtyImage} 
-            alt="Services d'Amincissement et d'Esthétique" 
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src={specialtyImage} alt="Services d'Amincissement et d'Esthétique" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-secondary/90 via-secondary/75 to-purple-600/85"></div>
         </div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button 
-              variant="ghost" 
-              className="text-white/80 hover:text-white mb-8 p-0"
-              onClick={() => window.history.back()}
-            >
+            <Button variant="ghost" className="text-white/80 hover:text-white mb-8 p-0" onClick={() => window.history.back()}>
               <ArrowLeft className="w-5 h-5 mr-2" />
               Retour aux services
             </Button>
@@ -108,7 +78,7 @@ const ServicesAmincissement = () => {
                 Réserver une séance
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 <Phone className="w-5 h-5 mr-3" />
                 Consultation gratuite
               </Button>
@@ -118,11 +88,9 @@ const ServicesAmincissement = () => {
           {/* Treatment Icons */}
           <ScrollAnimation animation="fade-up" delay={800}>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-6 max-w-4xl mx-auto mt-16">
-              {[Snowflake, Radio, Waves, Zap, Star, CheckCircle].map((Icon, index) => (
-                <div key={index} className="glass-card p-4 text-center hover:scale-110 transition-transform duration-300">
+              {[Snowflake, Radio, Waves, Zap, Star, CheckCircle].map((Icon, index) => <div key={index} className="glass-card p-4 text-center hover:scale-110 transition-transform duration-300">
                   <Icon className="w-6 h-6 text-white mx-auto" />
-                </div>
-              ))}
+                </div>)}
             </div>
           </ScrollAnimation>
         </div>
@@ -144,9 +112,8 @@ const ServicesAmincissement = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {techniques.map((technique, index) => {
-              const Icon = technique.icon;
-              return (
-                <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
+            const Icon = technique.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full">
                     <CardContent className="p-8">
                       <div className="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
@@ -162,12 +129,10 @@ const ServicesAmincissement = () => {
                       </p>
                       
                       <div className="space-y-3 mb-6">
-                        {technique.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-start space-x-3">
+                        {technique.benefits.map((benefit, benefitIndex) => <div key={benefitIndex} className="flex items-start space-x-3">
                             <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
                             <span className="text-neutral text-sm">{benefit}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
 
                       <div className="border-t pt-4 mt-4">
@@ -183,9 +148,8 @@ const ServicesAmincissement = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -205,8 +169,7 @@ const ServicesAmincissement = () => {
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {additionalServices.map((service, index) => (
-              <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+            {additionalServices.map((service, index) => <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                 <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full text-center">
                   <CardContent className="p-8">
                     <div className="w-12 h-12 bg-gradient-secondary/20 rounded-full flex items-center justify-center mb-6 mx-auto">
@@ -222,8 +185,7 @@ const ServicesAmincissement = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
 
           {/* Results Section */}
@@ -239,12 +201,10 @@ const ServicesAmincissement = () => {
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {results.map((result, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                {results.map((result, index) => <div key={index} className="flex items-center space-x-3">
                     <Star className="w-5 h-5 text-secondary flex-shrink-0" />
                     <span className="text-neutral text-sm">{result}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </ScrollAnimation>
@@ -269,7 +229,7 @@ const ServicesAmincissement = () => {
                 Réserver votre transformation
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 <Star className="w-5 h-5 mr-3" />
                 Consultation gratuite
               </Button>
@@ -277,8 +237,6 @@ const ServicesAmincissement = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default ServicesAmincissement;
