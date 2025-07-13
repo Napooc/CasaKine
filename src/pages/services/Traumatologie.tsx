@@ -5,75 +5,46 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Activity, Clock, CheckCircle, Users, Award, Target, ArrowLeft, Phone, Calendar } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-rehabilitation.jpg';
-
 const Traumatologie = () => {
-  const treatments = [
-    {
-      title: "Traumatologie",
-      items: ["Fractures et entorses", "Raideurs post-traumatiques", "Rééducation post-chirurgicale", "Prothèses PTH et PTG"]
-    },
-    {
-      title: "Neurologie", 
-      items: ["Hémiplégie et paralysies", "Maladie de Parkinson", "Sclérose en plaques", "AVC et traumatismes crâniens"]
-    },
-    {
-      title: "Rhumatologie",
-      items: ["Arthrose et arthrite", "Tendinites chroniques", "Douleurs articulaires", "Pathologies inflammatoires"]
-    }
-  ];
-
-  const benefits = [
-    "Réduction significative de la douleur",
-    "Amélioration de la mobilité articulaire", 
-    "Renforcement musculaire progressif",
-    "Prévention des récidives",
-    "Accompagnement personnalisé",
-    "Techniques de pointe"
-  ];
-
-  const process = [
-    {
-      step: "1",
-      title: "Évaluation initiale",
-      description: "Bilan complet de votre condition avec tests spécifiques"
-    },
-    {
-      step: "2", 
-      title: "Plan de traitement",
-      description: "Programme personnalisé adapté à vos objectifs"
-    },
-    {
-      step: "3",
-      title: "Séances thérapeutiques", 
-      description: "Traitement avec techniques manuelles et exercices"
-    },
-    {
-      step: "4",
-      title: "Suivi et prévention",
-      description: "Évaluation des progrès et conseils préventifs"
-    }
-  ];
-
-  return (
-    <Layout>
+  const treatments = [{
+    title: "Traumatologie",
+    items: ["Fractures et entorses", "Raideurs post-traumatiques", "Rééducation post-chirurgicale", "Prothèses PTH et PTG"]
+  }, {
+    title: "Neurologie",
+    items: ["Hémiplégie et paralysies", "Maladie de Parkinson", "Sclérose en plaques", "AVC et traumatismes crâniens"]
+  }, {
+    title: "Rhumatologie",
+    items: ["Arthrose et arthrite", "Tendinites chroniques", "Douleurs articulaires", "Pathologies inflammatoires"]
+  }];
+  const benefits = ["Réduction significative de la douleur", "Amélioration de la mobilité articulaire", "Renforcement musculaire progressif", "Prévention des récidives", "Accompagnement personnalisé", "Techniques de pointe"];
+  const process = [{
+    step: "1",
+    title: "Évaluation initiale",
+    description: "Bilan complet de votre condition avec tests spécifiques"
+  }, {
+    step: "2",
+    title: "Plan de traitement",
+    description: "Programme personnalisé adapté à vos objectifs"
+  }, {
+    step: "3",
+    title: "Séances thérapeutiques",
+    description: "Traitement avec techniques manuelles et exercices"
+  }, {
+    step: "4",
+    title: "Suivi et prévention",
+    description: "Évaluation des progrès et conseils préventifs"
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={specialtyImage} 
-            alt="Traumatologie, Neurologie, Rhumatologie" 
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src={specialtyImage} alt="Traumatologie, Neurologie, Rhumatologie" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/75 to-secondary/85"></div>
         </div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button 
-              variant="ghost" 
-              className="text-white/80 hover:text-white mb-8 p-0"
-              onClick={() => window.history.back()}
-            >
+            <Button variant="ghost" className="text-white/80 hover:text-white mb-8 p-0" onClick={() => window.history.back()}>
               <ArrowLeft className="w-5 h-5 mr-2" />
               Retour aux services
             </Button>
@@ -102,7 +73,7 @@ const Traumatologie = () => {
                 Réserver maintenant
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 <Phone className="w-5 h-5 mr-3" />
                 Nous contacter
               </Button>
@@ -126,8 +97,7 @@ const Traumatologie = () => {
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {treatments.map((treatment, index) => (
-              <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
+            {treatments.map((treatment, index) => <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
                 <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full">
                   <CardContent className="p-8">
                     <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mb-6 mx-auto">
@@ -139,17 +109,14 @@ const Traumatologie = () => {
                     </h3>
                     
                     <div className="space-y-3">
-                      {treatment.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex items-start space-x-3">
+                      {treatment.items.map((item, itemIndex) => <div key={itemIndex} className="flex items-start space-x-3">
                           <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                           <span className="text-neutral text-sm">{item}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </CardContent>
                 </Card>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -170,12 +137,10 @@ const Traumatologie = () => {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                  {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
                       <span className="text-neutral">{benefit}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </ScrollAnimation>
@@ -221,8 +186,7 @@ const Traumatologie = () => {
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
-              <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+            {process.map((step, index) => <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto bg-gradient-accent rounded-full flex items-center justify-center shadow-accent-glow mb-6">
                     <span className="text-xl font-playfair font-bold text-white">
@@ -237,8 +201,7 @@ const Traumatologie = () => {
                     {step.description}
                   </p>
                 </div>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -269,8 +232,6 @@ const Traumatologie = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Traumatologie;
