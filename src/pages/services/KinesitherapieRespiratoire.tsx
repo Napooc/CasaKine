@@ -5,69 +5,36 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Heart, Clock, CheckCircle, Baby, Users, Stethoscope, ArrowLeft, Phone, Calendar, Home } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-medical-gymnastics.jpg';
-
 const KinesitherapieRespiratoire = () => {
-  const services = [
-    {
-      icon: Baby,
-      title: "Kinésithérapie Respiratoire Nourrisson",
-      description: "Soins spécialisés pour les tout-petits avec des techniques douces et adaptées",
-      techniques: ["Drainage bronchique adapté", "Désencombrement en douceur", "Techniques de clapping modéré", "Surveillance continue"]
-    },
-    {
-      icon: Users,
-      title: "Kinésithérapie Respiratoire Adulte", 
-      description: "Traitement complet des affections respiratoires chez l'adulte",
-      techniques: ["Drainage postural", "Techniques de toux assistée", "Rééducation ventilatoire", "Exercices de renforcement"]
-    },
-    {
-      icon: Home,
-      title: "Soins à Domicile",
-      description: "Possibilité de traitement dans le confort de votre domicile",
-      techniques: ["Déplacement sur rendez-vous", "Matériel portatif", "Suivi personnalisé", "Urgences respiratoires"]
-    }
-  ];
-
-  const conditions = [
-    "Bronchiolite du nourrisson",
-    "Bronchite chronique", 
-    "Asthme et allergies respiratoires",
-    "Mucoviscidose",
-    "Post-opératoire thoracique",
-    "Insuffisance respiratoire",
-    "Pneumonie et infections",
-    "Œdème pulmonaire"
-  ];
-
-  const benefits = [
-    "Amélioration de la fonction respiratoire",
-    "Réduction des sécrétions bronchiques",
-    "Prévention des complications",
-    "Diminution de la toux",
-    "Meilleure oxygénation",
-    "Confort respiratoire accru"
-  ];
-
-  return (
-    <Layout>
+  const services = [{
+    icon: Baby,
+    title: "Kinésithérapie Respiratoire Nourrisson",
+    description: "Soins spécialisés pour les tout-petits avec des techniques douces et adaptées",
+    techniques: ["Drainage bronchique adapté", "Désencombrement en douceur", "Techniques de clapping modéré", "Surveillance continue"]
+  }, {
+    icon: Users,
+    title: "Kinésithérapie Respiratoire Adulte",
+    description: "Traitement complet des affections respiratoires chez l'adulte",
+    techniques: ["Drainage postural", "Techniques de toux assistée", "Rééducation ventilatoire", "Exercices de renforcement"]
+  }, {
+    icon: Home,
+    title: "Soins à Domicile",
+    description: "Possibilité de traitement dans le confort de votre domicile",
+    techniques: ["Déplacement sur rendez-vous", "Matériel portatif", "Suivi personnalisé", "Urgences respiratoires"]
+  }];
+  const conditions = ["Bronchiolite du nourrisson", "Bronchite chronique", "Asthme et allergies respiratoires", "Mucoviscidose", "Post-opératoire thoracique", "Insuffisance respiratoire", "Pneumonie et infections", "Œdème pulmonaire"];
+  const benefits = ["Amélioration de la fonction respiratoire", "Réduction des sécrétions bronchiques", "Prévention des complications", "Diminution de la toux", "Meilleure oxygénation", "Confort respiratoire accru"];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={specialtyImage} 
-            alt="Kinésithérapie Respiratoire" 
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src={specialtyImage} alt="Kinésithérapie Respiratoire" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-medical-red/90 via-medical-red/75 to-red-600/85"></div>
         </div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button 
-              variant="ghost" 
-              className="text-white/80 hover:text-white mb-8 p-0"
-              onClick={() => window.history.back()}
-            >
+            <Button variant="ghost" className="text-white/80 hover:text-white mb-8 p-0" onClick={() => window.history.back()}>
               <ArrowLeft className="w-5 h-5 mr-2" />
               Retour aux services
             </Button>
@@ -95,7 +62,7 @@ const KinesitherapieRespiratoire = () => {
                 Réserver maintenant
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 <Phone className="w-5 h-5 mr-3" />
                 Urgence respiratoire
               </Button>
@@ -142,9 +109,8 @@ const KinesitherapieRespiratoire = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
+            const Icon = service.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full">
                     <CardContent className="p-8">
                       <div className="w-16 h-16 bg-gradient-to-br from-medical-red/20 to-red-500/20 rounded-full flex items-center justify-center mb-6 mx-auto">
@@ -160,18 +126,15 @@ const KinesitherapieRespiratoire = () => {
                       </p>
                       
                       <div className="space-y-3">
-                        {service.techniques.map((technique, techIndex) => (
-                          <div key={techIndex} className="flex items-start space-x-3">
+                        {service.techniques.map((technique, techIndex) => <div key={techIndex} className="flex items-start space-x-3">
                             <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
                             <span className="text-neutral text-sm">{technique}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -192,12 +155,10 @@ const KinesitherapieRespiratoire = () => {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {conditions.map((condition, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                  {conditions.map((condition, index) => <div key={index} className="flex items-center space-x-3">
                       <Stethoscope className="w-5 h-5 text-medical-red flex-shrink-0" />
                       <span className="text-neutral">{condition}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </ScrollAnimation>
@@ -209,12 +170,10 @@ const KinesitherapieRespiratoire = () => {
                 </h3>
                 
                 <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                  {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-3">
                       <Heart className="w-5 h-5 text-medical-red flex-shrink-0" />
                       <span className="text-neutral">{benefit}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
 
                 <div className="mt-8 p-6 bg-white/50 rounded-2xl">
@@ -261,8 +220,6 @@ const KinesitherapieRespiratoire = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default KinesitherapieRespiratoire;
