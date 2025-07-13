@@ -212,7 +212,7 @@ const KinesitherapieRespiratoire = () => {
                 Réserver une consultation
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 <Home className="w-5 h-5 mr-3" />
                 Demander un soin à domicile
               </Button>
