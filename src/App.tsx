@@ -11,6 +11,10 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import Traumatologie from "./pages/services/Traumatologie";
+import KinesitherapieRespiratoire from "./pages/services/KinesitherapieRespiratoire";
+import ServicesAmincissement from "./pages/services/ServicesAmincissement";
+import ReeducationSpecialisee from "./pages/services/ReeducationSpecialisee";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +28,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/traumatologie" element={<Traumatologie />} />
+          <Route path="/services/kinesitherapie-respiratoire" element={<KinesitherapieRespiratoire />} />
+          <Route path="/services/amincissement" element={<ServicesAmincissement />} />
+          <Route path="/services/reeducation-specialisee" element={<ReeducationSpecialisee />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />

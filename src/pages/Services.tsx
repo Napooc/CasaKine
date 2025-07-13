@@ -5,7 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Stethoscope, Target, Users, Award } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 const Services = () => {
+  const navigate = useNavigate();
+  
   const mainServices = [{
     icon: Activity,
     title: 'Traumatologie, Neurologie, Rhumatologie',
@@ -13,7 +16,8 @@ const Services = () => {
     features: ['Arthrose et arthrite', 'Tendinites et entorses', 'Raideurs post-traumatiques', 'Prothèses PTH et PTG', 'Hémiplégie et paralysies', 'Maladie de Parkinson', 'Sclérose en plaques'],
     duration: '45-60 minutes',
     color: 'text-primary',
-    bgGradient: 'from-primary/10 to-primary/5'
+    bgGradient: 'from-primary/10 to-primary/5',
+    route: '/services/traumatologie'
   }, {
     icon: Heart,
     title: 'Kinésithérapie Respiratoire',
@@ -21,7 +25,8 @@ const Services = () => {
     features: ['Kinésithérapie respiratoire nourrisson', 'Kinésithérapie respiratoire adulte', 'Désencombrement bronchique', 'Possibilité à domicile'],
     duration: '30-45 minutes',
     color: 'text-medical-red',
-    bgGradient: 'from-red-500/10 to-red-500/5'
+    bgGradient: 'from-red-500/10 to-red-500/5',
+    route: '/services/kinesitherapie-respiratoire'
   }, {
     icon: Zap,
     title: 'Services d\'Amincissement et d\'Esthétique',
@@ -29,7 +34,8 @@ const Services = () => {
     features: ['Cryothérapie/Cryolipolyse', 'Palper Rouler', 'Radiofréquence', 'Lipocavitation 40K', 'Lipolyse laser', 'Pressothérapie'],
     duration: '60-90 minutes',
     color: 'text-secondary',
-    bgGradient: 'from-secondary/10 to-secondary/5'
+    bgGradient: 'from-secondary/10 to-secondary/5',
+    route: '/services/amincissement'
   }, {
     icon: Shield,
     title: 'Rééducation Spécialisée',
@@ -37,7 +43,8 @@ const Services = () => {
     features: ['Rééducation périnéale', 'Rééducation après AVC', 'Drainage lymphatique manuel', 'Réadaptation à l\'effort', 'Possibilité à domicile'],
     duration: '45-60 minutes',
     color: 'text-accent',
-    bgGradient: 'from-accent/10 to-accent/5'
+    bgGradient: 'from-accent/10 to-accent/5',
+    route: '/services/reeducation-specialisee'
   }];
   const specialties = [{
     icon: Stethoscope,
@@ -222,7 +229,11 @@ const Services = () => {
                               <Clock className="w-4 h-4" />
                               <span className="text-sm">{service.duration}</span>
                             </div>
-                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`}>
+                            <Button 
+                              variant="ghost" 
+                              className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`}
+                              onClick={() => navigate(service.route)}
+                            >
                               Réserver
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
