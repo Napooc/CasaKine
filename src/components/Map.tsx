@@ -9,8 +9,8 @@ interface MapProps {
 }
 
 const Map: React.FC<MapProps> = ({ 
-  location = "19 Rue De Masmouda, Casablanca 20210", 
-  address = "19 Rue De Masmouda, Casablanca 20210" 
+  location = "H8FJ+HP Casablanca", 
+  address = "H8FJ+HP Casablanca"
 }) => {
   const openInGoogleMaps = () => {
     const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(location)}`;
