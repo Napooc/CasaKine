@@ -561,12 +561,15 @@ const BlogPost = () => {
                         {relatedPost.excerpt}
                       </p>
                       
-                      <Link to={`/blog/${relatedPost.id}`}>
-                        <Button variant="ghost" size="sm" className="text-accent hover:text-accent-dark hover:bg-accent/10 p-0">
-                          Lire l'article
-                          <ArrowRight className="w-3 h-3 ml-1" />
-                        </Button>
-                      </Link>
+                       <Link 
+                         to={`/blog/${relatedPost.id}`}
+                         onClick={() => window.scrollTo(0, 0)}
+                       >
+                         <Button variant="ghost" size="sm" className="text-accent hover:text-accent-dark hover:bg-accent/10 p-0">
+                           Lire l'article
+                           <ArrowRight className="w-3 h-3 ml-1" />
+                         </Button>
+                       </Link>
                     </CardContent>
                   </Card>
                 </ScrollAnimation>
