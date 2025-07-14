@@ -10,7 +10,7 @@ interface MapProps {
 
 const Map: React.FC<MapProps> = ({ 
   location = "H8FJ+HP Casablanca", 
-  address = "H8FJ+HP Casablanca"
+  address = "H8FJ+HP Casablanca" 
 }) => {
   const openInGoogleMaps = () => {
     const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(location)}`;
