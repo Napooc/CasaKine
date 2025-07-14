@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { MapPin, Navigation, ExternalLink, Phone, Clock } from 'lucide-react';
@@ -8,8 +9,8 @@ interface MapProps {
 }
 
 const Map: React.FC<MapProps> = ({ 
-  location = "H8FJ+HP Casablanca", 
-  address = "123 Boulevard Hassan II, Quartier Maarif, Casablanca, Maroc" 
+  location = "19 Rue De Masmouda, Casablanca 20210", 
+  address = "19 Rue De Masmouda, Casablanca 20210" 
 }) => {
   const openInGoogleMaps = () => {
     const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(location)}`;

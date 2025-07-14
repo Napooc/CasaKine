@@ -35,10 +35,10 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Adresse',
-      value: '19, rue Masmouda Hay Al Hana - Casablanca - 20210',
+      value: '19 Rue De Masmouda, Casablanca 20210',
       description: 'Quartier Hay Al Hana, Casablanca',
       color: 'text-accent',
-      action: 'https://maps.google.com/?q=19+rue+Masmouda+Hay+Al+Hana+Casablanca'
+      action: 'https://maps.google.com/?q=19+Rue+De+Masmouda+Casablanca+20210'
     },
     {
       icon: MessageCircle,
@@ -236,8 +236,8 @@ const Contact = () => {
           <ScrollAnimation animation="scale-up" delay={200}>
             <div className="glass-card p-4 rounded-3xl shadow-strong overflow-hidden">
               <Map 
-                location="H8FJ+HP Casablanca"
-                address="123 Boulevard Hassan II, Quartier Maarif, Casablanca, Maroc"
+                location="19 Rue De Masmouda, Casablanca 20210"
+                address="19 Rue De Masmouda, Casablanca 20210"
               />
             </div>
           </ScrollAnimation>
