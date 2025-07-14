@@ -22,7 +22,7 @@ const Map: React.FC<MapProps> = ({
     window.open(directionsUrl, '_blank');
   };
 
-  const embedMapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw&q=${encodeURIComponent(location)}&zoom=16&maptype=roadmap`;
+  const embedMapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8234567890123!2d-7.589843484502345!3d33.59234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z${encodeURIComponent(location)}!5e0!3m2!1sen!2sma!4v1234567890123!5m2!1sen!2sma`;
 
   return (
     <div className="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-strong bg-gradient-to-br from-primary/5 to-accent/5">
