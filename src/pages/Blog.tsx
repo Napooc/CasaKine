@@ -296,16 +296,7 @@ const Blog = () => {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-6 text-sm text-neutral-light">
-                      <div className="flex items-center space-x-2">
-                        <Eye className="w-4 h-4" />
-                        <span>{featuredPost.views}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Heart className="w-4 h-4" />
-                        <span>{featuredPost.likes}</span>
-                      </div>
-                    </div>
+                    
                     
                     <Link to={`/blog/${featuredPost.id}`}>
                       <Button className="morph-button bg-gradient-primary hover-glow text-white font-montserrat font-semibold px-8 py-3 rounded-full shadow-medium transition-all duration-300 hover:scale-105">
@@ -338,8 +329,7 @@ const Blog = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => {
             const CategoryIcon = getCategoryIcon(post.category);
-            return (
-              <ScrollAnimation key={post.id} animation="fade-up" delay={index * 150}>
+            return <ScrollAnimation key={post.id} animation="fade-up" delay={index * 150}>
                 <Link to={`/blog/${post.id}`} className="block">
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full cursor-pointer">
                     <div className="relative overflow-hidden">
@@ -383,13 +373,10 @@ const Blog = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-4 text-xs text-neutral-light">
                             <div className="flex items-center space-x-1">
-                              <Eye className="w-3 h-3" />
-                              <span>{post.views}</span>
+                              
+                              
                             </div>
-                            <div className="flex items-center space-x-1">
-                              <Heart className="w-3 h-3" />
-                              <span>{post.likes}</span>
-                            </div>
+                            
                           </div>
                           
                           <Button variant="ghost" size="sm" className="text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-1 transition-all duration-300">
@@ -401,8 +388,7 @@ const Blog = () => {
                     </CardContent>
                   </Card>
                 </Link>
-              </ScrollAnimation>
-            );
+              </ScrollAnimation>;
           })}
           </div>
 
