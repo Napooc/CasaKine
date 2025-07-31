@@ -5,19 +5,7 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Calendar, 
-  User, 
-  Clock, 
-  ArrowLeft, 
-  Heart, 
-  Share2, 
-  Eye, 
-  ArrowRight,
-  Bookmark,
-  MessageCircle
-} from 'lucide-react';
-
+import { Calendar, User, Clock, ArrowLeft, Heart, Share2, Eye, ArrowRight, Bookmark, MessageCircle } from 'lucide-react';
 interface BlogPost {
   id: number;
   title: string;
@@ -32,21 +20,23 @@ interface BlogPost {
   likes: number;
   tags: string[];
 }
-
 const BlogPost = () => {
-  const { id } = useParams<{ id: string }>();
+  const {
+    id
+  } = useParams<{
+    id: string;
+  }>();
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPost | null>(null);
   const [isLiked, setIsLiked] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   // Sample blog posts data with unique content
-  const blogPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: '10 Exercices Essentiels pour Renforcer Votre Dos',
-      excerpt: 'Découvrez une série d\'exercices simples et efficaces pour prévenir et soulager les douleurs dorsales, adaptés à tous les niveaux.',
-      content: `
+  const blogPosts: BlogPost[] = [{
+    id: 1,
+    title: '10 Exercices Essentiels pour Renforcer Votre Dos',
+    excerpt: 'Découvrez une série d\'exercices simples et efficaces pour prévenir et soulager les douleurs dorsales, adaptés à tous les niveaux.',
+    content: `
         <h2>Introduction</h2>
         <p>Le mal de dos est l'une des principales causes de consultation en kinésithérapie. Dans cet article, nous vous proposons 10 exercices essentiels qui vous aideront à renforcer votre dos et à prévenir les douleurs.</p>
         
@@ -76,20 +66,19 @@ const BlogPost = () => {
         <h2>Conclusion</h2>
         <p>La régularité est la clé du succès. Intégrez ces exercices dans votre routine quotidienne pour un dos en bonne santé.</p>
       `,
-      author: 'Dr. Nawal El Ghorfi',
-      date: '15 Mars 2024',
-      readTime: '8 min',
-      category: 'Exercices',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 1250,
-      likes: 89,
-      tags: ['dos', 'exercices', 'prévention', 'renforcement']
-    },
-    {
-      id: 2,
-      title: 'L\'Importance de la Rééducation Post-Opératoire',
-      excerpt: 'Comprendre pourquoi la kinésithérapie est cruciale après une intervention chirurgicale.',
-      content: `
+    author: 'Dr. Nawal El Ghorfi',
+    date: '15 Mars 2024',
+    readTime: '8 min',
+    category: 'Exercices',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 1250,
+    likes: 89,
+    tags: ['dos', 'exercices', 'prévention', 'renforcement']
+  }, {
+    id: 2,
+    title: 'L\'Importance de la Rééducation Post-Opératoire',
+    excerpt: 'Comprendre pourquoi la kinésithérapie est cruciale après une intervention chirurgicale.',
+    content: `
         <h2>La rééducation post-opératoire : un enjeu majeur</h2>
         <p>Après une intervention chirurgicale, la rééducation n'est pas une option mais une nécessité. Elle permet de retrouver rapidement ses capacités fonctionnelles et de prévenir les complications.</p>
         
@@ -117,20 +106,19 @@ const BlogPost = () => {
         <h2>L'importance du suivi professionnel</h2>
         <p>Un kinésithérapeute qualifié adapte le programme selon votre évolution et vos besoins spécifiques.</p>
       `,
-      author: 'Dr. Nawal El Ghorfi',
-      date: '12 Mars 2024',
-      readTime: '6 min',
-      category: 'Conseils',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 890,
-      likes: 65,
-      tags: ['rééducation', 'post-opératoire', 'récupération', 'chirurgie']
-    },
-    {
-      id: 3,
-      title: 'Nutrition et Récupération Musculaire',
-      excerpt: 'Les aliments clés pour optimiser la récupération après vos séances de kinésithérapie.',
-      content: `
+    author: 'Dr. Nawal El Ghorfi',
+    date: '12 Mars 2024',
+    readTime: '6 min',
+    category: 'Conseils',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 890,
+    likes: 65,
+    tags: ['rééducation', 'post-opératoire', 'récupération', 'chirurgie']
+  }, {
+    id: 3,
+    title: 'Nutrition et Récupération Musculaire',
+    excerpt: 'Les aliments clés pour optimiser la récupération après vos séances de kinésithérapie.',
+    content: `
         <h2>L'alimentation au service de la récupération</h2>
         <p>Une nutrition adaptée joue un rôle fondamental dans la récupération musculaire et la réparation tissulaire.</p>
         
@@ -173,20 +161,19 @@ const BlogPost = () => {
           <li>Oméga-3 : anti-inflammatoire</li>
         </ul>
       `,
-      author: 'Dr. Nawal El Ghorfi',
-      date: '10 Mars 2024',
-      readTime: '5 min',
-      category: 'Nutrition',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 720,
-      likes: 52,
-      tags: ['nutrition', 'récupération', 'alimentation', 'performance']
-    },
-    {
-      id: 4,
-      title: 'Nouveautés Technologiques en Kinésithérapie',
-      excerpt: 'Les dernières innovations qui révolutionnent les soins de rééducation moderne.',
-      content: `
+    author: 'Dr. Nawal El Ghorfi',
+    date: '10 Mars 2024',
+    readTime: '5 min',
+    category: 'Nutrition',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 720,
+    likes: 52,
+    tags: ['nutrition', 'récupération', 'alimentation', 'performance']
+  }, {
+    id: 4,
+    title: 'Nouveautés Technologiques en Kinésithérapie',
+    excerpt: 'Les dernières innovations qui révolutionnent les soins de rééducation moderne.',
+    content: `
         <h2>La révolution technologique en kinésithérapie</h2>
         <p>Les nouvelles technologies transforment la pratique de la kinésithérapie, offrant des solutions innovantes pour améliorer les soins.</p>
         
@@ -216,20 +203,19 @@ const BlogPost = () => {
         <h2>Impact sur la pratique</h2>
         <p>Ces innovations permettent une prise en charge plus précise, motivante et efficace.</p>
       `,
-      author: 'Dr. Nawal El Ghorfi',
-      date: '8 Mars 2024',
-      readTime: '7 min',
-      category: 'Actualités',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 950,
-      likes: 78,
-      tags: ['technologie', 'innovation', 'digital', 'kinésithérapie']
-    },
-    {
-      id: 5,
-      title: 'Prévenir les Blessures Sportives',
-      excerpt: 'Conseils pratiques pour éviter les blessures et optimiser vos performances sportives.',
-      content: `
+    author: 'Dr. Nawal El Ghorfi',
+    date: '8 Mars 2024',
+    readTime: '7 min',
+    category: 'Actualités',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 950,
+    likes: 78,
+    tags: ['technologie', 'innovation', 'digital', 'kinésithérapie']
+  }, {
+    id: 5,
+    title: 'Prévenir les Blessures Sportives',
+    excerpt: 'Conseils pratiques pour éviter les blessures et optimiser vos performances sportives.',
+    content: `
         <h2>La prévention : meilleure que la guérison</h2>
         <p>80% des blessures sportives peuvent être évitées avec une approche préventive adaptée.</p>
         
@@ -274,20 +260,19 @@ const BlogPost = () => {
         <h2>Matériel et environnement</h2>
         <p>Utilisez un équipement adapté et vérifiez les conditions de pratique.</p>
       `,
-      author: 'Dr. Nawal El Ghorfi',
-      date: '5 Mars 2024',
-      readTime: '6 min',
-      category: 'Conseils',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 1120,
-      likes: 94,
-      tags: ['sport', 'prévention', 'blessures', 'performance']
-    },
-    {
-      id: 6,
-      title: 'Exercices de Respiration Thérapeutique',
-      excerpt: 'Techniques de respiration pour améliorer votre bien-être et accélérer la guérison.',
-      content: `
+    author: 'Dr. Nawal El Ghorfi',
+    date: '5 Mars 2024',
+    readTime: '6 min',
+    category: 'Conseils',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 1120,
+    likes: 94,
+    tags: ['sport', 'prévention', 'blessures', 'performance']
+  }, {
+    id: 6,
+    title: 'Exercices de Respiration Thérapeutique',
+    excerpt: 'Techniques de respiration pour améliorer votre bien-être et accélérer la guérison.',
+    content: `
         <h2>Le pouvoir thérapeutique de la respiration</h2>
         <p>La respiration consciente est un outil puissant pour gérer le stress, la douleur et améliorer la récupération.</p>
         
@@ -324,23 +309,20 @@ const BlogPost = () => {
         <h2>Intégration au quotidien</h2>
         <p>Pratiquez 5-10 minutes par jour pour des bénéfices durables.</p>
       `,
-      author: 'Dr. Nawal El Ghorfi',
-      date: '3 Mars 2024',
-      readTime: '4 min',
-      category: 'Exercices',
-      image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-      views: 680,
-      likes: 41,
-      tags: ['respiration', 'bien-être', 'relaxation', 'thérapie']
-    }
-  ];
-
+    author: 'Dr. Nawal El Ghorfi',
+    date: '3 Mars 2024',
+    readTime: '4 min',
+    category: 'Exercices',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    views: 680,
+    likes: 41,
+    tags: ['respiration', 'bien-être', 'relaxation', 'thérapie']
+  }];
   useEffect(() => {
     const postId = parseInt(id || '1');
     const foundPost = blogPosts.find(p => p.id === postId);
     setPost(foundPost || null);
   }, [id]);
-
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
@@ -351,10 +333,8 @@ const BlogPost = () => {
       navigator.clipboard.writeText(window.location.href);
     }
   };
-
   if (!post) {
-    return (
-      <Layout>
+    return <Layout>
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-primary mb-4">Article non trouvé</h1>
@@ -363,23 +343,16 @@ const BlogPost = () => {
             </Button>
           </div>
         </div>
-      </Layout>
-    );
+      </Layout>;
   }
-
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-primary via-primary-light to-secondary overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <ScrollAnimation animation="fade-up">
-            <Button 
-              variant="ghost" 
-              onClick={() => navigate('/blog')}
-              className="text-white hover:bg-white/20 mb-8"
-            >
+            <Button variant="ghost" onClick={() => navigate('/blog')} className="text-white hover:bg-white/20 mb-8">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Retour au blog
             </Button>
@@ -418,107 +391,26 @@ const BlogPost = () => {
             {/* Main Content */}
             <div className="lg:col-span-3">
               <ScrollAnimation animation="fade-up">
-                <img 
-                  src={post.image} 
-                  alt={post.title}
-                  className="w-full h-80 object-cover rounded-2xl mb-8 shadow-strong"
-                />
+                <img src={post.image} alt={post.title} className="w-full h-80 object-cover rounded-2xl mb-8 shadow-strong" />
                 
-                <div 
-                  className="prose prose-lg max-w-none prose-headings:font-playfair prose-headings:text-primary prose-p:text-neutral prose-a:text-accent"
-                  dangerouslySetInnerHTML={{ __html: post.content }}
-                />
+                <div className="prose prose-lg max-w-none prose-headings:font-playfair prose-headings:text-primary prose-p:text-neutral prose-a:text-accent" dangerouslySetInnerHTML={{
+                __html: post.content
+              }} />
                 
                 {/* Tags */}
                 <div className="mt-12 pt-8 border-t border-primary/10">
                   <h4 className="font-montserrat font-semibold text-primary mb-4">Tags :</h4>
                   <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag, index) => (
-                      <Badge key={index} variant="secondary" className="text-sm">
+                    {post.tags.map((tag, index) => <Badge key={index} variant="secondary" className="text-sm">
                         #{tag}
-                      </Badge>
-                    ))}
+                      </Badge>)}
                   </div>
                 </div>
               </ScrollAnimation>
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-24 space-y-6">
-                
-                {/* Stats */}
-                <Card className="glass-card">
-                  <CardContent className="p-6">
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-2">
-                          <Eye className="w-4 h-4 text-neutral-light" />
-                          <span className="text-sm text-neutral-light">Vues</span>
-                        </div>
-                        <span className="font-semibold text-primary">{post.views}</span>
-                      </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-2">
-                          <Heart className={`w-4 h-4 ${isLiked ? 'text-red-500 fill-red-500' : 'text-neutral-light'}`} />
-                          <span className="text-sm text-neutral-light">J'aime</span>
-                        </div>
-                        <span className="font-semibold text-primary">{post.likes}</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Actions */}
-                <Card className="glass-card">
-                  <CardContent className="p-6">
-                    <div className="space-y-3">
-                      <Button 
-                        variant="outline" 
-                        className="w-full"
-                        onClick={() => setIsLiked(!isLiked)}
-                      >
-                        <Heart className={`w-4 h-4 mr-2 ${isLiked ? 'text-red-500 fill-red-500' : ''}`} />
-                        {isLiked ? 'Aimé' : 'J\'aime'}
-                      </Button>
-                      
-                      <Button 
-                        variant="outline" 
-                        className="w-full"
-                        onClick={() => setIsBookmarked(!isBookmarked)}
-                      >
-                        <Bookmark className={`w-4 h-4 mr-2 ${isBookmarked ? 'fill-current' : ''}`} />
-                        {isBookmarked ? 'Sauvegardé' : 'Sauvegarder'}
-                      </Button>
-                      
-                      <Button 
-                        variant="outline" 
-                        className="w-full"
-                        onClick={handleShare}
-                      >
-                        <Share2 className="w-4 h-4 mr-2" />
-                        Partager
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Newsletter */}
-                <Card className="glass-card">
-                  <CardContent className="p-6">
-                    <h4 className="font-playfair font-bold text-primary mb-3">Newsletter</h4>
-                    <p className="text-sm text-neutral-light mb-4">
-                      Recevez nos derniers articles directement dans votre boîte mail.
-                    </p>
-                    <Button className="w-full morph-button bg-gradient-primary hover-glow text-white">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      S'abonner
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -533,18 +425,10 @@ const BlogPost = () => {
           </ScrollAnimation>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {blogPosts
-              .filter(p => p.id !== post.id && p.category === post.category)
-              .slice(0, 3)
-              .map((relatedPost, index) => (
-                <ScrollAnimation key={relatedPost.id} animation="fade-up" delay={index * 150}>
+            {blogPosts.filter(p => p.id !== post.id && p.category === post.category).slice(0, 3).map((relatedPost, index) => <ScrollAnimation key={relatedPost.id} animation="fade-up" delay={index * 150}>
                   <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full">
                     <div className="relative overflow-hidden">
-                      <img 
-                        src={relatedPost.image} 
-                        alt={relatedPost.title}
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
+                      <img src={relatedPost.image} alt={relatedPost.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" />
                       <div className="absolute top-4 left-4">
                         <Badge className="bg-primary/10 text-primary border-0">
                           {relatedPost.category}
@@ -569,13 +453,10 @@ const BlogPost = () => {
                       </Link>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              ))}
+                </ScrollAnimation>)}
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default BlogPost;
