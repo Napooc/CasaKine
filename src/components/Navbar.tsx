@@ -52,7 +52,7 @@ const Navbar = () => {
             {/* Logo Premium */}
             <Link to="/" className="flex items-center space-x-4 group">
               <div className="relative">
-                <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="h-24 w-32 object-cover transition-transform duration-300 group-hover:scale-110 shadow-lg rounded-lg" />
+                <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="h-20 w-auto transition-transform duration-300 group-hover:scale-110 shadow-lg rounded-lg" />
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 rounded-lg transition-opacity duration-300"></div>
               </div>
               <div className="flex flex-col">
