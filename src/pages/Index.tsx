@@ -207,7 +207,11 @@ const Index = () => {
 
           <ScrollAnimation animation="fade-up" delay={600}>
             <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
-              Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Découvrez l'excellence en kinésithérapie et amincissement dans un environnement moderne et bienveillant.
+              👋 Bienvenue au Centre Nawal EL GHORFI
+              <br/>Kinésithérapie & Amincissement à Casablanca
+              <br/>Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
+              moderne, au cœur de Casablanca, pour des soins de kinésithérapie,
+              rééducation fonctionnelle et amincissement personnalisé.
             </p>
           </ScrollAnimation>
 
@@ -384,8 +388,136 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Why Choose Our Center Section */}
+      <section className="py-32 bg-neutral-lightest relative overflow-hidden">
+        <div className="absolute inset-0 medical-pattern opacity-30"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-playfair font-bold text-primary mb-6">
+                ✅ Pourquoi choisir <span className="text-gradient-accent">notre centre ?</span>
+              </h2>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Accessibilité optimale',
+                description: 'Situé en rez-de-chaussée, sans marche, avec accès adapté aux personnes à mobilité réduite',
+                icon: '♿'
+              },
+              {
+                title: 'Facilité de stationnement',
+                description: 'Plus de 15 places disponibles',
+                icon: '🚗'
+              },
+              {
+                title: 'Confort thermique garanti',
+                description: 'Centre chauffé et climatisé, box individuels avec climatisation anti-allergènes',
+                icon: '🌡️'
+              },
+              {
+                title: 'À 100 m du tramway',
+                description: 'Station Sidi Abderrahmane',
+                icon: '🚊'
+              },
+              {
+                title: 'Technologie de pointe',
+                description: 'Matériel de rééducation régulièrement mis à jour',
+                icon: '⚡'
+              },
+              {
+                title: 'Cadre apaisant',
+                description: 'Centre entouré d\'un jardin verdoyant',
+                icon: '🌳'
+              },
+              {
+                title: 'Soins à domicile possibles',
+                description: 'Pour les patients ne pouvant pas se déplacer',
+                icon: '🏠'
+              }
+            ].map((feature, index) => (
+              <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
+                <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-4xl mb-4">{feature.icon}</div>
+                    <h3 className="text-lg font-playfair font-bold text-primary mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-neutral-light leading-relaxed text-sm">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Dr. Nawal Section */}
       <section className="py-32 bg-background relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollAnimation animation="slide-left">
+              <div className="relative">
+                <div className="glass-card p-2 rounded-3xl">
+                  <img 
+                    src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" 
+                    alt="Dr. Nawal El Ghorfi" 
+                    className="w-full h-auto rounded-2xl"
+                  />
+                </div>
+                
+                {/* Floating Badge */}
+                <div className="absolute -top-6 -right-6 glass-card p-4 rounded-2xl">
+                  <div className="text-accent text-lg font-playfair font-bold">20+ ans</div>
+                  <div className="text-primary text-sm">D'expérience</div>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="slide-right">
+              <div>
+                <h2 className="text-5xl md:text-6xl font-playfair font-bold text-primary mb-8">
+                  👩‍⚕️ <span className="text-gradient-accent">À propos</span>
+                </h2>
+                <div className="space-y-6 text-lg text-neutral leading-relaxed">
+                  <p>
+                    Le centre est dirigé par <strong className="text-primary">Mme Nawal EL GHORFI ép. HARAKAT</strong>, 
+                    Diplômée d'État en Kinésithérapie et Physiothérapie, avec plus de 20 ans d'expérience.
+                  </p>
+                  <p>
+                    Tous les soins sont personnellement assurés par Mme EL GHORFI, 
+                    garantissant un suivi rigoureux et individualisé – 
+                    <strong className="text-accent">aucune délégation à des assistantes</strong>.
+                  </p>
+                </div>
+                
+                <div className="mt-8 space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-3 h-3 bg-accent rounded-full animate-pulse-glow"></div>
+                    <span className="text-neutral">Diplômée d'État en Kinésithérapie</span>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-glow"></div>
+                    <span className="text-neutral">Spécialiste en Physiothérapie</span>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-3 h-3 bg-primary rounded-full animate-pulse-glow"></div>
+                    <span className="text-neutral">Suivi personnalisé garanti</span>
+                  </div>
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-32 bg-neutral-lightest relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-20">
