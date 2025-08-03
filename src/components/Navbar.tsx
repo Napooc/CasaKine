@@ -48,16 +48,16 @@ const Navbar = () => {
   return <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'glass-effect shadow-strong' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-center h-28">
+          <div className="flex justify-between items-center h-20">
             {/* Logo Premium */}
-            <Link to="/" className="flex items-center space-x-6 group">
+            <Link to="/" className="flex items-center space-x-4 group">
               <div className="relative">
-                <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="h-28 w-auto transition-transform duration-300 group-hover:scale-110 shadow-lg rounded-lg" />
+                <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="h-20 w-auto transition-transform duration-300 group-hover:scale-110 shadow-lg rounded-lg" />
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 rounded-lg transition-opacity duration-300"></div>
               </div>
               <div className="flex flex-col">
-                <span className="font-playfair text-3xl font-bold text-primary leading-tight">Kinésithérapie Nawal El GHORFI</span>
-                <span className="font-montserrat text-base text-neutral opacity-80 mt-1">Centre de Kinésithérapie Spécialisé</span>
+                <span className="font-playfair text-2xl font-bold text-primary">Kinésithérapie Nawal El GHORFI</span>
+                <span className="font-montserrat text-sm text-neutral opacity-80">Centre de Kinésithérapie</span>
               </div>
             </Link>
 
@@ -122,7 +122,7 @@ const Navbar = () => {
       </nav>
 
       {/* Navbar Spacer */}
-      <div className="h-28"></div>
+      <div className="h-20"></div>
     </>;
 };
 export default Navbar;
