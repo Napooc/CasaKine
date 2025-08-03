@@ -8,120 +8,153 @@ import { Link } from 'react-router-dom';
 import { Calendar, User, Clock, ArrowRight, Heart, Stethoscope, Activity, Shield, Eye, MessageCircle, Share2, BookOpen } from 'lucide-react';
 const Blog = () => {
   const categories = [{
-    name: 'Tous',
-    count: 24,
+    name: 'Toutes',
+    count: 15,
     active: true
   }, {
-    name: 'Conseils',
-    count: 8,
+    name: 'Kinésithérapie Respiratoire',
+    count: 4,
     active: false
   }, {
-    name: 'Exercices',
-    count: 6,
+    name: 'Rééducation Posturale',
+    count: 3,
     active: false
   }, {
-    name: 'Nutrition',
-    count: 5,
+    name: 'Traumatologie Sportive',
+    count: 4,
     active: false
   }, {
-    name: 'Actualités',
-    count: 5,
+    name: 'Bien-être & Prévention',
+    count: 4,
     active: false
   }];
   const featuredPost = {
     id: 1,
-    title: '10 Exercices Essentiels pour Renforcer Votre Dos',
-    excerpt: 'Découvrez une série d\'exercices simples et efficaces pour prévenir et soulager les douleurs dorsales, adaptés à tous les niveaux.',
+    title: 'Kinésithérapie Respiratoire : Une Approche Révolutionnaire pour la Récupération Post-COVID',
+    excerpt: 'Découvrez comment notre approche innovante de la kinésithérapie respiratoire aide les patients à retrouver leur capacité pulmonaire et leur qualité de vie après une infection COVID-19.',
     author: 'Dr. Nawal El Ghorfi',
-    date: '15 Mars 2024',
-    readTime: '8 min',
-    category: 'Exercices',
-    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-    views: 1250,
-    likes: 89
+    date: '22 Janvier 2024',
+    readTime: '12 min',
+    category: 'Kinésithérapie Respiratoire',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&q=80&w=800',
+    views: 2580,
+    likes: 147
   };
   const posts = [{
     id: 2,
-    title: 'L\'Importance de la Rééducation Post-Opératoire',
-    excerpt: 'Découvrez pourquoi un suivi kinésithérapeutique rigoureux après chirurgie optimise votre récupération et prévient les complications à long terme.',
+    title: 'Rééducation Post-Chirurgicale : Protocoles Personnalisés pour une Récupération Optimale',
+    excerpt: 'Notre approche sur mesure de la rééducation post-opératoire combine techniques manuelles avancées et technologies de pointe pour accélérer votre guérison.',
     author: 'Dr. Nawal El Ghorfi',
-    date: '12 Mars 2024',
-    readTime: '6 min',
-    category: 'Conseils',
-    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-    views: 890,
-    likes: 65
+    date: '18 Janvier 2024',
+    readTime: '9 min',
+    category: 'Rééducation Posturale',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=80&w=800',
+    views: 1890,
+    likes: 125
   }, {
     id: 3,
-    title: 'Nutrition et Récupération Musculaire',
-    excerpt: 'Explorez les secrets d\'une alimentation ciblée qui booste vos performances et accélère la reconstruction tissulaire après l\'effort.',
+    title: 'Traumatologie Sportive : Prévention et Traitement des Lésions Musculaires',
+    excerpt: 'Guide complet pour comprendre, prévenir et traiter efficacement les blessures sportives les plus courantes avec des protocoles éprouvés.',
     author: 'Dr. Nawal El Ghorfi',
-    date: '10 Mars 2024',
-    readTime: '5 min',
-    category: 'Nutrition',
-    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-    views: 720,
-    likes: 52
+    date: '15 Janvier 2024',
+    readTime: '11 min',
+    category: 'Traumatologie Sportive',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800',
+    views: 1620,
+    likes: 98
   }, {
     id: 4,
-    title: 'Nouveautés Technologiques en Kinésithérapie',
-    excerpt: 'Plongez dans l\'univers des innovations révolutionnaires : réalité virtuelle, IA et capteurs intelligents transforment la rééducation moderne.',
+    title: 'Techniques de Relaxation Myofasciale : Libérez les Tensions Profondes',
+    excerpt: 'Découvrez les méthodes avancées de libération myofasciale pour soulager les douleurs chroniques et améliorer votre mobilité.',
     author: 'Dr. Nawal El Ghorfi',
-    date: '8 Mars 2024',
-    readTime: '7 min',
-    category: 'Actualités',
-    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-    views: 950,
-    likes: 78
+    date: '12 Janvier 2024',
+    readTime: '8 min',
+    category: 'Bien-être & Prévention',
+    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68e71?auto=format&fit=crop&q=80&w=800',
+    views: 1350,
+    likes: 87
   }, {
     id: 5,
-    title: 'Prévenir les Blessures Sportives',
-    excerpt: 'Maîtrisez les techniques d\'échauffement avancées et de renforcement préventif pour maintenir votre corps au top de sa forme.',
+    title: 'Ergonomie au Travail : Préservez Votre Santé Posturale',
+    excerpt: 'Conseils pratiques et exercices ciblés pour maintenir une posture saine au bureau et prévenir les troubles musculo-squelettiques.',
     author: 'Dr. Nawal El Ghorfi',
-    date: '5 Mars 2024',
-    readTime: '6 min',
-    category: 'Conseils',
-    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-    views: 1120,
-    likes: 94
+    date: '10 Janvier 2024',
+    readTime: '7 min',
+    category: 'Bien-être & Prévention',
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=800',
+    views: 2120,
+    likes: 156
   }, {
     id: 6,
-    title: 'Exercices de Respiration Thérapeutique',
-    excerpt: 'Apprenez les protocoles respiratoires scientifiquement prouvés pour gérer le stress, optimiser l\'oxygénation et faciliter la guérison.',
+    title: 'Rééducation de l\'Épaule : Retrouvez Votre Amplitude de Mouvement',
+    excerpt: 'Protocole complet de rééducation pour les pathologies de l\'épaule, de la tendinite à la rupture de la coiffe des rotateurs.',
     author: 'Dr. Nawal El Ghorfi',
-    date: '3 Mars 2024',
-    readTime: '4 min',
-    category: 'Exercices',
-    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
-    views: 680,
-    likes: 41
+    date: '8 Janvier 2024',
+    readTime: '10 min',
+    category: 'Rééducation Posturale',
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800',
+    views: 1780,
+    likes: 113
+  }, {
+    id: 7,
+    title: 'Kinésithérapie Pédiatrique : Accompagner le Développement Moteur',
+    excerpt: 'Approches spécialisées pour favoriser le développement moteur optimal chez l\'enfant et traiter les troubles du mouvement.',
+    author: 'Dr. Nawal El Ghorfi',
+    date: '5 Janvier 2024',
+    readTime: '9 min',
+    category: 'Rééducation Posturale',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800',
+    views: 1450,
+    likes: 94
+  }, {
+    id: 8,
+    title: 'Drainage Lymphatique Manuel : Technique et Bienfaits Thérapeutiques',
+    excerpt: 'Maîtrisez les techniques de drainage lymphatique pour améliorer la circulation et accélérer la récupération post-traumatique.',
+    author: 'Dr. Nawal El Ghorfi',
+    date: '3 Janvier 2024',
+    readTime: '6 min',
+    category: 'Bien-être & Prévention',
+    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&q=80&w=800',
+    views: 1290,
+    likes: 82
+  }, {
+    id: 9,
+    title: 'Réhabilitation Cardio-Respiratoire : Programme Personnalisé',
+    excerpt: 'Protocoles de réhabilitation cardiovasculaire et respiratoire adaptés aux pathologies chroniques et aux patients post-COVID.',
+    author: 'Dr. Nawal El Ghorfi',
+    date: '1 Janvier 2024',
+    readTime: '13 min',
+    category: 'Kinésithérapie Respiratoire',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&q=80&w=800',
+    views: 2350,
+    likes: 168
   }];
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Exercices':
+      case 'Kinésithérapie Respiratoire':
         return Activity;
-      case 'Conseils':
+      case 'Rééducation Posturale':
         return Heart;
-      case 'Nutrition':
-        return Shield;
-      case 'Actualités':
+      case 'Traumatologie Sportive':
         return Stethoscope;
+      case 'Bien-être & Prévention':
+        return Shield;
       default:
         return BookOpen;
     }
   };
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Exercices':
-        return 'text-primary bg-primary/10';
-      case 'Conseils':
-        return 'text-medical-red bg-red-500/10';
-      case 'Nutrition':
-        return 'text-secondary bg-secondary/10';
-      case 'Actualités':
-        return 'text-accent bg-accent/10';
+      case 'Kinésithérapie Respiratoire':
+        return 'text-blue-700 bg-blue-50 border-blue-200';
+      case 'Rééducation Posturale':
+        return 'text-emerald-700 bg-emerald-50 border-emerald-200';
+      case 'Traumatologie Sportive':
+        return 'text-orange-700 bg-orange-50 border-orange-200';
+      case 'Bien-être & Prévention':
+        return 'text-purple-700 bg-purple-50 border-purple-200';
       default:
-        return 'text-neutral bg-neutral/10';
+        return 'text-gray-700 bg-gray-50 border-gray-200';
     }
   };
   return <Layout>
