@@ -4,103 +4,66 @@ import femmeEnceinteHero from '@/assets/femme-enceinte-hero.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Baby, 
-  Heart, 
-  Sparkles, 
-  Shield, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Star,
-  Calendar,
-  User,
-  Target,
-  Activity,
-  Brain,
-  Zap
-} from 'lucide-react';
-
+import { Baby, Heart, Sparkles, Shield, Users, Clock, CheckCircle, Star, Calendar, User, Target, Activity, Brain, Zap } from 'lucide-react';
 const FemmeEnceinte = () => {
-  const preparationServices = [
-    {
-      icon: Heart,
-      title: 'Techniques de Respiration',
-      description: 'Apprenez les techniques essentielles pour mieux gérer les contractions et soulager la douleur naturellement.',
-      benefits: ['Gestion de la douleur', 'Relaxation profonde', 'Oxygénation optimale', 'Contrôle du stress']
-    },
-    {
-      icon: Users,
-      title: 'Positions d\'Accouchement',
-      description: 'Découvrez les positions favorables qui facilitent le travail et l\'expulsion lors de l\'accouchement.',
-      benefits: ['Facilite le travail', 'Réduit les douleurs', 'Accélère la descente', 'Positions confortables']
-    },
-    {
-      icon: Baby,
-      title: 'Communication In Utero',
-      description: 'Créez un lien précoce avec votre bébé grâce à des techniques de communication prénatale impliquant le futur papa.',
-      benefits: ['Lien parent-enfant', 'Implication du papa', 'Développement émotionnel', 'Préparation à la parentalité']
-    }
-  ];
-
-  const reeducationServices = [
-    {
-      icon: Target,
-      title: 'Renforcement Périnéal',
-      description: 'Retrouvez tonicité et contrôle pour prévenir les fuites urinaires et le relâchement musculaire.',
-      methods: ['Exercices ciblés', 'Contractions progressives', 'Respiration coordonnée', 'Conscience corporelle']
-    },
-    {
-      icon: Brain,
-      title: 'Biofeedback',
-      description: 'Technique avec sonde vaginale et retour visuel/sonore pour visualiser et contrôler vos contractions musculaires.',
-      methods: ['Visualisation temps réel', 'Contrôle précis', 'Apprentissage accéléré', 'Feedback instantané']
-    },
-    {
-      icon: Zap,
-      title: 'Électrostimulation',
-      description: 'En cas de faiblesse musculaire importante, réactivation des contractions périnéales par stimulation électrique.',
-      methods: ['Réactivation musculaire', 'Intensité progressive', 'Récupération accélérée', 'Tonification ciblée']
-    }
-  ];
-
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Évaluation Initiale',
-      description: 'Bilan complet de votre état physique et de vos besoins spécifiques selon le stade de grossesse.',
-      icon: User
-    },
-    {
-      step: '02',
-      title: 'Programme Personnalisé',
-      description: 'Élaboration d\'un plan adapté à votre profil et à vos objectifs de préparation.',
-      icon: Target
-    },
-    {
-      step: '03',
-      title: 'Séances Régulières',
-      description: 'Accompagnement hebdomadaire avec exercices pratiques et techniques spécialisées.',
-      icon: Calendar
-    },
-    {
-      step: '04',
-      title: 'Suivi Post-Partum',
-      description: 'Rééducation périnéale et abdominale pour retrouver tonicité et bien-être après l\'accouchement.',
-      icon: Activity
-    }
-  ];
-
-  return (
-    <Layout>
+  const preparationServices = [{
+    icon: Heart,
+    title: 'Techniques de Respiration',
+    description: 'Apprenez les techniques essentielles pour mieux gérer les contractions et soulager la douleur naturellement.',
+    benefits: ['Gestion de la douleur', 'Relaxation profonde', 'Oxygénation optimale', 'Contrôle du stress']
+  }, {
+    icon: Users,
+    title: 'Positions d\'Accouchement',
+    description: 'Découvrez les positions favorables qui facilitent le travail et l\'expulsion lors de l\'accouchement.',
+    benefits: ['Facilite le travail', 'Réduit les douleurs', 'Accélère la descente', 'Positions confortables']
+  }, {
+    icon: Baby,
+    title: 'Communication In Utero',
+    description: 'Créez un lien précoce avec votre bébé grâce à des techniques de communication prénatale impliquant le futur papa.',
+    benefits: ['Lien parent-enfant', 'Implication du papa', 'Développement émotionnel', 'Préparation à la parentalité']
+  }];
+  const reeducationServices = [{
+    icon: Target,
+    title: 'Renforcement Périnéal',
+    description: 'Retrouvez tonicité et contrôle pour prévenir les fuites urinaires et le relâchement musculaire.',
+    methods: ['Exercices ciblés', 'Contractions progressives', 'Respiration coordonnée', 'Conscience corporelle']
+  }, {
+    icon: Brain,
+    title: 'Biofeedback',
+    description: 'Technique avec sonde vaginale et retour visuel/sonore pour visualiser et contrôler vos contractions musculaires.',
+    methods: ['Visualisation temps réel', 'Contrôle précis', 'Apprentissage accéléré', 'Feedback instantané']
+  }, {
+    icon: Zap,
+    title: 'Électrostimulation',
+    description: 'En cas de faiblesse musculaire importante, réactivation des contractions périnéales par stimulation électrique.',
+    methods: ['Réactivation musculaire', 'Intensité progressive', 'Récupération accélérée', 'Tonification ciblée']
+  }];
+  const processSteps = [{
+    step: '01',
+    title: 'Évaluation Initiale',
+    description: 'Bilan complet de votre état physique et de vos besoins spécifiques selon le stade de grossesse.',
+    icon: User
+  }, {
+    step: '02',
+    title: 'Programme Personnalisé',
+    description: 'Élaboration d\'un plan adapté à votre profil et à vos objectifs de préparation.',
+    icon: Target
+  }, {
+    step: '03',
+    title: 'Séances Régulières',
+    description: 'Accompagnement hebdomadaire avec exercices pratiques et techniques spécialisées.',
+    icon: Calendar
+  }, {
+    step: '04',
+    title: 'Suivi Post-Partum',
+    description: 'Rééducation périnéale et abdominale pour retrouver tonicité et bien-être après l\'accouchement.',
+    icon: Activity
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={femmeEnceinteHero} 
-            alt="Femme enceinte en consultation" 
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src={femmeEnceinteHero} alt="Femme enceinte en consultation" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-pink-600/95 via-pink-500/80 to-purple-600/90"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
         </div>
@@ -141,7 +104,7 @@ const FemmeEnceinte = () => {
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver une Séance
               </Button>
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300">
+              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-gray-950">
                 En savoir plus
               </Button>
             </div>
@@ -170,9 +133,8 @@ const FemmeEnceinte = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {preparationServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
+            const Icon = service.icon;
+            return <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
                   <Card className="h-full border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
                     <CardHeader className="text-center pb-4">
                       <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -187,18 +149,15 @@ const FemmeEnceinte = () => {
                         {service.description}
                       </p>
                       <div className="space-y-3">
-                        {service.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-center space-x-3">
+                        {service.benefits.map((benefit, benefitIndex) => <div key={benefitIndex} className="flex items-center space-x-3">
                             <CheckCircle className="w-5 h-5 text-pink-500 flex-shrink-0" />
                             <span className="text-gray-700 text-sm">{benefit}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -223,9 +182,8 @@ const FemmeEnceinte = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+            const Icon = step.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                   <div className="text-center group">
                     <div className="relative mb-8">
                       <div className="w-20 h-20 mx-auto bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl border border-white/30">
@@ -236,9 +194,7 @@ const FemmeEnceinte = () => {
                       <div className="absolute -top-2 -right-2 w-12 h-12 bg-pink-300/30 rounded-full flex items-center justify-center">
                         <Icon className="w-6 h-6 text-white" />
                       </div>
-                      {index < processSteps.length - 1 && (
-                        <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-white/50 to-transparent"></div>
-                      )}
+                      {index < processSteps.length - 1 && <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-white/50 to-transparent"></div>}
                     </div>
                     
                     <h3 className="text-xl font-playfair font-bold text-white mb-4">
@@ -248,9 +204,8 @@ const FemmeEnceinte = () => {
                       {step.description}
                     </p>
                   </div>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -276,9 +231,8 @@ const FemmeEnceinte = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {reeducationServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
+            const Icon = service.icon;
+            return <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
                   <Card className="h-full border-0 shadow-xl bg-gradient-to-br from-white to-purple-50/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
                     <CardHeader className="text-center pb-4">
                       <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -293,18 +247,15 @@ const FemmeEnceinte = () => {
                         {service.description}
                       </p>
                       <div className="space-y-3">
-                        {service.methods.map((method, methodIndex) => (
-                          <div key={methodIndex} className="flex items-center space-x-3">
+                        {service.methods.map((method, methodIndex) => <div key={methodIndex} className="flex items-center space-x-3">
                             <Sparkles className="w-5 h-5 text-purple-500 flex-shrink-0" />
                             <span className="text-gray-700 text-sm">{method}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
 
           <ScrollAnimation animation="fade-up" delay={600}>
@@ -349,7 +300,7 @@ const FemmeEnceinte = () => {
                 Consultation Gratuite
               </Button>
               
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300">
+              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-zinc-950">
                 <Clock className="w-5 h-5 mr-3" />
                 Voir les horaires
               </Button>
@@ -357,8 +308,6 @@ const FemmeEnceinte = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default FemmeEnceinte;
