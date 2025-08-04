@@ -3,155 +3,86 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  ArrowLeft, Calendar, Phone, CheckCircle, Heart, Brain, 
-  Wind, Droplets, Activity, Hand, Baby, Clock, Star,
-  Stethoscope, Target, Shield, Users, Home, ArrowRight,
-  Zap, Sparkles
-} from 'lucide-react';
+import { ArrowLeft, Calendar, Phone, CheckCircle, Heart, Brain, Wind, Droplets, Activity, Hand, Baby, Clock, Star, Stethoscope, Target, Shield, Users, Home, ArrowRight, Zap, Sparkles } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-medical-gymnastics.jpg';
-
 const KinesitherapieRespiratoire = () => {
-  const services = [
-    {
-      icon: Activity,
-      title: "Traumatologie, Rhumatologie & Pathologies de la Colonne Vertébrale",
-      description: "Nous traitons les atteintes mécaniques ou inflammatoires de l'appareil locomoteur",
-      conditions: [
-        "Arthrose, arthrite, tendinite",
-        "Scoliose, raideurs post-traumatiques", 
-        "Polyarthrite rhumatoïde",
-        "Entorses, prothèse totale de hanche (PTH) ou de genou (PTG)"
-      ],
-      gradient: "from-primary/20 to-primary/5",
-      color: "text-primary"
-    },
-    {
-      icon: Brain,
-      title: "Neurologie",
-      description: "Prise en charge des affections du système nerveux, d'origine traumatique ou pathologique",
-      conditions: [
-        "Hémiplégie, tétraplégie, paralysies centrales ou périphériques",
-        "Paralysie faciale, infirmité motrice cérébrale (IMC)",
-        "Maladie de Parkinson, d'Alzheimer, sclérose en plaques (SEP)",
-        "Sclérose latérale amyotrophique (SLA)"
-      ],
-      gradient: "from-secondary/20 to-secondary/5",
-      color: "text-secondary"
-    },
-    {
-      icon: Wind,
-      title: "Rééducation Respiratoire",
-      description: "Amélioration de la fonction respiratoire dans les cas suivants",
-      conditions: [
-        "Bronchiolite du nourrisson, asthme, bronchite chronique",
-        "Emphysème, dilatation des bronches (DDB), post-infection",
-        "Techniques de drainage bronchique et désencombrement",
-        "Réentraînement respiratoire"
-      ],
-      gradient: "from-medical-red/20 to-red-500/5",
-      color: "text-medical-red"
-    },
-    {
-      icon: Droplets,
-      title: "Drainage Lymphatique Manuel (DLM)",
-      description: "Massage doux favorisant la circulation lymphatique",
-      conditions: [
-        "Jambes lourdes, œdèmes, séquelles de phlébite",
-        "Suite à une chirurgie, notamment une ablation mammaire",
-        "Détoxification du corps et renforcement immunitaire",
-        "Réalisé manuellement en respectant les trajets lymphatiques"
-      ],
-      gradient: "from-accent/20 to-accent/5",
-      color: "text-accent"
-    },
-    {
-      icon: Activity,
-      title: "Réadaptation à l'Effort",
-      description: "Accompagnement progressif à la reprise de la marche ou d'une activité physique",
-      conditions: [
-        "Pathologie cardiovasculaire, traitement oncologique",
-        "Fatigue chronique ou déconditionnement à l'effort",
-        "Activité physique adaptée",
-        "Favorise la récupération et le bien-être général"
-      ],
-      gradient: "from-neutral-light/20 to-neutral-light/5",
-      color: "text-neutral"
-    },
-    {
-      icon: Hand,
-      title: "Traitement des Cicatrices",
-      description: "Rééducation des cicatrices problématiques",
-      conditions: [
-        "Inflammatoires, douloureuses, adhérentes",
-        "Esthétiquement gênantes",
-        "Consécutives à une opération, un traumatisme ou une brûlure",
-        "Techniques spécifiques (Stravac, autres techniques)"
-      ],
-      gradient: "from-neutral/20 to-neutral/5",
-      color: "text-neutral-dark"
-    },
-    {
-      icon: Baby,
-      title: "Développement Psychomoteur de l'Enfant",
-      description: "Soutien à l'acquisition des étapes clés du développement moteur",
-      conditions: [
-        "Retards ou troubles de la marche, station assise",
-        "Pathologies neurologiques ou musculaires (IMC, myopathies)",
-        "Accompagnement doux et progressif",
-        "Aide chaque enfant à développer son autonomie motrice"
-      ],
-      gradient: "from-green-500/20 to-green-400/5",
-      color: "text-green-600"
-    }
-  ];
-
-  const benefits = [
-    "Soulagement de la douleur",
-    "Restauration de la mobilité", 
-    "Amélioration de la qualité de vie",
-    "Maintien ou récupération des fonctions motrices",
-    "Développement de l'autonomie",
-    "Approche personnalisée et globale"
-  ];
-
-  const processSteps = [
-    {
-      step: "01",
-      title: "Évaluation Initiale",
-      description: "Bilan complet de votre condition et définition d'objectifs personnalisés",
-      icon: Target
-    },
-    {
-      step: "02", 
-      title: "Plan Thérapeutique",
-      description: "Élaboration d'un programme adapté à vos besoins spécifiques",
-      icon: Heart
-    },
-    {
-      step: "03",
-      title: "Traitement Actif",
-      description: "Mise en œuvre des techniques de kinésithérapie appropriées",
-      icon: Activity
-    },
-    {
-      step: "04",
-      title: "Suivi & Autonomie",
-      description: "Accompagnement vers l'autonomie et conseils de prévention",
-      icon: Star
-    }
-  ];
-
-  return (
-    <Layout>
+  const services = [{
+    icon: Activity,
+    title: "Traumatologie, Rhumatologie & Pathologies de la Colonne Vertébrale",
+    description: "Nous traitons les atteintes mécaniques ou inflammatoires de l'appareil locomoteur",
+    conditions: ["Arthrose, arthrite, tendinite", "Scoliose, raideurs post-traumatiques", "Polyarthrite rhumatoïde", "Entorses, prothèse totale de hanche (PTH) ou de genou (PTG)"],
+    gradient: "from-primary/20 to-primary/5",
+    color: "text-primary"
+  }, {
+    icon: Brain,
+    title: "Neurologie",
+    description: "Prise en charge des affections du système nerveux, d'origine traumatique ou pathologique",
+    conditions: ["Hémiplégie, tétraplégie, paralysies centrales ou périphériques", "Paralysie faciale, infirmité motrice cérébrale (IMC)", "Maladie de Parkinson, d'Alzheimer, sclérose en plaques (SEP)", "Sclérose latérale amyotrophique (SLA)"],
+    gradient: "from-secondary/20 to-secondary/5",
+    color: "text-secondary"
+  }, {
+    icon: Wind,
+    title: "Rééducation Respiratoire",
+    description: "Amélioration de la fonction respiratoire dans les cas suivants",
+    conditions: ["Bronchiolite du nourrisson, asthme, bronchite chronique", "Emphysème, dilatation des bronches (DDB), post-infection", "Techniques de drainage bronchique et désencombrement", "Réentraînement respiratoire"],
+    gradient: "from-medical-red/20 to-red-500/5",
+    color: "text-medical-red"
+  }, {
+    icon: Droplets,
+    title: "Drainage Lymphatique Manuel (DLM)",
+    description: "Massage doux favorisant la circulation lymphatique",
+    conditions: ["Jambes lourdes, œdèmes, séquelles de phlébite", "Suite à une chirurgie, notamment une ablation mammaire", "Détoxification du corps et renforcement immunitaire", "Réalisé manuellement en respectant les trajets lymphatiques"],
+    gradient: "from-accent/20 to-accent/5",
+    color: "text-accent"
+  }, {
+    icon: Activity,
+    title: "Réadaptation à l'Effort",
+    description: "Accompagnement progressif à la reprise de la marche ou d'une activité physique",
+    conditions: ["Pathologie cardiovasculaire, traitement oncologique", "Fatigue chronique ou déconditionnement à l'effort", "Activité physique adaptée", "Favorise la récupération et le bien-être général"],
+    gradient: "from-neutral-light/20 to-neutral-light/5",
+    color: "text-neutral"
+  }, {
+    icon: Hand,
+    title: "Traitement des Cicatrices",
+    description: "Rééducation des cicatrices problématiques",
+    conditions: ["Inflammatoires, douloureuses, adhérentes", "Esthétiquement gênantes", "Consécutives à une opération, un traumatisme ou une brûlure", "Techniques spécifiques (Stravac, autres techniques)"],
+    gradient: "from-neutral/20 to-neutral/5",
+    color: "text-neutral-dark"
+  }, {
+    icon: Baby,
+    title: "Développement Psychomoteur de l'Enfant",
+    description: "Soutien à l'acquisition des étapes clés du développement moteur",
+    conditions: ["Retards ou troubles de la marche, station assise", "Pathologies neurologiques ou musculaires (IMC, myopathies)", "Accompagnement doux et progressif", "Aide chaque enfant à développer son autonomie motrice"],
+    gradient: "from-green-500/20 to-green-400/5",
+    color: "text-green-600"
+  }];
+  const benefits = ["Soulagement de la douleur", "Restauration de la mobilité", "Amélioration de la qualité de vie", "Maintien ou récupération des fonctions motrices", "Développement de l'autonomie", "Approche personnalisée et globale"];
+  const processSteps = [{
+    step: "01",
+    title: "Évaluation Initiale",
+    description: "Bilan complet de votre condition et définition d'objectifs personnalisés",
+    icon: Target
+  }, {
+    step: "02",
+    title: "Plan Thérapeutique",
+    description: "Élaboration d'un programme adapté à vos besoins spécifiques",
+    icon: Heart
+  }, {
+    step: "03",
+    title: "Traitement Actif",
+    description: "Mise en œuvre des techniques de kinésithérapie appropriées",
+    icon: Activity
+  }, {
+    step: "04",
+    title: "Suivi & Autonomie",
+    description: "Accompagnement vers l'autonomie et conseils de prévention",
+    icon: Star
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={specialtyImage} 
-            alt="Kinésithérapie moderne" 
-            className="w-full h-full object-cover scale-110" 
-          />
+          <img src={specialtyImage} alt="Kinésithérapie moderne" className="w-full h-full object-cover scale-110" />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-secondary/90"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/20"></div>
         </div>
@@ -174,11 +105,7 @@ const KinesitherapieRespiratoire = () => {
 
         <div className="relative z-10 text-center max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button 
-              variant="ghost" 
-              className="text-white/80 hover:text-white mb-8 p-0 group transition-all duration-300" 
-              onClick={() => window.history.back()}
-            >
+            <Button variant="ghost" className="text-white/80 hover:text-white mb-8 p-0 group transition-all duration-300" onClick={() => window.history.back()}>
               <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
               Retour aux services
             </Button>
@@ -209,10 +136,7 @@ const KinesitherapieRespiratoire = () => {
                 Réserver une Consultation
               </Button>
               
-              <Button 
-                variant="outline" 
-                className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white group"
-              >
+              <Button variant="outline" className="glass-effect border-white/30 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 group text-zinc-950 bg-violet-50">
                 <Phone className="w-5 h-5 mr-3 group-hover:animate-pulse" />
                 Contact Urgent
               </Button>
@@ -222,21 +146,30 @@ const KinesitherapieRespiratoire = () => {
           {/* Quick Stats */}
           <ScrollAnimation animation="fade-up" delay={800}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {[
-                { value: "7", label: "Spécialités", icon: Target },
-                { value: "100%", label: "Personnalisé", icon: Heart },
-                { value: "24h", label: "Urgences", icon: Clock },
-                { value: "🏠", label: "Domicile", icon: Home }
-              ].map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div key={index} className="glass-card p-6 text-center group hover:scale-110 transition-all duration-300">
+              {[{
+              value: "7",
+              label: "Spécialités",
+              icon: Target
+            }, {
+              value: "100%",
+              label: "Personnalisé",
+              icon: Heart
+            }, {
+              value: "24h",
+              label: "Urgences",
+              icon: Clock
+            }, {
+              value: "🏠",
+              label: "Domicile",
+              icon: Home
+            }].map((stat, index) => {
+              const Icon = stat.icon;
+              return <div key={index} className="glass-card p-6 text-center group hover:scale-110 transition-all duration-300">
                     <Icon className="w-6 h-6 text-accent mx-auto mb-3 group-hover:animate-pulse" />
                     <div className="text-2xl font-playfair font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-white/80 text-sm">{stat.label}</div>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </ScrollAnimation>
         </div>
@@ -260,13 +193,8 @@ const KinesitherapieRespiratoire = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <ScrollAnimation 
-                  key={index} 
-                  animation={index % 2 === 0 ? "slide-left" : "slide-right"} 
-                  delay={index * 150}
-                >
+            const Icon = service.icon;
+            return <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 150}>
                   <Card className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-[1.02] hover-glow h-full group bg-gradient-to-br ${service.gradient}`}>
                     <CardContent className="p-8">
                       <div className="flex items-start space-x-6">
@@ -285,20 +213,17 @@ const KinesitherapieRespiratoire = () => {
                           </p>
                           
                           <div className="space-y-3">
-                            {service.conditions.map((condition, condIndex) => (
-                              <div key={condIndex} className="flex items-start space-x-3">
+                            {service.conditions.map((condition, condIndex) => <div key={condIndex} className="flex items-start space-x-3">
                                 <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
                                 <span className="text-neutral text-sm leading-relaxed">{condition}</span>
-                              </div>
-                            ))}
+                              </div>)}
                           </div>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -323,9 +248,8 @@ const KinesitherapieRespiratoire = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
+            const Icon = step.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
                   <div className="text-center group">
                     <div className="relative mb-8">
                       <div className="w-24 h-24 mx-auto bg-gradient-accent rounded-2xl flex items-center justify-center shadow-accent-glow group-hover:scale-110 transition-all duration-300 backdrop-blur-sm">
@@ -336,9 +260,7 @@ const KinesitherapieRespiratoire = () => {
                           {step.step}
                         </span>
                       </div>
-                      {index < processSteps.length - 1 && (
-                        <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-accent/50 to-transparent"></div>
-                      )}
+                      {index < processSteps.length - 1 && <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-accent/50 to-transparent"></div>}
                     </div>
                     
                     <h3 className="text-xl font-playfair font-bold text-white mb-4">
@@ -348,9 +270,8 @@ const KinesitherapieRespiratoire = () => {
                       {step.description}
                     </p>
                   </div>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -371,14 +292,12 @@ const KinesitherapieRespiratoire = () => {
                 </p>
 
                 <div className="grid grid-cols-1 gap-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-4 p-4 glass-card rounded-xl hover:scale-105 transition-all duration-300">
+                  {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-4 p-4 glass-card rounded-xl hover:scale-105 transition-all duration-300">
                       <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0">
                         <CheckCircle className="w-5 h-5 text-white" />
                       </div>
                       <span className="text-neutral font-medium">{benefit}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </ScrollAnimation>
@@ -445,10 +364,7 @@ const KinesitherapieRespiratoire = () => {
                 Réserver une Consultation Gratuite
               </Button>
               
-              <Button 
-                variant="outline" 
-                className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white group"
-              >
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 group text-zinc-950">
                 <ArrowRight className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
                 Découvrir Nos Tarifs
               </Button>
@@ -456,8 +372,6 @@ const KinesitherapieRespiratoire = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default KinesitherapieRespiratoire;
