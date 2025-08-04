@@ -8,7 +8,6 @@ import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Ste
 import { useNavigate } from 'react-router-dom';
 const Services = () => {
   const navigate = useNavigate();
-  
   const mainServices = [{
     icon: Activity,
     title: 'Traumatologie, Neurologie, Rhumatologie',
@@ -247,11 +246,7 @@ const Services = () => {
                               <Clock className="w-4 h-4" />
                               <span className="text-sm">{service.duration}</span>
                             </div>
-                            <Button 
-                              variant="ghost" 
-                              className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`}
-                              onClick={() => navigate(service.route)}
-                            >
+                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`} onClick={() => navigate(service.route)}>
                               Réserver
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
@@ -371,9 +366,7 @@ const Services = () => {
                 Consultation Gratuite
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
-                Voir nos tarifs
-              </Button>
+              
             </div>
           </ScrollAnimation>
         </div>
