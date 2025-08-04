@@ -404,32 +404,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-32 bg-gradient-premium relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float absolute top-10 left-10"></div>
-          <div className="w-64 h-64 bg-white/5 rounded-full blur-2xl animate-float-delay absolute bottom-10 right-10"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-6 lg:px-8">
-          <ScrollAnimation animation="scale-up">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-8">
-              Restez Informé de Nos
-              <span className="text-white/80 block">Dernières Publications</span>
-            </h2>
-            <p className="text-xl text-white/90 mb-12 leading-relaxed">
-              Recevez nos conseils d'experts, exercices et actualités directement dans votre boîte mail.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-md mx-auto">
-              <input type="email" placeholder="Votre adresse email" className="flex-1 px-6 py-4 rounded-full glass-effect border-white/20 text-white placeholder-white/60 focus:border-white focus:ring-2 focus:ring-white/20" />
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105 whitespace-nowrap">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                S'abonner
-              </Button>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
+      
     </Layout>;
 };
 export default Blog;
