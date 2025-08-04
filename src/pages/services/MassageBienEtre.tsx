@@ -4,115 +4,77 @@ import massageHero from '@/assets/massage-hero.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Sparkles, 
-  Heart, 
-  Zap, 
-  Waves, 
-  Moon, 
-  Sun, 
-  Clock, 
-  CheckCircle, 
-  Star,
-  Calendar,
-  Shield,
-  Target,
-  Activity,
-  Leaf
-} from 'lucide-react';
-
+import { Sparkles, Heart, Zap, Waves, Moon, Sun, Clock, CheckCircle, Star, Calendar, Shield, Target, Activity, Leaf } from 'lucide-react';
 const MassageBienEtre = () => {
-  const massageTypes = [
-    {
-      icon: Moon,
-      title: 'Massage Relaxant',
-      subtitle: 'Le massage anti-stress par excellence',
-      description: 'Assouplissement des articulations, détente des muscles et relance de la circulation pour une sensation de légèreté et de calme profond.',
-      benefits: ['Réduction du stress', 'Amélioration du sommeil', 'Détente musculaire', 'Sensation de légèreté', 'Calme mental profond'],
-      color: 'from-blue-500 to-indigo-500',
-      bgGradient: 'from-blue-50 to-indigo-50'
-    },
-    {
-      icon: Target,
-      title: 'Massage Décontracturant',
-      subtitle: 'Soulagement ciblé des contractures',
-      description: 'Massage manuel spécialement conçu pour soulager les contractures musculaires, diminuer les tensions nerveuses et procurer un effet antalgique immédiat.',
-      benefits: ['Soulagement des contractures', 'Diminution tensions nerveuses', 'Effet antalgique', 'Activation circulation locale', 'Récupération accélérée'],
-      color: 'from-red-500 to-orange-500',
-      bgGradient: 'from-red-50 to-orange-50',
-      duration: '20 à 40 minutes selon la zone'
-    },
-    {
-      icon: Zap,
-      title: 'Massage Tonifiant',
-      subtitle: 'Énergisant et revitalisant',
-      description: 'Massage énergique avec mouvements enveloppants et profonds pour dénouer les tensions, stimuler les tissus et éliminer les toxines.',
-      benefits: ['Dénoue les tensions', 'Stimulation des tissus', 'Élimination des toxines', 'Tonification corporelle', 'Recharge énergétique'],
-      color: 'from-green-500 to-emerald-500',
-      bgGradient: 'from-green-50 to-emerald-50'
-    }
-  ];
-
-  const expertisePoints = [
-    {
-      icon: Heart,
-      title: 'Expertise Anatomique',
-      description: 'Nos masseurs-kinésithérapeutes maîtrisent parfaitement l\'anatomie et les techniques de soins manuels.'
-    },
-    {
-      icon: Target,
-      title: 'Détection Précise',
-      description: 'Identification et traitement ciblé de vos tensions en profondeur pour un soulagement durable.'
-    },
-    {
-      icon: Waves,
-      title: 'Techniques Avancées',
-      description: 'Utilisation de méthodes professionnelles adaptées à chaque type de tension et objectif.'
-    },
-    {
-      icon: Shield,
-      title: 'Soins Personnalisés',
-      description: 'Chaque séance est adaptée à vos besoins spécifiques et à votre condition physique.'
-    }
-  ];
-
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Consultation',
-      description: 'Évaluation de vos tensions, stress et objectifs de bien-être',
-      icon: Heart
-    },
-    {
-      step: '02',
-      title: 'Choix du Massage',
-      description: 'Sélection du type de massage le plus adapté à vos besoins',
-      icon: Target
-    },
-    {
-      step: '03',
-      title: 'Séance Personnalisée',
-      description: 'Massage professionnel dans un environnement relaxant',
-      icon: Sparkles
-    },
-    {
-      step: '04',
-      title: 'Suivi & Conseils',
-      description: 'Recommandations pour prolonger les bienfaits du massage',
-      icon: Star
-    }
-  ];
-
-  return (
-    <Layout>
+  const massageTypes = [{
+    icon: Moon,
+    title: 'Massage Relaxant',
+    subtitle: 'Le massage anti-stress par excellence',
+    description: 'Assouplissement des articulations, détente des muscles et relance de la circulation pour une sensation de légèreté et de calme profond.',
+    benefits: ['Réduction du stress', 'Amélioration du sommeil', 'Détente musculaire', 'Sensation de légèreté', 'Calme mental profond'],
+    color: 'from-blue-500 to-indigo-500',
+    bgGradient: 'from-blue-50 to-indigo-50'
+  }, {
+    icon: Target,
+    title: 'Massage Décontracturant',
+    subtitle: 'Soulagement ciblé des contractures',
+    description: 'Massage manuel spécialement conçu pour soulager les contractures musculaires, diminuer les tensions nerveuses et procurer un effet antalgique immédiat.',
+    benefits: ['Soulagement des contractures', 'Diminution tensions nerveuses', 'Effet antalgique', 'Activation circulation locale', 'Récupération accélérée'],
+    color: 'from-red-500 to-orange-500',
+    bgGradient: 'from-red-50 to-orange-50',
+    duration: '20 à 40 minutes selon la zone'
+  }, {
+    icon: Zap,
+    title: 'Massage Tonifiant',
+    subtitle: 'Énergisant et revitalisant',
+    description: 'Massage énergique avec mouvements enveloppants et profonds pour dénouer les tensions, stimuler les tissus et éliminer les toxines.',
+    benefits: ['Dénoue les tensions', 'Stimulation des tissus', 'Élimination des toxines', 'Tonification corporelle', 'Recharge énergétique'],
+    color: 'from-green-500 to-emerald-500',
+    bgGradient: 'from-green-50 to-emerald-50'
+  }];
+  const expertisePoints = [{
+    icon: Heart,
+    title: 'Expertise Anatomique',
+    description: 'Nos masseurs-kinésithérapeutes maîtrisent parfaitement l\'anatomie et les techniques de soins manuels.'
+  }, {
+    icon: Target,
+    title: 'Détection Précise',
+    description: 'Identification et traitement ciblé de vos tensions en profondeur pour un soulagement durable.'
+  }, {
+    icon: Waves,
+    title: 'Techniques Avancées',
+    description: 'Utilisation de méthodes professionnelles adaptées à chaque type de tension et objectif.'
+  }, {
+    icon: Shield,
+    title: 'Soins Personnalisés',
+    description: 'Chaque séance est adaptée à vos besoins spécifiques et à votre condition physique.'
+  }];
+  const processSteps = [{
+    step: '01',
+    title: 'Consultation',
+    description: 'Évaluation de vos tensions, stress et objectifs de bien-être',
+    icon: Heart
+  }, {
+    step: '02',
+    title: 'Choix du Massage',
+    description: 'Sélection du type de massage le plus adapté à vos besoins',
+    icon: Target
+  }, {
+    step: '03',
+    title: 'Séance Personnalisée',
+    description: 'Massage professionnel dans un environnement relaxant',
+    icon: Sparkles
+  }, {
+    step: '04',
+    title: 'Suivi & Conseils',
+    description: 'Recommandations pour prolonger les bienfaits du massage',
+    icon: Star
+  }];
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={massageHero} 
-            alt="Massage bien-être dans un environnement relaxant" 
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src={massageHero} alt="Massage bien-être dans un environnement relaxant" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-green-600/95 via-emerald-600/80 to-teal-700/90"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
         </div>
@@ -153,7 +115,7 @@ const MassageBienEtre = () => {
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver un Massage
               </Button>
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300">
+              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-zinc-950">
                 Découvrir nos soins
               </Button>
             </div>
@@ -183,9 +145,8 @@ const MassageBienEtre = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {expertisePoints.map((point, index) => {
-              const Icon = point.icon;
-              return (
-                <ScrollAnimation key={index} animation="fade-up" delay={index * 150}>
+            const Icon = point.icon;
+            return <ScrollAnimation key={index} animation="fade-up" delay={index * 150}>
                   <Card className="h-full border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-500 hover:scale-105 group text-center">
                     <CardContent className="p-8">
                       <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -199,9 +160,8 @@ const MassageBienEtre = () => {
                       </p>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -227,11 +187,9 @@ const MassageBienEtre = () => {
 
           <div className="space-y-16">
             {massageTypes.map((massage, index) => {
-              const Icon = massage.icon;
-              const isEven = index % 2 === 0;
-              
-              return (
-                <ScrollAnimation key={index} animation={isEven ? "slide-left" : "slide-right"} delay={index * 200}>
+            const Icon = massage.icon;
+            const isEven = index % 2 === 0;
+            return <ScrollAnimation key={index} animation={isEven ? "slide-left" : "slide-right"} delay={index * 200}>
                   <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
                     {/* Content */}
                     <div className="flex-1 space-y-6">
@@ -253,20 +211,16 @@ const MassageBienEtre = () => {
                         {massage.description}
                       </p>
                       
-                      {massage.duration && (
-                        <div className="flex items-center space-x-2 text-gray-700">
+                      {massage.duration && <div className="flex items-center space-x-2 text-gray-700">
                           <Clock className="w-5 h-5 text-green-600" />
                           <span className="font-medium">Durée : {massage.duration}</span>
-                        </div>
-                      )}
+                        </div>}
                       
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {massage.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-center space-x-3">
+                        {massage.benefits.map((benefit, benefitIndex) => <div key={benefitIndex} className="flex items-center space-x-3">
                             <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                             <span className="text-gray-700 text-sm">{benefit}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </div>
                     
@@ -279,19 +233,16 @@ const MassageBienEtre = () => {
                             Bienfaits Principaux
                           </h4>
                           <div className="space-y-2">
-                            {massage.benefits.slice(0, 3).map((benefit, idx) => (
-                              <div key={idx} className="text-gray-700 text-sm font-medium">
+                            {massage.benefits.slice(0, 3).map((benefit, idx) => <div key={idx} className="text-gray-700 text-sm font-medium">
                                 • {benefit}
-                              </div>
-                            ))}
+                              </div>)}
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -316,9 +267,8 @@ const MassageBienEtre = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => {
-              const Icon = step.icon;
-              return (
-                <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+            const Icon = step.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                   <div className="text-center group">
                     <div className="relative mb-8">
                       <div className="w-20 h-20 mx-auto bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl border border-white/30">
@@ -329,9 +279,7 @@ const MassageBienEtre = () => {
                       <div className="absolute -top-2 -right-2 w-12 h-12 bg-emerald-400/30 rounded-full flex items-center justify-center">
                         <Icon className="w-6 h-6 text-white" />
                       </div>
-                      {index < processSteps.length - 1 && (
-                        <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-white/50 to-transparent"></div>
-                      )}
+                      {index < processSteps.length - 1 && <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-white/50 to-transparent"></div>}
                     </div>
                     
                     <h3 className="text-xl font-playfair font-bold text-white mb-4">
@@ -341,9 +289,8 @@ const MassageBienEtre = () => {
                       {step.description}
                     </p>
                   </div>
-                </ScrollAnimation>
-              );
-            })}
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
@@ -358,17 +305,33 @@ const MassageBienEtre = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {[
-                { icon: Moon, title: 'Relaxation Profonde', desc: 'Détente musculaire et mentale complète' },
-                { icon: Activity, title: 'Circulation Améliorée', desc: 'Activation de la circulation sanguine et lymphatique' },
-                { icon: Zap, title: 'Énergie Renouvelée', desc: 'Élimination des toxines et recharge énergétique' },
-                { icon: Heart, title: 'Stress Réduit', desc: 'Diminution du stress et amélioration du bien-être' },
-                { icon: Sun, title: 'Sommeil Amélioré', desc: 'Qualité de sommeil significativement améliorée' },
-                { icon: Shield, title: 'Récupération Optimisée', desc: 'Accélération de la récupération musculaire' }
-              ].map((benefit, index) => {
-                const Icon = benefit.icon;
-                return (
-                  <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
+              {[{
+              icon: Moon,
+              title: 'Relaxation Profonde',
+              desc: 'Détente musculaire et mentale complète'
+            }, {
+              icon: Activity,
+              title: 'Circulation Améliorée',
+              desc: 'Activation de la circulation sanguine et lymphatique'
+            }, {
+              icon: Zap,
+              title: 'Énergie Renouvelée',
+              desc: 'Élimination des toxines et recharge énergétique'
+            }, {
+              icon: Heart,
+              title: 'Stress Réduit',
+              desc: 'Diminution du stress et amélioration du bien-être'
+            }, {
+              icon: Sun,
+              title: 'Sommeil Amélioré',
+              desc: 'Qualité de sommeil significativement améliorée'
+            }, {
+              icon: Shield,
+              title: 'Récupération Optimisée',
+              desc: 'Accélération de la récupération musculaire'
+            }].map((benefit, index) => {
+              const Icon = benefit.icon;
+              return <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
                     <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                       <Icon className="w-12 h-12 text-green-600 mx-auto mb-4" />
                       <h3 className="text-lg font-playfair font-bold text-gray-800 mb-2">
@@ -378,9 +341,8 @@ const MassageBienEtre = () => {
                         {benefit.desc}
                       </p>
                     </div>
-                  </ScrollAnimation>
-                );
-              })}
+                  </ScrollAnimation>;
+            })}
             </div>
           </ScrollAnimation>
         </div>
@@ -411,16 +373,11 @@ const MassageBienEtre = () => {
                 Réserver Maintenant
               </Button>
               
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300">
-                <Clock className="w-5 h-5 mr-3" />
-                Voir les tarifs
-              </Button>
+              
             </div>
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default MassageBienEtre;
