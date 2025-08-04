@@ -20,7 +20,7 @@ const Services = () => {
     route: '/services/traumatologie'
   }, {
     icon: Heart,
-    title: 'Kinésithérapie Respiratoire',
+    title: 'Kinésithérapie',
     description: 'Amélioration de la respiration chez l\'adulte et l\'enfant',
     features: ['Kinésithérapie respiratoire nourrisson', 'Kinésithérapie respiratoire adulte', 'Désencombrement bronchique', 'Possibilité à domicile'],
     duration: '30-45 minutes',

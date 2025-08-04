@@ -3,189 +3,415 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Heart, Clock, CheckCircle, Baby, Users, Stethoscope, ArrowLeft, Phone, Calendar, Home } from 'lucide-react';
+import { 
+  ArrowLeft, Calendar, Phone, CheckCircle, Heart, Brain, 
+  Wind, Droplets, Activity, Hand, Baby, Clock, Star,
+  Stethoscope, Target, Shield, Users, Home, ArrowRight,
+  Zap, Sparkles
+} from 'lucide-react';
 import specialtyImage from '@/assets/specialty-medical-gymnastics.jpg';
+
 const KinesitherapieRespiratoire = () => {
-  const services = [{
-    icon: Baby,
-    title: "Kinésithérapie Respiratoire Nourrisson",
-    description: "Soins spécialisés pour les tout-petits avec des techniques douces et adaptées",
-    techniques: ["Drainage bronchique adapté", "Désencombrement en douceur", "Techniques de clapping modéré", "Surveillance continue"]
-  }, {
-    icon: Users,
-    title: "Kinésithérapie Respiratoire Adulte",
-    description: "Traitement complet des affections respiratoires chez l'adulte",
-    techniques: ["Drainage postural", "Techniques de toux assistée", "Rééducation ventilatoire", "Exercices de renforcement"]
-  }, {
-    icon: Home,
-    title: "Soins à Domicile",
-    description: "Possibilité de traitement dans le confort de votre domicile",
-    techniques: ["Déplacement sur rendez-vous", "Matériel portatif", "Suivi personnalisé", "Urgences respiratoires"]
-  }];
-  const conditions = ["Bronchiolite du nourrisson", "Bronchite chronique", "Asthme et allergies respiratoires", "Mucoviscidose", "Post-opératoire thoracique", "Insuffisance respiratoire", "Pneumonie et infections", "Œdème pulmonaire"];
-  const benefits = ["Amélioration de la fonction respiratoire", "Réduction des sécrétions bronchiques", "Prévention des complications", "Diminution de la toux", "Meilleure oxygénation", "Confort respiratoire accru"];
-  return <Layout>
+  const services = [
+    {
+      icon: Activity,
+      title: "Traumatologie, Rhumatologie & Pathologies de la Colonne Vertébrale",
+      description: "Nous traitons les atteintes mécaniques ou inflammatoires de l'appareil locomoteur",
+      conditions: [
+        "Arthrose, arthrite, tendinite",
+        "Scoliose, raideurs post-traumatiques", 
+        "Polyarthrite rhumatoïde",
+        "Entorses, prothèse totale de hanche (PTH) ou de genou (PTG)"
+      ],
+      gradient: "from-primary/20 to-primary/5",
+      color: "text-primary"
+    },
+    {
+      icon: Brain,
+      title: "Neurologie",
+      description: "Prise en charge des affections du système nerveux, d'origine traumatique ou pathologique",
+      conditions: [
+        "Hémiplégie, tétraplégie, paralysies centrales ou périphériques",
+        "Paralysie faciale, infirmité motrice cérébrale (IMC)",
+        "Maladie de Parkinson, d'Alzheimer, sclérose en plaques (SEP)",
+        "Sclérose latérale amyotrophique (SLA)"
+      ],
+      gradient: "from-secondary/20 to-secondary/5",
+      color: "text-secondary"
+    },
+    {
+      icon: Wind,
+      title: "Rééducation Respiratoire",
+      description: "Amélioration de la fonction respiratoire dans les cas suivants",
+      conditions: [
+        "Bronchiolite du nourrisson, asthme, bronchite chronique",
+        "Emphysème, dilatation des bronches (DDB), post-infection",
+        "Techniques de drainage bronchique et désencombrement",
+        "Réentraînement respiratoire"
+      ],
+      gradient: "from-medical-red/20 to-red-500/5",
+      color: "text-medical-red"
+    },
+    {
+      icon: Droplets,
+      title: "Drainage Lymphatique Manuel (DLM)",
+      description: "Massage doux favorisant la circulation lymphatique",
+      conditions: [
+        "Jambes lourdes, œdèmes, séquelles de phlébite",
+        "Suite à une chirurgie, notamment une ablation mammaire",
+        "Détoxification du corps et renforcement immunitaire",
+        "Réalisé manuellement en respectant les trajets lymphatiques"
+      ],
+      gradient: "from-accent/20 to-accent/5",
+      color: "text-accent"
+    },
+    {
+      icon: Activity,
+      title: "Réadaptation à l'Effort",
+      description: "Accompagnement progressif à la reprise de la marche ou d'une activité physique",
+      conditions: [
+        "Pathologie cardiovasculaire, traitement oncologique",
+        "Fatigue chronique ou déconditionnement à l'effort",
+        "Activité physique adaptée",
+        "Favorise la récupération et le bien-être général"
+      ],
+      gradient: "from-neutral-light/20 to-neutral-light/5",
+      color: "text-neutral"
+    },
+    {
+      icon: Hand,
+      title: "Traitement des Cicatrices",
+      description: "Rééducation des cicatrices problématiques",
+      conditions: [
+        "Inflammatoires, douloureuses, adhérentes",
+        "Esthétiquement gênantes",
+        "Consécutives à une opération, un traumatisme ou une brûlure",
+        "Techniques spécifiques (Stravac, autres techniques)"
+      ],
+      gradient: "from-neutral/20 to-neutral/5",
+      color: "text-neutral-dark"
+    },
+    {
+      icon: Baby,
+      title: "Développement Psychomoteur de l'Enfant",
+      description: "Soutien à l'acquisition des étapes clés du développement moteur",
+      conditions: [
+        "Retards ou troubles de la marche, station assise",
+        "Pathologies neurologiques ou musculaires (IMC, myopathies)",
+        "Accompagnement doux et progressif",
+        "Aide chaque enfant à développer son autonomie motrice"
+      ],
+      gradient: "from-green-500/20 to-green-400/5",
+      color: "text-green-600"
+    }
+  ];
+
+  const benefits = [
+    "Soulagement de la douleur",
+    "Restauration de la mobilité", 
+    "Amélioration de la qualité de vie",
+    "Maintien ou récupération des fonctions motrices",
+    "Développement de l'autonomie",
+    "Approche personnalisée et globale"
+  ];
+
+  const processSteps = [
+    {
+      step: "01",
+      title: "Évaluation Initiale",
+      description: "Bilan complet de votre condition et définition d'objectifs personnalisés",
+      icon: Target
+    },
+    {
+      step: "02", 
+      title: "Plan Thérapeutique",
+      description: "Élaboration d'un programme adapté à vos besoins spécifiques",
+      icon: Heart
+    },
+    {
+      step: "03",
+      title: "Traitement Actif",
+      description: "Mise en œuvre des techniques de kinésithérapie appropriées",
+      icon: Activity
+    },
+    {
+      step: "04",
+      title: "Suivi & Autonomie",
+      description: "Accompagnement vers l'autonomie et conseils de prévention",
+      icon: Star
+    }
+  ];
+
+  return (
+    <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={specialtyImage} alt="Kinésithérapie Respiratoire" className="w-full h-full object-cover scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-br from-medical-red/90 via-medical-red/75 to-red-600/85"></div>
+          <img 
+            src={specialtyImage} 
+            alt="Kinésithérapie moderne" 
+            className="w-full h-full object-cover scale-110" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-secondary/90"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/20"></div>
         </div>
 
-        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/6 w-20 h-20 bg-gradient-accent rounded-full opacity-20 animate-float flex items-center justify-center">
+            <Heart className="w-10 h-10 text-white" />
+          </div>
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-secondary rounded-full opacity-30 animate-float-delay flex items-center justify-center">
+            <Activity className="w-8 h-8 text-white" />
+          </div>
+          <div className="absolute bottom-1/3 left-1/3 w-18 h-18 bg-gradient-primary rounded-full opacity-25 animate-float flex items-center justify-center">
+            <Wind className="w-9 h-9 text-white" />
+          </div>
+          <div className="absolute bottom-1/4 right-1/5 w-14 h-14 bg-white/20 rounded-full opacity-40 animate-float-delay flex items-center justify-center">
+            <Brain className="w-7 h-7 text-white" />
+          </div>
+        </div>
+
+        <div className="relative z-10 text-center max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button variant="ghost" className="text-white/80 hover:text-white mb-8 p-0" onClick={() => window.history.back()}>
-              <ArrowLeft className="w-5 h-5 mr-2" />
+            <Button 
+              variant="ghost" 
+              className="text-white/80 hover:text-white mb-8 p-0 group transition-all duration-300" 
+              onClick={() => window.history.back()}
+            >
+              <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
               Retour aux services
             </Button>
             
-            <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
-              Spécialité Respiratoire
+            <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-8 py-3 text-sm mb-8 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Services Complets de Kinésithérapie
             </Badge>
             
-            <h1 className="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 leading-tight">
-              Kinésithérapie <span className="text-gradient-accent">Respiratoire</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-8 leading-tight">
+              Kinésithérapie <br />
+              <span className="text-gradient-accent">Globale</span>
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={400}>
-            <p className="text-xl md:text-2xl text-neutral-lightest/90 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Amélioration de la respiration chez l'adulte et l'enfant avec des techniques 
-              spécialisées et un accompagnement personnalisé, y compris à domicile.
+            <p className="text-xl md:text-2xl lg:text-3xl text-neutral-lightest/90 max-w-5xl mx-auto mb-12 leading-relaxed font-light">
+              Nos services de kinésithérapie nous proposons une prise en charge 
+              <span className="text-white font-medium"> globale et personnalisée </span>
+              dans différents domaines, adaptée à chaque besoin et à chaque patient
             </p>
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={600}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-medical-red hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
-                <Calendar className="w-5 h-5 mr-3" />
-                Réserver maintenant
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
+                <Calendar className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                Réserver une Consultation
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
-                <Phone className="w-5 h-5 mr-3" />
-                Urgence respiratoire
+              <Button 
+                variant="outline" 
+                className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white group"
+              >
+                <Phone className="w-5 h-5 mr-3 group-hover:animate-pulse" />
+                Contact Urgent
               </Button>
             </div>
           </ScrollAnimation>
 
           {/* Quick Stats */}
           <ScrollAnimation animation="fade-up" delay={800}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
-              <div className="glass-card p-6 text-center">
-                <div className="text-2xl font-playfair font-bold text-white mb-2">30-45</div>
-                <div className="text-white/80 text-sm">Minutes</div>
-              </div>
-              <div className="glass-card p-6 text-center">
-                <div className="text-2xl font-playfair font-bold text-white mb-2">0-99</div>
-                <div className="text-white/80 text-sm">Ans</div>
-              </div>
-              <div className="glass-card p-6 text-center">
-                <div className="text-2xl font-playfair font-bold text-white mb-2">24/7</div>
-                <div className="text-white/80 text-sm">Urgences</div>
-              </div>
-              <div className="glass-card p-6 text-center">
-                <div className="text-2xl font-playfair font-bold text-white mb-2">✓</div>
-                <div className="text-white/80 text-sm">Domicile</div>
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {[
+                { value: "7", label: "Spécialités", icon: Target },
+                { value: "100%", label: "Personnalisé", icon: Heart },
+                { value: "24h", label: "Urgences", icon: Clock },
+                { value: "🏠", label: "Domicile", icon: Home }
+              ].map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="glass-card p-6 text-center group hover:scale-110 transition-all duration-300">
+                    <Icon className="w-6 h-6 text-accent mx-auto mb-3 group-hover:animate-pulse" />
+                    <div className="text-2xl font-playfair font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-white/80 text-sm">{stat.label}</div>
+                  </div>
+                );
+              })}
             </div>
           </ScrollAnimation>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 medical-pattern opacity-5"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-6">
-                Nos <span className="text-gradient-accent">Services Respiratoires</span>
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
+                Nos <span className="text-gradient-accent">Domaines d'Expertise</span>
               </h2>
-              <p className="text-xl text-neutral-light max-w-3xl mx-auto">
-                Une expertise adaptée à chaque âge et chaque pathologie respiratoire
+              <p className="text-xl text-neutral-light max-w-4xl mx-auto leading-relaxed">
+                Une approche complète et spécialisée pour répondre à tous vos besoins thérapeutiques
               </p>
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => {
-            const Icon = service.icon;
-            return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
-                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full">
+              const Icon = service.icon;
+              return (
+                <ScrollAnimation 
+                  key={index} 
+                  animation={index % 2 === 0 ? "slide-left" : "slide-right"} 
+                  delay={index * 150}
+                >
+                  <Card className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-[1.02] hover-glow h-full group bg-gradient-to-br ${service.gradient}`}>
                     <CardContent className="p-8">
-                      <div className="w-16 h-16 bg-gradient-to-br from-medical-red/20 to-red-500/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <Icon className="w-8 h-8 text-medical-red" />
-                      </div>
-                      
-                      <h3 className="text-xl font-playfair font-bold text-primary mb-4 text-center">
-                        {service.title}
-                      </h3>
-                      
-                      <p className="text-neutral-light mb-6 text-center text-sm">
-                        {service.description}
-                      </p>
-                      
-                      <div className="space-y-3">
-                        {service.techniques.map((technique, techIndex) => <div key={techIndex} className="flex items-start space-x-3">
-                            <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
-                            <span className="text-neutral text-sm">{technique}</span>
-                          </div>)}
+                      <div className="flex items-start space-x-6">
+                        <div className="flex-shrink-0">
+                          <div className="w-20 h-20 rounded-2xl bg-white/50 flex items-center justify-center group-hover:animate-pulse-glow shadow-medium backdrop-blur-sm">
+                            <Icon className={`w-10 h-10 ${service.color} group-hover:scale-110 transition-all duration-300`} />
+                          </div>
+                        </div>
+                        
+                        <div className="flex-grow">
+                          <h3 className="text-xl font-playfair font-bold text-primary mb-4 leading-tight">
+                            {service.title}
+                          </h3>
+                          <p className="text-neutral-light mb-6 leading-relaxed">
+                            {service.description}
+                          </p>
+                          
+                          <div className="space-y-3">
+                            {service.conditions.map((condition, condIndex) => (
+                              <div key={condIndex} className="flex items-start space-x-3">
+                                <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                                <span className="text-neutral text-sm leading-relaxed">{condition}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>;
-          })}
+                </ScrollAnimation>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Conditions Section */}
-      <section className="py-24 bg-neutral-lightest">
+      {/* Process Section */}
+      <section className="py-32 bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="w-full h-full bg-gradient-to-br from-primary/90 via-secondary/80 to-accent/90"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-playfair font-bold text-white mb-6">
+                Notre <span className="text-gradient-accent">Processus de Soins</span>
+              </h2>
+              <p className="text-xl text-neutral-lightest/90 max-w-4xl mx-auto leading-relaxed">
+                Une approche méthodique et personnalisée pour garantir votre rétablissement optimal
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
+                  <div className="text-center group">
+                    <div className="relative mb-8">
+                      <div className="w-24 h-24 mx-auto bg-gradient-accent rounded-2xl flex items-center justify-center shadow-accent-glow group-hover:scale-110 transition-all duration-300 backdrop-blur-sm">
+                        <Icon className="w-10 h-10 text-white group-hover:animate-pulse" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                        <span className="text-sm font-playfair font-bold text-primary">
+                          {step.step}
+                        </span>
+                      </div>
+                      {index < processSteps.length - 1 && (
+                        <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-accent/50 to-transparent"></div>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-xl font-playfair font-bold text-white mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="text-neutral-lightest/80 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </ScrollAnimation>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-32 bg-neutral-lightest relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimation animation="slide-left">
               <div>
-                <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-8">
-                  Pathologies <span className="text-gradient-accent">Traitées</span>
+                <h2 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-8">
+                  Nos <span className="text-gradient-accent">Objectifs Thérapeutiques</span>
                 </h2>
                 
                 <p className="text-xl text-neutral-light mb-8 leading-relaxed">
-                  Notre expertise couvre un large éventail d'affections respiratoires, 
-                  du nourrisson à l'adulte, avec des protocoles adaptés.
+                  Nos protocoles visent à soulager la douleur, restaurer la mobilité et améliorer 
+                  significativement votre qualité de vie grâce à une approche globale et personnalisée.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {conditions.map((condition, index) => <div key={index} className="flex items-center space-x-3">
-                      <Stethoscope className="w-5 h-5 text-medical-red flex-shrink-0" />
-                      <span className="text-neutral">{condition}</span>
-                    </div>)}
+                <div className="grid grid-cols-1 gap-4">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center space-x-4 p-4 glass-card rounded-xl hover:scale-105 transition-all duration-300">
+                      <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-neutral font-medium">{benefit}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slide-right">
-              <div className="bg-gradient-to-br from-medical-red/10 to-red-500/10 rounded-3xl p-8">
-                <h3 className="text-2xl font-playfair font-bold text-primary mb-6 text-center">
-                  Bénéfices du Traitement
-                </h3>
-                
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-3">
-                      <Heart className="w-5 h-5 text-medical-red flex-shrink-0" />
-                      <span className="text-neutral">{benefit}</span>
-                    </div>)}
+              <div className="bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 rounded-3xl p-10 glass-card">
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6 shadow-accent-glow">
+                    <Users className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-playfair font-bold text-primary mb-4">
+                    Prise en Charge Personnalisée
+                  </h3>
+                  <p className="text-neutral-light leading-relaxed mb-8">
+                    Chaque patient bénéficie d'un accompagnement sur mesure, adapté à sa condition, 
+                    ses objectifs et son rythme de progression.
+                  </p>
                 </div>
 
-                <div className="mt-8 p-6 bg-white/50 rounded-2xl">
-                  <div className="text-center">
-                    <Clock className="w-8 h-8 text-medical-red mx-auto mb-4" />
-                    <div className="text-lg font-playfair font-semibold text-primary mb-2">
-                      Durée des séances
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center p-6 bg-white/50 rounded-2xl">
+                    <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <div className="text-lg font-playfair font-semibold text-primary mb-1">
+                      Durée
                     </div>
-                    <div className="text-2xl font-bold text-medical-red">30-45 minutes</div>
-                    <div className="text-sm text-neutral-light mt-2">
-                      Adaptée selon l'âge et la pathologie
+                    <div className="text-sm text-neutral-light">45-60 min</div>
+                  </div>
+                  <div className="text-center p-6 bg-white/50 rounded-2xl">
+                    <Home className="w-8 h-8 text-secondary mx-auto mb-3" />
+                    <div className="text-lg font-playfair font-semibold text-primary mb-1">
+                      Domicile
                     </div>
+                    <div className="text-sm text-neutral-light">Disponible</div>
                   </div>
                 </div>
               </div>
@@ -195,31 +421,43 @@ const KinesitherapieRespiratoire = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-medical-red via-red-600 to-red-700">
-        <div className="max-w-4xl mx-auto text-center px-6 lg:px-8">
+      <section className="py-32 bg-gradient-premium relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float absolute top-10 left-10"></div>
+          <div className="w-64 h-64 bg-white/5 rounded-full blur-2xl animate-float-delay absolute bottom-10 right-10"></div>
+          <div className="w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-float absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-5xl mx-auto text-center px-6 lg:px-8">
           <ScrollAnimation animation="scale-up">
-            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-8">
-              Respirez <span className="text-white/80">Mieux</span> Dès Aujourd'hui
+            <h2 className="text-4xl md:text-6xl font-playfair font-bold text-white mb-8 leading-tight">
+              Commencez Votre 
+              <span className="text-white/80 block">Rétablissement Aujourd'hui</span>
             </h2>
-            <p className="text-xl text-white/90 mb-12 leading-relaxed">
-              N'attendez pas pour améliorer votre fonction respiratoire. 
-              Contactez-nous pour une consultation ou en cas d'urgence respiratoire.
+            <p className="text-xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto">
+              Nos kinésithérapeutes experts sont prêts à vous accompagner dans votre parcours de guérison. 
+              Réservez votre consultation personnalisée ou contactez-nous pour plus d'informations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-medical-red hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
-                <Calendar className="w-5 h-5 mr-3" />
-                Réserver une consultation
+              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
+                <Calendar className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                Réserver une Consultation Gratuite
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
-                <Home className="w-5 h-5 mr-3" />
-                Demander un soin à domicile
+              <Button 
+                variant="outline" 
+                className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-white group"
+              >
+                <ArrowRight className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
+                Découvrir Nos Tarifs
               </Button>
             </div>
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 };
+
 export default KinesitherapieRespiratoire;
