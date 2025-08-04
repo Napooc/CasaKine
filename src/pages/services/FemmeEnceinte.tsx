@@ -1,0 +1,364 @@
+import Layout from '@/components/Layout';
+import ScrollAnimation from '@/components/ScrollAnimation';
+import femmeEnceinteHero from '@/assets/femme-enceinte-hero.jpg';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { 
+  Baby, 
+  Heart, 
+  Sparkles, 
+  Shield, 
+  Users, 
+  Clock, 
+  CheckCircle, 
+  Star,
+  Calendar,
+  User,
+  Target,
+  Activity,
+  Brain,
+  Zap
+} from 'lucide-react';
+
+const FemmeEnceinte = () => {
+  const preparationServices = [
+    {
+      icon: Heart,
+      title: 'Techniques de Respiration',
+      description: 'Apprenez les techniques essentielles pour mieux gérer les contractions et soulager la douleur naturellement.',
+      benefits: ['Gestion de la douleur', 'Relaxation profonde', 'Oxygénation optimale', 'Contrôle du stress']
+    },
+    {
+      icon: Users,
+      title: 'Positions d\'Accouchement',
+      description: 'Découvrez les positions favorables qui facilitent le travail et l\'expulsion lors de l\'accouchement.',
+      benefits: ['Facilite le travail', 'Réduit les douleurs', 'Accélère la descente', 'Positions confortables']
+    },
+    {
+      icon: Baby,
+      title: 'Communication In Utero',
+      description: 'Créez un lien précoce avec votre bébé grâce à des techniques de communication prénatale impliquant le futur papa.',
+      benefits: ['Lien parent-enfant', 'Implication du papa', 'Développement émotionnel', 'Préparation à la parentalité']
+    }
+  ];
+
+  const reeducationServices = [
+    {
+      icon: Target,
+      title: 'Renforcement Périnéal',
+      description: 'Retrouvez tonicité et contrôle pour prévenir les fuites urinaires et le relâchement musculaire.',
+      methods: ['Exercices ciblés', 'Contractions progressives', 'Respiration coordonnée', 'Conscience corporelle']
+    },
+    {
+      icon: Brain,
+      title: 'Biofeedback',
+      description: 'Technique avec sonde vaginale et retour visuel/sonore pour visualiser et contrôler vos contractions musculaires.',
+      methods: ['Visualisation temps réel', 'Contrôle précis', 'Apprentissage accéléré', 'Feedback instantané']
+    },
+    {
+      icon: Zap,
+      title: 'Électrostimulation',
+      description: 'En cas de faiblesse musculaire importante, réactivation des contractions périnéales par stimulation électrique.',
+      methods: ['Réactivation musculaire', 'Intensité progressive', 'Récupération accélérée', 'Tonification ciblée']
+    }
+  ];
+
+  const processSteps = [
+    {
+      step: '01',
+      title: 'Évaluation Initiale',
+      description: 'Bilan complet de votre état physique et de vos besoins spécifiques selon le stade de grossesse.',
+      icon: User
+    },
+    {
+      step: '02',
+      title: 'Programme Personnalisé',
+      description: 'Élaboration d\'un plan adapté à votre profil et à vos objectifs de préparation.',
+      icon: Target
+    },
+    {
+      step: '03',
+      title: 'Séances Régulières',
+      description: 'Accompagnement hebdomadaire avec exercices pratiques et techniques spécialisées.',
+      icon: Calendar
+    },
+    {
+      step: '04',
+      title: 'Suivi Post-Partum',
+      description: 'Rééducation périnéale et abdominale pour retrouver tonicité et bien-être après l\'accouchement.',
+      icon: Activity
+    }
+  ];
+
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={femmeEnceinteHero} 
+            alt="Femme enceinte en consultation" 
+            className="w-full h-full object-cover scale-105" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-600/95 via-pink-500/80 to-purple-600/90"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float"></div>
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-pink-300/20 rounded-full blur-lg animate-float-delay"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-purple-300/15 rounded-full blur-2xl animate-float"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-12 h-12 bg-white/20 rounded-full blur-md animate-float-delay"></div>
+        </div>
+
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up" delay={200}>
+            <div className="mb-8">
+              <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
+                🤰 Accompagnement Spécialisé
+              </Badge>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
+                Femme <span className="text-pink-200">Enceinte</span><br />
+                <span className="text-3xl md:text-4xl lg:text-5xl font-montserrat font-light opacity-90">
+                  Préparation & Rééducation
+                </span>
+              </h1>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="fade-up" delay={400}>
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
+              Un accompagnement complet pour vivre sereinement votre grossesse et retrouver 
+              votre bien-être après l'accouchement.
+            </p>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="scale-up" delay={600}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button className="bg-white text-pink-600 hover:bg-pink-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110">
+                <Calendar className="w-5 h-5 mr-3" />
+                Réserver une Séance
+              </Button>
+              <Button variant="outline" className="border-white/30 text-white hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300">
+                En savoir plus
+              </Button>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* Preparation Section */}
+      <section className="py-32 bg-gradient-to-br from-pink-50 to-purple-50 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="w-96 h-96 bg-pink-200/30 rounded-full blur-3xl absolute top-0 right-0"></div>
+          <div className="w-64 h-64 bg-purple-200/20 rounded-full blur-2xl absolute bottom-0 left-0"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-800 mb-6">
+                Préparation à l'<span className="text-pink-600">Accouchement</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Des séances complètes et personnalisées pour vous préparer à accueillir votre bébé en toute sérénité
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            {preparationServices.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
+                  <Card className="h-full border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <CardHeader className="text-center pb-4">
+                      <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <Icon className="w-10 h-10 text-white" />
+                      </div>
+                      <CardTitle className="text-xl font-playfair text-gray-800">
+                        {service.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div className="space-y-3">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <div key={benefitIndex} className="flex items-center space-x-3">
+                            <CheckCircle className="w-5 h-5 text-pink-500 flex-shrink-0" />
+                            <span className="text-gray-700 text-sm">{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </ScrollAnimation>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-32 bg-gradient-to-br from-purple-600 via-pink-600 to-pink-700 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="w-full h-full bg-black/20"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-6">
+                Notre <span className="text-pink-200">Processus</span>
+              </h2>
+              <p className="text-xl text-white/90 max-w-3xl mx-auto">
+                Un accompagnement structuré et personnalisé tout au long de votre parcours
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+                  <div className="text-center group">
+                    <div className="relative mb-8">
+                      <div className="w-20 h-20 mx-auto bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl border border-white/30">
+                        <span className="text-2xl font-playfair font-bold text-white">
+                          {step.step}
+                        </span>
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-12 h-12 bg-pink-300/30 rounded-full flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      {index < processSteps.length - 1 && (
+                        <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-white/50 to-transparent"></div>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-xl font-playfair font-bold text-white mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="text-white/80 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </ScrollAnimation>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Reeducation Section */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="w-96 h-96 bg-purple-100/50 rounded-full blur-3xl absolute top-10 left-10"></div>
+          <div className="w-64 h-64 bg-pink-100/30 rounded-full blur-2xl absolute bottom-10 right-10"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-gray-800 mb-6">
+                Rééducation <span className="text-purple-600">Périnéale</span> Post-Accouchement
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Un suivi spécialisé pour retrouver tonicité, confort et sécurité dans votre quotidien après l'accouchement
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            {reeducationServices.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
+                  <Card className="h-full border-0 shadow-xl bg-gradient-to-br from-white to-purple-50/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
+                    <CardHeader className="text-center pb-4">
+                      <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <Icon className="w-10 h-10 text-white" />
+                      </div>
+                      <CardTitle className="text-xl font-playfair text-gray-800">
+                        {service.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div className="space-y-3">
+                        {service.methods.map((method, methodIndex) => (
+                          <div key={methodIndex} className="flex items-center space-x-3">
+                            <Sparkles className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                            <span className="text-gray-700 text-sm">{method}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </ScrollAnimation>
+              );
+            })}
+          </div>
+
+          <ScrollAnimation animation="fade-up" delay={600}>
+            <div className="mt-16 text-center">
+              <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-8 max-w-4xl mx-auto">
+                <Shield className="w-16 h-16 text-purple-600 mx-auto mb-6" />
+                <h3 className="text-2xl font-playfair font-bold text-gray-800 mb-4">
+                  Renforcement Abdominal Ciblé
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Une fois la tonicité périnéale retrouvée, nous poursuivons par un travail abdominal ciblé, 
+                  essentiel pour refermer la sangle abdominale en douceur et retrouver votre silhouette d'avant grossesse.
+                </p>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 bg-gradient-to-br from-pink-600 to-purple-700 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float absolute top-10 left-10"></div>
+          <div className="w-64 h-64 bg-pink-300/20 rounded-full blur-2xl animate-float-delay absolute bottom-10 right-10"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-6 lg:px-8">
+          <ScrollAnimation animation="scale-up">
+            <Baby className="w-20 h-20 text-white/80 mx-auto mb-8" />
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-8">
+              Prête à Commencer Votre 
+              <span className="text-pink-200 block">Parcours de Bien-être ?</span>
+            </h2>
+            <p className="text-xl text-white/90 mb-12 leading-relaxed">
+              Nos spécialistes vous accompagnent à chaque étape, de la préparation à l'accouchement 
+              jusqu'à votre récupération complète.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button className="bg-white text-pink-600 hover:bg-pink-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110">
+                <Star className="w-5 h-5 mr-3" />
+                Consultation Gratuite
+              </Button>
+              
+              <Button variant="outline" className="border-white/30 text-white hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300">
+                <Clock className="w-5 h-5 mr-3" />
+                Voir les horaires
+              </Button>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default FemmeEnceinte;

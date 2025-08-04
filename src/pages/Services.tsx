@@ -4,7 +4,7 @@ import heroServicesImage from '@/assets/hero-services.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Stethoscope, Target, Users, Award } from 'lucide-react';
+import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Stethoscope, Target, Users, Award, Baby, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 const Services = () => {
   const navigate = useNavigate();
@@ -45,6 +45,24 @@ const Services = () => {
     color: 'text-accent',
     bgGradient: 'from-accent/10 to-accent/5',
     route: '/services/reeducation-specialisee'
+  }, {
+    icon: Baby,
+    title: 'Femme enceinte',
+    description: 'Accompagnement spécialisé pour la grossesse et l\'après-accouchement',
+    features: ['Préparation à l\'accouchement', 'Techniques de respiration', 'Rééducation périnéale post-partum', 'Biofeedback et électrostimulation', 'Communication in utero', 'Renforcement abdominal'],
+    duration: '45-60 minutes',
+    color: 'text-pink-600',
+    bgGradient: 'from-pink-500/10 to-pink-500/5',
+    route: '/services/femme-enceinte'
+  }, {
+    icon: Sparkles,
+    title: 'Massage et Bien-être',
+    description: 'Massages thérapeutiques pour relaxation et récupération',
+    features: ['Massage relaxant anti-stress', 'Massage décontracturant', 'Massage tonifiant énergisant', 'Détente musculaire profonde', 'Amélioration circulation', 'Élimination des toxines'],
+    duration: '20-60 minutes',
+    color: 'text-green-600',
+    bgGradient: 'from-green-500/10 to-green-500/5',
+    route: '/services/massage-bien-etre'
   }];
   const specialties = [{
     icon: Stethoscope,
