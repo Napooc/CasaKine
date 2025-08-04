@@ -364,10 +364,7 @@ const KinesitherapieRespiratoire = () => {
                 Réserver une Consultation Gratuite
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 group text-zinc-950">
-                <ArrowRight className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
-                Découvrir Nos Tarifs
-              </Button>
+              
             </div>
           </ScrollAnimation>
         </div>
