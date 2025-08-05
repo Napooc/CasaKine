@@ -5,6 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Activity, Clock, CheckCircle, Users, Award, Target, ArrowLeft, Phone, Calendar } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-rehabilitation.jpg';
+import equipmentImage from '@/assets/traumatologie-equipment.jpg';
+import therapyImage from '@/assets/traumatologie-therapy.jpg';
+import recoveryImage from '@/assets/traumatologie-recovery.jpg';
 const Traumatologie = () => {
   const treatments = [{
     title: "Traumatologie",
@@ -121,48 +124,143 @@ const Traumatologie = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Equipment Section */}
       <section className="py-24 bg-neutral-lightest">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-6">
+                Équipements <span className="text-gradient-accent">Modernes</span>
+              </h2>
+              <p className="text-xl text-neutral-light max-w-3xl mx-auto">
+                Technologies de pointe pour des traitements efficaces et personnalisés
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <ScrollAnimation animation="slide-left">
+              <div className="relative">
+                <img 
+                  src={equipmentImage} 
+                  alt="Équipements modernes de traumatologie" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="slide-right">
+              <div>
+                <h3 className="text-3xl font-playfair font-bold text-primary mb-6">
+                  Technologie de Pointe
+                </h3>
+                <p className="text-xl text-neutral-light mb-8 leading-relaxed">
+                  Notre centre est équipé des dernières innovations en matière de rééducation 
+                  et de physiothérapie pour garantir les meilleurs résultats.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+                      <span className="text-neutral">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+
+          {/* Therapy Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimation animation="slide-left">
               <div>
-                <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-8">
-                  Bénéfices de nos <span className="text-gradient-accent">Traitements</span>
-                </h2>
-                
+                <h3 className="text-3xl font-playfair font-bold text-primary mb-6">
+                  Thérapie <span className="text-gradient-accent">Personnalisée</span>
+                </h3>
                 <p className="text-xl text-neutral-light mb-8 leading-relaxed">
-                  Notre approche thérapeutique combine techniques manuelles traditionnelles 
-                  et innovations technologiques pour des résultats optimaux.
+                  Chaque patient bénéficie d'un plan de traitement adapté à ses besoins 
+                  spécifiques et à ses objectifs de récupération.
                 </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                      <span className="text-neutral">{benefit}</span>
-                    </div>)}
+                <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-8">
+                  <div className="grid grid-cols-2 gap-8">
+                    <div className="text-center">
+                      <div className="text-4xl font-playfair font-bold text-primary mb-2">45-60</div>
+                      <div className="text-neutral-light">Minutes par séance</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl font-playfair font-bold text-primary mb-2">15+</div>
+                      <div className="text-neutral-light">Années d'expérience</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl font-playfair font-bold text-primary mb-2">95%</div>
+                      <div className="text-neutral-light">Patients satisfaits</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl font-playfair font-bold text-primary mb-2">24/7</div>
+                      <div className="text-neutral-light">Urgences possibles</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slide-right">
-              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-8">
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="text-center">
-                    <div className="text-4xl font-playfair font-bold text-primary mb-2">45-60</div>
-                    <div className="text-neutral-light">Minutes par séance</div>
+              <div className="relative">
+                <img 
+                  src={therapyImage} 
+                  alt="Séance de thérapie personnalisée" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent rounded-3xl"></div>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
+      {/* Recovery Section */}
+      <section className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollAnimation animation="scale-up">
+              <div className="relative">
+                <img 
+                  src={recoveryImage} 
+                  alt="Patient en cours de récupération" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent rounded-3xl"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="fade-up">
+              <div>
+                <h3 className="text-3xl font-playfair font-bold text-primary mb-6">
+                  Récupération <span className="text-gradient-accent">Optimale</span>
+                </h3>
+                <p className="text-xl text-neutral-light mb-8 leading-relaxed">
+                  Nos patients retrouvent leur mobilité et leur qualité de vie grâce 
+                  à nos protocoles de rééducation éprouvés et notre suivi personnalisé.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-primary">Résultats Durables</h4>
+                      <p className="text-neutral-light">Récupération complète et prévention des récidives</p>
+                    </div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-playfair font-bold text-primary mb-2">15+</div>
-                    <div className="text-neutral-light">Années d'expérience</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-playfair font-bold text-primary mb-2">95%</div>
-                    <div className="text-neutral-light">Patients satisfaits</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-4xl font-playfair font-bold text-primary mb-2">24/7</div>
-                    <div className="text-neutral-light">Urgences possibles</div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-secondary rounded-full flex items-center justify-center">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-primary">Accompagnement Expert</h4>
+                      <p className="text-neutral-light">Équipe qualifiée et expérimentée à votre service</p>
+                    </div>
                   </div>
                 </div>
               </div>

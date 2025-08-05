@@ -5,6 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Star } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-wellness.jpg';
+import technologyImage from '@/assets/amincissement-technology.jpg';
+import treatmentImage from '@/assets/amincissement-treatment.jpg';
+import resultsImage from '@/assets/amincissement-results.jpg';
 const ServicesAmincissement = () => {
   const techniques = [{
     icon: Snowflake,
@@ -154,60 +157,152 @@ const ServicesAmincissement = () => {
         </div>
       </section>
 
-      {/* Additional Services */}
+      {/* Technology Showcase */}
       <section className="py-24 bg-neutral-lightest">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-6">
-                Services <span className="text-gradient-accent">Complémentaires</span>
+                Technologies <span className="text-gradient-accent">de Pointe</span>
               </h2>
               <p className="text-xl text-neutral-light max-w-3xl mx-auto">
-                Une gamme complète de soins pour une approche globale de votre bien-être
+                Équipements modernes pour des résultats visibles et durables
               </p>
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {additionalServices.map((service, index) => <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
-                <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full text-center">
-                  <CardContent className="p-8">
-                    <div className="w-12 h-12 bg-gradient-secondary/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                      <Zap className="w-6 h-6 text-secondary" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <ScrollAnimation animation="slide-left">
+              <div className="relative">
+                <img 
+                  src={technologyImage} 
+                  alt="Technologies d'amincissement modernes" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent rounded-3xl"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="slide-right">
+              <div>
+                <h3 className="text-3xl font-playfair font-bold text-primary mb-6">
+                  Équipements <span className="text-secondary">Révolutionnaires</span>
+                </h3>
+                <p className="text-xl text-neutral-light mb-8 leading-relaxed">
+                  Nos machines de dernière génération offrent des traitements non-invasifs 
+                  avec des résultats visibles dès la première séance.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {additionalServices.map((service, index) => (
+                    <Card key={index} className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 text-center">
+                      <CardContent className="p-6">
+                        <div className="w-10 h-10 bg-gradient-secondary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                          <Zap className="w-5 h-5 text-secondary" />
+                        </div>
+                        <h4 className="text-sm font-playfair font-bold text-primary mb-2">
+                          {service.title}
+                        </h4>
+                        <p className="text-neutral-light text-xs leading-relaxed">
+                          {service.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+
+          {/* Treatment Process */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <ScrollAnimation animation="slide-left">
+              <div>
+                <h3 className="text-3xl font-playfair font-bold text-primary mb-6">
+                  Processus de <span className="text-gradient-accent">Traitement</span>
+                </h3>
+                <p className="text-xl text-neutral-light mb-8 leading-relaxed">
+                  Chaque séance est personnalisée selon vos objectifs et votre morphologie 
+                  pour des résultats optimaux et naturels.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-secondary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold">1</span>
                     </div>
-                    
-                    <h3 className="text-lg font-playfair font-bold text-primary mb-4">
-                      {service.title}
-                    </h3>
-                    
-                    <p className="text-neutral-light text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>)}
+                    <div>
+                      <h4 className="text-lg font-semibold text-primary">Consultation Gratuite</h4>
+                      <p className="text-neutral-light">Analyse morphologique et définition des objectifs</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold">2</span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-primary">Traitement Personnalisé</h4>
+                      <p className="text-neutral-light">Séances adaptées avec technologies ciblées</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-primary">Suivi des Résultats</h4>
+                      <p className="text-neutral-light">Évaluation et ajustement du protocole</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="slide-right">
+              <div className="relative">
+                <img 
+                  src={treatmentImage} 
+                  alt="Séance de traitement d'amincissement" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
+              </div>
+            </ScrollAnimation>
           </div>
 
           {/* Results Section */}
-          <ScrollAnimation animation="scale-up">
-            <div className="bg-gradient-to-br from-secondary/10 to-purple-500/10 rounded-3xl p-12">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-playfair font-bold text-primary mb-4">
-                  Résultats <span className="text-secondary">Garantis</span>
-                </h3>
-                <p className="text-xl text-neutral-light">
-                  60-90 minutes de pure détente pour des résultats spectaculaires
-                </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollAnimation animation="scale-up">
+              <div className="relative">
+                <img 
+                  src={resultsImage} 
+                  alt="Résultats de transformation corporelle" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent rounded-3xl"></div>
               </div>
+            </ScrollAnimation>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {results.map((result, index) => <div key={index} className="flex items-center space-x-3">
-                    <Star className="w-5 h-5 text-secondary flex-shrink-0" />
-                    <span className="text-neutral text-sm">{result}</span>
-                  </div>)}
+            <ScrollAnimation animation="fade-up">
+              <div className="bg-gradient-to-br from-secondary/10 to-purple-500/10 rounded-3xl p-12">
+                <div className="text-center mb-8">
+                  <h3 className="text-3xl font-playfair font-bold text-primary mb-4">
+                    Résultats <span className="text-secondary">Garantis</span>
+                  </h3>
+                  <p className="text-xl text-neutral-light">
+                    60-90 minutes de pure détente pour des résultats spectaculaires
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {results.map((result, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <Star className="w-5 h-5 text-secondary flex-shrink-0" />
+                      <span className="text-neutral text-sm">{result}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </ScrollAnimation>
+            </ScrollAnimation>
+          </div>
         </div>
       </section>
 

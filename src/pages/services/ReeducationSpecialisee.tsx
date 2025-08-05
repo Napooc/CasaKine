@@ -5,6 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Shield, Clock, CheckCircle, Heart, Brain, Home, ArrowLeft, Phone, Calendar, Users } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-manual-therapy.jpg';
+import facilityImage from '@/assets/reeducation-facility.jpg';
+import drainageImage from '@/assets/reeducation-drainage.jpg';
+import homeCareImage from '@/assets/reeducation-home-care.jpg';
 const ReeducationSpecialisee = () => {
   const specializations = [{
     icon: Heart,
@@ -166,60 +169,137 @@ const ReeducationSpecialisee = () => {
         </div>
       </section>
 
-      {/* Additional Services */}
+      {/* Facility Showcase */}
       <section className="py-24 bg-neutral-lightest">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <ScrollAnimation animation="fade-up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-6">
+                Nos <span className="text-gradient-accent">Installations</span>
+              </h2>
+              <p className="text-xl text-neutral-light max-w-3xl mx-auto">
+                Un environnement moderne et adapté pour votre rééducation spécialisée
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <ScrollAnimation animation="slide-left">
+              <div className="relative">
+                <img 
+                  src={facilityImage} 
+                  alt="Centre de rééducation spécialisée moderne" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent rounded-3xl"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="slide-right">
               <div>
-                <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-8">
-                  Services <span className="text-gradient-accent">Complémentaires</span>
-                </h2>
-                
-                <div className="space-y-8">
+                <h3 className="text-3xl font-playfair font-bold text-primary mb-6">
+                  Centre <span className="text-accent">Spécialisé</span>
+                </h3>
+                <p className="text-xl text-neutral-light mb-8 leading-relaxed">
+                  Notre centre dispose d'équipements spécialisés pour la rééducation 
+                  neurologique, périnéale et le drainage lymphatique.
+                </p>
+                <div className="space-y-6">
                   {additionalServices.map((service, index) => {
-                  const Icon = service.icon;
-                  return <div key={index} className="flex items-start space-x-6">
+                    const Icon = service.icon;
+                    return (
+                      <div key={index} className="flex items-start space-x-6">
                         <div className="w-12 h-12 bg-gradient-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
                           <Icon className="w-6 h-6 text-accent" />
                         </div>
                         <div>
-                          <h3 className="text-xl font-playfair font-bold text-primary mb-3">
+                          <h4 className="text-xl font-playfair font-bold text-primary mb-3">
                             {service.title}
-                          </h3>
+                          </h4>
                           <p className="text-neutral-light leading-relaxed">
                             {service.description}
                           </p>
                         </div>
-                      </div>;
-                })}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+
+          {/* Drainage Therapy */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <ScrollAnimation animation="slide-left">
+              <div>
+                <h3 className="text-3xl font-playfair font-bold text-primary mb-6">
+                  Drainage <span className="text-gradient-accent">Lymphatique</span>
+                </h3>
+                <p className="text-xl text-neutral-light mb-8 leading-relaxed">
+                  Technique douce et efficace pour stimuler la circulation et réduire 
+                  les œdèmes post-chirurgicaux ou pathologiques.
+                </p>
+                <div className="bg-gradient-to-br from-accent/10 to-teal-500/10 rounded-3xl p-8">
+                  <h4 className="text-2xl font-playfair font-bold text-primary mb-6 text-center">
+                    Pathologies Traitées
+                  </h4>
+                  <div className="grid grid-cols-1 gap-3">
+                    {conditions.slice(0, 6).map((condition, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <Shield className="w-5 h-5 text-accent flex-shrink-0" />
+                        <span className="text-neutral text-sm">{condition}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="slide-right">
-              <div className="bg-gradient-to-br from-accent/10 to-teal-500/10 rounded-3xl p-8">
-                <h3 className="text-2xl font-playfair font-bold text-primary mb-6 text-center">
-                  Pathologies Traitées
-                </h3>
-                
-                <div className="grid grid-cols-1 gap-3">
-                  {conditions.map((condition, index) => <div key={index} className="flex items-center space-x-3">
-                      <Shield className="w-5 h-5 text-accent flex-shrink-0" />
-                      <span className="text-neutral text-sm">{condition}</span>
-                    </div>)}
-                </div>
+              <div className="relative">
+                <img 
+                  src={drainageImage} 
+                  alt="Séance de drainage lymphatique" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
+              </div>
+            </ScrollAnimation>
+          </div>
 
-                <div className="mt-8 p-6 bg-white/50 rounded-2xl">
+          {/* Home Care */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollAnimation animation="scale-up">
+              <div className="relative">
+                <img 
+                  src={homeCareImage} 
+                  alt="Soins à domicile personnalisés" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent rounded-3xl"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="fade-up">
+              <div>
+                <h3 className="text-3xl font-playfair font-bold text-primary mb-6">
+                  Soins à <span className="text-gradient-accent">Domicile</span>
+                </h3>
+                <p className="text-xl text-neutral-light mb-8 leading-relaxed">
+                  Pour votre confort et votre sécurité, nous proposons des soins 
+                  à domicile avec le même niveau de qualité qu'au cabinet.
+                </p>
+                <div className="p-6 bg-white/50 rounded-2xl">
                   <h4 className="text-lg font-playfair font-semibold text-primary mb-4 text-center">
                     Bénéfices du Traitement
                   </h4>
-                  
                   <div className="grid grid-cols-2 gap-3">
-                    {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-2">
+                    {benefits.map((benefit, index) => (
+                      <div key={index} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-accent flex-shrink-0" />
                         <span className="text-neutral text-xs">{benefit}</span>
-                      </div>)}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

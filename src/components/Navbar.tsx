@@ -19,7 +19,7 @@ const Navbar = () => {
     icon: Home,
     color: 'hover:text-primary'
   }, {
-    name: 'À PROPOS',
+    name: 'À\u00A0PROPOS',
     path: '/about',
     icon: Heart,
     color: 'hover:text-medical-red'
