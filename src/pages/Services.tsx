@@ -132,7 +132,7 @@ const Services = () => {
               </Badge>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
                 Des Soins <span className="text-gradient-accent">Personnalisés</span><br />
-                pour Chaque <span className="text-secondary">Besoin</span>
+                pour Chaque <span className="text-sky-400">Besoin</span>
               </h1>
             </div>
           </ScrollAnimation>
