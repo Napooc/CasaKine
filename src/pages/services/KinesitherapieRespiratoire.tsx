@@ -5,6 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Calendar, Phone, CheckCircle, Heart, Brain, Wind, Droplets, Activity, Hand, Baby, Clock, Star, Stethoscope, Target, Shield, Users, Home, ArrowRight, Zap, Sparkles } from 'lucide-react';
 import specialtyImage from '@/assets/specialty-medical-gymnastics.jpg';
+import kinesitherapieImage1 from '@/assets/kinesitherapie-respiratoire-1.jpg';
+import kinesitherapieImage2 from '@/assets/kinesitherapie-respiratoire-2.jpg';
+import kinesitherapieImage3 from '@/assets/kinesitherapie-respiratoire-3.jpg';
 const KinesitherapieRespiratoire = () => {
   const services = [{
     icon: Activity,
@@ -334,6 +337,84 @@ const KinesitherapieRespiratoire = () => {
                   </div>
                 </div>
               </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
+      {/* Images Gallery Section */}
+      <section className="py-32 bg-background relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
+                Notre <span className="text-gradient-accent">Environnement de Soins</span>
+              </h2>
+              <p className="text-xl text-neutral-light max-w-4xl mx-auto leading-relaxed">
+                Découvrez nos installations modernes et nos équipements de pointe pour votre rétablissement
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ScrollAnimation animation="scale-up" delay={200}>
+              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={kinesitherapieImage1} 
+                    alt="Séance de kinésithérapie respiratoire moderne"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-playfair font-bold text-primary mb-3">
+                    Séances Personnalisées
+                  </h3>
+                  <p className="text-neutral-light leading-relaxed">
+                    Accompagnement individuel avec équipements spécialisés pour optimiser votre rétablissement respiratoire.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="scale-up" delay={400}>
+              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={kinesitherapieImage2} 
+                    alt="Équipements de rééducation respiratoire"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-playfair font-bold text-primary mb-3">
+                    Équipements Modernes
+                  </h3>
+                  <p className="text-neutral-light leading-relaxed">
+                    Technologies de pointe pour un diagnostic précis et des traitements efficaces adaptés à chaque patient.
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="scale-up" delay={600}>
+              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={kinesitherapieImage3} 
+                    alt="Environnement thérapeutique professionnel"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-playfair font-bold text-primary mb-3">
+                    Environnement Apaisant
+                  </h3>
+                  <p className="text-neutral-light leading-relaxed">
+                    Cadre professionnel et chaleureux conçu pour votre confort et votre bien-être durant les soins.
+                  </p>
+                </CardContent>
+              </Card>
             </ScrollAnimation>
           </div>
         </div>

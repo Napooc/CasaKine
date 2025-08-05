@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 
 const WhatsAppContact = () => {
-  const phoneNumber = "+212123456789"; // Replace with actual WhatsApp number
+  const phoneNumber = "+212661677096"; // Dr. Nawal El Ghorfi WhatsApp number
   const defaultMessage = "Bonjour Dr. Nawal El Ghorfi, je souhaiterais prendre rendez-vous pour une consultation en kinésithérapie.";
 
   const openWhatsApp = () => {

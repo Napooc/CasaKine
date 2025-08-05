@@ -247,7 +247,7 @@ const Services = () => {
                               <span className="text-sm">{service.duration}</span>
                             </div>
                             <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`} onClick={() => navigate(service.route)}>
-                              Réserver
+                              En savoir plus
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
                           </div>
