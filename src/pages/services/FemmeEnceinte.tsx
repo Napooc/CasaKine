@@ -1,6 +1,9 @@
 import Layout from '@/components/Layout';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import femmeEnceinteHero from '@/assets/femme-enceinte-hero.jpg';
+import femmeEnceintePreparation from '@/assets/femme-enceinte-preparation.jpg';
+import femmeEnceinteRehabilitation from '@/assets/femme-enceinte-rehabilitation.jpg';
+import femmeEnceinteBonding from '@/assets/femme-enceinte-bonding.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -131,6 +134,53 @@ const FemmeEnceinte = () => {
             </div>
           </ScrollAnimation>
 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Featured Image */}
+            <ScrollAnimation animation="slide-left">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-3xl blur-xl scale-105"></div>
+                <img 
+                  src={femmeEnceintePreparation} 
+                  alt="Préparation à l'accouchement" 
+                  className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-pink-600/80 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Text Content */}
+            <ScrollAnimation animation="slide-right">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-3xl font-playfair font-bold text-gray-800 mb-4">
+                    Une Préparation <span className="text-pink-600">Personnalisée</span>
+                  </h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    Chaque future maman est unique. Notre approche personnalisée vous prépare 
+                    physiquement et mentalement à l'accouchement, en tenant compte de vos besoins 
+                    spécifiques et de votre stade de grossesse.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { icon: Heart, text: "Techniques de respiration adaptées" },
+                    { icon: Users, text: "Positions d'accouchement optimales" },
+                    { icon: Baby, text: "Communication prénatale avec bébé" },
+                    { icon: Shield, text: "Préparation du partenaire" }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full flex items-center justify-center">
+                        <item.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-gray-700 font-medium">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {preparationServices.map((service, index) => {
             const Icon = service.icon;
@@ -229,6 +279,53 @@ const FemmeEnceinte = () => {
             </div>
           </ScrollAnimation>
 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Text Content */}
+            <ScrollAnimation animation="slide-left">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-3xl font-playfair font-bold text-gray-800 mb-4">
+                    Récupération <span className="text-purple-600">Post-Partum</span>
+                  </h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    Après l'accouchement, il est essentiel de retrouver tonicité et confiance. 
+                    Notre programme de rééducation périnéale vous accompagne étape par étape 
+                    vers une récupération complète et durable.
+                  </p>
+                </div>
+                
+                <div className="space-y-4">
+                  {[
+                    { icon: Target, text: "Renforcement ciblé du périnée" },
+                    { icon: Brain, text: "Techniques de biofeedback avancées" },
+                    { icon: Zap, text: "Électrostimulation si nécessaire" },
+                    { icon: Activity, text: "Suivi personnalisé long terme" }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                        <item.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-gray-700 font-medium">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Featured Image */}
+            <ScrollAnimation animation="slide-right">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl scale-105"></div>
+                <img 
+                  src={femmeEnceinteRehabilitation} 
+                  alt="Rééducation périnéale post-partum" 
+                  className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-600/80 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {reeducationServices.map((service, index) => {
             const Icon = service.icon;
@@ -259,16 +356,27 @@ const FemmeEnceinte = () => {
           </div>
 
           <ScrollAnimation animation="fade-up" delay={600}>
-            <div className="mt-16 text-center">
-              <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-8 max-w-4xl mx-auto">
-                <Shield className="w-16 h-16 text-purple-600 mx-auto mb-6" />
-                <h3 className="text-2xl font-playfair font-bold text-gray-800 mb-4">
-                  Renforcement Abdominal Ciblé
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Une fois la tonicité périnéale retrouvée, nous poursuivons par un travail abdominal ciblé, 
-                  essentiel pour refermer la sangle abdominale en douceur et retrouver votre silhouette d'avant grossesse.
-                </p>
+            <div className="mt-16">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-3xl blur-xl scale-105"></div>
+                  <img 
+                    src={femmeEnceinteBonding} 
+                    alt="Moments de complicité parent-bébé" 
+                    className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                
+                <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-8">
+                  <Shield className="w-16 h-16 text-purple-600 mb-6" />
+                  <h3 className="text-2xl font-playfair font-bold text-gray-800 mb-4">
+                    Renforcement Abdominal Ciblé
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Une fois la tonicité périnéale retrouvée, nous poursuivons par un travail abdominal ciblé, 
+                    essentiel pour refermer la sangle abdominale en douceur et retrouver votre silhouette d'avant grossesse.
+                  </p>
+                </div>
               </div>
             </div>
           </ScrollAnimation>
