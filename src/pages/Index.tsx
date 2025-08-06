@@ -174,163 +174,100 @@ const Index = () => {
     location: 'Casablanca'
   }];
   return <Layout>
-      {/* Ultra-Modern Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Dynamic Background with Parallax */}
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
+        {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src={heroIndexImage} 
-            alt="Centre de kinésithérapie moderne" 
-            className="w-full h-full object-cover scale-110 transition-transform duration-1000 ease-out" 
-          />
-          {/* Multi-layer Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/85 to-indigo-900/90"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/40"></div>
+          <img src={heroIndexImage} alt="Modern medical clinic" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-secondary/90"></div>
         </div>
 
-        {/* Advanced Floating Elements */}
+        {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Primary Orbs */}
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-cyan-400/30 to-blue-500/20 rounded-full blur-2xl animate-float opacity-60"></div>
-          <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-gradient-to-br from-violet-400/25 to-purple-500/15 rounded-full blur-xl animate-float-delay opacity-70"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-28 h-28 bg-gradient-to-br from-emerald-400/20 to-teal-500/10 rounded-full blur-3xl animate-float opacity-50"></div>
-          <div className="absolute bottom-1/4 right-1/3 w-20 h-20 bg-gradient-to-br from-amber-400/30 to-orange-500/20 rounded-full blur-lg animate-float-delay opacity-80"></div>
-          
-          {/* Secondary Particles */}
-          <div className="absolute top-1/2 left-1/6 w-4 h-4 bg-white/40 rounded-full animate-pulse"></div>
-          <div className="absolute top-2/3 right-1/5 w-3 h-3 bg-cyan-300/50 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute bottom-1/2 left-3/4 w-5 h-5 bg-violet-300/40 rounded-full animate-pulse delay-500"></div>
-          
-          {/* Geometric Elements */}
-          <div className="absolute top-1/5 right-1/6 w-16 h-16 border border-white/20 rotate-45 animate-spin-slow"></div>
-          <div className="absolute bottom-1/5 left-1/5 w-12 h-12 border-2 border-cyan-400/30 rounded-full animate-pulse"></div>
+          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-accent rounded-full opacity-20 animate-float"></div>
+          <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-secondary rounded-full opacity-30 animate-float-delay"></div>
+          <div className="absolute bottom-32 left-40 w-20 h-20 bg-gradient-primary rounded-full opacity-25 animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-28 h-28 bg-gradient-accent rounded-full opacity-20 animate-float-delay"></div>
         </div>
 
-        {/* Main Content Container */}
-        <div className="relative z-10 text-center max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Badge */}
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-medium mb-8 hover:scale-105 transition-transform duration-300">
-              <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3 animate-pulse"></div>
-              ✨ Centre de Kinésithérapie d'Excellence
-            </div>
-          </ScrollAnimation>
-
-          {/* Main Title with Modern Typography */}
-          <ScrollAnimation animation="fade-up" delay={400}>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-white mb-8 leading-none tracking-tight">
-              <span className="block bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent">
-                Kinésithérapie
-              </span>
-              <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-400 bg-clip-text text-transparent font-black">
-                & Bien-être
-              </span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
+              Centre de <span className="text-gradient-accent">Kinésithérapie</span><br />
+              et d'<span className="text-white">Amincissement</span>
             </h1>
           </ScrollAnimation>
 
-          {/* Subtitle */}
-          <ScrollAnimation animation="fade-up" delay={600}>
-            <div className="max-w-4xl mx-auto mb-8">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-white/90 mb-6 font-playfair">
-                Dr. Nawal EL GHORFI
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
-            </div>
+          <ScrollAnimation animation="slide-left" delay={400}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+              Nawal EL GHORFI - Kinésithérapeute Diplômée d'État
+            </h2>
           </ScrollAnimation>
 
-          {/* Description */}
-          <ScrollAnimation animation="fade-up" delay={800}>
-            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
-              <span className="text-cyan-300 font-medium">Centre d'excellence</span> à Casablanca depuis 2001
-              <br />
-              Rééducation fonctionnelle • Amincissement • Thérapies manuelles
+          <ScrollAnimation animation="fade-up" delay={600}>
+            <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+              👋 Bienvenue au Centre Nawal EL GHORFI
+              <br/>Kinésithérapie & Amincissement à Casablanca
+              <br/>Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
+              moderne, au cœur de Casablanca, pour des soins de kinésithérapie,
+              rééducation fonctionnelle et amincissement personnalisé.
             </p>
           </ScrollAnimation>
 
-          {/* CTA Buttons */}
-          <ScrollAnimation animation="scale-up" delay={1000}>
+          <ScrollAnimation animation="scale-up" delay={800}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              {/* Primary CTA */}
-              <button 
-                onClick={handleBookAppointment}
-                className="group relative px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-lg rounded-full transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-cyan-500/50 active:scale-95"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg"></div>
-                <div className="relative z-10 flex items-center">
-                  <Calendar className="w-6 h-6 mr-3" />
-                  Consultation Gratuite
-                </div>
-              </button>
+              <Button onClick={handleBookAppointment} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 hover:shadow-accent-glow">
+                <Calendar className="w-5 h-5 mr-3" />
+                Réservez Votre Consultation
+              </Button>
               
-              {/* Secondary CTA */}
-              <button 
-                className="group relative px-10 py-5 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white font-medium text-lg rounded-full transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:border-white/50"
-              >
-                <div className="flex items-center">
-                  <ChevronRight className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  Découvrir nos services
-                </div>
-              </button>
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
+                En savoir plus
+              </Button>
             </div>
           </ScrollAnimation>
 
-          {/* Modern Stats Grid */}
-          <ScrollAnimation animation="fade-up" delay={1200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              {[
-                { icon: Star, value: '25+', label: 'Années d\'expérience', color: 'from-yellow-400 to-orange-500' },
-                { icon: Users, value: '2000+', label: 'Patients traités', color: 'from-emerald-400 to-teal-500' },
-                { icon: Award, value: '2001', label: 'Fondé en', color: 'from-purple-400 to-violet-500' },
-                { icon: Calendar, value: '24/7', label: 'Service client', color: 'from-blue-400 to-cyan-500' }
-              ].map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div 
-                    key={index} 
-                    className="group relative p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl transition-all duration-500 hover:scale-110 hover:bg-white/10 hover:border-white/20"
-                  >
-                    {/* Gradient Background on Hover */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity duration-300`}></div>
-                    
-                    <div className="relative z-10 text-center">
-                      <Icon className="w-8 h-8 text-white/70 mx-auto mb-3 group-hover:scale-125 transition-transform duration-300" />
-                      <div className="text-3xl md:text-4xl font-bold text-white mb-2 font-playfair">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-white/70 font-medium">
-                        {stat.label}
-                      </div>
+          {/* Stats Section */}
+          <ScrollAnimation animation="fade-up" delay={1000}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {[{
+              icon: Star,
+              value: '25+',
+              label: 'Années d\'expérience'
+            }, {
+              icon: Users,
+              value: '2000+',
+              label: 'Patients satisfaits'
+            }, {
+              icon: Award,
+              value: '2001',
+              label: 'Centre opérationnel'
+            }, {
+              icon: Calendar,
+              value: '24/7',
+              label: 'Disponibilité'
+            }].map((stat, index) => {
+              const Icon = stat.icon;
+              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
+                    <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
+                    <div className="text-3xl font-playfair font-bold text-white mb-2">
+                      {stat.value}
                     </div>
-                  </div>
-                );
-              })}
+                    <div className="text-sm font-montserrat text-neutral-lightest/80">
+                      {stat.label}
+                    </div>
+                  </div>;
+            })}
             </div>
           </ScrollAnimation>
         </div>
 
-        {/* Modern Scroll Indicator */}
-        <ScrollAnimation animation="fade-up" delay={1400}>
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div className="flex flex-col items-center space-y-3">
-              <div className="text-white/60 text-sm font-medium tracking-wide">DÉCOUVRIR</div>
-              <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center relative">
-                <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
-              </div>
-            </div>
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
           </div>
-        </ScrollAnimation>
-
-        {/* Animated SVG Background Pattern */}
-        <div className="absolute inset-0 pointer-events-none opacity-10">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.5"/>
-              </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#grid)" />
-          </svg>
         </div>
       </section>
 

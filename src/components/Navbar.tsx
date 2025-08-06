@@ -68,7 +68,7 @@ const Navbar = () => {
               return <Link key={item.name} to={item.path} className={`group relative px-6 py-3 rounded-full transition-all duration-300 ${isActive(item.path) ? 'bg-gradient-primary text-white shadow-glow' : 'text-neutral hover:bg-white/10'} ${item.color}`}>
                     <div className="flex items-center space-x-2">
                       <Icon className={`w-4 h-4 transition-all duration-300 ${isActive(item.path) ? 'animate-pulse-glow' : 'group-hover:animate-bounce'}`} />
-                      <span className="font-montserrat font-medium text-sm tracking-wide whitespace-nowrap">
+                      <span className="font-montserrat font-medium text-sm tracking-wide">
                         {item.name}
                       </span>
                     </div>
@@ -105,7 +105,7 @@ const Navbar = () => {
             const Icon = item.icon;
             return <Link key={item.name} to={item.path} onClick={() => setIsOpen(false)} className={`flex items-center space-x-4 p-4 rounded-xl transition-all duration-300 text-lg font-medium ${isActive(item.path) ? 'bg-gradient-primary text-white shadow-lg scale-105' : 'text-primary hover:bg-primary/10 hover:text-primary'}`}>
                   <Icon className={`w-6 h-6 ${isActive(item.path) ? 'animate-pulse-glow' : ''}`} />
-                  <span className="font-montserrat font-semibold whitespace-nowrap">{item.name}</span>
+                  <span className="font-montserrat font-semibold">{item.name}</span>
                 </Link>;
           })}
             
