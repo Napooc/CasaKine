@@ -64,6 +64,7 @@ const Contact = () => {
         subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État"
         description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement."
         ctaText="Appeler Maintenant"
+        ctaAction={() => window.open('tel:+212522398874')}
         showStats={false}
         backgroundType="gradient"
       />
@@ -192,7 +193,7 @@ const Contact = () => {
                     Pour toute urgence en dehors des horaires d'ouverture, 
                     contactez-nous directement.
                   </p>
-                  <Button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-montserrat font-semibold py-3 rounded-full shadow-strong transition-all duration-300 hover:scale-105">
+                  <Button className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-montserrat font-semibold py-3 rounded-full shadow-strong transition-all duration-300 hover:scale-105" onClick={() => window.open('tel:+212661677096')}>
                     <Phone className="w-5 h-5 mr-3" />
                     Appel d'Urgence
                   </Button>
@@ -208,7 +209,7 @@ const Contact = () => {
                     Échangez rapidement avec notre équipe via WhatsApp 
                     pour des questions ou prises de rendez-vous express.
                   </p>
-                  <Button className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-montserrat font-semibold py-3 rounded-full shadow-strong transition-all duration-300 hover:scale-105">
+                  <Button className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-montserrat font-semibold py-3 rounded-full shadow-strong transition-all duration-300 hover:scale-105" onClick={() => window.open('https://wa.me/212661677096', '_blank')}>
                     <MessageCircle className="w-5 h-5 mr-3" />
                     Ouvrir WhatsApp
                   </Button>
@@ -220,7 +221,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-32 bg-background">
+      <section id="map" className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-12">

@@ -71,12 +71,12 @@ const Traumatologie = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver maintenant
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950" onClick={() => window.open('tel:+212522398874')}>
                 <Phone className="w-5 h-5 mr-3" />
                 Nous contacter
               </Button>
@@ -317,7 +317,7 @@ const Traumatologie = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver une consultation
               </Button>

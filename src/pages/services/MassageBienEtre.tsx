@@ -114,11 +114,11 @@ const MassageBienEtre = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="bg-white text-green-600 hover:bg-green-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110">
+              <Button className="bg-white text-green-600 hover:bg-green-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver un Massage
               </Button>
-              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-zinc-950">
+              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-zinc-950" onClick={() => document.getElementById('massage-types')?.scrollIntoView({ behavior: 'smooth' })}>
                 Découvrir nos soins
               </Button>
             </div>
@@ -170,7 +170,7 @@ const MassageBienEtre = () => {
       </section>
 
       {/* Massage Types Section */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section id="massage-types" className="py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-96 h-96 bg-green-100/50 rounded-full blur-3xl absolute top-10 left-10"></div>
           <div className="w-64 h-64 bg-emerald-100/30 rounded-full blur-2xl absolute bottom-10 right-10"></div>

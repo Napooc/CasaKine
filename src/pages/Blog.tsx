@@ -172,12 +172,12 @@ const Blog = () => {
 
           <ScrollAnimation animation="scale-up" delay={800}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = 'mailto:info@casakine.com?subject=Inscription%20Newsletter')}>
                 <MessageCircle className="w-5 h-5 mr-3" />
                 S'abonner à la Newsletter
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
+              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950" onClick={() => document.getElementById('articles')?.scrollIntoView({ behavior: 'smooth' })}>
                 Tous les articles
               </Button>
             </div>
@@ -313,7 +313,7 @@ const Blog = () => {
       </section>
 
       {/* Articles Grid */}
-      <section className="py-32 bg-background">
+      <section id="articles" className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-16">

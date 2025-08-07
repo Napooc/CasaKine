@@ -176,7 +176,7 @@ const SpecialtyModal: React.FC<SpecialtyModalProps> = ({ specialty, isOpen, onCl
                 <div className="mt-10 text-center">
                   <Button 
                     className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105"
-                    onClick={onClose}
+                    onClick={() => { window.location.href = '/contact'; onClose(); }}
                   >
                     Prendre Rendez-vous pour cette spécialité
                   </Button>

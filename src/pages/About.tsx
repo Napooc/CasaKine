@@ -102,12 +102,12 @@ const About = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 mb-12">
-                  <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                  <Button onClick={() => (window.location.href = '/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                     <Users className="w-5 h-5 mr-3" />
                     Prendre Rendez-vous
                   </Button>
                   
-                  <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
+                  <Button variant="outline" onClick={() => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                     Notre parcours
                   </Button>
                 </div>
@@ -254,7 +254,7 @@ const About = () => {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-32 bg-gradient-hero relative overflow-hidden">
+      <section id="timeline" className="py-32 bg-gradient-hero relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="w-full h-full bg-gradient-to-br from-primary/90 via-primary/70 to-secondary/90"></div>
         </div>

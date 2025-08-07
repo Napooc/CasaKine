@@ -152,12 +152,12 @@ const Services = () => {
 
           <ScrollAnimation animation="scale-up" delay={800}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button onClick={() => (window.location.href = '/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                 <Activity className="w-5 h-5 mr-3" />
                 Réserver une Consultation
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
+              <Button variant="outline" onClick={() => document.getElementById('main-services')?.scrollIntoView({ behavior: 'smooth' })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 Voir tous nos services
               </Button>
             </div>
@@ -200,7 +200,7 @@ const Services = () => {
       </section>
 
       {/* Main Services Section */}
-      <section className="py-32 bg-background relative">
+      <section id="main-services" className="py-32 bg-background relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-20">
@@ -361,7 +361,7 @@ const Services = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
                 <Star className="w-5 h-5 mr-3" />
                 Consultation Gratuite
               </Button>
