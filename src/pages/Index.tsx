@@ -13,16 +13,13 @@ import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRi
 const Index = () => {
   const [selectedSpecialty, setSelectedSpecialty] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const handleBookAppointment = () => {
     window.location.href = '/contact';
   };
-
-  const handleSpecialtyClick = (specialty) => {
+  const handleSpecialtyClick = specialty => {
     setSelectedSpecialty(specialty);
     setIsModalOpen(true);
   };
-
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedSpecialty(null);
@@ -34,30 +31,12 @@ const Index = () => {
     color: 'text-primary',
     detailedInfo: {
       overview: 'La rééducation fonctionnelle est une approche thérapeutique complète visant à restaurer les capacités physiques et fonctionnelles après un traumatisme, une chirurgie ou une pathologie neurologique. Notre centre utilise des techniques avancées et des équipements de pointe pour optimiser votre récupération.',
-      benefits: [
-        'Récupération optimisée des fonctions motrices',
-        'Réduction significative de la douleur',
-        'Amélioration de la qualité de vie au quotidien',
-        'Prévention des récidives et complications',
-        'Renforcement musculaire ciblé et progressif'
-      ],
-      techniques: [
-        'Rééducation proprioceptive',
-        'Thérapie par ondes de choc',
-        'Électrostimulation thérapeutique',
-        'Mobilisation articulaire',
-        'Renforcement isokinétique'
-      ],
+      benefits: ['Récupération optimisée des fonctions motrices', 'Réduction significative de la douleur', 'Amélioration de la qualité de vie au quotidien', 'Prévention des récidives et complications', 'Renforcement musculaire ciblé et progressif'],
+      techniques: ['Rééducation proprioceptive', 'Thérapie par ondes de choc', 'Électrostimulation thérapeutique', 'Mobilisation articulaire', 'Renforcement isokinétique'],
       duration: '45-60 min',
       sessions: '8-15 séances',
       image: specialtyRehabilitationImage,
-      conditions: [
-        'Traumatismes sportifs et accidents',
-        'Post-chirurgie orthopédique',
-        'Pathologies neurologiques (AVC, sclérose)',
-        'Troubles de l\'équilibre et de la coordination',
-        'Rééducation post-fracture'
-      ]
+      conditions: ['Traumatismes sportifs et accidents', 'Post-chirurgie orthopédique', 'Pathologies neurologiques (AVC, sclérose)', 'Troubles de l\'équilibre et de la coordination', 'Rééducation post-fracture']
     }
   }, {
     icon: Heart,
@@ -66,30 +45,12 @@ const Index = () => {
     color: 'text-medical-red',
     detailedInfo: {
       overview: 'Nos thérapies manuelles combinent expertise traditionnelle et innovations modernes pour traiter les dysfonctions musculo-squelettiques. Chaque séance est personnalisée selon vos besoins spécifiques pour un soulagement durable et une récupération optimale.',
-      benefits: [
-        'Soulagement immédiat des tensions musculaires',
-        'Amélioration de la circulation sanguine',
-        'Réduction du stress et de l\'anxiété',
-        'Restauration de la mobilité articulaire',
-        'Détoxification et régénération tissulaire'
-      ],
-      techniques: [
-        'Massage thérapeutique suédois',
-        'Ostéopathie structurelle',
-        'Release myofascial',
-        'Trigger points therapy',
-        'Drainage lymphatique manuel'
-      ],
+      benefits: ['Soulagement immédiat des tensions musculaires', 'Amélioration de la circulation sanguine', 'Réduction du stress et de l\'anxiété', 'Restauration de la mobilité articulaire', 'Détoxification et régénération tissulaire'],
+      techniques: ['Massage thérapeutique suédois', 'Ostéopathie structurelle', 'Release myofascial', 'Trigger points therapy', 'Drainage lymphatique manuel'],
       duration: '60-90 min',
       sessions: '6-12 séances',
       image: specialtyManualTherapyImage,
-      conditions: [
-        'Douleurs cervicales et lombaires',
-        'Tensions musculaires chroniques',
-        'Migraines et céphalées',
-        'Troubles de la posture',
-        'Stress et fatigue chronique'
-      ]
+      conditions: ['Douleurs cervicales et lombaires', 'Tensions musculaires chroniques', 'Migraines et céphalées', 'Troubles de la posture', 'Stress et fatigue chronique']
     }
   }, {
     icon: Zap,
@@ -98,30 +59,12 @@ const Index = () => {
     color: 'text-secondary',
     detailedInfo: {
       overview: 'Nos programmes d\'amincissement et bien-être associent techniques manuelles et technologies avancées pour sculpter votre silhouette tout en améliorant votre bien-être général. Une approche holistique pour des résultats durables et visibles.',
-      benefits: [
-        'Réduction visible de la cellulite',
-        'Amélioration du tonus et de l\'élasticité',
-        'Stimulation du métabolisme',
-        'Élimination des toxines et rétention d\'eau',
-        'Relaxation profonde et revitalisation'
-      ],
-      techniques: [
-        'Drainage lymphatique Vodder',
-        'Électrolipolyse ciblée',
-        'Pressothérapie pneumatique',
-        'Radiofréquence esthétique',
-        'Massage palper-rouler'
-      ],
+      benefits: ['Réduction visible de la cellulite', 'Amélioration du tonus et de l\'élasticité', 'Stimulation du métabolisme', 'Élimination des toxines et rétention d\'eau', 'Relaxation profonde et revitalisation'],
+      techniques: ['Drainage lymphatique Vodder', 'Électrolipolyse ciblée', 'Pressothérapie pneumatique', 'Radiofréquence esthétique', 'Massage palper-rouler'],
       duration: '75-90 min',
       sessions: '10-20 séances',
       image: specialtyWellnessImage,
-      conditions: [
-        'Cellulite et rétention d\'eau',
-        'Surpoids localisé',
-        'Troubles circulatoires',
-        'Post-grossesse et vergetures',
-        'Jambes lourdes et œdèmes'
-      ]
+      conditions: ['Cellulite et rétention d\'eau', 'Surpoids localisé', 'Troubles circulatoires', 'Post-grossesse et vergetures', 'Jambes lourdes et œdèmes']
     }
   }, {
     icon: Shield,
@@ -130,30 +73,12 @@ const Index = () => {
     color: 'text-accent',
     detailedInfo: {
       overview: 'La gymnastique médicale combine exercices thérapeutiques, Pilates et yoga adaptés pour renforcer votre corps en douceur. Nos programmes sur-mesure améliorent votre condition physique tout en respectant vos limitations et objectifs personnels.',
-      benefits: [
-        'Renforcement musculaire progressif',
-        'Amélioration de la flexibilité et mobilité',
-        'Correction des déséquilibres posturaux',
-        'Prévention des blessures futures',
-        'Gestion du stress et relaxation mentale'
-      ],
-      techniques: [
-        'Pilates thérapeutique',
-        'Yoga médical adapté',
-        'Gymnastique corrective',
-        'Stretching postural',
-        'Renforcement fonctionnel'
-      ],
+      benefits: ['Renforcement musculaire progressif', 'Amélioration de la flexibilité et mobilité', 'Correction des déséquilibres posturaux', 'Prévention des blessures futures', 'Gestion du stress et relaxation mentale'],
+      techniques: ['Pilates thérapeutique', 'Yoga médical adapté', 'Gymnastique corrective', 'Stretching postural', 'Renforcement fonctionnel'],
       duration: '60 min',
       sessions: '12-24 séances',
       image: specialtyMedicalGymnasticsImage,
-      conditions: [
-        'Troubles posturaux et scoliose',
-        'Faiblesse musculaire généralisée',
-        'Prévention des chutes (seniors)',
-        'Rééducation post-traumatique',
-        'Stress et troubles anxieux'
-      ]
+      conditions: ['Troubles posturaux et scoliose', 'Faiblesse musculaire généralisée', 'Prévention des chutes (seniors)', 'Rééducation post-traumatique', 'Stress et troubles anxieux']
     }
   }];
   const testimonials = [{
@@ -207,8 +132,8 @@ const Index = () => {
           <ScrollAnimation animation="fade-up" delay={600}>
             <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
               👋 Bienvenue au Centre Nawal EL GHORFI
-              <br/>Kinésithérapie & Amincissement à Casablanca
-              <br/>Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
+              <br />Kinésithérapie & Amincissement à Casablanca
+              <br />Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
               moderne, au cœur de Casablanca, pour des soins de kinésithérapie,
               rééducation fonctionnelle et amincissement personnalisé.
             </p>
@@ -221,7 +146,7 @@ const Index = () => {
                 Réservez Votre Consultation
               </Button>
               
-              <Button variant="outline" onClick={() => (window.location.href = '/services')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
+              <Button variant="outline" onClick={() => window.location.href = '/services'} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 En savoir plus
               </Button>
             </div>
@@ -303,11 +228,7 @@ const Index = () => {
                       <p className="text-neutral-light leading-relaxed flex-grow">
                         {service.description}
                       </p>
-                      <Button 
-                        variant="ghost" 
-                        className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300"
-                        onClick={() => handleSpecialtyClick(service)}
-                      >
+                      <Button variant="ghost" className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300" onClick={() => handleSpecialtyClick(service)}>
                         En savoir plus
                         <ChevronRight className="w-4 h-4 ml-2" />
                       </Button>
@@ -354,12 +275,9 @@ const Index = () => {
                   </div>
                 </div>
 
-                <Button 
-                  className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105"
-                  onClick={() => {
-                    window.location.href = '/about#nawal-profile';
-                  }}
-                >
+                <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105" onClick={() => {
+                window.location.href = '/about#nawal-profile';
+              }}>
                   Découvrir notre histoire
                 </Button>
               </div>
@@ -401,44 +319,35 @@ const Index = () => {
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Accessibilité optimale',
-                description: 'Situé en rez-de-chaussée, sans marche, avec accès adapté aux personnes à mobilité réduite',
-                icon: '♿'
-              },
-              {
-                title: 'Facilité de stationnement',
-                description: 'Plus de 15 places disponibles',
-                icon: '🚗'
-              },
-              {
-                title: 'Confort thermique garanti',
-                description: 'Centre chauffé et climatisé, box individuels avec climatisation anti-allergènes',
-                icon: '🌡️'
-              },
-              {
-                title: 'À 100 m du tramway',
-                description: 'Station Sidi Abderrahmane',
-                icon: '🚊'
-              },
-              {
-                title: 'Technologie de pointe',
-                description: 'Matériel de rééducation régulièrement mis à jour',
-                icon: '⚡'
-              },
-              {
-                title: 'Cadre apaisant',
-                description: 'Centre entouré d\'un jardin verdoyant',
-                icon: '🌳'
-              },
-              {
-                title: 'Soins à domicile possibles',
-                description: 'Pour les patients ne pouvant pas se déplacer',
-                icon: '🏠'
-              }
-            ].map((feature, index) => (
-              <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
+            {[{
+            title: 'Accessibilité optimale',
+            description: 'Situé en rez-de-chaussée, sans marche, avec accès adapté aux personnes à mobilité réduite',
+            icon: '♿'
+          }, {
+            title: 'Facilité de stationnement',
+            description: 'Plus de 15 places disponibles',
+            icon: '🚗'
+          }, {
+            title: 'Confort thermique garanti',
+            description: 'Centre chauffé et climatisé, box individuels avec climatisation anti-allergènes',
+            icon: '🌡️'
+          }, {
+            title: 'À 100 m du tramway',
+            description: 'Station Sidi Abderrahmane',
+            icon: '🚊'
+          }, {
+            title: 'Technologie de pointe',
+            description: 'Matériel de rééducation régulièrement mis à jour',
+            icon: '⚡'
+          }, {
+            title: 'Cadre apaisant',
+            description: 'Centre entouré d\'un jardin verdoyant',
+            icon: '🌳'
+          }, {
+            title: 'Soins à domicile possibles',
+            description: 'Pour les patients ne pouvant pas se déplacer',
+            icon: '🏠'
+          }].map((feature, index) => <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
                 <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full">
                   <CardContent className="p-6 text-center">
                     <div className="text-4xl mb-4">{feature.icon}</div>
@@ -450,8 +359,7 @@ const Index = () => {
                     </p>
                   </CardContent>
                 </Card>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -463,11 +371,7 @@ const Index = () => {
             <ScrollAnimation animation="slide-left">
               <div className="relative">
                 <div className="glass-card p-2 rounded-3xl">
-                  <img 
-                    src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" 
-                    alt="Dr. Nawal El Ghorfi" 
-                    className="w-full h-auto rounded-2xl"
-                  />
+                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="w-full h-auto rounded-2xl" />
                 </div>
                 
                 {/* Floating Badge */}
@@ -586,21 +490,14 @@ const Index = () => {
                 Prendre Rendez-vous
               </Button>
               
-              <div className="flex items-center space-x-4 text-white/90">
-                <Clock className="w-5 h-5" />
-                <span className="font-montserrat">Ouvert 7j/7 • Urgences acceptées</span>
-              </div>
+              
             </div>
           </ScrollAnimation>
         </div>
       </section>
 
       {/* Specialty Modal */}
-      <SpecialtyModal 
-        specialty={selectedSpecialty}
-        isOpen={isModalOpen}
-        onClose={closeModal}
-      />
+      <SpecialtyModal specialty={selectedSpecialty} isOpen={isModalOpen} onClose={closeModal} />
     </Layout>;
 };
 export default Index;
