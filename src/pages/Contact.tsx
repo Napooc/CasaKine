@@ -40,10 +40,10 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Adresse',
-      value: 'H8FJ+HP Casablanca',
+      value: 'Kinésithérapie Nawal EL GHORFI',
       description: 'Casablanca',
       color: 'text-accent',
-      action: 'https://maps.google.com/?q=H8FJ+HP,Casablanca,Morocco'
+      action: 'https://maps.google.com/?q=Kinésithérapie+Nawal+EL+GHORFI,Casablanca,Morocco'
     },
     {
       icon: MessageCircle,
@@ -257,8 +257,8 @@ const Contact = () => {
           <ScrollAnimation animation="scale-up" delay={200}>
             <div className="glass-card p-4 rounded-3xl shadow-strong overflow-hidden">
               <Map 
-                location="H8FJ+HP Casablanca"
-                address="H8FJ+HP Casablanca"
+                location="Kinésithérapie Nawal EL GHORFI"
+                address="Kinésithérapie Nawal EL GHORFI, Casablanca"
               />
             </div>
           </ScrollAnimation>
