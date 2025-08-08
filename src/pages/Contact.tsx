@@ -4,6 +4,8 @@ import HeroSection from '@/components/HeroSection';
 import Map from '@/components/Map';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useParallax } from '@/hooks/useScrollAnimation';
+import contactParallaxBg from '@/assets/contact-parallax-bg.jpg';
 import { 
   Phone, 
   Mail, 
@@ -15,6 +17,8 @@ import {
 } from 'lucide-react';
 
 const Contact = () => {
+  const scrollY = useParallax();
+  
   const contactInfo = [
     {
       icon: Phone,
@@ -63,19 +67,34 @@ const Contact = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <HeroSection
-        title="Centre de Kinésithérapie et d'Amincissement"
-        subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État"
-        description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement."
-        ctaText="Appeler Maintenant"
-        ctaAction={() => window.open('tel:+212522398874')}
-        showStats={false}
-        backgroundType="gradient"
+      {/* Parallax Background */}
+      <div 
+        className="fixed inset-0 w-full h-full z-0"
+        style={{
+          backgroundImage: `url(${contactParallaxBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          transform: `translateY(${scrollY * 0.5}px)`,
+          opacity: 0.3
+        }}
       />
 
+      {/* Hero Section */}
+      <div className="relative z-10">
+        <HeroSection
+          title="Centre de Kinésithérapie et d'Amincissement"
+          subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État"
+          description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement."
+          ctaText="Appeler Maintenant"
+          ctaAction={() => window.open('tel:+212522398874')}
+          showStats={false}
+          backgroundType="gradient"
+        />
+      </div>
+
       {/* Contact Cards Section */}
-      <section className="py-20 bg-background relative">
+      <section className="py-20 bg-background/90 backdrop-blur-sm relative z-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
@@ -133,7 +152,7 @@ const Contact = () => {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-32 bg-neutral-lightest relative overflow-hidden">
+      <section className="py-32 bg-neutral-lightest/90 backdrop-blur-sm relative overflow-hidden z-10">
         <div className="absolute inset-0 medical-pattern opacity-30"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -241,7 +260,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section id="map" className="py-32 bg-background">
+      <section id="map" className="py-32 bg-background/90 backdrop-blur-sm relative z-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-12">
