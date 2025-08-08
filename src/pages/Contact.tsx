@@ -22,7 +22,12 @@ const Contact = () => {
       value: '+212 522 39 88 74 / +212 661 67 70 96',
       description: 'Lun-Ven 8h-18h, Sam 8h-14h',
       color: 'text-primary',
-      action: 'tel:+212522398874'
+      action: null,
+      hasMultipleOptions: true,
+      phoneNumbers: [
+        { number: '+212 522 39 88 74', label: 'Ligne fixe' },
+        { number: '+212 661 67 70 96', label: 'Mobile' }
+      ]
     },
     {
       icon: Mail,
@@ -30,7 +35,7 @@ const Contact = () => {
       value: 'info@casakine.com',
       description: 'Réponse sous 24h',
       color: 'text-secondary',
-      action: 'mailto:info@casakine.com'
+      action: 'mailto:info@casakine.com?subject=Demande de renseignements'
     },
     {
       icon: MapPin,
@@ -38,7 +43,7 @@ const Contact = () => {
       value: 'H8FJ+HP Casablanca',
       description: 'Casablanca',
       color: 'text-accent',
-      action: 'https://maps.google.com/?q=H8FJ+HP+Casablanca'
+      action: 'https://maps.google.com/?q=H8FJ+HP,Casablanca,Morocco'
     },
     {
       icon: MessageCircle,
@@ -46,7 +51,7 @@ const Contact = () => {
       value: '+212 661 67 70 96',
       description: 'Messages et rendez-vous express',
       color: 'text-green-600',
-      action: 'https://wa.me/212661677096'
+      action: 'https://wa.me/212661677096?text=Bonjour, je souhaiterais prendre rendez-vous'
     }
   ];
 
@@ -96,13 +101,28 @@ const Contact = () => {
                         {info.description}
                       </p>
                       
-                      <Button
-                        variant="outline"
-                        className="w-full border-primary/20 text-primary hover:bg-primary hover:text-white transition-all duration-300 font-medium"
-                        onClick={() => window.open(info.action, '_blank')}
-                      >
-                        Contacter
-                      </Button>
+                      {info.hasMultipleOptions ? (
+                        <div className="space-y-2 w-full">
+                          {info.phoneNumbers?.map((phone, phoneIndex) => (
+                            <Button
+                              key={phoneIndex}
+                              variant="outline"
+                              className="w-full border-primary/20 text-primary hover:bg-primary hover:text-white transition-all duration-300 font-medium text-xs"
+                              onClick={() => window.open(`tel:${phone.number}`)}
+                            >
+                              {phone.label}
+                            </Button>
+                          ))}
+                        </div>
+                      ) : (
+                        <Button
+                          variant="outline"
+                          className="w-full border-primary/20 text-primary hover:bg-primary hover:text-white transition-all duration-300 font-medium"
+                          onClick={() => window.open(info.action, info.title === 'Adresse' ? '_blank' : '_self')}
+                        >
+                          Contacter
+                        </Button>
+                      )}
                     </CardContent>
                   </Card>
                 </ScrollAnimation>
