@@ -4,73 +4,21 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { 
-  Activity, 
-  Heart, 
-  Target, 
-  Users, 
-  CheckCircle, 
-  Clock, 
-  ArrowRight,
-  Sparkles,
-  Shield,
-  Star
-} from 'lucide-react';
+import { Activity, Heart, Target, Users, CheckCircle, Clock, ArrowRight, Sparkles, Shield, Star } from 'lucide-react';
 import gymnasticsHeroImage from '@/assets/gymnastics-medical-hero.jpg';
 import gymnasticsSeniorImage from '@/assets/gymnastics-senior.jpg';
 import gymnasticsVertebralImage from '@/assets/gymnastics-vertebral.jpg';
-
 const GymnastiqueMedicale = () => {
-  const benefits = [
-    'Amélioration de la mobilité articulaire',
-    'Renforcement musculaire progressif',
-    'Prévention des douleurs chroniques',
-    'Maintien de l\'autonomie',
-    'Amélioration de l\'équilibre',
-    'Stimulation cognitive',
-    'Lien social et convivialité'
-  ];
-
-  const vertebralProgram = [
-    'Assouplissement de la colonne vertébrale',
-    'Renforcement de la ceinture abdominale',
-    'Stabilisation du bassin',
-    'Mobilisation des membres supérieurs',
-    'Travail des membres inférieurs',
-    'Protection articulaire',
-    'Amélioration de la posture'
-  ];
-
-  const seniorProgram = [
-    'Maintien de l\'autonomie corporelle',
-    'Prévention des chutes',
-    'Amélioration de l\'équilibre',
-    'Renforcement musculaire adapté',
-    'Souplesse articulaire',
-    'Coordination motrice',
-    'Stimulation cognitive et sociale'
-  ];
-
-  const equipment = [
-    'Ballons de gymnastique',
-    'Élastiques de résistance',
-    'Plateaux d\'équilibre (Freeman)',
-    'Tapis de sol professionnels',
-    'Accessoires de proprioception',
-    'Matériel de coordination'
-  ];
-
-  return (
-    <Layout>
+  const benefits = ['Amélioration de la mobilité articulaire', 'Renforcement musculaire progressif', 'Prévention des douleurs chroniques', 'Maintien de l\'autonomie', 'Amélioration de l\'équilibre', 'Stimulation cognitive', 'Lien social et convivialité'];
+  const vertebralProgram = ['Assouplissement de la colonne vertébrale', 'Renforcement de la ceinture abdominale', 'Stabilisation du bassin', 'Mobilisation des membres supérieurs', 'Travail des membres inférieurs', 'Protection articulaire', 'Amélioration de la posture'];
+  const seniorProgram = ['Maintien de l\'autonomie corporelle', 'Prévention des chutes', 'Amélioration de l\'équilibre', 'Renforcement musculaire adapté', 'Souplesse articulaire', 'Coordination motrice', 'Stimulation cognitive et sociale'];
+  const equipment = ['Ballons de gymnastique', 'Élastiques de résistance', 'Plateaux d\'équilibre (Freeman)', 'Tapis de sol professionnels', 'Accessoires de proprioception', 'Matériel de coordination'];
+  return <Layout>
       {/* Hero Section */}
       {/* Custom Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={gymnasticsHeroImage} 
-            alt="Gymnastique médicale moderne"
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src={gymnasticsHeroImage} alt="Gymnastique médicale moderne" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-secondary/90"></div>
         </div>
 
@@ -93,10 +41,7 @@ const GymnastiqueMedicale = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={600}>
-            <Button 
-              onClick={() => window.location.href = '/contact'}
-              className="bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110"
-            >
+            <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
               <Activity className="w-5 h-5 mr-3" />
               Réserver une séance
             </Button>
@@ -123,18 +68,13 @@ const GymnastiqueMedicale = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                  {benefits.map((benefit, index) => <div key={index} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
                       <span className="text-neutral text-sm">{benefit}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
 
-                <Button 
-                  onClick={() => window.location.href = '/contact'}
-                  className="bg-gradient-accent hover-accent-glow text-white px-8 py-3"
-                >
+                <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-accent hover-accent-glow text-white px-8 py-3">
                   <Activity className="w-5 h-5 mr-2" />
                   Commencer maintenant
                 </Button>
@@ -143,11 +83,7 @@ const GymnastiqueMedicale = () => {
 
             <ScrollAnimation animation="slide-right">
               <div className="relative">
-                <img 
-                  src={gymnasticsHeroImage} 
-                  alt="Gymnastique médicale moderne"
-                  className="w-full h-[500px] object-cover rounded-2xl shadow-strong"
-                />
+                <img src={gymnasticsHeroImage} alt="Gymnastique médicale moderne" className="w-full h-[500px] object-cover rounded-2xl shadow-strong" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
               </div>
             </ScrollAnimation>
@@ -193,12 +129,10 @@ const GymnastiqueMedicale = () => {
                   </p>
 
                   <div className="space-y-3">
-                    {vertebralProgram.map((item, index) => (
-                      <div key={index} className="flex items-center space-x-3">
+                    {vertebralProgram.map((item, index) => <div key={index} className="flex items-center space-x-3">
                         <Star className="w-5 h-5 text-accent flex-shrink-0" />
                         <span className="text-neutral text-sm">{item}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   <div className="mt-8 p-6 bg-gradient-to-r from-accent/10 to-secondary/10 rounded-xl">
@@ -216,19 +150,10 @@ const GymnastiqueMedicale = () => {
 
             <ScrollAnimation animation="slide-right">
               <div className="relative">
-                <img 
-                  src={gymnasticsVertebralImage} 
-                  alt="Gymnastique vertébrale"
-                  className="w-full h-[600px] object-cover rounded-2xl shadow-strong"
-                />
+                <img src={gymnasticsVertebralImage} alt="Gymnastique vertébrale" className="w-full h-[600px] object-cover rounded-2xl shadow-strong" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent rounded-2xl"></div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4">
-                    <div className="flex items-center space-x-3">
-                      <Clock className="w-5 h-5 text-primary" />
-                      <span className="text-primary font-medium">Séances de 45-60 minutes</span>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </ScrollAnimation>
@@ -257,11 +182,7 @@ const GymnastiqueMedicale = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimation animation="slide-left">
               <div className="relative">
-                <img 
-                  src={gymnasticsSeniorImage} 
-                  alt="Gymnastique senior"
-                  className="w-full h-[600px] object-cover rounded-2xl shadow-strong"
-                />
+                <img src={gymnasticsSeniorImage} alt="Gymnastique senior" className="w-full h-[600px] object-cover rounded-2xl shadow-strong" />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/30 to-transparent rounded-2xl"></div>
                 <div className="absolute top-6 left-6 right-6">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4">
@@ -287,12 +208,10 @@ const GymnastiqueMedicale = () => {
                   </div>
 
                   <div className="space-y-4 mb-8">
-                    {seniorProgram.map((item, index) => (
-                      <div key={index} className="flex items-center space-x-3">
+                    {seniorProgram.map((item, index) => <div key={index} className="flex items-center space-x-3">
                         <Sparkles className="w-5 h-5 text-secondary flex-shrink-0" />
                         <span className="text-neutral text-sm">{item}</span>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   <div className="bg-gradient-to-r from-secondary/10 to-accent/10 rounded-xl p-6 mb-6">
@@ -300,12 +219,10 @@ const GymnastiqueMedicale = () => {
                       Matériel utilisé :
                     </h4>
                     <div className="grid grid-cols-2 gap-2">
-                      {equipment.map((item, index) => (
-                        <div key={index} className="flex items-center space-x-2">
+                      {equipment.map((item, index) => <div key={index} className="flex items-center space-x-2">
                           <Shield className="w-4 h-4 text-secondary flex-shrink-0" />
                           <span className="text-neutral text-xs">{item}</span>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
 
@@ -337,28 +254,16 @@ const GymnastiqueMedicale = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                onClick={() => window.location.href = '/contact'}
-                className="bg-gradient-accent hover-accent-glow text-white font-semibold px-8 py-4 text-lg"
-              >
+              <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-accent hover-accent-glow text-white font-semibold px-8 py-4 text-lg">
                 <Activity className="w-5 h-5 mr-3" />
                 Réserver une séance d'essai
               </Button>
               
-              <Button 
-                variant="outline" 
-                onClick={() => window.open('tel:+212522398874')}
-                className="border-white/30 hover:bg-white/20 text-white font-medium px-8 py-4 text-lg"
-              >
-                Appeler maintenant
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              
             </div>
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default GymnastiqueMedicale;
