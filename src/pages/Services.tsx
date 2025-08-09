@@ -9,15 +9,6 @@ import { useNavigate } from 'react-router-dom';
 const Services = () => {
   const navigate = useNavigate();
   const mainServices = [{
-    icon: Activity,
-    title: 'Traumatologie, Neurologie, Rhumatologie',
-    description: 'Traitement des pathologies mécaniques et inflammatoires de l\'appareil locomoteur',
-    features: ['Arthrose et arthrite', 'Tendinites et entorses', 'Raideurs post-traumatiques', 'Prothèses PTH et PTG', 'Hémiplégie et paralysies', 'Maladie de Parkinson', 'Sclérose en plaques'],
-    duration: '45-60 minutes',
-    color: 'text-primary',
-    bgGradient: 'from-primary/10 to-primary/5',
-    route: '/services/traumatologie'
-  }, {
     icon: Heart,
     title: 'Kinésithérapie',
     description: 'Amélioration de la respiration chez l\'adulte et l\'enfant',
@@ -36,14 +27,14 @@ const Services = () => {
     bgGradient: 'from-secondary/10 to-secondary/5',
     route: '/services/amincissement'
   }, {
-    icon: Shield,
-    title: 'Rééducation Spécialisée',
-    description: 'Programmes de rééducation personnalisés selon vos besoins',
-    features: ['Rééducation périnéale', 'Rééducation après AVC', 'Drainage lymphatique manuel', 'Réadaptation à l\'effort', 'Possibilité à domicile'],
+    icon: Activity,
+    title: 'Gymnastique médicale',
+    description: 'Cours encadrés par des kinésithérapeutes pour améliorer mobilité et prévenir les douleurs',
+    features: ['Gymnastique vertébrale', 'Gymnastique senior', 'Renforcement musculaire', 'Amélioration de l\'équilibre', 'Prévention des chutes', 'Ambiance conviviale'],
     duration: '45-60 minutes',
     color: 'text-accent',
     bgGradient: 'from-accent/10 to-accent/5',
-    route: '/services/reeducation-specialisee'
+    route: '/services/gymnastique-medicale'
   }, {
     icon: Baby,
     title: 'Femme enceinte',
