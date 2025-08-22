@@ -159,21 +159,26 @@ const Services = () => {
           {/* Quick Service Stats */}
           <ScrollAnimation animation="fade-up" delay={1000}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {[{
+            {[{
               icon: Activity,
-              label: 'Rééducation'
+              label: 'Rééducation',
+              route: '/services/amincissement'
             }, {
               icon: Heart,
-              label: 'Thérapies'
+              label: 'Thérapies',
+              route: '/services/kinesitherapie-respiratoire'
             }, {
               icon: Zap,
-              label: 'Bien-être'
+              label: 'Bien-être',
+              route: '/services/massage-bien-etre'
             }, {
               icon: Shield,
-              label: 'Prévention'
+              label: 'Prévention',
+              route: '/services/gymnastique-medicale'
             }].map((service, index) => {
               const Icon = service.icon;
-              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
+              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer"
+                onClick={() => navigate(service.route)}>
                     <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
                     <div className="text-white font-montserrat text-sm opacity-90">
                       {service.label}

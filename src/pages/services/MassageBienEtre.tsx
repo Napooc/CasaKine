@@ -4,11 +4,14 @@ import massageHero from '@/assets/massage-hero.jpg';
 import massageRelaxation from '@/assets/massage-relaxation.jpg';
 import massageTherapy from '@/assets/massage-therapy-session.jpg';
 import massageRoom from '@/assets/massage-room.jpg';
+import massageNewTherapy from '@/assets/massage-new-therapy.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Sparkles, Heart, Zap, Waves, Moon, Sun, Clock, CheckCircle, Star, Calendar, Shield, Target, Activity, Leaf } from 'lucide-react';
+import { Sparkles, Heart, Zap, Waves, Moon, Sun, Clock, CheckCircle, Star, Calendar, Shield, Target, Activity, Leaf, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 const MassageBienEtre = () => {
+  const navigate = useNavigate();
   const massageTypes = [{
     icon: Moon,
     title: 'Massage Relaxant',
@@ -92,6 +95,14 @@ const MassageBienEtre = () => {
 
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
+            <Button 
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm mb-8 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-lg"
+              onClick={() => navigate('/services')}
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Retour aux services
+            </Button>
+            
             <div className="mb-8">
               <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
                 🌿 Massages Thérapeutiques
@@ -279,8 +290,8 @@ const MassageBienEtre = () => {
                       <div className="relative group">
                         <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-3xl blur-xl scale-105"></div>
                         <div className={`relative z-10 bg-gradient-to-br ${massage.bgGradient} rounded-3xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300`}>
-                          <img 
-                            src={massageImages[index]} 
+                         <img 
+                            src={index === 0 ? massageTherapy : index === 1 ? massageNewTherapy : massageRelaxation} 
                             alt={massage.title} 
                             className="w-full h-48 object-cover"
                           />

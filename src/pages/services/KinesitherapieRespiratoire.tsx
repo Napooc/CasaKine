@@ -4,11 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Calendar, Phone, CheckCircle, Heart, Brain, Wind, Droplets, Activity, Hand, Baby, Clock, Star, Stethoscope, Target, Shield, Users, Home, ArrowRight, Zap, Sparkles } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import specialtyImage from '@/assets/specialty-medical-gymnastics.jpg';
 import kinesitherapieImage1 from '@/assets/kinesitherapie-respiratoire-1.jpg';
 import kinesitherapieImage2 from '@/assets/kinesitherapie-respiratoire-2.jpg';
 import kinesitherapieImage3 from '@/assets/kinesitherapie-respiratoire-3.jpg';
 const KinesitherapieRespiratoire = () => {
+  const navigate = useNavigate();
   const services = [{
     icon: Activity,
     title: "Traumatologie, Rhumatologie & Pathologies de la Colonne Vertébrale",
@@ -108,7 +110,10 @@ const KinesitherapieRespiratoire = () => {
 
         <div className="relative z-10 text-center max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button variant="ghost" className="text-white/80 hover:text-white mb-8 p-0 group transition-all duration-300" onClick={() => window.history.back()}>
+            <Button 
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm mb-8 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-lg group"
+              onClick={() => navigate('/services')}
+            >
               <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
               Retour aux services
             </Button>

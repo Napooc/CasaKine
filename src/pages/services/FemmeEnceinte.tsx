@@ -7,8 +7,10 @@ import femmeEnceinteBonding from '@/assets/femme-enceinte-bonding.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Baby, Heart, Sparkles, Shield, Users, Clock, CheckCircle, Star, Calendar, User, Target, Activity, Brain, Zap } from 'lucide-react';
+import { Baby, Heart, Sparkles, Shield, Users, Clock, CheckCircle, Star, Calendar, User, Target, Activity, Brain, Zap, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 const FemmeEnceinte = () => {
+  const navigate = useNavigate();
   const preparationServices = [{
     icon: Heart,
     title: 'Techniques de Respiration',
@@ -81,6 +83,14 @@ const FemmeEnceinte = () => {
 
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
+            <Button 
+              className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm mb-8 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-lg"
+              onClick={() => navigate('/services')}
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Retour aux services
+            </Button>
+            
             <div className="mb-8">
               <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
                 🤰 Accompagnement Spécialisé
