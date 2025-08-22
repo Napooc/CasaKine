@@ -24,15 +24,18 @@ const GymnastiqueMedicale = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-secondary/90"></div>
         </div>
 
+        <div className="fixed top-4 left-4 z-50">
+          <Button 
+            className="bg-white/90 hover:bg-white text-primary border border-primary/20 backdrop-blur-sm px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-xl hover:shadow-2xl"
+            onClick={() => navigate('/services')}
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Retour aux services
+          </Button>
+        </div>
+
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button 
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm mb-8 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-lg"
-              onClick={() => navigate('/services')}
-            >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              Retour aux services
-            </Button>
             
             <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
               🧘‍♀️ Gymnastique Médicale
