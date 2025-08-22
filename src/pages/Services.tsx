@@ -215,10 +215,7 @@ const Services = () => {
             {mainServices.map((service, index) => {
             const Icon = service.icon;
             return <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 200}>
-                  <Card 
-                    className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group bg-gradient-to-br ${service.bgGradient} cursor-pointer`}
-                    onClick={() => navigate(service.route)}
-                  >
+                  <Card className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group bg-gradient-to-br ${service.bgGradient}`}>
                     <CardContent className="p-10">
                       <div className="flex items-start space-x-6">
                         <div className="flex-shrink-0">
@@ -247,7 +244,7 @@ const Services = () => {
                               <Clock className="w-4 h-4" />
                               <span className="text-sm">{service.duration}</span>
                             </div>
-                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`}>
+                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`} onClick={() => navigate(service.route)}>
                               En savoir plus
                               <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
