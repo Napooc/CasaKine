@@ -143,12 +143,14 @@ const Services = () => {
 
           <ScrollAnimation animation="scale-up" delay={800}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button onClick={() => (window.location.href = '/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button onClick={() => window.location.href = '/contact'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                 <Activity className="w-5 h-5 mr-3" />
                 Réserver une Consultation
               </Button>
               
-              <Button variant="outline" onClick={() => document.getElementById('main-services')?.scrollIntoView({ behavior: 'smooth' })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
+              <Button variant="outline" onClick={() => document.getElementById('main-services')?.scrollIntoView({
+              behavior: 'smooth'
+            })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                 Voir tous nos services
               </Button>
             </div>
@@ -295,43 +297,7 @@ const Services = () => {
       </section>
 
       {/* Specialties Section */}
-      <section className="py-32 bg-neutral-lightest relative overflow-hidden">
-        <div className="absolute inset-0 medical-pattern opacity-30"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollAnimation animation="fade-up">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-6">
-                Spécialités <span className="text-gradient-accent">Complémentaires</span>
-              </h2>
-              <p className="text-xl text-neutral-light max-w-3xl mx-auto">
-                Des expertises spécialisées pour répondre à tous vos besoins thérapeutiques
-              </p>
-            </div>
-          </ScrollAnimation>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {specialties.map((specialty, index) => {
-            const Icon = specialty.icon;
-            return <ScrollAnimation key={index} animation="rotate-in" delay={index * 150}>
-                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group text-center">
-                    <CardContent className="p-8 h-full flex flex-col">
-                      <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-secondary/10 flex items-center justify-center group-hover:animate-pulse-glow">
-                        <Icon className="w-8 h-8 text-secondary group-hover:scale-110 transition-transform duration-300" />
-                      </div>
-                      <h3 className="text-lg font-playfair font-bold text-primary mb-4">
-                        {specialty.title}
-                      </h3>
-                      <p className="text-neutral-light text-sm leading-relaxed flex-grow">
-                        {specialty.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>;
-          })}
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-32 bg-gradient-premium relative overflow-hidden">
@@ -352,7 +318,7 @@ const Services = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
+              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
                 <Star className="w-5 h-5 mr-3" />
                 Consultation Gratuite
               </Button>
