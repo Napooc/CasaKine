@@ -3,7 +3,7 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Target, TrendingUp, Sparkles, Users } from 'lucide-react';
+import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Target, TrendingUp, Sparkles, Users, MapPin, Activity, Heart, Zap as Lightning, Eye, Shield } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/amincissement-hero-modern.jpg';
 import radiofrequencyImage from '@/assets/radiofrequency-modern.jpg';
@@ -46,7 +46,38 @@ const ServicesAmincissement = () => {
     benefits: ["Active le métabolisme et brûle les graisses localisées", "Améliore la fermeté de la peau", "Réduit la cellulite", "Favorise la récupération musculaire"],
     details: "Indolore et rapide, la cryothérapie est une solution naturelle pour affiner la silhouette sans intervention chirurgicale. Séances pratiquées sous supervision d'un professionnel qualifié."
   }];
-  const targetAreas = ["Cuisses (intérieur/extérieur)", "Fesses et ventre", "Genoux, mollets, chevilles", "Dos et hanches", "Bras et décolleté", "Contour des yeux et visage"];
+  const targetAreas = [
+    {
+      zone: "Cuisses (intérieur/extérieur)",
+      icon: "legs",
+      description: "Raffermissement et remodelage des cuisses"
+    },
+    {
+      zone: "Fesses et ventre", 
+      icon: "body",
+      description: "Tonification ciblée du tronc"
+    },
+    {
+      zone: "Genoux, mollets, chevilles",
+      icon: "leg",
+      description: "Affinement des membres inférieurs"
+    },
+    {
+      zone: "Dos et hanches",
+      icon: "back", 
+      description: "Remodelage de la silhouette dorsale"
+    },
+    {
+      zone: "Bras et décolleté",
+      icon: "arms",
+      description: "Raffermissement du haut du corps"
+    },
+    {
+      zone: "Contour des yeux et visage",
+      icon: "face",
+      description: "Traitement anti-âge du visage"
+    }
+  ];
   return <Layout>
       {/* Fixed Return Button */}
       <div className="fixed top-6 left-6 z-50">
@@ -240,37 +271,90 @@ const ServicesAmincissement = () => {
       </section>
 
       {/* Target Areas Section */}
-      <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-32 bg-gradient-to-br from-neutral-lightest via-background to-secondary/5 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-32 h-32 border border-primary/20 rounded-full"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 border border-accent/20 rounded-full"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-secondary/20 rounded-full"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <ScrollAnimation animation="fade-up">
-            <div className="text-center mb-16">
-              <Badge className="bg-accent/10 text-accent border-accent/20 px-6 py-3 text-base mb-6">
-                ✨ Amincissement & Raffermissement ciblés
+            <div className="text-center mb-20">
+              <Badge className="bg-accent/15 text-accent border-accent/30 px-8 py-4 text-lg mb-8 backdrop-blur-sm shadow-soft">
+                ✨ Zones de Traitement Ciblées
               </Badge>
               
-              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-6">
-                Zones de <span className="text-gradient-accent">Traitement</span>
+              <h2 className="text-5xl md:text-6xl font-playfair font-bold text-primary mb-8 leading-tight">
+                Transformation <span className="text-gradient-accent">Complète</span>
               </h2>
-              <p className="text-xl text-neutral-light max-w-3xl mx-auto">
-                Traitement efficace et personnalisé pour toutes les zones de votre corps
+              <p className="text-xl text-neutral-light max-w-4xl mx-auto leading-relaxed">
+                Découvrez nos traitements spécialisés pour chaque zone de votre corps. 
+                Des solutions personnalisées pour des résultats visibles et durables.
               </p>
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {targetAreas.map((area, index) => <ScrollAnimation key={index} animation="scale-up" delay={index * 100}>
-                <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 text-center">
-                  <CardContent className="p-8">
-                    <div className="w-12 h-12 bg-gradient-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                      <Sparkles className="w-6 h-6 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-playfair font-bold text-primary mb-2">
-                      {area}
-                    </h3>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>)}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {targetAreas.map((area, index) => {
+              const getIcon = (iconType: string) => {
+                switch(iconType) {
+                  case 'legs': return Activity;
+                  case 'body': return Shield;
+                  case 'leg': return MapPin;
+                  case 'back': return Target;
+                  case 'arms': return Heart;
+                  case 'face': return Eye;
+                  default: return Sparkles;
+                }
+              };
+              
+              const IconComponent = getIcon(area.icon);
+              
+              return (
+                <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+                  <Card className="group relative overflow-hidden bg-gradient-to-br from-white via-neutral-lightest to-secondary/5 border-0 shadow-soft hover:shadow-strong transition-all duration-700 hover:scale-105 h-full">
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <CardContent className="p-10 relative z-10">
+                      {/* Icon with animated background */}
+                      <div className="relative mb-8">
+                        <div className="w-20 h-20 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl flex items-center justify-center mb-6 mx-auto shadow-soft group-hover:shadow-strong transition-all duration-500 group-hover:scale-110">
+                          <IconComponent className="w-10 h-10 text-white" />
+                        </div>
+                        
+                        {/* Decorative ring */}
+                        <div className="absolute inset-0 w-20 h-20 mx-auto border-2 border-accent/20 rounded-2xl group-hover:border-accent/40 transition-colors duration-500 group-hover:rotate-12"></div>
+                      </div>
+                      
+                      <h3 className="text-xl font-playfair font-bold text-primary mb-4 group-hover:text-secondary transition-colors duration-300">
+                        {area.zone}
+                      </h3>
+                      
+                      <p className="text-neutral-light text-center leading-relaxed group-hover:text-neutral transition-colors duration-300">
+                        {area.description}
+                      </p>
+                      
+                      {/* Bottom accent */}
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-t-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </CardContent>
+                  </Card>
+                </ScrollAnimation>
+              );
+            })}
           </div>
+
+          {/* Bottom CTA */}
+          <ScrollAnimation animation="fade-up" delay={600}>
+            <div className="text-center mt-16">
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 px-8 py-4 rounded-full border border-primary/20">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="text-primary font-medium">Traitement sur mesure pour chaque zone</span>
+              </div>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 
