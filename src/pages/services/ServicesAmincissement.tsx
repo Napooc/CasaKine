@@ -11,100 +11,52 @@ import cavitationImage from '@/assets/cavitation-modern.jpg';
 import laserImage from '@/assets/laser-modern.jpg';
 import cryotherapyImage from '@/assets/cryotherapy-modern.jpg';
 import consultationImage from '@/assets/consultation-modern.jpg';
-
 const ServicesAmincissement = () => {
   const navigate = useNavigate();
-
-  const techniques = [
-    {
-      icon: Radio,
-      title: "Radiofréquence",
-      image: radiofrequencyImage,
-      duration: "30 minutes",
-      description: "La radiofréquence est une technique non invasive utilisée en kinésithérapie et esthétique pour favoriser la perte de cellulite et le remodelage corporel.",
-      benefits: [
-        "Stimule la production de collagène",
-        "Améliore la fermeté et l'élasticité de la peau",
-        "Active la circulation sanguine et lymphatique",
-        "Favorise la réduction des amas graisseux localisés",
-        "Aide à lisser la peau d'orange"
-      ],
-      details: "Grâce à la chaleur produite par des ondes électromagnétiques, ce traitement est une solution sûre, indolore et sans temps de récupération. Chaque séance se réalise en cabinet, sous la supervision d'un kinésithérapeute spécialisé."
-    },
-    {
-      icon: Waves,
-      title: "Cavitation 40K",
-      image: cavitationImage,
-      duration: "30-45 minutes",
-      description: "La cavitation 40k est une technique non invasive utilisée pour éliminer les graisses localisées et remodeler la silhouette sans chirurgie.",
-      benefits: [
-        "Réduit les amas graisseux localisés",
-        "Améliore la texture de la peau",
-        "Affine la silhouette",
-        "Favorise un effet minceur durable"
-      ],
-      details: "Grâce à des ultrasons à haute fréquence, elle provoque la destruction des cellules graisseuses, qui sont ensuite naturellement éliminées par l'organisme. Indolore et sans effets secondaires, idéale pour cibler les zones rebelles."
-    },
-    {
-      icon: Zap,
-      title: "Laser Minceur",
-      image: laserImage,
-      duration: "20-30 minutes",
-      description: "Le laser minceur est une technique non invasive qui utilise des faisceaux lumineux pour cibler les cellules graisseuses et favoriser leur élimination naturelle.",
-      benefits: [
-        "Diminue les graisses localisées",
-        "Raffermit la peau",
-        "Améliore la silhouette",
-        "Réduit la cellulite"
-      ],
-      details: "Indolore et rapide, le laser est une solution efficace pour remodeler le corps sans chirurgie ni douleur. Chaque séance est réalisée en cabinet par un kinésithérapeute spécialisé."
-    },
-    {
-      icon: Snowflake,
-      title: "Cryothérapie",
-      image: cryotherapyImage,
-      duration: "20-30 minutes",
-      description: "La cryothérapie est une méthode non invasive qui utilise le froid intense pour stimuler la combustion des graisses et le remodelage corporel.",
-      benefits: [
-        "Active le métabolisme et brûle les graisses localisées",
-        "Améliore la fermeté de la peau",
-        "Réduit la cellulite",
-        "Favorise la récupération musculaire"
-      ],
-      details: "Indolore et rapide, la cryothérapie est une solution naturelle pour affiner la silhouette sans intervention chirurgicale. Séances pratiquées sous supervision d'un professionnel qualifié."
-    }
-  ];
-
-  const targetAreas = [
-    "Cuisses (intérieur/extérieur)",
-    "Fesses et ventre",
-    "Genoux, mollets, chevilles",
-    "Dos et hanches",
-    "Bras et décolleté",
-    "Contour des yeux et visage"
-  ];
-
-  return (
-    <Layout>
+  const techniques = [{
+    icon: Radio,
+    title: "Radiofréquence",
+    image: radiofrequencyImage,
+    duration: "30 minutes",
+    description: "La radiofréquence est une technique non invasive utilisée en kinésithérapie et esthétique pour favoriser la perte de cellulite et le remodelage corporel.",
+    benefits: ["Stimule la production de collagène", "Améliore la fermeté et l'élasticité de la peau", "Active la circulation sanguine et lymphatique", "Favorise la réduction des amas graisseux localisés", "Aide à lisser la peau d'orange"],
+    details: "Grâce à la chaleur produite par des ondes électromagnétiques, ce traitement est une solution sûre, indolore et sans temps de récupération. Chaque séance se réalise en cabinet, sous la supervision d'un kinésithérapeute spécialisé."
+  }, {
+    icon: Waves,
+    title: "Cavitation 40K",
+    image: cavitationImage,
+    duration: "30-45 minutes",
+    description: "La cavitation 40k est une technique non invasive utilisée pour éliminer les graisses localisées et remodeler la silhouette sans chirurgie.",
+    benefits: ["Réduit les amas graisseux localisés", "Améliore la texture de la peau", "Affine la silhouette", "Favorise un effet minceur durable"],
+    details: "Grâce à des ultrasons à haute fréquence, elle provoque la destruction des cellules graisseuses, qui sont ensuite naturellement éliminées par l'organisme. Indolore et sans effets secondaires, idéale pour cibler les zones rebelles."
+  }, {
+    icon: Zap,
+    title: "Laser Minceur",
+    image: laserImage,
+    duration: "20-30 minutes",
+    description: "Le laser minceur est une technique non invasive qui utilise des faisceaux lumineux pour cibler les cellules graisseuses et favoriser leur élimination naturelle.",
+    benefits: ["Diminue les graisses localisées", "Raffermit la peau", "Améliore la silhouette", "Réduit la cellulite"],
+    details: "Indolore et rapide, le laser est une solution efficace pour remodeler le corps sans chirurgie ni douleur. Chaque séance est réalisée en cabinet par un kinésithérapeute spécialisé."
+  }, {
+    icon: Snowflake,
+    title: "Cryothérapie",
+    image: cryotherapyImage,
+    duration: "20-30 minutes",
+    description: "La cryothérapie est une méthode non invasive qui utilise le froid intense pour stimuler la combustion des graisses et le remodelage corporel.",
+    benefits: ["Active le métabolisme et brûle les graisses localisées", "Améliore la fermeté de la peau", "Réduit la cellulite", "Favorise la récupération musculaire"],
+    details: "Indolore et rapide, la cryothérapie est une solution naturelle pour affiner la silhouette sans intervention chirurgicale. Séances pratiquées sous supervision d'un professionnel qualifié."
+  }];
+  const targetAreas = ["Cuisses (intérieur/extérieur)", "Fesses et ventre", "Genoux, mollets, chevilles", "Dos et hanches", "Bras et décolleté", "Contour des yeux et visage"];
+  return <Layout>
       {/* Fixed Return Button */}
       <div className="fixed top-6 left-6 z-50">
-        <Button 
-          className="bg-white/95 hover:bg-white text-primary border border-primary/20 backdrop-blur-md px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-xl hover:shadow-2xl"
-          onClick={() => navigate('/services')}
-        >
-          <ArrowLeft className="w-5 h-5 mr-2" />
-          Retour aux services
-        </Button>
+        
       </div>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt="Services d'Amincissement" 
-            className="w-full h-full object-cover scale-105"
-          />
+          <img src={heroImage} alt="Services d'Amincissement" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-secondary/70 to-purple-600/80"></div>
         </div>
 
@@ -131,19 +83,12 @@ const ServicesAmincissement = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" 
-                onClick={() => (window.location.href = '/contact')}
-              >
+              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Bilan personnalisé gratuit
               </Button>
               
-              <Button 
-                variant="outline" 
-                className="glass-effect border-white/30 hover:bg-white/20 text-white font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105" 
-                onClick={() => window.open('tel:+212522398874')}
-              >
+              <Button variant="outline" onClick={() => window.open('tel:+212522398874')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 <Phone className="w-5 h-5 mr-3" />
                 Consultation immédiate
               </Button>
@@ -221,11 +166,7 @@ const ServicesAmincissement = () => {
 
             <ScrollAnimation animation="slide-right">
               <div className="relative">
-                <img 
-                  src={consultationImage} 
-                  alt="Consultation personnalisée" 
-                  className="w-full h-96 object-cover rounded-3xl shadow-strong"
-                />
+                <img src={consultationImage} alt="Consultation personnalisée" className="w-full h-96 object-cover rounded-3xl shadow-strong" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
               </div>
             </ScrollAnimation>
@@ -249,11 +190,9 @@ const ServicesAmincissement = () => {
 
           <div className="space-y-24">
             {techniques.map((technique, index) => {
-              const Icon = technique.icon;
-              const isEven = index % 2 === 0;
-              
-              return (
-                <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
+            const Icon = technique.icon;
+            const isEven = index % 2 === 0;
+            return <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
                   <ScrollAnimation animation={isEven ? "slide-left" : "slide-right"}>
                     <div className={!isEven ? 'lg:col-start-2' : ''}>
                       <Badge className="bg-secondary/10 text-secondary border-secondary/20 px-4 py-2 mb-6">
@@ -274,12 +213,10 @@ const ServicesAmincissement = () => {
                       </p>
                       
                       <div className="space-y-3 mb-6">
-                        {technique.benefits.map((benefit, benefitIndex) => (
-                          <div key={benefitIndex} className="flex items-start space-x-3">
+                        {technique.benefits.map((benefit, benefitIndex) => <div key={benefitIndex} className="flex items-start space-x-3">
                             <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                             <span className="text-neutral">{benefit}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                       
                       <p className="text-neutral-light italic">
@@ -291,18 +228,13 @@ const ServicesAmincissement = () => {
                   <ScrollAnimation animation={isEven ? "slide-right" : "slide-left"}>
                     <div className={!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}>
                       <div className="relative">
-                        <img 
-                          src={technique.image} 
-                          alt={`Technique ${technique.title}`} 
-                          className="w-full h-96 object-cover rounded-3xl shadow-strong"
-                        />
+                        <img src={technique.image} alt={`Technique ${technique.title}`} className="w-full h-96 object-cover rounded-3xl shadow-strong" />
                         <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent rounded-3xl"></div>
                       </div>
                     </div>
                   </ScrollAnimation>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -326,8 +258,7 @@ const ServicesAmincissement = () => {
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {targetAreas.map((area, index) => (
-              <ScrollAnimation key={index} animation="scale-up" delay={index * 100}>
+            {targetAreas.map((area, index) => <ScrollAnimation key={index} animation="scale-up" delay={index * 100}>
                 <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 text-center">
                   <CardContent className="p-8">
                     <div className="w-12 h-12 bg-gradient-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
@@ -338,8 +269,7 @@ const ServicesAmincissement = () => {
                     </h3>
                   </CardContent>
                 </Card>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -429,19 +359,12 @@ const ServicesAmincissement = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" 
-                onClick={() => (window.location.href = '/contact')}
-              >
+              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Bilan gratuit maintenant
               </Button>
               
-              <Button 
-                variant="outline" 
-                className="glass-effect border-white/30 hover:bg-white/20 text-white font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105" 
-                onClick={() => window.open('tel:+212522398874')}
-              >
+              <Button variant="outline" onClick={() => window.open('tel:+212522398874')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 <Phone className="w-5 h-5 mr-3" />
                 Appelez-nous
               </Button>
@@ -449,8 +372,6 @@ const ServicesAmincissement = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default ServicesAmincissement;
