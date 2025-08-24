@@ -109,13 +109,7 @@ const KinesitherapieRespiratoire = () => {
         </div>
 
         <div className="fixed top-4 left-4 z-50">
-          <Button 
-            className="bg-white/90 hover:bg-white text-primary border border-primary/20 backdrop-blur-sm px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-xl hover:shadow-2xl"
-            onClick={() => navigate('/services')}
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Retour aux services
-          </Button>
+          
         </div>
 
         <div className="relative z-10 text-center max-w-7xl mx-auto px-6 lg:px-8">
@@ -368,11 +362,7 @@ const KinesitherapieRespiratoire = () => {
             <ScrollAnimation animation="scale-up" delay={200}>
               <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={kinesitherapieImage1} 
-                    alt="Séance de kinésithérapie respiratoire moderne"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <img src={kinesitherapieImage1} alt="Séance de kinésithérapie respiratoire moderne" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-playfair font-bold text-primary mb-3">
@@ -388,11 +378,7 @@ const KinesitherapieRespiratoire = () => {
             <ScrollAnimation animation="scale-up" delay={400}>
               <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={kinesitherapieImage2} 
-                    alt="Équipements de rééducation respiratoire"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <img src={kinesitherapieImage2} alt="Équipements de rééducation respiratoire" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-playfair font-bold text-primary mb-3">
@@ -408,11 +394,7 @@ const KinesitherapieRespiratoire = () => {
             <ScrollAnimation animation="scale-up" delay={600}>
               <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
                 <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={kinesitherapieImage3} 
-                    alt="Environnement thérapeutique professionnel"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <img src={kinesitherapieImage3} alt="Environnement thérapeutique professionnel" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-playfair font-bold text-primary mb-3">
