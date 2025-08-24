@@ -1,0 +1,39 @@
+import { Helmet } from 'react-helmet-async';
+
+interface GoogleVerificationProps {
+  verificationCode?: string;
+  analyticsId?: string;
+}
+
+export const GoogleVerification = ({ 
+  verificationCode, 
+  analyticsId = "G-XXXXXXXXXX" // Replace with actual GA4 Measurement ID
+}: GoogleVerificationProps) => {
+  return (
+    <Helmet>
+      {/* Google Search Console Verification */}
+      {verificationCode && (
+        <meta name="google-site-verification" content={verificationCode} />
+      )}
+      
+      {/* Google Analytics */}
+      {analyticsId && (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`}></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${analyticsId}', {
+                page_title: document.title,
+                page_location: window.location.href,
+                send_page_view: true
+              });
+            `}
+          </script>
+        </>
+      )}
+    </Helmet>
+  );
+};

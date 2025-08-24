@@ -1,5 +1,7 @@
 import Layout from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import { getServiceSchema, getBreadcrumbSchema } from '@/lib/structuredData';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -13,6 +15,19 @@ import cryotherapyImage from '@/assets/cryotherapy-modern.jpg';
 import consultationImage from '@/assets/consultation-modern.jpg';
 const ServicesAmincissement = () => {
   const navigate = useNavigate();
+
+  const structuredData = [
+    getServiceSchema({
+      name: "Services d'Amincissement et Remodelage Corporel",
+      description: "Techniques modernes d'amincissement : radiofréquence, cavitation 40k, laser minceur et cryothérapie. Résultats visibles et durables à Casablanca.",
+      url: "https://casakine.com/services/amincissement"
+    }),
+    getBreadcrumbSchema([
+      { name: "Accueil", url: "https://casakine.com" },
+      { name: "Services", url: "https://casakine.com/services" },
+      { name: "Amincissement", url: "https://casakine.com/services/amincissement" }
+    ])
+  ];
   const techniques = [{
     icon: Radio,
     title: "Radiofréquence",
@@ -79,6 +94,13 @@ const ServicesAmincissement = () => {
     }
   ];
   return <Layout>
+      <SEO 
+        title="Amincissement et Remodelage Corporel - Casakine Casablanca"
+        description="🔥 Techniques modernes d'amincissement à Casablanca : Radiofréquence, Cavitation 40k, Laser minceur, Cryothérapie. ✨ Résultats visibles dès les premières séances. ☎️ +212 661 67 70 96"
+        keywords="amincissement casablanca, radiofréquence casablanca, cavitation 40k, laser minceur maroc, cryothérapie amincissement, remodelage corporel, cellulite traitement, dr nawal el ghorfi"
+        canonical="https://casakine.com/services/amincissement"
+        structuredData={structuredData}
+      />
       {/* Fixed Return Button */}
       <div className="fixed top-6 left-6 z-50">
         

@@ -12,3 +12,11 @@ Allow: /
 
 User-agent: *
 Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://casakine.com/sitemap.xml
+
+# Disallow admin/private areas (add as needed)
+# User-agent: *
+# Disallow: /admin/

@@ -1,7 +1,9 @@
 import Layout from '@/components/Layout';
+import { SEO } from '@/components/SEO';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import HeroSection from '@/components/HeroSection';
 import Map from '@/components/Map';
+import { getLocalBusinessSchema, getBreadcrumbSchema } from '@/lib/structuredData';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useParallax } from '@/hooks/useScrollAnimation';
@@ -18,6 +20,14 @@ import {
 
 const Contact = () => {
   const scrollY = useParallax();
+
+  const structuredData = [
+    getLocalBusinessSchema(),
+    getBreadcrumbSchema([
+      { name: "Accueil", url: "https://casakine.com" },
+      { name: "Contact", url: "https://casakine.com/contact" }
+    ])
+  ];
   
   const contactInfo = [
     {
@@ -67,6 +77,13 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO 
+        title="Contact et Rendez-vous - Centre Casakine Casablanca"
+        description="📍 Prenez rendez-vous au centre de kinésithérapie Casakine Casablanca. 📞 +212 661 67 70 96 ✉️ info@casakine.com 📍 19 Rue De Masmouda, Casablanca. Horaires et plan d'accès."
+        keywords="rendez vous kinésithérapeute casablanca, contact casakine, adresse kinésithérapie casablanca, horaires dr nawal el ghorfi, consultation physiothérapie"
+        canonical="https://casakine.com/contact"
+        structuredData={structuredData}
+      />
       {/* Parallax Background */}
       <div 
         className="fixed inset-0 w-full h-full z-0"

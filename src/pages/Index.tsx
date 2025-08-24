@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
+import { SEO } from '@/components/SEO';
+import { GoogleVerification } from '@/components/GoogleVerification';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import SpecialtyModal from '@/components/SpecialtyModal';
+import { getLocalBusinessSchema, getWebsiteSchema, getOrganizationSchema, getFAQSchema } from '@/lib/structuredData';
 import heroIndexImage from '@/assets/hero-index.jpg';
 import specialtyRehabilitationImage from '@/assets/specialty-rehabilitation.jpg';
 import specialtyManualTherapyImage from '@/assets/specialty-manual-therapy.jpg';
@@ -97,7 +100,38 @@ const Index = () => {
     rating: 5,
     location: 'Casablanca'
   }];
+
+  const faqs = [
+    {
+      question: "Quels sont les tarifs des consultations de kinésithérapie ?",
+      answer: "Nos tarifs varient selon le type de soin. Contactez-nous au +212 661 67 70 96 pour un devis personnalisé."
+    },
+    {
+      question: "Prenez-vous en charge les urgences ?",
+      answer: "Oui, nous acceptons les urgences le dimanche. Appelez-nous pour confirmer la disponibilité."
+    },
+    {
+      question: "Faut-il une ordonnance pour consulter ?",
+      answer: "Une ordonnance médicale est recommandée mais pas obligatoire pour tous nos services. Consultez-nous pour plus d'informations."
+    }
+  ];
+
+  const structuredData = [
+    getLocalBusinessSchema(),
+    getWebsiteSchema(),
+    getOrganizationSchema(),
+    getFAQSchema(faqs)
+  ];
+
   return <Layout>
+      <SEO 
+        title="Dr. Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca"
+        description="🏥 Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne."
+        keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport"
+        canonical="https://casakine.com/"
+        structuredData={structuredData}
+      />
+      <GoogleVerification />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         {/* Background Image */}

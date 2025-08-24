@@ -1,0 +1,10 @@
+# Redirects for SEO migration from old domain
+# Add these redirects once you have control of casakine.com domain
+
+# Redirect old paths to new structure (if migrating from existing site)
+# /old-page /new-page 301
+# /kinesiotherapeute /about 301
+# /services-amincissement /services/amincissement 301
+
+# Catch-all for SPA (Single Page Application)
+/* /index.html 200
