@@ -8,55 +8,58 @@
 
 @layer base {
   :root {
-    /* Premium Medical Blue Palette */
-    --background: 0 0% 100%;
-    --foreground: 207 67% 15%;
+    /* Modern Light Blue & Yellow Palette */
+    --background: 210 100% 98%;
+    --foreground: 210 85% 12%;
 
-    /* Medical Blue Primary */
-    --primary: 207 67% 23%;
-    --primary-light: 207 67% 35%;
-    --primary-dark: 207 67% 15%;
+    /* Vibrant Light Blue Primary */
+    --primary: 195 85% 65%;
+    --primary-light: 195 85% 75%;
+    --primary-dark: 195 85% 55%;
     --primary-foreground: 0 0% 100%;
 
-    /* Therapeutic Green */
-    --secondary: 155 67% 50%;
-    --secondary-light: 155 67% 62%;
-    --secondary-dark: 155 67% 38%;
-    --secondary-foreground: 0 0% 100%;
+    /* Sunny Yellow Secondary */
+    --secondary: 50 100% 70%;
+    --secondary-light: 50 100% 80%;
+    --secondary-dark: 50 100% 60%;
+    --secondary-foreground: 210 85% 12%;
 
-    /* Premium Gold Accent */
-    --accent: 35 84% 52%;
-    --accent-light: 35 84% 64%;
-    --accent-dark: 35 84% 40%;
-    --accent-foreground: 0 0% 100%;
+    /* Electric Yellow Accent */
+    --accent: 45 100% 55%;
+    --accent-light: 45 100% 65%;
+    --accent-dark: 45 100% 45%;
+    --accent-foreground: 210 85% 12%;
 
-    /* Elegant Neutrals */
-    --neutral: 210 11% 15%;
-    --neutral-light: 210 11% 71%;
-    --neutral-lighter: 210 11% 85%;
-    --neutral-lightest: 210 11% 96%;
+    /* Modern Neutrals */
+    --neutral: 210 20% 20%;
+    --neutral-light: 210 15% 65%;
+    --neutral-lighter: 210 20% 90%;
+    --neutral-lightest: 210 30% 97%;
 
     /* Medical Red for Logo */
     --medical-red: 0 84% 55%;
 
-    /* Glassmorphism */
-    --glass-bg: 255 255 255 / 0.1;
-    --glass-border: 255 255 255 / 0.2;
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* Modern Glassmorphism */
+    --glass-bg: 195 85 255 / 0.08;
+    --glass-border: 195 85 255 / 0.15;
+    --glass-shadow: 0 12px 40px 0 rgba(52, 152, 219, 0.25);
 
-    /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-light)) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-light)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)) 0%, hsl(var(--primary)) 50%, hsl(var(--secondary-dark)) 100%);
-    --gradient-premium: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
+    /* Modern Creative Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(195 90% 85%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-light)) 50%, hsl(50 100% 90%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-light)) 50%, hsl(45 100% 85%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)) 0%, hsl(var(--primary)) 30%, hsl(var(--secondary)) 70%, hsl(var(--accent)) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 30%, hsl(var(--secondary)) 70%, hsl(var(--primary-light)) 100%);
+    --gradient-creative: linear-gradient(45deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 25%, hsl(var(--accent)) 50%, hsl(var(--primary-light)) 75%, hsl(var(--secondary-light)) 100%);
+    --gradient-mesh: radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.4) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--secondary) / 0.4) 0%, transparent 50%), radial-gradient(circle at 40% 40%, hsl(var(--accent) / 0.3) 0%, transparent 50%);
 
-    /* Premium Shadows */
-    --shadow-soft: 0 4px 20px -4px rgba(31, 38, 135, 0.1);
-    --shadow-medium: 0 8px 30px -8px rgba(31, 38, 135, 0.15);
-    --shadow-strong: 0 16px 60px -16px rgba(31, 38, 135, 0.25);
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
-    --shadow-accent-glow: 0 0 40px hsl(var(--accent) / 0.4);
+    /* Modern Shadows with Color */
+    --shadow-soft: 0 6px 25px -6px rgba(52, 152, 219, 0.15);
+    --shadow-medium: 0 12px 35px -12px rgba(52, 152, 219, 0.25);
+    --shadow-strong: 0 20px 70px -20px rgba(52, 152, 219, 0.35);
+    --shadow-glow: 0 0 50px hsl(var(--primary) / 0.4);
+    --shadow-accent-glow: 0 0 50px hsl(var(--accent) / 0.5);
+    --shadow-yellow-glow: 0 0 40px hsl(var(--secondary) / 0.6);
 
     /* Animation Variables */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,18 +67,18 @@
     --transition-elastic: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     /* Standard Variables */
-    --card: 0 0% 100%;
-    --card-foreground: 207 67% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 207 67% 15%;
-    --muted: 210 11% 96%;
-    --muted-foreground: 210 11% 45%;
+    --card: 210 100% 99%;
+    --card-foreground: 210 85% 12%;
+    --popover: 210 100% 99%;
+    --popover-foreground: 210 85% 12%;
+    --muted: 210 30% 95%;
+    --muted-foreground: 210 25% 50%;
     --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
-    --border: 210 11% 85%;
-    --input: 210 11% 85%;
-    --ring: 207 67% 23%;
-    --radius: 1rem;
+    --border: 195 50% 85%;
+    --input: 195 50% 90%;
+    --ring: 195 85% 65%;
+    --radius: 1.2rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -196,6 +199,63 @@
 
   .gradient-premium {
     background: var(--gradient-premium);
+  }
+
+  .gradient-creative {
+    background: var(--gradient-creative);
+  }
+
+  .gradient-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  /* Modern Yellow Glow Effects */
+  .hover-yellow-glow {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-yellow-glow:hover {
+    box-shadow: var(--shadow-yellow-glow);
+    transform: translateY(-4px);
+  }
+
+  /* Creative Modern Effects */
+  .modern-card {
+    @apply bg-white/80 backdrop-blur-lg border border-primary/20 rounded-2xl shadow-soft;
+    background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+  }
+
+  .creative-button {
+    @apply relative overflow-hidden rounded-full font-semibold transition-all duration-300;
+    background: var(--gradient-creative);
+    box-shadow: var(--shadow-medium);
+  }
+
+  .creative-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-strong);
+  }
+
+  .creative-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .creative-button:hover::after {
+    left: 100%;
+  }
+
+  /* Modern Mesh Background */
+  .mesh-background {
+    background: var(--gradient-mesh);
+    background-size: 400% 400%;
+    animation: mesh-animation 8s ease-in-out infinite;
   }
 
   /* Unique Scroll Animations */
@@ -418,6 +478,15 @@
   }
   100% {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+@keyframes mesh-animation {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 
