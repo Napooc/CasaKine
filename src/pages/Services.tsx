@@ -148,11 +148,7 @@ const Services = () => {
                 Réserver une Consultation
               </Button>
               
-              <Button variant="outline" onClick={() => document.getElementById('main-services')?.scrollIntoView({
-              behavior: 'smooth'
-            })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
-                Voir tous nos services
-              </Button>
+              
             </div>
           </ScrollAnimation>
 
@@ -177,8 +173,7 @@ const Services = () => {
               route: '/services/gymnastique-medicale'
             }].map((service, index) => {
               const Icon = service.icon;
-              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer"
-                onClick={() => navigate(service.route)}>
+              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>
                     <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
                     <div className="text-white font-montserrat text-sm opacity-90">
                       {service.label}
@@ -215,10 +210,7 @@ const Services = () => {
             {mainServices.map((service, index) => {
             const Icon = service.icon;
             return <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 200}>
-                  <Card 
-                    className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group bg-gradient-to-br ${service.bgGradient} cursor-pointer`}
-                    onClick={() => navigate(service.route)}
-                  >
+                  <Card className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group bg-gradient-to-br ${service.bgGradient} cursor-pointer`} onClick={() => navigate(service.route)}>
                     <CardContent className="p-10">
                       <div className="flex items-start space-x-6">
                         <div className="flex-shrink-0">
