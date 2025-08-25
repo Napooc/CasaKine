@@ -100,37 +100,19 @@ const Index = () => {
     rating: 5,
     location: 'Casablanca'
   }];
-
-  const faqs = [
-    {
-      question: "Quels sont les tarifs des consultations de kinésithérapie ?",
-      answer: "Nos tarifs varient selon le type de soin. Contactez-nous au +212 661 67 70 96 pour un devis personnalisé."
-    },
-    {
-      question: "Prenez-vous en charge les urgences ?",
-      answer: "Oui, nous acceptons les urgences le dimanche. Appelez-nous pour confirmer la disponibilité."
-    },
-    {
-      question: "Faut-il une ordonnance pour consulter ?",
-      answer: "Une ordonnance médicale est recommandée mais pas obligatoire pour tous nos services. Consultez-nous pour plus d'informations."
-    }
-  ];
-
-  const structuredData = [
-    getLocalBusinessSchema(),
-    getWebsiteSchema(),
-    getOrganizationSchema(),
-    getFAQSchema(faqs)
-  ];
-
+  const faqs = [{
+    question: "Quels sont les tarifs des consultations de kinésithérapie ?",
+    answer: "Nos tarifs varient selon le type de soin. Contactez-nous au +212 661 67 70 96 pour un devis personnalisé."
+  }, {
+    question: "Prenez-vous en charge les urgences ?",
+    answer: "Oui, nous acceptons les urgences le dimanche. Appelez-nous pour confirmer la disponibilité."
+  }, {
+    question: "Faut-il une ordonnance pour consulter ?",
+    answer: "Une ordonnance médicale est recommandée mais pas obligatoire pour tous nos services. Consultez-nous pour plus d'informations."
+  }];
+  const structuredData = [getLocalBusinessSchema(), getWebsiteSchema(), getOrganizationSchema(), getFAQSchema(faqs)];
   return <Layout>
-      <SEO 
-        title="Dr. Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca"
-        description="🏥 Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne."
-        keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport"
-        canonical="https://casakine.com/"
-        structuredData={structuredData}
-      />
+      <SEO title="Dr. Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca" description="🏥 Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne." keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport" canonical="https://casakine.com/" structuredData={structuredData} />
       <GoogleVerification />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
@@ -331,7 +313,7 @@ const Index = () => {
                 
                 <div className="absolute -bottom-6 -right-6 glass-card p-4 rounded-2xl">
                   <div className="text-secondary text-2xl font-playfair font-bold">98%</div>
-                  <div className="text-white text-sm">Satisfaction</div>
+                  <div className="text-black text-sm">Satisfaction</div>
                 </div>
               </div>
             </ScrollAnimation>
