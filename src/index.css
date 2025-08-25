@@ -490,6 +490,27 @@
   }
 }
 
+/* Modern Transition Classes */
+.transition-2000 {
+  transition-duration: 2000ms;
+}
+
+.duration-2000 {
+  transition-duration: 2000ms;
+}
+
+.duration-8000 {
+  transition-duration: 8000ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 /* Medical Theme Specific */
 .medical-pattern {
   background-image: 
