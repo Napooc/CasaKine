@@ -56,7 +56,7 @@ const Navbar = () => {
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 rounded-lg transition-opacity duration-300"></div>
               </div>
               <div className="flex flex-col">
-                <span className="font-playfair font-bold text-primary text-xl">Kinésithérapie Nawal El GHORFI</span>
+                <span className="font-playfair font-bold text-primary text-lg text-center">Kinésithérapie Nawal El GHORFI</span>
                 
               </div>
             </Link>
