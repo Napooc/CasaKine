@@ -102,12 +102,14 @@ const About = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 mb-12">
-                  <Button onClick={() => (window.location.href = '/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                  <Button onClick={() => window.location.href = '/contact'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                     <Users className="w-5 h-5 mr-3" />
                     Prendre Rendez-vous
                   </Button>
                   
-                  <Button variant="outline" onClick={() => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
+                  <Button variant="outline" onClick={() => document.getElementById('timeline')?.scrollIntoView({
+                  behavior: 'smooth'
+                })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                     Notre parcours
                   </Button>
                 </div>
@@ -132,7 +134,7 @@ const About = () => {
                 <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-glow animate-float-delay">
                   <div className="text-center">
                     <div className="text-3xl font-playfair font-bold text-secondary mb-1">2000+</div>
-                    <div className="text-sm text-white/90">Patients</div>
+                    <div className="text-sm text-black/90">Patients</div>
                   </div>
                 </div>
                 
