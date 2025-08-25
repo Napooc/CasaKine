@@ -147,32 +147,55 @@ const ModernHero: React.FC<ModernHeroProps> = ({ onBookAppointment }) => {
       <div className="relative z-10 text-center max-w-7xl mx-auto px-6 lg:px-8">
         {/* Main Title with Enhanced Animation */}
         <ScrollAnimation animation="fade-up" delay={200}>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-bold text-white mb-8 leading-tight">
-            <span className="inline-block text-gradient-accent animate-float">Nawal</span>{' '}
-            <span className="inline-block text-white animate-float-delay">EL GHORFI</span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-bold mb-8 leading-tight relative">
+            <span className="inline-block text-transparent bg-gradient-to-r from-accent via-yellow-300 to-secondary bg-clip-text animate-float text-shadow-strong drop-shadow-2xl">
+              Nawal
+            </span>{' '}
+            <span className="inline-block text-white animate-float-delay text-shadow-strong drop-shadow-2xl font-black" style={{
+              textShadow: '0 0 30px rgba(0,0,0,0.8), 0 0 60px rgba(59, 130, 246, 0.5), 2px 2px 4px rgba(0,0,0,0.9)'
+            }}>
+              EL GHORFI
+            </span>
           </h1>
         </ScrollAnimation>
 
         {/* Typing Animation */}
         <ScrollAnimation animation="slide-left" delay={400}>
           <div className="h-20 md:h-24 flex items-center justify-center mb-8">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-montserrat font-light text-secondary-light">
-              {displayText}
-              <span className="animate-pulse text-accent">|</span>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-montserrat font-semibold text-white relative">
+              <span className="bg-gradient-to-r from-accent via-yellow-200 to-secondary bg-clip-text text-transparent drop-shadow-lg" style={{
+                textShadow: '0 0 20px rgba(255,255,255,0.3)'
+              }}>
+                {displayText}
+              </span>
+              <span className="animate-pulse text-accent ml-1 drop-shadow-lg">|</span>
             </h2>
           </div>
         </ScrollAnimation>
 
         {/* Description with Creative Styling */}
         <ScrollAnimation animation="fade-up" delay={600}>
-          <div className="modern-card max-w-4xl mx-auto p-8 mb-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-creative opacity-5"></div>
-            <p className="text-xl md:text-2xl text-primary-dark leading-relaxed relative z-10">
-              <span className="text-accent font-semibold">✨ Bienvenue</span> dans votre centre de kinésithérapie premium à Casablanca
-              <br />
-              <span className="text-secondary font-medium">🏥 Expertise</span> • 
-              <span className="text-primary font-medium"> Innovation</span> • 
-              <span className="text-accent font-medium"> Bien-être</span>
+          <div className="modern-card max-w-4xl mx-auto p-8 mb-12 relative overflow-hidden backdrop-blur-lg border border-white/20">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-secondary/10"></div>
+            <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
+            <p className="text-xl md:text-2xl leading-relaxed relative z-10 text-center">
+              <span className="text-accent font-bold text-2xl md:text-3xl drop-shadow-lg animate-pulse">✨ Bienvenue</span>
+              <span className="text-white font-medium block mt-2 drop-shadow-md" style={{
+                textShadow: '0 0 15px rgba(0,0,0,0.7), 0 0 30px rgba(59, 130, 246, 0.3)'
+              }}>
+                dans votre centre de kinésithérapie premium à Casablanca
+              </span>
+              <div className="mt-4 flex flex-wrap justify-center gap-4 text-lg md:text-xl">
+                <span className="bg-secondary/20 backdrop-blur-sm px-4 py-2 rounded-full border border-secondary/30 text-secondary font-bold drop-shadow-lg">
+                  🏥 Expertise
+                </span>
+                <span className="bg-primary/20 backdrop-blur-sm px-4 py-2 rounded-full border border-primary/30 text-primary font-bold drop-shadow-lg">
+                  💡 Innovation
+                </span>
+                <span className="bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full border border-accent/30 text-accent font-bold drop-shadow-lg">
+                  🌟 Bien-être
+                </span>
+              </div>
             </p>
           </div>
         </ScrollAnimation>
@@ -182,19 +205,26 @@ const ModernHero: React.FC<ModernHeroProps> = ({ onBookAppointment }) => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <Button 
               onClick={onBookAppointment} 
-              className="creative-button text-white font-montserrat font-bold px-12 py-5 text-xl rounded-full shadow-strong transition-all duration-500 hover:scale-110 group"
+              className="relative overflow-hidden bg-gradient-to-r from-accent via-yellow-400 to-secondary text-black font-montserrat font-bold px-12 py-6 text-xl rounded-full shadow-2xl transition-all duration-500 hover:scale-110 group border-2 border-white/20"
+              style={{
+                boxShadow: '0 0 30px rgba(59, 130, 246, 0.4), 0 0 60px rgba(234, 179, 8, 0.3), inset 0 1px 0 rgba(255,255,255,0.3)'
+              }}
             >
-              <Calendar className="w-6 h-6 mr-3 group-hover:animate-bounce" />
-              Réservez Maintenant
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-pulse"></div>
+              <Calendar className="w-6 h-6 mr-3 group-hover:animate-bounce relative z-10" />
+              <span className="relative z-10 drop-shadow-sm">Réservez Maintenant</span>
             </Button>
             
             <Button 
-              variant="modern" 
-              className="font-montserrat font-semibold px-10 py-5 text-xl rounded-full transition-all duration-500 hover:scale-105 text-primary"
+              className="relative overflow-hidden bg-white/10 backdrop-blur-sm text-white font-montserrat font-semibold px-10 py-6 text-xl rounded-full border-2 border-white/30 transition-all duration-500 hover:scale-105 hover:bg-white/20 group"
               onClick={() => window.location.href = '/services'}
+              style={{
+                boxShadow: '0 0 20px rgba(255,255,255,0.2), inset 0 1px 0 rgba(255,255,255,0.2)'
+              }}
             >
-              <Sparkles className="w-5 h-5 mr-3" />
-              Découvrir nos Services
+              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <Sparkles className="w-5 h-5 mr-3 relative z-10 group-hover:animate-spin" />
+              <span className="relative z-10 drop-shadow-sm">Découvrir nos Services</span>
             </Button>
           </div>
         </ScrollAnimation>
@@ -207,15 +237,23 @@ const ModernHero: React.FC<ModernHeroProps> = ({ onBookAppointment }) => {
               return (
                 <div 
                   key={index} 
-                  className="modern-card p-6 text-center transition-all duration-700 hover:scale-110 hover-yellow-glow group relative overflow-hidden"
-                  style={{ animationDelay: `${index * 150}ms` }}
+                  className="relative p-6 text-center transition-all duration-700 hover:scale-110 group backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden"
+                  style={{ 
+                    animationDelay: `${index * 150}ms`,
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2)'
+                  }}
                 >
-                  <div className="absolute inset-0 bg-gradient-creative opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                  <Icon className={`w-10 h-10 ${stat.color} mx-auto mb-4 group-hover:animate-bounce relative z-10`} />
-                  <div className="text-4xl font-playfair font-bold text-primary mb-2 relative z-10">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <Icon className={`w-12 h-12 ${stat.color} mx-auto mb-4 group-hover:animate-bounce relative z-10 drop-shadow-lg`} />
+                  <div className="text-4xl md:text-5xl font-playfair font-bold text-white mb-2 relative z-10 drop-shadow-lg" style={{
+                    textShadow: '0 0 20px rgba(0,0,0,0.5), 0 0 40px rgba(59, 130, 246, 0.3)'
+                  }}>
                     {stat.value}
                   </div>
-                  <div className="text-sm font-montserrat text-neutral-light relative z-10">
+                  <div className="text-sm font-montserrat text-white/90 relative z-10 font-medium drop-shadow-md">
                     {stat.label}
                   </div>
                 </div>
