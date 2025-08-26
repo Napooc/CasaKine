@@ -7,7 +7,7 @@ import { getLocalBusinessSchema, getBreadcrumbSchema } from '@/lib/structuredDat
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useParallax } from '@/hooks/useScrollAnimation';
-import contactParallaxBg from '@/assets/contact-parallax-bg.jpg';
+const contactSignageBg = '/lovable-uploads/4d328ddb-b62f-40af-b284-cff2ebacc9f3.png';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Star, Navigation } from 'lucide-react';
 const Contact = () => {
   const scrollY = useParallax();
@@ -67,19 +67,98 @@ const Contact = () => {
   }];
   return <Layout>
       <SEO title="Contact et Rendez-vous - Centre Casakine Casablanca" description="📍 Prenez rendez-vous au centre de kinésithérapie Casakine Casablanca. 📞 +212 661 67 70 96 ✉️ info@casakine.com 📍 19 Rue De Masmouda, Casablanca. Horaires et plan d'accès." keywords="rendez vous kinésithérapeute casablanca, contact casakine, adresse kinésithérapie casablanca, horaires dr nawal el ghorfi, consultation physiothérapie" canonical="https://casakine.com/contact" structuredData={structuredData} />
-      {/* Parallax Background */}
-      <div className="fixed inset-0 w-full h-full z-0" style={{
-      backgroundImage: `url(${contactParallaxBg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      transform: `translateY(${scrollY * 0.5}px)`,
-      opacity: 0.3
-    }} />
+      {/* Modern Hero Section with Signage Background */}
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image with Modern Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${contactSignageBg})`,
+              transform: `translateY(${scrollY * 0.3}px)`,
+            }}
+          />
+          {/* Modern Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-secondary/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
+        </div>
 
-      {/* Hero Section */}
-      <div className="relative z-10">
-        <HeroSection title="Centre    de     Kinésithérapie   et  d'Amincissement" subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État" description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement." ctaText="Appeler Maintenant" ctaAction={() => window.open('tel:+212522398874')} showStats={false} backgroundType="gradient" />
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 text-center">
+          <ScrollAnimation animation="fade-up">
+            <div className="space-y-8">
+              {/* Main Title */}
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white leading-tight">
+                <span className="block">Votre</span>
+                <span className="block text-gradient bg-gradient-to-r from-yellow-300 via-orange-300 to-yellow-400 bg-clip-text text-transparent">
+                  Rendez-vous
+                </span>
+                <span className="block">Nous Attend</span>
+              </h1>
+
+              {/* Subtitle */}
+              <div className="max-w-3xl mx-auto space-y-4">
+                <p className="text-xl md:text-2xl text-white/90 font-montserrat font-medium">
+                  Centre de Kinésithérapie et d'Amincissement
+                </p>
+                <p className="text-lg md:text-xl text-white/80 font-montserrat">
+                  <span className="font-semibold text-yellow-300">Nawal EL GHORFI</span> - Kinésithérapeute Diplômée d'État
+                </p>
+                <p className="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                  Plus de <span className="font-bold text-yellow-300">25 ans d'expertise</span> au service des patients. 
+                  Centre opérationnel depuis <span className="font-bold text-yellow-300">2001</span>.
+                </p>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-primary font-bold px-8 py-6 text-lg rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+                  onClick={() => window.open('tel:+212522398874')}
+                >
+                  <Phone className="w-6 h-6 mr-3" />
+                  Appeler Maintenant
+                </Button>
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-6 text-lg rounded-full"
+                  onClick={() => window.open('https://wa.me/212661677096', '_blank')}
+                >
+                  <MessageCircle className="w-6 h-6 mr-3" />
+                  WhatsApp
+                </Button>
+              </div>
+
+              {/* Contact Info Quick Access */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 max-w-4xl mx-auto">
+                <div className="glass-card p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
+                  <Phone className="w-8 h-8 text-yellow-300 mx-auto mb-3" />
+                  <p className="text-white font-semibold">+212 522 39 88 74</p>
+                  <p className="text-white/70 text-sm">Ligne fixe</p>
+                </div>
+                <div className="glass-card p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
+                  <MessageCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                  <p className="text-white font-semibold">+212 661 67 70 96</p>
+                  <p className="text-white/70 text-sm">WhatsApp & Mobile</p>
+                </div>
+                <div className="glass-card p-6 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20">
+                  <MapPin className="w-8 h-8 text-blue-300 mx-auto mb-3" />
+                  <p className="text-white font-semibold">19 Rue De Masmouda</p>
+                  <p className="text-white/70 text-sm">Casablanca 20210</p>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Contact Cards Section */}
