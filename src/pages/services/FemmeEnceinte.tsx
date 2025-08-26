@@ -68,24 +68,11 @@ const FemmeEnceinte = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Split Layout Design */}
-        <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2">
-          {/* Left side - Image */}
-          <div className="relative">
-            <img 
-              src={femmeEnceinteHero} 
-              alt="Femme enceinte en consultation" 
-              className="w-full h-full object-contain object-center scale-110" 
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/20 to-red-600/60"></div>
-          </div>
-          
-          {/* Right side - Gradient overlay */}
-          <div className="bg-gradient-to-br from-red-600/90 via-red-500/85 to-red-700/90 lg:bg-gradient-to-l lg:from-red-600/95 lg:via-red-500/90 lg:to-transparent"></div>
+        <div className="absolute inset-0">
+          <img src={femmeEnceinteHero} alt="Femme enceinte en consultation" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-br from-red-600/40 via-red-500/30 to-red-700/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
         </div>
-        
-        {/* Mobile overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-red-600/80 via-transparent to-transparent lg:hidden"></div>
 
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
