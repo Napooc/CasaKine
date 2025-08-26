@@ -168,12 +168,7 @@ const About = () => {
                 </div>
                 
                 {/* Floating Achievement */}
-                 <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-glow">
-                   <div className="text-center">
-                     <div className="text-3xl font-playfair font-bold text-accent mb-1">25+</div>
-                     <div className="text-sm text-neutral">Années d'expérience</div>
-                   </div>
-                 </div>
+                 
               </div>
             </ScrollAnimation>
 
@@ -204,10 +199,7 @@ const About = () => {
                     <div className="text-2xl font-playfair font-bold text-primary mb-1">25+</div>
                     <div className="text-sm text-neutral-light">Années d'expérience</div>
                   </div>
-                  <div className="text-center glass-card p-4 rounded-2xl">
-                    <div className="text-2xl font-playfair font-bold text-secondary mb-1">2001</div>
-                    <div className="text-sm text-neutral-light">Centre opérationnel</div>
-                  </div>
+                  
                 </div>
               </div>
             </ScrollAnimation>
