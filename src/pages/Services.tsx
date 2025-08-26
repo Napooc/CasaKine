@@ -93,7 +93,7 @@ const Services = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Dynamic Background */}
         <div className="absolute inset-0">
-          <img src={heroServicesImage} alt="Modern physiotherapy equipment" className="w-full h-full object-cover scale-105" />
+          <img src="/lovable-uploads/ff593693-5ff7-4abc-a290-5896e5cada6e.png" alt="Centre de kinésithérapie - Équipements modernes" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/80 to-primary/90"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
         </div>
@@ -156,20 +156,20 @@ const Services = () => {
           <ScrollAnimation animation="fade-up" delay={1000}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[{
-              icon: Activity,
-              label: 'Rééducation',
-              route: '/services/amincissement'
-            }, {
               icon: Heart,
-              label: 'Thérapies',
+              label: 'Kinésithérapie',
               route: '/services/kinesitherapie-respiratoire'
             }, {
               icon: Zap,
-              label: 'Bien-être',
-              route: '/services/massage-bien-etre'
+              label: 'Amincissement',
+              route: '/services/amincissement'
             }, {
-              icon: Shield,
-              label: 'Prévention',
+              icon: Baby,
+              label: 'Femme Enceinte',
+              route: '/services/femme-enceinte'
+            }, {
+              icon: Activity,
+              label: 'Gymnastique médicale',
               route: '/services/gymnastique-medicale'
             }].map((service, index) => {
               const Icon = service.icon;
