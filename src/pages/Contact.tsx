@@ -59,7 +59,7 @@ const Contact = () => {
     jour: 'Lundi - Mercredi - Vendredi',
     heures: '09h00 - 12h30 / 15h00 - 19h00 '
   }, {
-    jour: 'Mardi - Jeudi (horaires continus',
+    jour: 'Mardi - Jeudi (horaires continus)',
     heures: '09h30 - 16h00'
   }, {
     jour: 'Samedi',
