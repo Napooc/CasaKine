@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import CookiePolicy from "./pages/CookiePolicy";
 import KinesitherapieRespiratoire from "./pages/services/KinesitherapieRespiratoire";
 import ServicesAmincissement from "./pages/services/ServicesAmincissement";
 import GymnastiqueMedicale from "./pages/services/GymnastiqueMedicale";
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/services/traumatologie" element={<Traumatologie />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
