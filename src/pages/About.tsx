@@ -69,9 +69,9 @@ const About = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background with parallax effect */}
         <div className="absolute inset-0">
-          <img src="/lovable-uploads/852e8ad3-0a8e-44f2-a33d-675c40d512b4.png" alt="Centre de kinésithérapie - Nawal EL GHORFI" className="w-full h-full object-cover scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/50"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/40"></div>
+          <img src={heroAboutImage} alt="Professional physiotherapist" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
         </div>
 
         {/* Animated particles */}
@@ -86,17 +86,17 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimation animation="slide-left">
               <div className="text-white">
-                <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-8 leading-tight drop-shadow-2xl">
-                  L'<span className="text-gradient-accent drop-shadow-lg">Excellence</span><br />
+                <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-8 leading-tight">
+                  L'<span className="text-gradient-accent">Excellence</span><br />
                   au Service de<br />
-                  <span className="text-secondary drop-shadow-lg">Votre Santé</span>
+                  <span className="text-secondary">Votre Santé</span>
                 </h1>
                 
-                <h2 className="text-2xl md:text-3xl font-montserrat font-light text-white mb-8 opacity-90 drop-shadow-lg">
+                <h2 className="text-2xl md:text-3xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
                   Découvrez l'histoire et l'expertise de Nawal EL GHORFI
                 </h2>
                 
-                <p className="text-lg md:text-xl mb-12 leading-relaxed text-white/90 drop-shadow-lg">
+                <p className="text-lg md:text-xl mb-12 leading-relaxed text-gray-500">
                   Plus de 25 années d'expertise dédiées à votre bien-être et votre rétablissement, 
                   avec une approche moderne et personnalisée. Centre opérationnel depuis 2001.
                 </p>
@@ -131,12 +131,7 @@ const About = () => {
                    </div>
                  </div>
                 
-                <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-glow animate-float-delay">
-                  <div className="text-center">
-                    <div className="text-3xl font-playfair font-bold text-secondary mb-1">2000+</div>
-                    <div className="text-sm text-black/90">Patients</div>
-                  </div>
-                </div>
+                
                 
                  
               </div>
