@@ -184,7 +184,7 @@ const Index = () => {
 
           {/* Stats Section */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
               {[{
               icon: Star,
               value: '25+',
@@ -193,14 +193,6 @@ const Index = () => {
               icon: Users,
               value: '2000+',
               label: 'Patients satisfaits'
-            }, {
-              icon: Award,
-              value: '2001',
-              label: 'Centre opérationnel'
-            }, {
-              icon: Calendar,
-              value: '24/7',
-              label: 'Disponibilité'
             }].map((stat, index) => {
               const Icon = stat.icon;
               return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
