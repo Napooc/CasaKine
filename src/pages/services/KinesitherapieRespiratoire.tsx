@@ -47,12 +47,14 @@ const KinesitherapieRespiratoire = () => {
     gradient: "from-neutral-light/20 to-neutral-light/5",
     color: "text-neutral"
   }, {
-    icon: Hand,
-    title: "Traitement des Cicatrices",
-    description: "Rééducation des cicatrices problématiques",
-    conditions: ["Inflammatoires, douloureuses, adhérentes", "Esthétiquement gênantes", "Consécutives à une opération, un traumatisme ou une brûlure", "Techniques spécifiques (Stravac, autres techniques)"],
-    gradient: "from-neutral/20 to-neutral/5",
-    color: "text-neutral-dark"
+    icon: Zap,
+    title: "Les ondes de choc en kinésithérapie",
+    description: "La thérapie par ondes de choc est une méthode moderne et non invasive utilisée pour traiter les douleurs chroniques, en particulier au niveau des tendons, muscles et articulations.",
+    conditions: ["Soulage rapidement la douleur", "Stimule la guérison naturelle des tissus", "Améliore la circulation sanguine", "Réduit les calcifications tendineuses", "Favorise la récupération fonctionnelle"],
+    gradient: "from-blue-500/20 to-cyan-400/5",
+    color: "text-blue-600",
+    highlight: "Indiquée notamment pour les tendinites, fasciite plantaire, épines calcanéennes ou douleurs musculaires persistantes, la thérapie par ondes de choc offre une alternative efficace aux traitements médicamenteux ou chirurgicaux.",
+    timing: "Rapide (10-15 minutes), bien toléré et sans effets secondaires majeurs, ce soin est réalisé en cabinet par un kinésithérapeute formé."
   }, {
     icon: Baby,
     title: "Développement Psychomoteur de l'Enfant",
@@ -228,6 +230,24 @@ const KinesitherapieRespiratoire = () => {
                                 <span className="text-neutral text-sm leading-relaxed">{condition}</span>
                               </div>)}
                           </div>
+                          
+                          {/* Additional content for shockwave therapy */}
+                          {service.highlight && (
+                            <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200/50">
+                              <p className="text-blue-800 text-sm leading-relaxed font-medium">
+                                {service.highlight}
+                              </p>
+                            </div>
+                          )}
+                          
+                          {service.timing && (
+                            <div className="mt-4 flex items-center space-x-3 p-3 bg-white/60 rounded-lg">
+                              <Clock className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                              <span className="text-blue-700 text-sm font-medium">
+                                {service.timing}
+                              </span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </CardContent>
