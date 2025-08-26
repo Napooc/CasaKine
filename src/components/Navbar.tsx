@@ -52,11 +52,15 @@ const Navbar = () => {
             {/* Logo Premium */}
             <Link to="/" className="flex items-center space-x-4 group">
               <div className="relative">
-                <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="h-20 w-auto transition-transform duration-300 group-hover:scale-110 shadow-lg rounded-lg" />
-                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 rounded-lg transition-opacity duration-300"></div>
+                <img 
+                  src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" 
+                  alt="Dr. Nawal El Ghorfi" 
+                  className="h-16 w-auto min-w-[280px] max-w-[320px] object-contain transition-transform duration-300 group-hover:scale-105 shadow-lg rounded-lg bg-white/95 backdrop-blur-sm px-4 py-2" 
+                />
+                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 rounded-lg transition-opacity duration-300"></div>
               </div>
               <div className="flex flex-col">
-                <span className="font-playfair font-bold text-lg text-left text-stone-950">Kinésithérapie Nawal El GHORFI</span>
+                <span className="font-playfair font-bold text-lg text-left text-foreground">Kinésithérapie Nawal El GHORFI</span>
                 
               </div>
             </Link>
