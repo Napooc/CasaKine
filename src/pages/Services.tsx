@@ -53,24 +53,6 @@ const Services = () => {
     color: 'text-green-600',
     bgGradient: 'from-green-500/10 to-green-500/5',
     route: '/services/massage-bien-etre'
-  }, {
-    icon: Users,
-    title: 'Rééducation Spécialisée',
-    description: 'Programmes personnalisés pour la rééducation neurologique et périnéale',
-    features: ['Rééducation périnéale', 'Rééducation post-AVC', 'Drainage lymphatique', 'Réadaptation à l\'effort', 'Soins à domicile'],
-    duration: '45-60 minutes',
-    color: 'text-teal-600',
-    bgGradient: 'from-teal-500/10 to-teal-500/5',
-    route: '/services/reeducation-specialisee'
-  }, {
-    icon: Shield,
-    title: 'Traumatologie, Neurologie & Rhumatologie',
-    description: 'Traitement spécialisé des pathologies de l\'appareil locomoteur',
-    features: ['Fractures et entorses', 'Rééducation post-chirurgicale', 'Hémiplégie et paralysies', 'Arthrose et arthrite', 'Pathologies inflammatoires'],
-    duration: '45-60 minutes',
-    color: 'text-blue-600',
-    bgGradient: 'from-blue-500/10 to-blue-500/5',
-    route: '/services/traumatologie'
   }];
   const specialties = [{
     icon: Stethoscope,
@@ -172,7 +154,7 @@ const Services = () => {
 
           {/* Quick Service Stats */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
             {[{
               icon: Heart,
               label: 'Kinésithérapie',
@@ -193,14 +175,6 @@ const Services = () => {
               icon: Sparkles,
               label: 'Massage & Bien-être',
               route: '/services/massage-bien-etre'
-            }, {
-              icon: Users,
-              label: 'Rééducation Spécialisée',
-              route: '/services/reeducation-specialisee'
-            }, {
-              icon: Shield,
-              label: 'Traumatologie',
-              route: '/services/traumatologie'
             }].map((service, index) => {
               const Icon = service.icon;
               return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>
