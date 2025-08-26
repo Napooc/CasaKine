@@ -146,7 +146,7 @@ const Index = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={600}>
-            <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-stone-600">
                Bienvenue au Centre Nawal EL GHORFI
               <br />Kinésithérapie & Amincissement à Casablanca
               <br />Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
@@ -405,7 +405,7 @@ const Index = () => {
                 </h2>
                 <div className="space-y-6 text-lg text-neutral leading-relaxed">
                   <p>
-                    Le centre est dirigé par <strong className="text-primary">Mme Nawal EL GHORFI </strong>, 
+                    Le centre est dirigé par <strong className="text-primary">Mme Nawal EL GHORFI ép. HARAKAT</strong>, 
                     Diplômée d'État en Kinésithérapie et Physiothérapie, avec plus de 20 ans d'expérience.
                   </p>
                   <p>
