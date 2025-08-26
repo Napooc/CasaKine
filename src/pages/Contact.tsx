@@ -22,7 +22,7 @@ const Contact = () => {
     icon: Phone,
     title: 'Téléphone',
     value: '+212 522 39 88 74 / +212 661 67 70 96',
-    description: '',
+    description: 'Lun-Ven 8h-18h, Sam 8h-14h',
     color: 'text-primary',
     action: null,
     hasMultipleOptions: true,
@@ -57,7 +57,7 @@ const Contact = () => {
   }];
   const horaires = [{
     jour: 'Lundi - Mercredi - Vendredi',
-    heures: '09h00 - 12h30/15h00 - 19h00'
+    heures: '09h00 - 12h30 / 15h00 - 19h00 '
   }, {
     jour: 'Mardi - Jeudi (horaires continus)',
     heures: '09h30 - 16h00'
@@ -79,7 +79,7 @@ const Contact = () => {
 
       {/* Hero Section */}
       <div className="relative z-10">
-        <HeroSection title="Centre de Kinésithérapie et d'Amincissement" subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État" description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement." ctaText="Appeler Maintenant" ctaAction={() => window.open('tel:+212522398874')} showStats={false} backgroundType="gradient" />
+        <HeroSection title="Centre    de     Kinésithérapie   et  d'Amincissement" subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État" description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement." ctaText="Appeler Maintenant" ctaAction={() => window.open('tel:+212522398874')} showStats={false} backgroundType="gradient" />
       </div>
 
       {/* Contact Cards Section */}
