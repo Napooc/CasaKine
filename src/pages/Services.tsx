@@ -50,8 +50,8 @@ const Services = () => {
     description: 'Massages thérapeutiques pour relaxation et récupération',
     features: ['Massage relaxant anti-stress', 'Massage décontracturant', 'Massage tonifiant énergisant', 'Détente musculaire profonde', 'Amélioration circulation', 'Élimination des toxines'],
     duration: '20-60 minutes',
-    color: 'text-green-600',
-    bgGradient: 'from-green-500/10 to-green-500/5',
+    color: 'text-emerald-600',
+    bgGradient: 'from-emerald-500/20 to-emerald-400/15',
     route: '/services/massage-bien-etre'
   }];
   const specialties = [{
