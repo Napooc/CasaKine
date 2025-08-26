@@ -5,7 +5,7 @@ import { getServiceSchema, getBreadcrumbSchema } from '@/lib/structuredData';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Target, TrendingUp, Sparkles, Users, MapPin, Activity, Heart, Zap as Lightning, Eye, Shield } from 'lucide-react';
+import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Target, TrendingUp, Sparkles, Users, MapPin, Activity, Heart, Zap as Lightning, Eye, Shield, Vibrate, Scale, CircuitBoard, Thermometer, Hand } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/amincissement-hero-modern.jpg';
 import radiofrequencyImage from '@/assets/radiofrequency-modern.jpg';
@@ -13,6 +13,11 @@ import cavitationImage from '@/assets/cavitation-modern.jpg';
 import laserImage from '@/assets/laser-modern.jpg';
 import cryotherapyImage from '@/assets/cryotherapy-modern.jpg';
 import consultationImage from '@/assets/consultation-modern.jpg';
+import starvacImage from '@/assets/starvac-modern.jpg';
+import plateauVibrantImage from '@/assets/plateau-vibrant-modern.jpg';
+import pressotherapyImage from '@/assets/pressotherapy-modern.jpg';
+import impedancemetreImage from '@/assets/impedancemetre-modern.jpg';
+import saunaInfrarougeImage from '@/assets/sauna-infrarouge-modern.jpg';
 const ServicesAmincissement = () => {
   const navigate = useNavigate();
 
@@ -60,6 +65,46 @@ const ServicesAmincissement = () => {
     description: "La cryothérapie est une méthode non invasive qui utilise le froid intense pour stimuler la combustion des graisses et le remodelage corporel.",
     benefits: ["Active le métabolisme et brûle les graisses localisées", "Améliore la fermeté de la peau", "Réduit la cellulite", "Favorise la récupération musculaire"],
     details: "Indolore et rapide, la cryothérapie est une solution naturelle pour affiner la silhouette sans intervention chirurgicale. Séances pratiquées sous supervision d'un professionnel qualifié."
+  }, {
+    icon: Hand,
+    title: "STARVAC",
+    image: starvacImage,
+    duration: "30-45 minutes",
+    description: "L'équilibre entre la production et l'élimination des graisses est un processus contrôlé par les adipocytes. Avec les années, ce mécanisme naturel se fragilise provoquant une augmentation du stockage graisseux.",
+    benefits: ["Décongestionne les tissus", "Déstocke les cellules graisseuses", "Résorbe les capitons", "Diminue l'effet peau d'orange", "Raffermit la peau et affine la silhouette"],
+    details: "Le massage consiste à mobiliser le tissu cutané afin de se libérer du superflu d'eau et de graisse qui s'y accumulent. Le Starvac permet d'imiter mécaniquement cette action manuelle, stimule la circulation superficielle lymphatique, soulage les jambes lourdes."
+  }, {
+    icon: Vibrate,
+    title: "Le Plateau Vibrant",
+    image: plateauVibrantImage,
+    duration: "15-20 minutes",
+    description: "Le Plateau Vibrant est efficace pour perdre du poids et réduire les graisses abdominales. Les plateformes vibrantes ou oscillantes ont des aspects bénéfiques sur la santé.",
+    benefits: ["Raffermit la peau et le tissu conjonctif", "Diminue la cellulite", "Améliore la posture et l'allure", "Temps d'entraînement réduit", "Exercices faciles à pratiquer"],
+    details: "Le plus grand avantage de la plateforme vibrante est clair : Le temps nécessaire pour obtenir des résultats satisfaisants est beaucoup plus court que pour un entraînement physique conventionnel, avec des effets pratiquement pareils, voir meilleurs."
+  }, {
+    icon: CircuitBoard,
+    title: "Pressothérapie",
+    image: pressotherapyImage,
+    duration: "30-40 minutes",
+    description: "C'est une technique de drainage mécanique et pneumatique, qui opère un véritable massage par compression et décompression d'un appareillage composé de bottes et de ceinture en vinyle.",
+    benefits: ["Active la circulation sanguine et lymphatique", "Élimine mieux les toxines", "Améliore le retour veineux", "Réduit la rétention d'eau", "Affine la silhouette"],
+    details: "Les alvéoles des bottes se remplissent d'air à rythme défini et exercent des pressions multiples et douces sur le corps. Immédiatement, la sensation de jambes lourdes disparaît. La technique est particulièrement efficace dès la première séance."
+  }, {
+    icon: Scale,
+    title: "Impédancemètre",
+    image: impedancemetreImage,
+    duration: "5-10 minutes",
+    description: "Mesurez votre masse grasse : Se peser, c'est bien. Mesurer sa masse grasse, c'est mieux ! Il existe des balances à impédance-mètre, qui permettent de connaître précisément le pourcentage exact de graisse dans votre corps.",
+    benefits: ["Mesure précise de la masse grasse", "Suivi des progrès objectif", "Analyse de la composition corporelle", "Évaluation de la masse musculaire", "Indispensable pour un régime efficace"],
+    details: "Indispensable lorsque vous suivez un régime ou essayez de gagner en masse musculaire. Cette technologie permet un suivi précis et objectif de votre évolution corporelle."
+  }, {
+    icon: Thermometer,
+    title: "Sauna Infrarouge",
+    image: saunaInfrarougeImage,
+    duration: "30 minutes",
+    description: "Le sauna infrarouge est une méthode qui propose plusieurs avantages. Le principe est le même que celui du sauna traditionnel mais vous évitez le choc thermique. La température monte entre 40 et 60 degrés.",
+    benefits: ["Augmente la circulation sanguine", "Améliore le système cardiovasculaire", "Renforce le système immunitaire", "Réduit le stress et la fatigue", "Améliore l'oxygénation"],
+    details: "Les rayons infrarouges accélèrent les fonctions cellulaires et contribuent à la purification de la peau. Le sauna infrarouge a des effets d'amincissement : pour une séance de 30 min, la perte totale est estimée entre 800 et 1000 Kcal."
   }];
   const targetAreas = [
     {
@@ -163,7 +208,7 @@ const ServicesAmincissement = () => {
                 <div className="text-white/80 text-sm">Satisfaction</div>
               </div>
               <div className="glass-card p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">4</div>
+                <div className="text-3xl font-bold text-white mb-2">9</div>
                 <div className="text-white/80 text-sm">Technologies</div>
               </div>
               <div className="glass-card p-6 text-center">
@@ -243,7 +288,7 @@ const ServicesAmincissement = () => {
                 Nos <span className="text-gradient-accent">Technologies Avancées</span>
               </h2>
               <p className="text-xl text-neutral-light max-w-3xl mx-auto">
-                Découvrez nos 4 techniques révolutionnaires pour un amincissement ciblé et durable
+                Découvrez nos 9 techniques révolutionnaires pour un amincissement ciblé et durable
               </p>
             </div>
           </ScrollAnimation>
