@@ -5,21 +5,41 @@ import ScrollAnimation from '@/components/ScrollAnimation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Shield, BarChart3, Target, Settings, ArrowLeft, Mail, Phone, MapPin, Clock, User, Database, Info } from 'lucide-react';
+import { 
+  Shield, 
+  BarChart3, 
+  Target, 
+  Settings, 
+  ArrowLeft, 
+  Mail, 
+  Phone, 
+  MapPin,
+  Clock,
+  User,
+  Database,
+  Info
+} from 'lucide-react';
 import { cookieCategories } from '@/lib/cookieConfig';
 import { useCookieConsent } from '@/hooks/useCookieConsent';
+
 const CookiePolicy = () => {
-  const {
-    openModal
-  } = useCookieConsent();
+  const { openModal } = useCookieConsent();
+
   const categoryIcons = {
     essential: Shield,
     analytics: BarChart3,
     marketing: Target,
     preferences: Settings
   };
-  return <Layout>
-      <SEO title="Politique des Cookies - Dr. Nawal El Ghorfi | Casakine" description="Politique complète des cookies conforme à la CNDP. Découvrez comment nous utilisons les cookies sur notre site de kinésithérapie à Casablanca." keywords="politique cookies, CNDP Maroc, protection données personnelles, kinésithérapie casablanca, dr nawal el ghorfi" canonical="https://casakine.com/cookie-policy" />
+
+  return (
+    <Layout>
+      <SEO 
+        title="Politique des Cookies - Dr. Nawal El Ghorfi | Casakine"
+        description="Politique complète des cookies conforme à la CNDP. Découvrez comment nous utilisons les cookies sur notre site de kinésithérapie à Casablanca."
+        keywords="politique cookies, CNDP Maroc, protection données personnelles, kinésithérapie casablanca, dr nawal el ghorfi"
+        canonical="https://casakine.com/cookie-policy"
+      />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
@@ -27,7 +47,11 @@ const CookiePolicy = () => {
         
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Button variant="ghost" className="text-white/80 hover:text-white mb-8 p-0" onClick={() => window.history.back()}>
+            <Button 
+              variant="ghost" 
+              className="text-white/80 hover:text-white mb-8 p-0" 
+              onClick={() => window.history.back()}
+            >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Retour
             </Button>
@@ -48,7 +72,10 @@ const CookiePolicy = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={600}>
-            <Button onClick={openModal} className="bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+            <Button 
+              onClick={openModal}
+              className="bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110"
+            >
               <Settings className="w-5 h-5 mr-3" />
               Gérer mes Préférences
             </Button>
@@ -127,20 +154,26 @@ const CookiePolicy = () => {
 
           <div className="grid gap-8">
             {cookieCategories.map((category, index) => {
-            const Icon = categoryIcons[category.id as keyof typeof categoryIcons];
-            return <ScrollAnimation key={category.id} animation="fade-up" delay={index * 200}>
+              const Icon = categoryIcons[category.id as keyof typeof categoryIcons];
+              
+              return (
+                <ScrollAnimation key={category.id} animation="fade-up" delay={index * 200}>
                   <Card className="border-0 shadow-soft hover:shadow-strong transition-all duration-500">
                     <CardHeader>
                       <div className="flex items-center gap-4">
-                        <div className={`w-16 h-16 rounded-full flex items-center justify-center ${category.essential ? 'bg-gradient-primary' : 'bg-gradient-accent'}`}>
+                        <div className={`w-16 h-16 rounded-full flex items-center justify-center ${
+                          category.essential ? 'bg-gradient-primary' : 'bg-gradient-accent'
+                        }`}>
                           <Icon className="w-8 h-8 text-white" />
                         </div>
                         <div className="flex-1">
                           <CardTitle className="text-2xl font-playfair text-primary mb-2 flex items-center gap-3">
                             {category.name.fr}
-                            {category.essential && <Badge className="bg-primary/10 text-primary">
+                            {category.essential && (
+                              <Badge className="bg-primary/10 text-primary">
                                 Essentiel
-                              </Badge>}
+                              </Badge>
+                            )}
                           </CardTitle>
                           <p className="text-neutral-light">
                             {category.description.fr}
@@ -156,7 +189,8 @@ const CookiePolicy = () => {
                       </h4>
                       
                       <div className="grid gap-4">
-                        {category.cookies.map((cookie, cookieIndex) => <div key={cookieIndex} className="bg-white rounded-xl p-4 border border-neutral-light/20">
+                        {category.cookies.map((cookie, cookieIndex) => (
+                          <div key={cookieIndex} className="bg-white rounded-xl p-4 border border-neutral-light/20">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                               <div>
                                 <div className="flex items-center gap-2 mb-1">
@@ -198,18 +232,76 @@ const CookiePolicy = () => {
                                 {cookie.type}
                               </Badge>
                             </div>
-                          </div>)}
+                          </div>
+                        ))}
                       </div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>;
-          })}
+                </ScrollAnimation>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      
-    </Layout>;
+      <section className="py-16 bg-background">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <ScrollAnimation animation="fade-up">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl font-playfair text-primary text-center mb-6">
+                  Délégué à la Protection des Données (DPO)
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-neutral-light text-center mb-8">
+                  Pour toute question concernant vos données personnelles ou l'exercice de vos droits, 
+                  vous pouvez contacter notre délégué à la protection des données :
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-gradient-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Mail className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-primary mb-2">Email</h4>
+                    <p className="text-neutral-light text-sm">dpo@casakine.com</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-gradient-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Phone className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-primary mb-2">Téléphone</h4>
+                    <p className="text-neutral-light text-sm">+212 661 67 70 96</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-gradient-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <MapPin className="w-6 h-6 text-accent" />
+                    </div>
+                    <h4 className="font-semibold text-primary mb-2">Adresse</h4>
+                    <p className="text-neutral-light text-sm">Casablanca, Maroc</p>
+                  </div>
+                </div>
+                
+                <div className="mt-8 text-center">
+                  <Button 
+                    onClick={openModal}
+                    className="bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 py-3 rounded-full"
+                  >
+                    <Settings className="w-4 h-4 mr-2" />
+                    Modifier mes Préférences
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </ScrollAnimation>
+        </div>
+      </section>
+    </Layout>
+  );
 };
+
 export default CookiePolicy;
