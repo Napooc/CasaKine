@@ -53,7 +53,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center space-x-4 group">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" 
+                  src="/lovable-uploads/b842a1de-fa46-46d8-a692-ed9011b6ba3f.png" 
                   alt="Dr. Nawal El Ghorfi" 
                   className="h-16 w-auto transition-transform duration-300 group-hover:scale-105 shadow-lg" 
                 />
