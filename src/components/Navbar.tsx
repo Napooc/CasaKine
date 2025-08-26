@@ -55,9 +55,9 @@ const Navbar = () => {
                 <img 
                   src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" 
                   alt="Dr. Nawal El Ghorfi" 
-                  className="h-12 w-auto transition-transform duration-300 group-hover:scale-105 shadow-lg rounded-lg" 
+                  className="h-16 w-auto transition-transform duration-300 group-hover:scale-105 shadow-lg" 
                 />
-                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 rounded-lg transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
               <div className="flex flex-col">
                 <span className="font-playfair font-bold text-lg text-left text-foreground">Kinésithérapie Nawal El GHORFI</span>
