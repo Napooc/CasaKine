@@ -110,8 +110,14 @@ const ServicesAmincissement = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Services d'Amincissement" className="w-full h-full object-cover scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-secondary/70 to-purple-600/80"></div>
+          <img 
+            src="/lovable-uploads/e9466446-be50-4fdf-9b3f-4bfeb28a7576.png" 
+            alt="Équipements d'amincissement modernes" 
+            className="w-full h-full object-cover scale-105" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/85 via-blue-500/75 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-purple-400/20 to-black/30"></div>
+          <div className="absolute inset-0 bg-dots-pattern opacity-15"></div>
         </div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">

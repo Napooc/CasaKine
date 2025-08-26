@@ -87,9 +87,14 @@ const KinesitherapieRespiratoire = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={specialtyImage} alt="Kinésithérapie moderne" className="w-full h-full object-cover scale-110" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-secondary/90"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/20"></div>
+          <img 
+            src="/lovable-uploads/2544f454-85c1-4bb9-bbf0-21105732eb3d.png" 
+            alt="Cabinet de kinésithérapie moderne" 
+            className="w-full h-full object-cover scale-105" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/85 via-teal-500/75 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-blue-400/20 to-black/30"></div>
+          <div className="absolute inset-0 bg-mesh-pattern opacity-10"></div>
         </div>
 
         {/* Floating Elements */}
