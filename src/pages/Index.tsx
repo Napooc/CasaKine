@@ -147,7 +147,7 @@ const Index = () => {
 
           <ScrollAnimation animation="fade-up" delay={600}>
             <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
-              👋 Bienvenue au Centre Nawal EL GHORFI
+               Bienvenue au Centre Nawal EL GHORFI
               <br />Kinésithérapie & Amincissement à Casablanca
               <br />Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
               moderne, au cœur de Casablanca, pour des soins de kinésithérapie,
