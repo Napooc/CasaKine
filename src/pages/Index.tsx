@@ -405,13 +405,13 @@ const Index = () => {
                 </h2>
                 <div className="space-y-6 text-lg text-neutral leading-relaxed">
                   <p>
-                    Le centre est dirigé par <strong className="text-primary">Mme Nawal EL GHORFI ép. HARAKAT</strong>, 
+                    Le centre est dirigé par <strong className="text-primary">Mme Nawal EL GHORFI </strong>, 
                     Diplômée d'État en Kinésithérapie et Physiothérapie, avec plus de 20 ans d'expérience.
                   </p>
                   <p>
                     Tous les soins sont personnellement assurés par Mme EL GHORFI, 
                     garantissant un suivi rigoureux et individualisé – 
-                    aucune délégation à des assistantes.
+                    <strong className="text-accent">aucune délégation à des assistantes</strong>.
                   </p>
                 </div>
                 
