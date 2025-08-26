@@ -12,7 +12,8 @@ import specialtyWellnessImage from '@/assets/specialty-wellness.jpg';
 import specialtyMedicalGymnasticsImage from '@/assets/specialty-medical-gymnastics.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar, Baby } from 'lucide-react';
+import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar } from 'lucide-react';
+import { Baby } from 'lucide-react';
 const Index = () => {
   const [selectedSpecialty, setSelectedSpecialty] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
