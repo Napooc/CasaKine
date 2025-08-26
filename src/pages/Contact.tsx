@@ -94,15 +94,12 @@ const Contact = () => {
                       <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-primary/10 flex items-center justify-center group-hover:animate-pulse-glow">
                         <Icon className={`w-8 h-8 ${info.color} group-hover:scale-110 transition-transform duration-300`} />
                       </div>
-                       <h3 className="text-xl font-playfair font-bold text-foreground mb-3">
-                         {info.title}
-                       </h3>
-                       <p className="text-foreground/80 font-montserrat font-semibold mb-3 text-base">
-                         {info.value}
-                       </p>
-                       <p className="text-muted-foreground text-sm mb-4">
-                         {info.description}
-                       </p>
+                      <h3 className="text-lg font-playfair font-bold text-primary mb-2">
+                        {info.title}
+                      </h3>
+                      <p className="text-neutral font-montserrat font-semibold mb-2">
+                        {info.value}
+                      </p>
                       
                       
                       {info.hasMultipleOptions ? <div className="space-y-2 w-full">
@@ -130,30 +127,30 @@ const Contact = () => {
             {/* Contact Information */}
             <ScrollAnimation animation="slide-left">
               <div className="glass-card p-10 rounded-3xl shadow-strong">
-                 <h2 className="text-4xl font-playfair font-bold text-foreground mb-10">
-                   Informations <span className="text-primary">Contact</span>
-                 </h2>
+                <h2 className="text-3xl font-playfair font-bold text-primary mb-8">
+                  Informations <span className="text-gradient-accent">Contact</span>
+                </h2>
                 
-                 <div className="space-y-10">
-                   {contactInfo.map((info, index) => {
-                   const Icon = info.icon;
-                   return <div key={index} className="flex items-start space-x-6 p-6 rounded-xl hover:bg-muted/30 transition-colors duration-300">
-                         <div className={`w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0`}>
-                           <Icon className={`w-7 h-7 text-primary`} />
-                         </div>
-                         <div className="flex-1">
-                           <h3 className="font-playfair font-bold text-foreground mb-2 text-lg">
-                             {info.title}
-                           </h3>
-                           <p className="text-foreground/80 font-montserrat font-semibold mb-2 text-base">
-                             {info.value}
-                           </p>
-                           <p className="text-muted-foreground">
-                             {info.description}
-                           </p>
-                         </div>
-                       </div>;
-                 })}
+                <div className="space-y-8">
+                  {contactInfo.map((info, index) => {
+                  const Icon = info.icon;
+                  return <div key={index} className="flex items-start space-x-4 p-4 rounded-xl hover:bg-gradient-primary/5 transition-colors duration-300">
+                        <div className={`w-12 h-12 rounded-full bg-gradient-primary/10 flex items-center justify-center flex-shrink-0`}>
+                          <Icon className={`w-6 h-6 ${info.color}`} />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-playfair font-bold text-primary mb-1">
+                            {info.title}
+                          </h3>
+                          <p className="text-neutral font-montserrat font-semibold mb-1">
+                            {info.value}
+                          </p>
+                          <p className="text-neutral-light text-sm">
+                            {info.description}
+                          </p>
+                        </div>
+                      </div>;
+                })}
                 </div>
               </div>
             </ScrollAnimation>
@@ -164,19 +161,19 @@ const Contact = () => {
                 
                 {/* Horaires */}
                 <div className="glass-card p-8 rounded-3xl shadow-strong">
-                   <h3 className="text-2xl font-playfair font-bold text-foreground mb-8 flex items-center">
-                     <Clock className="w-7 h-7 mr-4 text-primary" />
-                     Horaires d'Ouverture
-                   </h3>
-                   <div className="space-y-6">
-                     {horaires.map((horaire, index) => <div key={index} className="flex justify-between items-center py-3 border-b border-border last:border-b-0">
-                         <span className="font-montserrat font-semibold text-foreground">
-                           {horaire.jour}
-                         </span>
-                         <span className="text-foreground/70 font-medium">
-                           {horaire.heures}
-                         </span>
-                       </div>)}
+                  <h3 className="text-2xl font-playfair font-bold text-primary mb-6 flex items-center">
+                    <Clock className="w-6 h-6 mr-3 text-accent" />
+                    Horaires d'Ouverture
+                  </h3>
+                  <div className="space-y-4">
+                    {horaires.map((horaire, index) => <div key={index} className="flex justify-between items-center py-2 border-b border-primary/10 last:border-b-0">
+                        <span className="font-montserrat font-medium text-primary">
+                          {horaire.jour}
+                        </span>
+                        <span className="text-neutral-light">
+                          {horaire.heures}
+                        </span>
+                      </div>)}
                   </div>
                   
                   
@@ -187,14 +184,14 @@ const Contact = () => {
 
                 {/* WhatsApp */}
                 <div className="glass-card p-8 rounded-3xl shadow-strong bg-gradient-to-br from-green-500/5 to-green-500/10">
-                   <h3 className="text-2xl font-playfair font-bold text-foreground mb-6 flex items-center">
-                     <MessageCircle className="w-7 h-7 mr-4 text-green-600" />
-                     WhatsApp
-                   </h3>
-                   <p className="text-foreground/70 mb-8 text-base leading-relaxed">
-                     Échangez rapidement avec notre équipe via WhatsApp 
-                     pour des questions ou prises de rendez-vous express.
-                   </p>
+                  <h3 className="text-2xl font-playfair font-bold text-primary mb-4 flex items-center">
+                    <MessageCircle className="w-6 h-6 mr-3 text-green-600" />
+                    WhatsApp
+                  </h3>
+                  <p className="text-neutral-light mb-6">
+                    Échangez rapidement avec notre équipe via WhatsApp 
+                    pour des questions ou prises de rendez-vous express.
+                  </p>
                   <Button className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-montserrat font-semibold py-3 rounded-full shadow-strong transition-all duration-300 hover:scale-105" onClick={() => window.open('https://wa.me/212661677096', '_blank')}>
                     <MessageCircle className="w-5 h-5 mr-3" />
                     Ouvrir WhatsApp
@@ -211,12 +208,12 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-12">
-               <h2 className="text-4xl md:text-5xl font-playfair font-bold text-foreground mb-8">
-                 Comment <span className="text-primary">Nous Trouver</span>
-               </h2>
-               <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-                 Situé au cœur de Casablanca, notre centre est facilement accessible
-               </p>
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-primary mb-6">
+                Comment <span className="text-gradient-accent">Nous Trouver</span>
+              </h2>
+              <p className="text-xl text-neutral-light max-w-3xl mx-auto">
+                Situé au cœur de Casablanca, notre centre est facilement accessible
+              </p>
             </div>
           </ScrollAnimation>
 
