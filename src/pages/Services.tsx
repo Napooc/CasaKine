@@ -23,8 +23,8 @@ const Services = () => {
     description: 'Techniques modernes d\'amincissement pour sculpter votre silhouette',
     features: ['Cryothérapie/Cryolipolyse', 'Palper Rouler', 'Radiofréquence', 'Lipocavitation 40K', 'Lipolyse laser', 'Pressothérapie'],
     duration: '60-90 minutes',
-    color: 'text-pink-600',
-    bgGradient: 'from-pink-500/20 to-pink-400/15',
+    color: 'text-secondary',
+    bgGradient: 'from-secondary/10 to-secondary/5',
     route: '/services/amincissement'
   }, {
     icon: Activity,
@@ -32,8 +32,8 @@ const Services = () => {
     description: 'Cours encadrés par des kinésithérapeutes pour améliorer mobilité et prévenir les douleurs',
     features: ['Gymnastique vertébrale', 'Gymnastique senior', 'Renforcement musculaire', 'Amélioration de l\'équilibre', 'Prévention des chutes', 'Ambiance conviviale'],
     duration: '45-60 minutes',
-    color: 'text-green-500',
-    bgGradient: 'from-green-400/15 to-green-300/10',
+    color: 'text-accent',
+    bgGradient: 'from-accent/10 to-accent/5',
     route: '/services/gymnastique-medicale'
   }, {
     icon: Baby,
@@ -41,8 +41,8 @@ const Services = () => {
     description: 'Accompagnement spécialisé pour la grossesse et l\'après-accouchement',
     features: ['Préparation à l\'accouchement', 'Techniques de respiration', 'Rééducation périnéale post-partum', 'Biofeedback et électrostimulation', 'Communication in utero', 'Renforcement abdominal'],
     duration: '45-60 minutes',
-    color: 'text-rose-700',
-    bgGradient: 'from-rose-600/25 to-rose-500/20',
+    color: 'text-pink-600',
+    bgGradient: 'from-pink-500/10 to-pink-500/5',
     route: '/services/femme-enceinte'
   }, {
     icon: Sparkles,
@@ -50,8 +50,8 @@ const Services = () => {
     description: 'Massages thérapeutiques pour relaxation et récupération',
     features: ['Massage relaxant anti-stress', 'Massage décontracturant', 'Massage tonifiant énergisant', 'Détente musculaire profonde', 'Amélioration circulation', 'Élimination des toxines'],
     duration: '20-60 minutes',
-    color: 'text-emerald-600',
-    bgGradient: 'from-emerald-500/20 to-emerald-400/15',
+    color: 'text-green-600',
+    bgGradient: 'from-green-500/10 to-green-500/5',
     route: '/services/massage-bien-etre'
   }];
   const specialties = [{
@@ -239,10 +239,7 @@ const Services = () => {
                           </div>
                           
                           <div className="flex items-center justify-between">
-                            <div className="flex items-center space-x-2 text-neutral-light">
-                              <Clock className="w-4 h-4" />
-                              <span className="text-sm">{service.duration}</span>
-                            </div>
+                            
                             <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`}>
                               En savoir plus
                               <ArrowRight className="w-4 h-4 ml-2" />
