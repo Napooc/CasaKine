@@ -138,12 +138,7 @@ const About = () => {
                   </div>
                 </div>
                 
-                 <div className="absolute top-1/2 -right-12 glass-card p-4 rounded-2xl shadow-glow animate-pulse-glow">
-                   <div className="text-center">
-                     <div className="text-2xl font-playfair font-bold text-black mb-1">2001</div>
-                     <div className="text-xs text-black/80">Depuis</div>
-                   </div>
-                 </div>
+                 
               </div>
             </ScrollAnimation>
           </div>
