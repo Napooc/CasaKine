@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import ScrollAnimation from '@/components/ScrollAnimation';
-import femmeEnceinteHero from '@/assets/femme-enceinte-hero.jpg';
+const femmeEnceinteHero = '/lovable-uploads/ae898483-0049-4459-bd35-4ca9c46d6852.png';
 import femmeEnceintePreparation from '@/assets/femme-enceinte-preparation.jpg';
 import femmeEnceinteRehabilitation from '@/assets/femme-enceinte-rehabilitation.jpg';
 import femmeEnceinteBonding from '@/assets/femme-enceinte-bonding.jpg';
