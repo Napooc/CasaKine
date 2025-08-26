@@ -105,9 +105,9 @@
     --gymnastique-secondary: 140 45% 65%;
     --gymnastique-accent: 100 50% 45%;
     
-    --femme-enceinte-primary: 0 70% 55%;
-    --femme-enceinte-secondary: 15 75% 65%;
-    --femme-enceinte-accent: 345 65% 50%;
+    --femme-enceinte-primary: 0 75% 50%;
+    --femme-enceinte-secondary: 10 80% 55%;
+    --femme-enceinte-accent: 350 70% 45%;
   }
 
   .dark {
