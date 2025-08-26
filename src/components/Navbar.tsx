@@ -60,17 +60,23 @@ const Navbar = () => {
                 }
               }}
             >
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/630f745f-8009-4ae3-9fcb-2c8a49ca5c8f.png" 
-                  alt="Dr. Nawal El Ghorfi - Kinésithérapeute D.E." 
-                  className="h-16 w-auto transition-all duration-300 group-hover:scale-110 drop-shadow-lg filter brightness-100 contrast-110" 
-                />
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-montserrat font-bold text-lg text-left text-foreground">Kinésithérapie Nawal El GHORFI</span>
-                
+              <div className="relative flex items-center space-x-3">
+                <div className="relative overflow-hidden rounded-full bg-white p-2 shadow-soft">
+                  <img 
+                    src="/lovable-uploads/369c1f5b-ed08-439c-a09b-58bc3f177c61.png" 
+                    alt="Dr. Nawal El Ghorfi - Kinésithérapeute D.E." 
+                    className="h-12 w-auto transition-transform duration-300 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full"></div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-playfair font-bold text-lg text-left text-primary leading-tight">
+                    Dr. Nawal EL GHORFI
+                  </span>
+                  <span className="font-montserrat font-medium text-sm text-neutral-light leading-tight">
+                    Kinésithérapeute D.E.
+                  </span>
+                </div>
               </div>
             </Link>
 
