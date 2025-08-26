@@ -1,11 +1,13 @@
 import Layout from '@/components/Layout';
 import ScrollAnimation from '@/components/ScrollAnimation';
-import massageHero from '@/assets/massage-hero.jpg';
+const femmeEnceinteHero = '/lovable-uploads/e9466446-be50-4fdf-9b3f-4bfeb28a7576.png';
 import massageRelaxation from '@/assets/massage-relaxation.jpg';
 import massageTherapy from '@/assets/massage-therapy-session.jpg';
 import massageRoom from '@/assets/massage-room.jpg';
 import massageNewTherapy from '@/assets/massage-therapy-modern.jpg';
 import massageRoomModern from '@/assets/massage-room-modern.jpg';
+import massageTherapeuticNew from '@/assets/massage-therapeutic-new.jpg';
+import massageEnergizingNew from '@/assets/massage-energizing-new.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -208,7 +210,7 @@ const MassageBienEtre = () => {
             <ScrollAnimation animation="slide-left">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-3xl blur-xl scale-105"></div>
-                <img src={massageRelaxation} alt="Massage relaxation" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                <img src={massageTherapeuticNew} alt="Massage thérapeutique professionnel" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/80 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </ScrollAnimation>
@@ -295,7 +297,7 @@ const MassageBienEtre = () => {
                       <div className="relative group">
                         <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-3xl blur-xl scale-105"></div>
                         <div className={`relative z-10 bg-gradient-to-br ${massage.bgGradient} rounded-3xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300`}>
-                         <img src={index === 0 ? massageNewTherapy : index === 1 ? massageRoomModern : massageRelaxation} alt={massage.title} className="w-full h-48 object-cover" />
+                         <img src={index === 0 ? massageNewTherapy : index === 1 ? massageRoomModern : massageEnergizingNew} alt={massage.title} className="w-full h-48 object-cover" />
                           <div className="p-8 text-center">
                             <Icon className={`w-16 h-16 mx-auto mb-4 text-gray-600`} />
                             <h4 className="text-xl font-playfair font-bold text-gray-800 mb-4">
