@@ -92,7 +92,7 @@ export const CookieModal: React.FC<CookieModalProps> = ({ language = 'en' }) => 
   return (
     <Dialog open={isModalOpen} onOpenChange={closeModal}>
       <DialogContent 
-        className="max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl border-0 shadow-2xl z-[60]"
+        className="max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl border-0 shadow-2xl"
         dir={language === 'ar' ? 'rtl' : 'ltr'}
       >
         <DialogHeader className="pb-6">

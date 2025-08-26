@@ -259,28 +259,6 @@ export class CookieManager {
       console.warn('Failed to log consent action:', error);
     }
   }
-
-  // Reset consent for testing
-  resetConsent(): void {
-    if (typeof window === 'undefined') return;
-    localStorage.removeItem(CONSENT_KEY);
-    this.preferences = null;
-    // Notify listeners that consent has been reset
-    this.onConsentChange.forEach(callback => {
-      try {
-        callback({
-          essential: true,
-          analytics: false,
-          marketing: false,
-          preferences: false,
-          timestamp: Date.now(),
-          version: CONSENT_VERSION
-        });
-      } catch (error) {
-        console.warn('Error in consent reset callback:', error);
-      }
-    });
-  }
 }
 
 // Global type extensions

@@ -15,13 +15,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar } from 'lucide-react';
 import { Baby } from 'lucide-react';
-import { CookieSettings } from '@/components/CookieSettings';
-import { useCookieConsent } from '@/hooks/useCookieConsent';
 const Index = () => {
   const navigate = useNavigate();
   const [selectedSpecialty, setSelectedSpecialty] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { hasConsent, resetConsent, openModal } = useCookieConsent();
   const handleBookAppointment = () => {
     navigate('/contact');
   };
@@ -537,17 +534,6 @@ const Index = () => {
           </ScrollAnimation>
         </div>
       </section>
-
-      {/* Cookie Testing Panel - Temporary */}
-      <div className="fixed top-4 right-4 z-50 p-4 bg-white border rounded-lg shadow-lg">
-        <h3 className="font-bold mb-2">Cookie Testing</h3>
-        <p className="text-sm mb-2">Has Consent: {hasConsent ? 'Yes' : 'No'}</p>
-        <div className="space-y-2">
-          <Button onClick={resetConsent} size="sm" variant="outline">Reset Cookies</Button>
-          <Button onClick={openModal} size="sm">Open Preferences</Button>
-          <CookieSettings language="fr" />
-        </div>
-      </div>
 
       {/* Specialty Modal */}
       <SpecialtyModal specialty={selectedSpecialty} isOpen={isModalOpen} onClose={closeModal} />
