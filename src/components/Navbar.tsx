@@ -50,7 +50,16 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo Premium */}
-            <Link to="/" className="flex items-center space-x-4 group">
+            <Link 
+              to="/" 
+              className="flex items-center space-x-4 group"
+              onClick={(e) => {
+                if (location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+            >
               <div className="relative">
                 <img 
                   src="/lovable-uploads/b842a1de-fa46-46d8-a692-ed9011b6ba3f.png" 
@@ -60,7 +69,7 @@ const Navbar = () => {
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
               <div className="flex flex-col">
-                <span className="font-playfair font-bold text-lg text-left text-foreground">Kinésithérapie Nawal El GHORFI</span>
+                <span className="font-montserrat font-bold text-lg text-left text-foreground">Kinésithérapie Nawal El GHORFI</span>
                 
               </div>
             </Link>
