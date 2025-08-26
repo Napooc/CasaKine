@@ -100,9 +100,7 @@ const Contact = () => {
                       <p className="text-neutral font-montserrat font-semibold mb-2">
                         {info.value}
                       </p>
-                      <p className="text-neutral-light text-sm mb-4 flex-grow">
-                        {info.description}
-                      </p>
+                      
                       
                       {info.hasMultipleOptions ? <div className="space-y-2 w-full">
                           {info.phoneNumbers?.map((phone, phoneIndex) => <Button key={phoneIndex} variant="outline" className="w-full border-primary/20 text-primary hover:bg-primary hover:text-white transition-all duration-300 font-medium text-xs" onClick={() => window.open(`tel:${phone.number}`)}>
