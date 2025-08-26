@@ -116,18 +116,36 @@ const Index = () => {
       <GoogleVerification />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
-        {/* Background Image */}
+        {/* Background with clinic interior */}
         <div className="absolute inset-0">
-          <img src={heroIndexImage} alt="Modern medical clinic" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-secondary/90"></div>
+          <img 
+            src="/lovable-uploads/54b9c91c-1c3e-4a0e-a202-1a3b5ac89a6b.png" 
+            alt="Centre de kinésithérapie moderne - Intérieur professionnel" 
+            className="w-full h-full object-cover scale-105 transition-transform duration-700" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-primary/60 to-secondary/70"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/50"></div>
         </div>
 
-        {/* Floating Elements */}
+        {/* Creative floating clinic elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-accent rounded-full opacity-20 animate-float"></div>
-          <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-secondary rounded-full opacity-30 animate-float-delay"></div>
-          <div className="absolute bottom-32 left-40 w-20 h-20 bg-gradient-primary rounded-full opacity-25 animate-float"></div>
-          <div className="absolute bottom-20 right-20 w-28 h-28 bg-gradient-accent rounded-full opacity-20 animate-float-delay"></div>
+          {/* Medical cross icons */}
+          <div className="absolute top-20 left-20 w-8 h-8 text-accent/40 animate-pulse">
+            <Stethoscope className="w-full h-full" />
+          </div>
+          <div className="absolute top-40 right-32 w-6 h-6 text-secondary/50 animate-ping">
+            <Heart className="w-full h-full" />
+          </div>
+          <div className="absolute bottom-32 left-40 w-10 h-10 text-white/30 animate-bounce">
+            <Shield className="w-full h-full" />
+          </div>
+          <div className="absolute bottom-20 right-20 w-7 h-7 text-accent/40 animate-pulse">
+            <Activity className="w-full h-full" />
+          </div>
+          
+          {/* Gradient circles for depth */}
+          <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-gradient-accent rounded-full opacity-10 animate-float blur-xl"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-gradient-secondary rounded-full opacity-15 animate-float-delay blur-xl"></div>
         </div>
 
         {/* Content */}
