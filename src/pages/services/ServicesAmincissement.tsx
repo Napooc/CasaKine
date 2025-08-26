@@ -8,16 +8,18 @@ import { Badge } from '@/components/ui/badge';
 import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Target, TrendingUp, Sparkles, Users, MapPin, Activity, Heart, Zap as Lightning, Eye, Shield, Vibrate, Scale, CircuitBoard, Thermometer, Hand } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/amincissement-hero-modern.jpg';
-import radiofrequencyImage from '@/assets/radiofrequency-modern.jpg';
-import cavitationImage from '@/assets/cavitation-modern.jpg';
-import laserImage from '@/assets/laser-modern.jpg';
-import cryotherapyImage from '@/assets/cryotherapy-modern.jpg';
 import consultationImage from '@/assets/consultation-modern.jpg';
-import starvacImage from '@/assets/starvac-modern.jpg';
-import plateauVibrantImage from '@/assets/plateau-vibrant-modern.jpg';
-import pressotherapyImage from '@/assets/pressotherapy-modern.jpg';
 import impedancemetreImage from '@/assets/impedancemetre-modern.jpg';
-import saunaInfrarougeImage from '@/assets/sauna-infrarouge-modern.jpg';
+
+// Real uploaded images
+const radiofrequencyImage = '/lovable-uploads/c95b1775-2a83-4be7-80ed-31b75042c71d.png';
+const cavitationImage = '/lovable-uploads/8b02a3ed-4f1a-4e0c-a2a1-67ff6d231bf5.png';
+const laserImage = '/lovable-uploads/a2e6bd2d-491c-4b20-a7f8-7c53cf4e2072.png';
+const cryotherapyImage = '/lovable-uploads/bf54c27e-1e0a-489a-8a28-9b086a8bba00.png';
+const starvacImage = '/lovable-uploads/af24c7b3-1936-4655-8658-942f6511b3a7.png';
+const plateauVibrantImage = '/lovable-uploads/3144c3e6-6759-4f72-bb71-1f6da879aff3.png';
+const pressotherapyImage = '/lovable-uploads/f25412e7-57c6-410e-a90d-a3c08f064423.png';
+const saunaInfrarougeImage = '/lovable-uploads/752dd68e-27de-46f2-90ed-61aa6eaee927.png';
 const ServicesAmincissement = () => {
   const navigate = useNavigate();
 
@@ -332,9 +334,44 @@ const ServicesAmincissement = () => {
 
                   <ScrollAnimation animation={isEven ? "slide-right" : "slide-left"}>
                     <div className={!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                      <div className="relative">
-                        <img src={technique.image} alt={`Technique ${technique.title}`} className="w-full h-96 object-cover rounded-3xl shadow-strong" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent rounded-3xl"></div>
+                      <div className="relative group">
+                        {/* Modern frame effect */}
+                        <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500 opacity-60 group-hover:opacity-80"></div>
+                        
+                        {/* Main image container */}
+                        <div className="relative bg-white p-6 rounded-3xl shadow-elegant group-hover:shadow-glow transition-all duration-500">
+                          {/* Decorative corners */}
+                          <div className="absolute top-3 left-3 w-8 h-8 border-l-4 border-t-4 border-primary/40 rounded-tl-lg"></div>
+                          <div className="absolute top-3 right-3 w-8 h-8 border-r-4 border-t-4 border-secondary/40 rounded-tr-lg"></div>
+                          <div className="absolute bottom-3 left-3 w-8 h-8 border-l-4 border-b-4 border-accent/40 rounded-bl-lg"></div>
+                          <div className="absolute bottom-3 right-3 w-8 h-8 border-r-4 border-b-4 border-primary/40 rounded-br-lg"></div>
+                          
+                          {/* Image with overlay effects */}
+                          <div className="relative overflow-hidden rounded-2xl">
+                            <img 
+                              src={technique.image} 
+                              alt={`Technique ${technique.title}`} 
+                              className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-110" 
+                            />
+                            
+                            {/* Gradient overlays */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                            
+                            {/* Floating badge */}
+                            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-primary shadow-soft">
+                              {technique.duration}
+                            </div>
+                            
+                            {/* Technology icon overlay */}
+                            <div className="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-500">
+                              <Icon className="w-6 h-6 text-white" />
+                            </div>
+                          </div>
+                          
+                          {/* Bottom accent line */}
+                          <div className="mt-4 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center"></div>
+                        </div>
                       </div>
                     </div>
                   </ScrollAnimation>
