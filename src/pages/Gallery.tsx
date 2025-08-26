@@ -266,168 +266,81 @@ const Gallery = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          {/* Modern Grid Layout - Organized by rows */}
-          <div className="space-y-8">
-            {/* First Row: Featured Items */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredItems.filter(item => item.featured).slice(0, 2).map((item, index) => (
-                <ScrollAnimation key={item.id} animation="fade-up" delay={index * 150}>
-                  <Card className="group relative border-0 overflow-hidden bg-white/95 backdrop-blur-sm shadow-xl hover:shadow-2xl transition-all duration-700 hover:scale-[1.02] h-96">
-                    {/* Large Featured Image */}
-                    <div className="relative h-64 overflow-hidden">
-                      <img 
-                        src={item.image} 
-                        alt={item.title} 
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
-                      />
-                      
-                      {/* Featured Badge */}
-                      <div className="absolute top-4 left-4">
-                        <div className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-4 py-2 rounded-full shadow-xl text-sm font-semibold flex items-center">
-                          <Eye className="w-4 h-4 mr-2" />
+          {/* Uniform Grid Layout - All cards same size */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {filteredItems.map((item, index) => (
+              <ScrollAnimation key={item.id} animation="fade-up" delay={index * 100}>
+                <Card className="group relative border-0 overflow-hidden bg-white/95 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 h-[420px] flex flex-col">
+                  {/* Uniform Image Container */}
+                  <div className="relative h-56 overflow-hidden flex-shrink-0">
+                    <img 
+                      src={item.image} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
+                    />
+                    
+                    {/* Featured Badge */}
+                    {item.featured && (
+                      <div className="absolute top-3 left-3">
+                        <div className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-3 py-1.5 rounded-full shadow-xl text-xs font-semibold flex items-center">
+                          <Eye className="w-3 h-3 mr-1" />
                           Coup de cœur
                         </div>
                       </div>
+                    )}
 
-                      {/* Category Badge */}
-                      <div className="absolute top-4 right-4">
-                        <Badge className="bg-gradient-to-r from-primary to-accent text-white border-0 shadow-lg px-3 py-1.5 font-medium">
-                          {filters.find(f => f.id === item.category)?.label}
-                        </Badge>
-                      </div>
+                    {/* Category Badge */}
+                    <div className="absolute top-3 right-3">
+                      <Badge className={`text-white border-0 shadow-lg px-2.5 py-1 text-xs font-medium ${
+                        item.category === 'cabinet' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' :
+                        item.category === 'equipements' ? 'bg-gradient-to-r from-green-500 to-emerald-500' :
+                        'bg-gradient-to-r from-purple-500 to-pink-500'
+                      }`}>
+                        {filters.find(f => f.id === item.category)?.label}
+                      </Badge>
+                    </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                        <Button 
-                          onClick={() => setSelectedImage(item.image)} 
-                          className="bg-white/90 text-primary hover:bg-white hover:scale-110 transition-all duration-300 shadow-2xl backdrop-blur-sm border-0 rounded-full px-6 py-3"
-                        >
-                          <ZoomIn className="w-5 h-5 mr-2" />
-                          Agrandir
-                        </Button>
+                    {/* Camera Icon */}
+                    <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <Camera className="w-5 h-5 text-white" />
                       </div>
                     </div>
 
-                    {/* Card Content */}
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-montserrat font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300">
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <Button 
+                        onClick={() => setSelectedImage(item.image)} 
+                        className="bg-white/90 text-primary hover:bg-white hover:scale-110 transition-all duration-300 rounded-full px-4 py-2 text-sm shadow-xl"
+                      >
+                        <ZoomIn className="w-4 h-4 mr-2" />
+                        Agrandir
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Card Content - Consistent height */}
+                  <CardContent className="p-5 flex-1 flex flex-col">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-montserrat font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300 line-clamp-2">
                         {item.title}
                       </h3>
-                      <p className="text-neutral-light leading-relaxed">
+                      <p className="text-neutral-light text-sm leading-relaxed line-clamp-3">
                         {item.description}
                       </p>
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>
-              ))}
-            </div>
-
-            {/* Second Row: Regular Items in 3-column grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredItems.filter(item => !item.featured).map((item, index) => (
-                <ScrollAnimation key={item.id} animation="fade-up" delay={index * 100}>
-                  <Card className="group relative border-0 overflow-hidden bg-white/95 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105">
-                    {/* Standard Image */}
-                    <div className="relative h-48 overflow-hidden">
-                      <img 
-                        src={item.image} 
-                        alt={item.title} 
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
-                      />
-                      
-                      {/* Category Badge */}
-                      <div className="absolute top-3 left-3">
-                        <Badge className={`text-white border-0 shadow-lg px-3 py-1 text-xs font-medium ${
-                          item.category === 'cabinet' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' :
-                          item.category === 'equipements' ? 'bg-gradient-to-r from-green-500 to-emerald-500' :
-                          'bg-gradient-to-r from-purple-500 to-pink-500'
-                        }`}>
-                          {filters.find(f => f.id === item.category)?.label}
-                        </Badge>
-                      </div>
-
-                      {/* Camera Icon */}
-                      <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                          <Camera className="w-5 h-5 text-white" />
-                        </div>
-                      </div>
-
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Button 
-                          onClick={() => setSelectedImage(item.image)} 
-                          className="bg-white/80 text-primary hover:bg-white hover:scale-110 transition-all duration-300 rounded-full px-4 py-2 text-sm"
-                        >
-                          <ZoomIn className="w-4 h-4 mr-1" />
-                          Voir
-                        </Button>
+                    </div>
+                    
+                    {/* Action Hint - Always at bottom */}
+                    <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="text-xs text-primary/60 flex items-center">
+                        <div className="w-1 h-1 bg-primary/40 rounded-full mr-2"></div>
+                        Cliquez pour agrandir
                       </div>
                     </div>
-
-                    {/* Card Content */}
-                    <CardContent className="p-5">
-                      <h3 className="text-lg font-montserrat font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">
-                        {item.title}
-                      </h3>
-                      <p className="text-neutral-light text-sm leading-relaxed">
-                        {item.description}
-                      </p>
-                      
-                      {/* Action Hint */}
-                      <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="text-xs text-primary/60 flex items-center">
-                          <div className="w-1 h-1 bg-primary/40 rounded-full mr-2"></div>
-                          Cliquez pour agrandir
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>
-              ))}
-            </div>
-
-            {/* Third Row: Add more items if available */}
-            {filteredItems.length > 6 && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {filteredItems.slice(6).map((item, index) => (
-                  <ScrollAnimation key={item.id} animation="scale-up" delay={index * 80}>
-                    <Card className="group relative border-0 overflow-hidden bg-white/95 backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-400 hover:scale-105">
-                      <div className="relative aspect-square overflow-hidden">
-                        <img 
-                          src={item.image} 
-                          alt={item.title} 
-                          className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110" 
-                        />
-                        
-                        {/* Mini Category Badge */}
-                        <div className="absolute top-2 left-2">
-                          <Badge className="bg-black/60 text-white border-0 px-2 py-1 text-xs">
-                            {filters.find(f => f.id === item.category)?.label}
-                          </Badge>
-                        </div>
-
-                        {/* Hover Action */}
-                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <button 
-                            onClick={() => setSelectedImage(item.image)}
-                            className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200"
-                          >
-                            <ZoomIn className="w-5 h-5 text-primary" />
-                          </button>
-                        </div>
-                      </div>
-                      
-                      <CardContent className="p-3">
-                        <h4 className="text-sm font-montserrat font-semibold text-primary mb-1 line-clamp-2">
-                          {item.title}
-                        </h4>
-                      </CardContent>
-                    </Card>
-                  </ScrollAnimation>
-                ))}
-              </div>
-            )}
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+            ))}
           </div>
         </div>
       </section>
