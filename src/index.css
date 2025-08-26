@@ -95,6 +95,19 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Page-specific theme colors */
+    --amincissement-primary: 315 70% 60%;
+    --amincissement-secondary: 330 80% 70%;
+    --amincissement-accent: 300 60% 50%;
+    
+    --gymnastique-primary: 120 40% 55%;
+    --gymnastique-secondary: 140 45% 65%;
+    --gymnastique-accent: 100 50% 45%;
+    
+    --femme-enceinte-primary: 0 70% 55%;
+    --femme-enceinte-secondary: 15 75% 65%;
+    --femme-enceinte-accent: 345 65% 50%;
   }
 
   .dark {
@@ -430,6 +443,25 @@
   .shadow-strong {
     box-shadow: var(--shadow-strong);
   }
+}
+
+/* Page-specific color themes */
+.page-amincissement {
+  --primary: var(--amincissement-primary);
+  --secondary: var(--amincissement-secondary);
+  --accent: var(--amincissement-accent);
+}
+
+.page-gymnastique {
+  --primary: var(--gymnastique-primary);
+  --secondary: var(--gymnastique-secondary);
+  --accent: var(--gymnastique-accent);
+}
+
+.page-femme-enceinte {
+  --primary: var(--femme-enceinte-primary);
+  --secondary: var(--femme-enceinte-secondary);
+  --accent: var(--femme-enceinte-accent);
 }
 
 /* Keyframe Animations */

@@ -15,7 +15,8 @@ const GymnastiqueMedicale = () => {
   const vertebralProgram = ['Assouplissement de la colonne vertébrale', 'Renforcement de la ceinture abdominale', 'Stabilisation du bassin', 'Mobilisation des membres supérieurs', 'Travail des membres inférieurs', 'Protection articulaire', 'Amélioration de la posture'];
   const seniorProgram = ['Maintien de l\'autonomie corporelle', 'Prévention des chutes', 'Amélioration de l\'équilibre', 'Renforcement musculaire adapté', 'Souplesse articulaire', 'Coordination motrice', 'Stimulation cognitive et sociale'];
   const equipment = ['Ballons de gymnastique', 'Élastiques de résistance', 'Plateaux d\'équilibre (Freeman)', 'Tapis de sol professionnels', 'Accessoires de proprioception', 'Matériel de coordination'];
-  return <Layout>
+  return <div className="page-gymnastique">
+    <Layout>
       {/* Hero Section */}
       {/* Custom Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -271,6 +272,7 @@ const GymnastiqueMedicale = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  </div>;
 };
 export default GymnastiqueMedicale;

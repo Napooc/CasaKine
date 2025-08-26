@@ -64,7 +64,8 @@ const FemmeEnceinte = () => {
     description: 'Rééducation périnéale et abdominale pour retrouver tonicité et bien-être après l\'accouchement.',
     icon: Activity
   }];
-  return <Layout>
+  return <div className="page-femme-enceinte">
+    <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -426,6 +427,7 @@ const FemmeEnceinte = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  </div>;
 };
 export default FemmeEnceinte;

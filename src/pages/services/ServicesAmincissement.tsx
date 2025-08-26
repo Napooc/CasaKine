@@ -93,7 +93,8 @@ const ServicesAmincissement = () => {
       description: "Traitement anti-âge du visage"
     }
   ];
-  return <Layout>
+  return <div className="page-amincissement">
+    <Layout>
       <SEO 
         title="Amincissement et Remodelage Corporel - Casakine Casablanca"
         description="🔥 Techniques modernes d'amincissement à Casablanca : Radiofréquence, Cavitation 40k, Laser minceur, Cryothérapie. ✨ Résultats visibles dès les premières séances. ☎️ +212 661 67 70 96"
@@ -478,6 +479,7 @@ const ServicesAmincissement = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  </div>;
 };
 export default ServicesAmincissement;
