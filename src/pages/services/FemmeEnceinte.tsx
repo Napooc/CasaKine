@@ -83,13 +83,7 @@ const FemmeEnceinte = () => {
         </div>
 
         <div className="fixed top-4 left-4 z-50">
-          <Button 
-            className="bg-white/90 hover:bg-white text-primary border border-primary/20 backdrop-blur-sm px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-xl hover:shadow-2xl"
-            onClick={() => navigate('/services')}
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Retour aux services
-          </Button>
+          
         </div>
 
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
@@ -117,11 +111,13 @@ const FemmeEnceinte = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="bg-white text-red-600 hover:bg-red-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
+              <Button className="bg-white text-red-600 hover:bg-red-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver une Séance
               </Button>
-              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-gray-950" onClick={() => document.getElementById('preparation')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-gray-950" onClick={() => document.getElementById('preparation')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                 En savoir plus
               </Button>
             </div>
@@ -153,11 +149,7 @@ const FemmeEnceinte = () => {
             <ScrollAnimation animation="slide-left">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-3xl blur-xl scale-105"></div>
-                <img 
-                  src={femmeEnceintePreparation} 
-                  alt="Préparation à l'accouchement" 
-                  className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                />
+                <img src={femmeEnceintePreparation} alt="Préparation à l'accouchement" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-red-600/80 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </ScrollAnimation>
@@ -177,19 +169,24 @@ const FemmeEnceinte = () => {
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    { icon: Heart, text: "Techniques de respiration adaptées" },
-                    { icon: Users, text: "Positions d'accouchement optimales" },
-                    { icon: Baby, text: "Communication prénatale avec bébé" },
-                    { icon: Shield, text: "Préparation du partenaire" }
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
+                  {[{
+                    icon: Heart,
+                    text: "Techniques de respiration adaptées"
+                  }, {
+                    icon: Users,
+                    text: "Positions d'accouchement optimales"
+                  }, {
+                    icon: Baby,
+                    text: "Communication prénatale avec bébé"
+                  }, {
+                    icon: Shield,
+                    text: "Préparation du partenaire"
+                  }].map((item, idx) => <div key={idx} className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
                         <item.icon className="w-5 h-5 text-white" />
                       </div>
                       <span className="text-gray-700 font-medium">{item.text}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </ScrollAnimation>
@@ -197,8 +194,8 @@ const FemmeEnceinte = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {preparationServices.map((service, index) => {
-            const Icon = service.icon;
-            return <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
+              const Icon = service.icon;
+              return <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
                   <Card className="h-full border-0 shadow-xl bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
                     <CardHeader className="text-center pb-4">
                       <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -221,7 +218,7 @@ const FemmeEnceinte = () => {
                     </CardContent>
                   </Card>
                 </ScrollAnimation>;
-          })}
+            })}
           </div>
         </div>
       </section>
@@ -246,8 +243,8 @@ const FemmeEnceinte = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => {
-            const Icon = step.icon;
-            return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+              const Icon = step.icon;
+              return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                   <div className="text-center group">
                     <div className="relative mb-8">
                       <div className="w-20 h-20 mx-auto bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl border border-white/30">
@@ -269,7 +266,7 @@ const FemmeEnceinte = () => {
                     </p>
                   </div>
                 </ScrollAnimation>;
-          })}
+            })}
           </div>
         </div>
       </section>
@@ -309,19 +306,24 @@ const FemmeEnceinte = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  {[
-                    { icon: Target, text: "Renforcement ciblé du périnée" },
-                    { icon: Brain, text: "Techniques de biofeedback avancées" },
-                    { icon: Zap, text: "Électrostimulation si nécessaire" },
-                    { icon: Activity, text: "Suivi personnalisé long terme" }
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
+                  {[{
+                    icon: Target,
+                    text: "Renforcement ciblé du périnée"
+                  }, {
+                    icon: Brain,
+                    text: "Techniques de biofeedback avancées"
+                  }, {
+                    icon: Zap,
+                    text: "Électrostimulation si nécessaire"
+                  }, {
+                    icon: Activity,
+                    text: "Suivi personnalisé long terme"
+                  }].map((item, idx) => <div key={idx} className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
                         <item.icon className="w-5 h-5 text-white" />
                       </div>
                       <span className="text-gray-700 font-medium">{item.text}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </ScrollAnimation>
@@ -330,11 +332,7 @@ const FemmeEnceinte = () => {
             <ScrollAnimation animation="slide-right">
               <div className="relative group">
                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-3xl blur-xl scale-105"></div>
-                <img 
-                  src={femmeEnceinteRehabilitation} 
-                  alt="Rééducation périnéale post-partum" 
-                  className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                />
+                <img src={femmeEnceinteRehabilitation} alt="Rééducation périnéale post-partum" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-red-600/80 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </ScrollAnimation>
@@ -342,8 +340,8 @@ const FemmeEnceinte = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {reeducationServices.map((service, index) => {
-            const Icon = service.icon;
-            return <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
+              const Icon = service.icon;
+              return <ScrollAnimation key={index} animation="fade-up" delay={index * 200}>
                   <Card className="h-full border-0 shadow-xl bg-gradient-to-br from-white to-red-50/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 group">
                     <CardHeader className="text-center pb-4">
                       <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -366,7 +364,7 @@ const FemmeEnceinte = () => {
                     </CardContent>
                   </Card>
                 </ScrollAnimation>;
-          })}
+            })}
           </div>
 
           <ScrollAnimation animation="fade-up" delay={600}>
@@ -374,11 +372,7 @@ const FemmeEnceinte = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-3xl blur-xl scale-105"></div>
-                  <img 
-                    src={femmeEnceinteBonding} 
-                    alt="Moments de complicité parent-bébé" 
-                    className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <img src={femmeEnceinteBonding} alt="Moments de complicité parent-bébé" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 
                 <div className="bg-gradient-to-r from-red-100 to-red-200 rounded-2xl p-8">
