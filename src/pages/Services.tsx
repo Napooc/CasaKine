@@ -135,7 +135,7 @@ const Services = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={600}>
-            <p className="text-lg md:text-xl text-neutral-lightest/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-gray-500">
               Du traitement de la douleur à l'optimisation des performances, nos services s'adaptent 
               à tous vos besoins de santé et de bien-être avec une approche scientifique et humaine.
             </p>
