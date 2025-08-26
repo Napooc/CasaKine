@@ -21,8 +21,14 @@ const GymnastiqueMedicale = () => {
       {/* Custom Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={gymnasticsHeroImage} alt="Gymnastique médicale moderne" className="w-full h-full object-cover scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/80 to-secondary/90"></div>
+          <img 
+            src="/lovable-uploads/eadba95f-2bcc-4f83-ab65-91596799cdb7.png" 
+            alt="Salle de gymnastique médicale moderne avec équipements" 
+            className="w-full h-full object-cover scale-105" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/85 via-cyan-500/75 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-blue-400/20 to-black/40"></div>
+          <div className="absolute inset-0 bg-pattern-dots opacity-10"></div>
         </div>
 
         <div className="fixed top-4 left-4 z-50">

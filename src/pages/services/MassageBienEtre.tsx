@@ -81,9 +81,14 @@ const MassageBienEtre = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={massageHero} alt="Massage bien-être dans un environnement relaxant" className="w-full h-full object-cover scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-600/95 via-emerald-600/80 to-teal-700/90"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
+          <img 
+            src="/lovable-uploads/e9466446-be50-4fdf-9b3f-4bfeb28a7576.png" 
+            alt="Équipements de massage et bien-être modernes" 
+            className="w-full h-full object-cover scale-105" 
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-green-600/85 via-emerald-500/75 to-teal-600/80"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-green-400/20 to-black/35"></div>
+          <div className="absolute inset-0 bg-mesh-pattern opacity-15"></div>
         </div>
 
         {/* Floating Elements */}
