@@ -210,7 +210,7 @@ const MassageBienEtre = () => {
             <ScrollAnimation animation="slide-left">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-3xl blur-xl scale-105"></div>
-                <img src={massageTherapeuticNew} alt="Massage thérapeutique professionnel" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                <img src="/lovable-uploads/a7f79b02-85ff-4ca4-b99f-8f74c1643715.png" alt="Massage thérapeutique professionnel - Séance de relaxation" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/80 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </ScrollAnimation>
@@ -297,7 +297,7 @@ const MassageBienEtre = () => {
                       <div className="relative group">
                         <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-3xl blur-xl scale-105"></div>
                         <div className={`relative z-10 bg-gradient-to-br ${massage.bgGradient} rounded-3xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300`}>
-                         <img src={index === 0 ? massageNewTherapy : index === 1 ? massageRoomModern : massageEnergizingNew} alt={massage.title} className="w-full h-48 object-cover" />
+                         <img src={index === 0 ? massageNewTherapy : index === 1 ? massageRoomModern : "/lovable-uploads/453ca1c9-c32d-42c2-8cf4-9709cd875e6c.png"} alt={massage.title} className="w-full h-48 object-cover" />
                           <div className="p-8 text-center">
                             <Icon className={`w-16 h-16 mx-auto mb-4 text-gray-600`} />
                             <h4 className="text-xl font-playfair font-bold text-gray-800 mb-4">
