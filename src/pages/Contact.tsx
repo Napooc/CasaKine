@@ -43,8 +43,8 @@ const Contact = () => {
   }, {
     icon: MapPin,
     title: 'Adresse',
-    value: '19 Rue De Masmouda',
-    description: 'Casablanca 20210',
+    value: 'Kinésithérapie Nawal EL GHORFI',
+    description: 'Casablanca',
     color: 'text-accent',
     action: 'https://maps.google.com/?q=Kinésithérapie+Nawal+EL+GHORFI,Casablanca,Morocco'
   }, {
@@ -56,14 +56,15 @@ const Contact = () => {
     action: 'https://wa.me/212661677096?text=Bonjour, je souhaiterais prendre rendez-vous'
   }];
   const horaires = [{
-    jour: 'Lundi - Vendredi',
-    heures: '8h00 - 18h00'
+    jour: 'Lundi - Mercredi - Vendredi',
+    heures: '09h00 - 12h30'
+    heures: '15h00 - 19h00'
+  }, {
+    jour: 'Mardi - Jeudi (horaires continus',
+    heures: '09h30 - 16h00'
   }, {
     jour: 'Samedi',
-    heures: '8h00 - 14h00'
-  }, {
-    jour: 'Dimanche',
-    heures: 'Urgences uniquement'
+    heures: '09h00 - 12h30'
   }];
   return <Layout>
       <SEO title="Contact et Rendez-vous - Centre Casakine Casablanca" description="📍 Prenez rendez-vous au centre de kinésithérapie Casakine Casablanca. 📞 +212 661 67 70 96 ✉️ info@casakine.com 📍 19 Rue De Masmouda, Casablanca. Horaires et plan d'accès." keywords="rendez vous kinésithérapeute casablanca, contact casakine, adresse kinésithérapie casablanca, horaires dr nawal el ghorfi, consultation physiothérapie" canonical="https://casakine.com/contact" structuredData={structuredData} />
