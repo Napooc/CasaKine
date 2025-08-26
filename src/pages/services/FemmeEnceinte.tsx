@@ -69,9 +69,9 @@ const FemmeEnceinte = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={femmeEnceinteHero} alt="Femme enceinte en consultation" className="w-full h-full object-cover scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-br from-red-600/95 via-red-500/80 to-red-700/90"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
+          <img src={femmeEnceinteHero} alt="Femme enceinte en consultation" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-br from-red-600/40 via-red-500/30 to-red-700/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
         </div>
 
         {/* Floating Elements */}
