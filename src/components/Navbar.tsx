@@ -62,11 +62,11 @@ const Navbar = () => {
             >
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/b842a1de-fa46-46d8-a692-ed9011b6ba3f.png" 
-                  alt="Dr. Nawal El Ghorfi" 
-                  className="h-16 w-auto transition-transform duration-300 group-hover:scale-105 shadow-lg" 
+                  src="/lovable-uploads/630f745f-8009-4ae3-9fcb-2c8a49ca5c8f.png" 
+                  alt="Dr. Nawal El Ghorfi - Kinésithérapeute D.E." 
+                  className="h-16 w-auto transition-all duration-300 group-hover:scale-110 drop-shadow-lg filter brightness-100 contrast-110" 
                 />
-                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
               </div>
               <div className="flex flex-col">
                 <span className="font-montserrat font-bold text-lg text-left text-foreground">Kinésithérapie Nawal El GHORFI</span>
