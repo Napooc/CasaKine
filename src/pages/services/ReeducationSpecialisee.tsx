@@ -4,11 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Shield, Clock, CheckCircle, Heart, Brain, Home, ArrowLeft, Phone, Calendar, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import specialtyImage from '@/assets/specialty-manual-therapy.jpg';
 import facilityImage from '@/assets/reeducation-facility.jpg';
 import drainageImage from '@/assets/reeducation-drainage.jpg';
 import homeCareImage from '@/assets/reeducation-home-care.jpg';
 const ReeducationSpecialisee = () => {
+  const navigate = useNavigate();
   const specializations = [{
     icon: Heart,
     title: "Rééducation Périnéale",
@@ -75,7 +77,7 @@ const ReeducationSpecialisee = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-accent hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
+              <Button className="morph-button bg-white text-accent hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => navigate('/contact')}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver un bilan
               </Button>
@@ -321,7 +323,7 @@ const ReeducationSpecialisee = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-accent hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
+              <Button className="morph-button bg-white text-accent hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => navigate('/contact')}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Commencer ma rééducation
               </Button>

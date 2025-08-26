@@ -129,7 +129,7 @@ const MassageBienEtre = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="bg-white text-green-600 hover:bg-green-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
+              <Button className="bg-white text-green-600 hover:bg-green-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110" onClick={() => navigate('/contact')}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver un Massage
               </Button>

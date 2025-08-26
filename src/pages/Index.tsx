@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import { SEO } from '@/components/SEO';
 import { GoogleVerification } from '@/components/GoogleVerification';
@@ -15,10 +16,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar } from 'lucide-react';
 import { Baby } from 'lucide-react';
 const Index = () => {
+  const navigate = useNavigate();
   const [selectedSpecialty, setSelectedSpecialty] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleBookAppointment = () => {
-    window.location.href = '/contact';
+    navigate('/contact');
   };
   const handleSpecialtyClick = specialty => {
     setSelectedSpecialty(specialty);
@@ -191,7 +193,7 @@ const Index = () => {
                 Réservez Votre Consultation
               </Button>
               
-              <Button variant="outline" onClick={() => window.location.href = '/services'} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
+              <Button variant="outline" onClick={() => navigate('/services')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 En savoir plus
               </Button>
             </div>

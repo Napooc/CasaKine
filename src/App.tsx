@@ -16,6 +16,8 @@ import ServicesAmincissement from "./pages/services/ServicesAmincissement";
 import GymnastiqueMedicale from "./pages/services/GymnastiqueMedicale";
 import FemmeEnceinte from "./pages/services/FemmeEnceinte";
 import MassageBienEtre from "./pages/services/MassageBienEtre";
+import ReeducationSpecialisee from "./pages/services/ReeducationSpecialisee";
+import Traumatologie from "./pages/services/Traumatologie";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/services/gymnastique-medicale" element={<GymnastiqueMedicale />} />
           <Route path="/services/femme-enceinte" element={<FemmeEnceinte />} />
           <Route path="/services/massage-bien-etre" element={<MassageBienEtre />} />
+          <Route path="/services/reeducation-specialisee" element={<ReeducationSpecialisee />} />
+          <Route path="/services/traumatologie" element={<Traumatologie />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />

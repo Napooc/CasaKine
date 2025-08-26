@@ -4,7 +4,7 @@ import heroServicesImage from '@/assets/hero-services.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Stethoscope, Target, Users, Award, Baby, Sparkles } from 'lucide-react';
+import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Stethoscope, Target, Users, Award, Baby, Sparkles, ChevronRight, Calendar } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 const Services = () => {
   const navigate = useNavigate();
@@ -53,6 +53,24 @@ const Services = () => {
     color: 'text-green-600',
     bgGradient: 'from-green-500/10 to-green-500/5',
     route: '/services/massage-bien-etre'
+  }, {
+    icon: Users,
+    title: 'Rééducation Spécialisée',
+    description: 'Programmes personnalisés pour la rééducation neurologique et périnéale',
+    features: ['Rééducation périnéale', 'Rééducation post-AVC', 'Drainage lymphatique', 'Réadaptation à l\'effort', 'Soins à domicile'],
+    duration: '45-60 minutes',
+    color: 'text-teal-600',
+    bgGradient: 'from-teal-500/10 to-teal-500/5',
+    route: '/services/reeducation-specialisee'
+  }, {
+    icon: Shield,
+    title: 'Traumatologie, Neurologie & Rhumatologie',
+    description: 'Traitement spécialisé des pathologies de l\'appareil locomoteur',
+    features: ['Fractures et entorses', 'Rééducation post-chirurgicale', 'Hémiplégie et paralysies', 'Arthrose et arthrite', 'Pathologies inflammatoires'],
+    duration: '45-60 minutes',
+    color: 'text-blue-600',
+    bgGradient: 'from-blue-500/10 to-blue-500/5',
+    route: '/services/traumatologie'
   }];
   const specialties = [{
     icon: Stethoscope,
@@ -143,7 +161,7 @@ const Services = () => {
 
           <ScrollAnimation animation="scale-up" delay={800}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button onClick={() => window.location.href = '/contact'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button onClick={() => navigate('/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                 <Activity className="w-5 h-5 mr-3" />
                 Réserver une Consultation
               </Button>
@@ -175,6 +193,14 @@ const Services = () => {
               icon: Sparkles,
               label: 'Massage & Bien-être',
               route: '/services/massage-bien-etre'
+            }, {
+              icon: Users,
+              label: 'Rééducation Spécialisée',
+              route: '/services/reeducation-specialisee'
+            }, {
+              icon: Shield,
+              label: 'Traumatologie',
+              route: '/services/traumatologie'
             }].map((service, index) => {
               const Icon = service.icon;
               return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>
@@ -319,7 +345,7 @@ const Services = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
+              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => navigate('/contact')}>
                 <Star className="w-5 h-5 mr-3" />
                 Consultation Gratuite
               </Button>
