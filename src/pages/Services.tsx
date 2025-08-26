@@ -41,8 +41,8 @@ const Services = () => {
     description: 'Accompagnement spécialisé pour la grossesse et l\'après-accouchement',
     features: ['Préparation à l\'accouchement', 'Techniques de respiration', 'Rééducation périnéale post-partum', 'Biofeedback et électrostimulation', 'Communication in utero', 'Renforcement abdominal'],
     duration: '45-60 minutes',
-    color: 'text-red-600',
-    bgGradient: 'from-red-500/20 to-red-400/15',
+    color: 'text-rose-700',
+    bgGradient: 'from-rose-600/25 to-rose-500/20',
     route: '/services/femme-enceinte'
   }, {
     icon: Sparkles,
