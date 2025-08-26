@@ -94,8 +94,8 @@ const Services = () => {
         {/* Dynamic Background */}
         <div className="absolute inset-0">
           <img src="/lovable-uploads/ff593693-5ff7-4abc-a290-5896e5cada6e.png" alt="Centre de kinésithérapie - Équipements modernes" className="w-full h-full object-cover scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-br from-secondary/95 via-secondary/80 to-primary/90"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/40"></div>
         </div>
 
         {/* Floating Service Icons */}
@@ -121,21 +121,21 @@ const Services = () => {
               <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
                 Nos Services Spécialisés
               </Badge>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
-                Des Soins <span className="text-gradient-accent">Personnalisés</span><br />
-                pour Chaque <span className="text-sky-400">Besoin</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+                Des Soins <span className="text-gradient-accent drop-shadow-lg">Personnalisés</span><br />
+                pour Chaque <span className="text-sky-400 drop-shadow-lg">Besoin</span>
               </h1>
             </div>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={400}>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-white mb-8 opacity-90 drop-shadow-lg">
               Découvrez notre gamme complète de services thérapeutiques
             </h2>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={600}>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-gray-500">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-white/90 drop-shadow-lg">
               Du traitement de la douleur à l'optimisation des performances, nos services s'adaptent 
               à tous vos besoins de santé et de bien-être avec une approche scientifique et humaine.
             </p>
@@ -154,7 +154,7 @@ const Services = () => {
 
           {/* Quick Service Stats */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {[{
               icon: Heart,
               label: 'Kinésithérapie',
@@ -171,6 +171,10 @@ const Services = () => {
               icon: Activity,
               label: 'Gymnastique médicale',
               route: '/services/gymnastique-medicale'
+            }, {
+              icon: Sparkles,
+              label: 'Massage & Bien-être',
+              route: '/services/massage-bien-etre'
             }].map((service, index) => {
               const Icon = service.icon;
               return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>
