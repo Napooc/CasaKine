@@ -102,17 +102,17 @@ const Index = () => {
     }
   }];
   const testimonials = [{
-    name: 'JIHANE G.',
+    name: 'Sarah M.',
     text: 'Un centre exceptionnel où professionnalisme rime avec bienveillance. Dr. Nawal est extraordinaire !',
     rating: 5,
     location: 'Casablanca'
   }, {
-    name: 'Simo T.',
-    text: 'Je recommande vivement.Belle équipe,Mme Ghorfi très à écoute et serviable,Bonne continuation',
+    name: 'Ahmed K.',
+    text: 'Des résultats visibles dès les premières séances. L\'équipe est à l\'écoute et utilise des techniques innovantes.',
     rating: 5,
-    location: 'Casablanca'
+    location: 'Rabat'
   }, {
-    name: 'Jihane A.',
+    name: 'Fatima Z.',
     text: 'Après mon accident, Dr. Nawal m\'a aidée à retrouver ma mobilité. Je recommande vivement !',
     rating: 5,
     location: 'Casablanca'
