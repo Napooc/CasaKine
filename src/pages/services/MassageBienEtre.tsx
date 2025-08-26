@@ -97,13 +97,7 @@ const MassageBienEtre = () => {
         <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
             <div className="fixed top-4 left-4 z-50">
-              <Button 
-                className="bg-white/90 hover:bg-white text-primary border border-primary/20 backdrop-blur-sm px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 font-medium shadow-xl hover:shadow-2xl"
-                onClick={() => navigate('/services')}
-              >
-                <ArrowLeft className="w-5 h-5 mr-2" />
-                Retour aux services
-              </Button>
+              
             </div>
             
             <div className="mb-8">
@@ -128,11 +122,13 @@ const MassageBienEtre = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="bg-white text-green-600 hover:bg-green-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
+              <Button className="bg-white text-green-600 hover:bg-green-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver un Massage
               </Button>
-              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-zinc-950" onClick={() => document.getElementById('massage-types')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Button variant="outline" className="border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 text-zinc-950" onClick={() => document.getElementById('massage-types')?.scrollIntoView({
+              behavior: 'smooth'
+            })}>
                 Découvrir nos soins
               </Button>
             </div>
@@ -207,11 +203,7 @@ const MassageBienEtre = () => {
             <ScrollAnimation animation="slide-left">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-3xl blur-xl scale-105"></div>
-                <img 
-                  src={massageRelaxation} 
-                  alt="Massage relaxation" 
-                  className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                />
+                <img src={massageRelaxation} alt="Massage relaxation" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-600/80 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </ScrollAnimation>
@@ -230,19 +222,24 @@ const MassageBienEtre = () => {
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    { icon: Heart, text: "Techniques personnalisées" },
-                    { icon: Target, text: "Ciblage précis des tensions" },
-                    { icon: Waves, text: "Relaxation profonde" },
-                    { icon: Shield, text: "Environnement apaisant" }
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
+                  {[{
+                  icon: Heart,
+                  text: "Techniques personnalisées"
+                }, {
+                  icon: Target,
+                  text: "Ciblage précis des tensions"
+                }, {
+                  icon: Waves,
+                  text: "Relaxation profonde"
+                }, {
+                  icon: Shield,
+                  text: "Environnement apaisant"
+                }].map((item, idx) => <div key={idx} className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center">
                         <item.icon className="w-5 h-5 text-white" />
                       </div>
                       <span className="text-gray-700 font-medium">{item.text}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </ScrollAnimation>
@@ -293,11 +290,7 @@ const MassageBienEtre = () => {
                       <div className="relative group">
                         <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-3xl blur-xl scale-105"></div>
                         <div className={`relative z-10 bg-gradient-to-br ${massage.bgGradient} rounded-3xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300`}>
-                         <img 
-                            src={index === 0 ? massageNewTherapy : index === 1 ? massageRoomModern : massageRelaxation} 
-                            alt={massage.title} 
-                            className="w-full h-48 object-cover"
-                          />
+                         <img src={index === 0 ? massageNewTherapy : index === 1 ? massageRoomModern : massageRelaxation} alt={massage.title} className="w-full h-48 object-cover" />
                           <div className="p-8 text-center">
                             <Icon className={`w-16 h-16 mx-auto mb-4 text-gray-600`} />
                             <h4 className="text-xl font-playfair font-bold text-gray-800 mb-4">
