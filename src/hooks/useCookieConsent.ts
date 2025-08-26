@@ -44,6 +44,12 @@ export const useCookieConsent = () => {
     setIsModalOpen(false);
   };
 
+  const resetConsent = () => {
+    cookieManager.resetConsent();
+    setHasConsent(false);
+    setPreferences(null);
+  };
+
   return {
     hasConsent,
     preferences,
@@ -53,6 +59,7 @@ export const useCookieConsent = () => {
     savePreferences,
     openModal,
     closeModal,
-    setIsModalOpen
+    setIsModalOpen,
+    resetConsent
   };
 };
