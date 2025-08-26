@@ -96,7 +96,7 @@ const About = () => {
                   Découvrez l'histoire et l'expertise de Nawal EL GHORFI
                 </h2>
                 
-                <p className="text-lg md:text-xl mb-12 leading-relaxed text-neutral-600">
+                <p className="text-lg md:text-xl mb-12 leading-relaxed text-gray-500">
                   Plus de 25 années d'expertise dédiées à votre bien-être et votre rétablissement, 
                   avec une approche moderne et personnalisée. Centre opérationnel depuis 2001.
                 </p>
