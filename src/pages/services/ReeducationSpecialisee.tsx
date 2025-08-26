@@ -10,6 +10,7 @@ import facilityImage from '@/assets/reeducation-facility.jpg';
 import drainageImage from '@/assets/reeducation-drainage.jpg';
 import homeCareImage from '@/assets/reeducation-home-care.jpg';
 const ReeducationSpecialisee = () => {
+  console.log('ReeducationSpecialisee component rendering...');
   const navigate = useNavigate();
   const specializations = [{
     icon: Heart,

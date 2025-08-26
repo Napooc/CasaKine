@@ -21,7 +21,9 @@ import Traumatologie from "./pages/services/Traumatologie";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  console.log('App rendering, ReeducationSpecialisee:', ReeducationSpecialisee);
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -47,7 +49,8 @@ const App = () => (
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-  </QueryClientProvider>
-);
+    </QueryClientProvider>
+  );
+};
 
 export default App;
