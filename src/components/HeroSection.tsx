@@ -33,14 +33,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     icon: Users,
     value: '2000+',
     label: 'Patients satisfaits'
-  }, {
-    icon: Award,
-    value: '2001',
-    label: 'Centre opérationnel'
-  }, {
-    icon: Calendar,
-    value: '24/7',
-    label: 'Disponibilité'
   }];
   useEffect(() => {
     if (showStats) {
