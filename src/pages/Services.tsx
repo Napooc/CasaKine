@@ -23,8 +23,8 @@ const Services = () => {
     description: 'Techniques modernes d\'amincissement pour sculpter votre silhouette',
     features: ['Cryothérapie/Cryolipolyse', 'Palper Rouler', 'Radiofréquence', 'Lipocavitation 40K', 'Lipolyse laser', 'Pressothérapie'],
     duration: '60-90 minutes',
-    color: 'text-pink-500',
-    bgGradient: 'from-pink-400/15 to-pink-300/10',
+    color: 'text-pink-600',
+    bgGradient: 'from-pink-500/20 to-pink-400/15',
     route: '/services/amincissement'
   }, {
     icon: Activity,
@@ -41,8 +41,8 @@ const Services = () => {
     description: 'Accompagnement spécialisé pour la grossesse et l\'après-accouchement',
     features: ['Préparation à l\'accouchement', 'Techniques de respiration', 'Rééducation périnéale post-partum', 'Biofeedback et électrostimulation', 'Communication in utero', 'Renforcement abdominal'],
     duration: '45-60 minutes',
-    color: 'text-red-500',
-    bgGradient: 'from-red-400/15 to-red-300/10',
+    color: 'text-red-600',
+    bgGradient: 'from-red-500/20 to-red-400/15',
     route: '/services/femme-enceinte'
   }, {
     icon: Sparkles,
