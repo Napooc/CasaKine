@@ -118,11 +118,7 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         {/* Background with clinic interior */}
         <div className="absolute inset-0">
-          <img 
-            src="/lovable-uploads/54b9c91c-1c3e-4a0e-a202-1a3b5ac89a6b.png" 
-            alt="Centre de kinésithérapie moderne - Intérieur professionnel" 
-            className="w-full h-full object-cover scale-105 transition-transform duration-700" 
-          />
+          <img src="/lovable-uploads/54b9c91c-1c3e-4a0e-a202-1a3b5ac89a6b.png" alt="Centre de kinésithérapie moderne - Intérieur professionnel" className="w-full h-full object-cover scale-105 transition-transform duration-700" />
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-primary/60 to-secondary/70"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/50"></div>
         </div>
@@ -164,7 +160,7 @@ const Index = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={600}>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-gray-500">
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-gray-200">
                Bienvenue au Centre Nawal EL GHORFI
               <br />Kinésithérapie & Amincissement à Casablanca
               <br />Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
