@@ -79,7 +79,7 @@ const Contact = () => {
 
       {/* Hero Section */}
       <div className="relative z-10">
-        <HeroSection title="Centre    de     Kinésithérapie   et  d'Amincissement" subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État" description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement." ctaText="Appeler Maintenant" ctaAction={() => window.open('tel:+212522398874')} showStats={false} backgroundType="gradient" />
+        <HeroSection title="Centre de Kinésithérapie et d'Amincissement" subtitle="Nawal EL GHORFI - Kinésithérapeute Diplômée d'État" description="Plus de 25 ans d'expertise au service des patients. Centre opérationnel depuis 2001. Prenez rendez-vous facilement." ctaText="Appeler Maintenant" ctaAction={() => window.open('tel:+212522398874')} showStats={false} backgroundType="gradient" />
       </div>
 
       {/* Contact Cards Section */}
