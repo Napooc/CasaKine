@@ -23,8 +23,8 @@ const Services = () => {
     description: 'Techniques modernes d\'amincissement pour sculpter votre silhouette',
     features: ['Cryothérapie/Cryolipolyse', 'Palper Rouler', 'Radiofréquence', 'Lipocavitation 40K', 'Lipolyse laser', 'Pressothérapie'],
     duration: '60-90 minutes',
-    color: 'text-secondary',
-    bgGradient: 'from-secondary/10 to-secondary/5',
+    color: 'text-pink-500',
+    bgGradient: 'from-pink-400/15 to-pink-300/10',
     route: '/services/amincissement'
   }, {
     icon: Activity,
@@ -32,8 +32,8 @@ const Services = () => {
     description: 'Cours encadrés par des kinésithérapeutes pour améliorer mobilité et prévenir les douleurs',
     features: ['Gymnastique vertébrale', 'Gymnastique senior', 'Renforcement musculaire', 'Amélioration de l\'équilibre', 'Prévention des chutes', 'Ambiance conviviale'],
     duration: '45-60 minutes',
-    color: 'text-accent',
-    bgGradient: 'from-accent/10 to-accent/5',
+    color: 'text-green-500',
+    bgGradient: 'from-green-400/15 to-green-300/10',
     route: '/services/gymnastique-medicale'
   }, {
     icon: Baby,
@@ -41,8 +41,8 @@ const Services = () => {
     description: 'Accompagnement spécialisé pour la grossesse et l\'après-accouchement',
     features: ['Préparation à l\'accouchement', 'Techniques de respiration', 'Rééducation périnéale post-partum', 'Biofeedback et électrostimulation', 'Communication in utero', 'Renforcement abdominal'],
     duration: '45-60 minutes',
-    color: 'text-pink-600',
-    bgGradient: 'from-pink-500/10 to-pink-500/5',
+    color: 'text-red-500',
+    bgGradient: 'from-red-400/15 to-red-300/10',
     route: '/services/femme-enceinte'
   }, {
     icon: Sparkles,
