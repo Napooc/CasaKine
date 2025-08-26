@@ -187,7 +187,7 @@ const Index = () => {
             <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
               {[{
               icon: Star,
-              value: '25+',
+              value: '+25',
               label: 'Années d\'expérience'
             }, {
               icon: Users,
