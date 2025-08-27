@@ -416,47 +416,7 @@ const BlogPost = () => {
       </section>
 
       {/* Related Articles */}
-      <section className="py-16 bg-neutral-lightest/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollAnimation animation="fade-up">
-            <h2 className="text-3xl font-playfair font-bold text-primary text-center mb-12">
-              Articles <span className="text-gradient-accent">Similaires</span>
-            </h2>
-          </ScrollAnimation>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {blogPosts.filter(p => p.id !== post.id && p.category === post.category).slice(0, 3).map((relatedPost, index) => <ScrollAnimation key={relatedPost.id} animation="fade-up" delay={index * 150}>
-                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full">
-                    <div className="relative overflow-hidden">
-                      <img src={relatedPost.image} alt={relatedPost.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" />
-                      <div className="absolute top-4 left-4">
-                        <Badge className="bg-primary/10 text-primary border-0">
-                          {relatedPost.category}
-                        </Badge>
-                      </div>
-                    </div>
-                    
-                    <CardContent className="p-6 flex flex-col h-full">
-                      <h3 className="text-lg font-playfair font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300 line-clamp-2">
-                        {relatedPost.title}
-                      </h3>
-                      
-                      <p className="text-neutral-light text-sm leading-relaxed mb-4 flex-grow">
-                        {relatedPost.excerpt}
-                      </p>
-                      
-                      <Link to={`/blog/${relatedPost.id}`}>
-                        <Button variant="ghost" size="sm" className="text-accent hover:text-accent-dark hover:bg-accent/10 p-0">
-                          Lire l'article
-                          <ArrowRight className="w-3 h-3 ml-1" />
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                </ScrollAnimation>)}
-          </div>
-        </div>
-      </section>
+      
     </Layout>;
 };
 export default BlogPost;
