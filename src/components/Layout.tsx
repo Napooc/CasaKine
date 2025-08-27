@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { CookieManager } from '@/components/CookieConsent/CookieManager';
 import Navbar from './Navbar';
 import { Breadcrumbs } from './Breadcrumbs';
 import WhatsAppContact from './WhatsAppContact';
@@ -22,7 +21,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
       <WhatsAppContact />
-      <CookieManager language="fr" />
     </div>
   );
 };

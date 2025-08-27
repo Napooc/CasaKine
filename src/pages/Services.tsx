@@ -4,7 +4,7 @@ import heroServicesImage from '@/assets/hero-services.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Stethoscope, Target, Users, Award, Baby, Sparkles, ChevronRight, Calendar } from 'lucide-react';
+import { Activity, Heart, Zap, Shield, Clock, CheckCircle, Star, ArrowRight, Stethoscope, Target, Users, Award, Baby, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 const Services = () => {
   const navigate = useNavigate();
@@ -143,7 +143,7 @@ const Services = () => {
 
           <ScrollAnimation animation="scale-up" delay={800}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button onClick={() => navigate('/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button onClick={() => window.location.href = '/contact'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                 <Activity className="w-5 h-5 mr-3" />
                 Réserver une Consultation
               </Button>
@@ -154,7 +154,7 @@ const Services = () => {
 
           {/* Quick Service Stats */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {[{
               icon: Heart,
               label: 'Kinésithérapie',
@@ -319,7 +319,7 @@ const Services = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => navigate('/contact')}>
+              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
                 <Star className="w-5 h-5 mr-3" />
                 Consultation Gratuite
               </Button>

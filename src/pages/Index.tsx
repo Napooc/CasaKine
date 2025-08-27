@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import { SEO } from '@/components/SEO';
 import { GoogleVerification } from '@/components/GoogleVerification';
@@ -14,13 +13,11 @@ import specialtyMedicalGymnasticsImage from '@/assets/specialty-medical-gymnasti
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar } from 'lucide-react';
-import { Baby } from 'lucide-react';
 const Index = () => {
-  const navigate = useNavigate();
   const [selectedSpecialty, setSelectedSpecialty] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleBookAppointment = () => {
-    navigate('/contact');
+    window.location.href = '/contact';
   };
   const handleSpecialtyClick = specialty => {
     setSelectedSpecialty(specialty);
@@ -46,31 +43,17 @@ const Index = () => {
     }
   }, {
     icon: Heart,
-    title: 'Massage et Bien-être',
-    description: 'Relaxation profonde, massages thérapeutiques personnalisés et détente',
+    title: 'Thérapies Manuelles',
+    description: 'Massage thérapeutique, ostéopathie et techniques myofasciales',
     color: 'text-medical-red',
     detailedInfo: {
-      overview: 'Nos massages thérapeutiques combinent expertise anatomique et techniques avancées pour vous offrir une expérience de relaxation profonde et durable. Nos masseurs-kinésithérapeutes détectent et relâchent vos tensions en profondeur pour un apaisement durable.',
-      benefits: ['Réduction du stress et de l\'anxiété', 'Soulagement des contractures musculaires', 'Amélioration de la circulation sanguine', 'Détente musculaire profonde', 'Élimination des toxines et revitalisation'],
-      techniques: ['Massage relaxant anti-stress', 'Massage décontracturant ciblé', 'Massage tonifiant énergisant', 'Techniques de respiration', 'Environnement apaisant personnalisé'],
+      overview: 'Nos thérapies manuelles combinent expertise traditionnelle et innovations modernes pour traiter les dysfonctions musculo-squelettiques. Chaque séance est personnalisée selon vos besoins spécifiques pour un soulagement durable et une récupération optimale.',
+      benefits: ['Soulagement immédiat des tensions musculaires', 'Amélioration de la circulation sanguine', 'Réduction du stress et de l\'anxiété', 'Restauration de la mobilité articulaire', 'Détoxification et régénération tissulaire'],
+      techniques: ['Massage thérapeutique suédois', 'Ostéopathie structurelle', 'Release myofascial', 'Trigger points therapy', 'Drainage lymphatique manuel'],
       duration: '60-90 min',
       sessions: '6-12 séances',
       image: specialtyManualTherapyImage,
-      conditions: ['Stress et tensions quotidiennes', 'Contractures musculaires', 'Fatigue physique et mentale', 'Troubles du sommeil', 'Besoin de relaxation profonde']
-    }
-  }, {
-    icon: Baby,
-    title: 'Femme Enceinte',
-    description: 'Préparation à l\'accouchement et rééducation périnéale post-partum',
-    color: 'text-red-500',
-    detailedInfo: {
-      overview: 'Un accompagnement complet pour vivre sereinement votre grossesse et retrouver votre bien-être après l\'accouchement. Nos séances personnalisées vous préparent physiquement et mentalement à l\'accouchement, puis vous accompagnent dans votre récupération post-partum.',
-      benefits: ['Préparation sereine à l\'accouchement', 'Techniques de respiration adaptées', 'Rééducation périnéale efficace', 'Communication prénatale avec bébé', 'Récupération post-partum optimale'],
-      techniques: ['Techniques de respiration et relaxation', 'Positions d\'accouchement optimales', 'Renforcement périnéal progressif', 'Biofeedback avec retour visuel', 'Électrostimulation si nécessaire'],
-      duration: '45-60 min',
-      sessions: '8-15 séances',
-      image: specialtyManualTherapyImage,
-      conditions: ['Préparation à l\'accouchement', 'Rééducation périnéale post-partum', 'Prévention des fuites urinaires', 'Renforcement musculaire post-grossesse', 'Accompagnement global maternité']
+      conditions: ['Douleurs cervicales et lombaires', 'Tensions musculaires chroniques', 'Migraines et céphalées', 'Troubles de la posture', 'Stress et fatigue chronique']
     }
   }, {
     icon: Zap,
@@ -193,7 +176,7 @@ const Index = () => {
                 Réservez Votre Consultation
               </Button>
               
-              <Button variant="outline" onClick={() => navigate('/services')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
+              <Button variant="outline" onClick={() => window.location.href = '/services'} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 En savoir plus
               </Button>
             </div>
@@ -252,7 +235,7 @@ const Index = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => {
             const Icon = service.icon;
             return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>

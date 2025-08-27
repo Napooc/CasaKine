@@ -1,12 +1,10 @@
 import Layout from '@/components/Layout';
-import { useNavigate } from 'react-router-dom';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import heroAboutImage from '@/assets/hero-about.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, GraduationCap, Heart, Users, Clock, Star, Stethoscope, Shield } from 'lucide-react';
 const About = () => {
-  const navigate = useNavigate();
   const qualifications = [{
     icon: GraduationCap,
     title: 'Kinésithérapeute D.E.',
@@ -104,7 +102,7 @@ const About = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 mb-12">
-                  <Button onClick={() => navigate('/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                  <Button onClick={() => window.location.href = '/contact'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                     <Users className="w-5 h-5 mr-3" />
                     Prendre Rendez-vous
                   </Button>

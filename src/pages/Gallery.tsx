@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout';
-import { useNavigate } from 'react-router-dom';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import heroGalleryImage from '@/assets/hero-gallery.jpg';
 import { Button } from '@/components/ui/button';
@@ -8,90 +7,73 @@ import { Badge } from '@/components/ui/badge';
 import { useState } from 'react';
 import { Play, Camera, Award, Users, Stethoscope, Heart, Activity, Shield, Eye, ZoomIn } from 'lucide-react';
 const Gallery = () => {
-  const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState('tous');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const filters = [{
     id: 'tous',
     label: 'Tous',
-    count: 8
+    count: 24
   }, {
     id: 'cabinet',
     label: 'Notre Cabinet',
-    count: 3
+    count: 8
   }, {
     id: 'equipements',
     label: 'Équipements',
-    count: 3
+    count: 6
   }, {
     id: 'soins',
     label: 'Soins',
-    count: 2
+    count: 10
   }];
   const galleryItems = [{
     id: 1,
     type: 'image',
     category: 'cabinet',
-    title: 'Espace d\'Accueil Principal',
-    description: 'Hall d\'accueil moderne avec comptoir et espace d\'attente confortable',
-    image: '/lovable-uploads/3ae0f8ed-520f-468e-be41-1c8dcdd1d219.png',
+    title: 'Salle d\'accueil moderne',
+    description: 'Espace d\'accueil confortable et apaisant',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
     featured: true
   }, {
     id: 2,
     type: 'image',
-    category: 'cabinet',
-    title: 'Salon d\'Attente',
-    description: 'Espace de détente avec canapés confortables et décoration chaleureuse',
-    image: '/lovable-uploads/195a7b36-d0f2-43a9-b774-7a8e779437c1.png',
+    category: 'equipements',
+    title: 'Équipements de pointe',
+    description: 'Technologies modernes pour des soins optimaux',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
     featured: false
   }, {
     id: 3,
-    type: 'image',
-    category: 'cabinet',
-    title: 'Jardin Thérapeutique',
-    description: 'Espace extérieur zen pour la relaxation et les exercices en plein air',
-    image: '/lovable-uploads/b367d013-4996-45f6-98e2-13fa6eace33e.png',
+    type: 'video',
+    category: 'soins',
+    title: 'Séance de rééducation',
+    description: 'Démonstration d\'exercices thérapeutiques',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
     featured: true
   }, {
     id: 4,
     type: 'image',
-    category: 'soins',
-    title: 'Salle de Soins 1',
-    description: 'Cabine de soins équipée avec matériel moderne et ambiance apaisante',
-    image: '/lovable-uploads/f559226e-a464-493c-8706-07d5601d8079.png',
+    category: 'cabinet',
+    title: 'Salle de consultation',
+    description: 'Environnement professionnel et chaleureux',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
     featured: false
   }, {
     id: 5,
     type: 'image',
-    category: 'soins',
-    title: 'Salle de Soins 2',
-    description: 'Espace de traitement avec équipements spécialisés et éclairage optimal',
-    image: '/lovable-uploads/563b754e-ff99-42ea-814d-2f3fb736e8fe.png',
-    featured: true
+    category: 'equipements',
+    title: 'Matériel de rééducation',
+    description: 'Équipements spécialisés pour tous types de soins',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
+    featured: false
   }, {
     id: 6,
     type: 'image',
-    category: 'equipements',
-    title: 'Thérapie par Suspension',
-    description: 'Salle équipée pour la rééducation fonctionnelle et la suspension thérapeutique',
-    image: '/lovable-uploads/bb6cf940-913e-421b-96af-981316b1c5be.png',
-    featured: false
-  }, {
-    id: 7,
-    type: 'image',
-    category: 'equipements',
-    title: 'Salle de Gymnastique Médicale',
-    description: 'Espace dédié aux exercices avec équipements de rééducation moderne',
-    image: '/lovable-uploads/3d24691e-f263-4f9d-bd31-9ae828ec1a44.png',
+    category: 'soins',
+    title: 'Thérapie manuelle',
+    description: 'Techniques de massage thérapeutique',
+    image: '/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png',
     featured: true
-  }, {
-    id: 8,
-    type: 'image',
-    category: 'equipements',
-    title: 'Centre de Rééducation',
-    description: 'Zone de rééducation avec barres parallèles et matériel thérapeutique',
-    image: '/lovable-uploads/c88c2518-08d1-474e-bfd8-2e9c98df5bfd.png',
-    featured: false
   }];
   const filteredItems = activeFilter === 'tous' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
   const achievements = [{
@@ -165,7 +147,7 @@ const Gallery = () => {
 
           <ScrollAnimation animation="scale-up" delay={800}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button onClick={() => navigate('/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+              <Button onClick={() => window.location.href = '/contact#map'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                 <Eye className="w-5 h-5 mr-3" />
                 Visiter le Centre
               </Button>
@@ -176,23 +158,14 @@ const Gallery = () => {
 
           {/* Gallery Preview Thumbnails */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-4 md:grid-cols-8 gap-3 max-w-5xl mx-auto">
-              {galleryItems.slice(0, 8).map((item, i) => <div key={i} className="relative group cursor-pointer" onClick={() => setSelectedImage(item.image)}>
-                  <div className="aspect-square rounded-2xl overflow-hidden glass-card border border-white/20 shadow-2xl">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent group-hover:from-primary/80 transition-all duration-300"></div>
-                    <div className="absolute inset-0 bg-white/10 group-hover:bg-white/20 transition-colors duration-300"></div>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto">
+              {[1, 2, 3, 4, 5, 6].map(i => <div key={i} className="relative group">
+                  <div className="aspect-square rounded-xl overflow-hidden glass-card">
+                    <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt={`Gallery preview ${i}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-300"></div>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                      <ZoomIn className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-                  {/* Modern floating label */}
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <div className="bg-white/90 backdrop-blur-sm text-primary text-xs font-medium px-3 py-1 rounded-full shadow-lg whitespace-nowrap">
-                      {item.title}
-                    </div>
+                    <ZoomIn className="w-6 h-6 text-white" />
                   </div>
                 </div>)}
             </div>
@@ -260,89 +233,58 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-20 bg-background relative overflow-hidden">
-        {/* Floating Background Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-primary/5 rounded-full blur-xl animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-accent/5 rounded-full blur-2xl animate-float-delay"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          {/* Uniform Grid Layout - All cards same size */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {filteredItems.map((item, index) => (
-              <ScrollAnimation key={item.id} animation="fade-up" delay={index * 100}>
-                <Card className="group relative border-0 overflow-hidden bg-white/95 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 h-[420px] flex flex-col">
-                  {/* Uniform Image Container */}
-                  <div className="relative h-56 overflow-hidden flex-shrink-0">
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
-                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
-                    />
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredItems.map((item, index) => <ScrollAnimation key={item.id} animation="fade-up" delay={index * 100}>
+                <Card className="group glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" />
                     
-                    {/* Featured Badge */}
-                    {item.featured && (
-                      <div className="absolute top-3 left-3">
-                        <div className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-3 py-1.5 rounded-full shadow-xl text-xs font-semibold flex items-center">
-                          <Eye className="w-3 h-3 mr-1" />
-                          Coup de cœur
-                        </div>
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <Button onClick={() => setSelectedImage(item.image)} className="w-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0">
+                          <ZoomIn className="w-4 h-4 mr-2" />
+                          Voir en grand
+                        </Button>
                       </div>
-                    )}
+                    </div>
 
-                    {/* Category Badge */}
-                    <div className="absolute top-3 right-3">
-                      <Badge className={`text-white border-0 shadow-lg px-2.5 py-1 text-xs font-medium ${
-                        item.category === 'cabinet' ? 'bg-gradient-to-r from-blue-500 to-cyan-500' :
-                        item.category === 'equipements' ? 'bg-gradient-to-r from-green-500 to-emerald-500' :
-                        'bg-gradient-to-r from-purple-500 to-pink-500'
-                      }`}>
+                    {/* Media Type Indicator */}
+                    <div className="absolute top-4 right-4">
+                      {item.type === 'video' ? <div className="w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center shadow-strong">
+                          <Play className="w-6 h-6 text-white" />
+                        </div> : <div className="w-12 h-12 bg-gradient-primary/80 rounded-full flex items-center justify-center shadow-strong">
+                          <Camera className="w-6 h-6 text-white" />
+                        </div>}
+                    </div>
+
+                    {/* Featured Badge */}
+                    {item.featured && <div className="absolute top-4 left-4">
+                        <Badge className="bg-gradient-secondary text-white border-0 shadow-strong">
+                          <Eye className="w-3 h-3 mr-1" />
+                          À la une
+                        </Badge>
+                      </div>}
+                  </div>
+
+                  <CardContent className="p-6">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <Badge variant="outline" className="text-xs font-montserrat bg-primary/10 text-primary border-primary/20">
                         {filters.find(f => f.id === item.category)?.label}
                       </Badge>
                     </div>
-
-                    {/* Camera Icon */}
-                    <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <Camera className="w-5 h-5 text-white" />
-                      </div>
-                    </div>
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <Button 
-                        onClick={() => setSelectedImage(item.image)} 
-                        className="bg-white/90 text-primary hover:bg-white hover:scale-110 transition-all duration-300 rounded-full px-4 py-2 text-sm shadow-xl"
-                      >
-                        <ZoomIn className="w-4 h-4 mr-2" />
-                        Agrandir
-                      </Button>
-                    </div>
-                  </div>
-
-                  {/* Card Content - Consistent height */}
-                  <CardContent className="p-5 flex-1 flex flex-col">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-montserrat font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-300 line-clamp-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-neutral-light text-sm leading-relaxed line-clamp-3">
-                        {item.description}
-                      </p>
-                    </div>
                     
-                    {/* Action Hint - Always at bottom */}
-                    <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="text-xs text-primary/60 flex items-center">
-                        <div className="w-1 h-1 bg-primary/40 rounded-full mr-2"></div>
-                        Cliquez pour agrandir
-                      </div>
-                    </div>
+                    <h3 className="text-xl font-playfair font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-neutral-light text-sm leading-relaxed">
+                      {item.description}
+                    </p>
                   </CardContent>
                 </Card>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
           </div>
         </div>
       </section>

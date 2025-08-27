@@ -1,5 +1,4 @@
 import Layout from '@/components/Layout';
-import { useNavigate } from 'react-router-dom';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,7 +9,6 @@ import equipmentImage from '@/assets/traumatologie-equipment.jpg';
 import therapyImage from '@/assets/traumatologie-therapy.jpg';
 import recoveryImage from '@/assets/traumatologie-recovery.jpg';
 const Traumatologie = () => {
-  const navigate = useNavigate();
   const treatments = [{
     title: "Traumatologie",
     items: ["Fractures et entorses", "Raideurs post-traumatiques", "Rééducation post-chirurgicale", "Prothèses PTH et PTG"]
@@ -73,7 +71,7 @@ const Traumatologie = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => navigate('/contact')}>
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver maintenant
               </Button>
@@ -319,7 +317,7 @@ const Traumatologie = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => navigate('/contact')}>
+              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => (window.location.href = '/contact')}>
                 <Calendar className="w-5 h-5 mr-3" />
                 Réserver une consultation
               </Button>

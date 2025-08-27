@@ -11,20 +11,15 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
-import CookiePolicy from "./pages/CookiePolicy";
 import KinesitherapieRespiratoire from "./pages/services/KinesitherapieRespiratoire";
 import ServicesAmincissement from "./pages/services/ServicesAmincissement";
 import GymnastiqueMedicale from "./pages/services/GymnastiqueMedicale";
 import FemmeEnceinte from "./pages/services/FemmeEnceinte";
 import MassageBienEtre from "./pages/services/MassageBienEtre";
-import ReeducationSpecialisee from "./pages/services/ReeducationSpecialisee";
-import Traumatologie from "./pages/services/Traumatologie";
 
 const queryClient = new QueryClient();
 
-const App = () => {
-  console.log('App rendering, ReeducationSpecialisee:', ReeducationSpecialisee);
-  return (
+const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -39,11 +34,8 @@ const App = () => {
           <Route path="/services/gymnastique-medicale" element={<GymnastiqueMedicale />} />
           <Route path="/services/femme-enceinte" element={<FemmeEnceinte />} />
           <Route path="/services/massage-bien-etre" element={<MassageBienEtre />} />
-          <Route path="/services/reeducation-specialisee" element={<ReeducationSpecialisee />} />
-          <Route path="/services/traumatologie" element={<Traumatologie />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
@@ -51,8 +43,7 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
-    </QueryClientProvider>
-  );
-};
+  </QueryClientProvider>
+);
 
 export default App;
