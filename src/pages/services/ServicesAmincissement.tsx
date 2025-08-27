@@ -22,19 +22,20 @@ const pressotherapyImage = '/lovable-uploads/f25412e7-57c6-410e-a90d-a3c08f06442
 const saunaInfrarougeImage = '/lovable-uploads/752dd68e-27de-46f2-90ed-61aa6eaee927.png';
 const ServicesAmincissement = () => {
   const navigate = useNavigate();
-
-  const structuredData = [
-    getServiceSchema({
-      name: "Services d'Amincissement et Remodelage Corporel",
-      description: "Techniques modernes d'amincissement : radiofréquence, cavitation 40k, laser minceur et cryothérapie. Résultats visibles et durables à Casablanca.",
-      url: "https://casakine.com/services/amincissement"
-    }),
-    getBreadcrumbSchema([
-      { name: "Accueil", url: "https://casakine.com" },
-      { name: "Services", url: "https://casakine.com/services" },
-      { name: "Amincissement", url: "https://casakine.com/services/amincissement" }
-    ])
-  ];
+  const structuredData = [getServiceSchema({
+    name: "Services d'Amincissement et Remodelage Corporel",
+    description: "Techniques modernes d'amincissement : radiofréquence, cavitation 40k, laser minceur et cryothérapie. Résultats visibles et durables à Casablanca.",
+    url: "https://casakine.com/services/amincissement"
+  }), getBreadcrumbSchema([{
+    name: "Accueil",
+    url: "https://casakine.com"
+  }, {
+    name: "Services",
+    url: "https://casakine.com/services"
+  }, {
+    name: "Amincissement",
+    url: "https://casakine.com/services/amincissement"
+  }])];
   const techniques = [{
     icon: Radio,
     title: "Radiofréquence",
@@ -108,47 +109,34 @@ const ServicesAmincissement = () => {
     benefits: ["Augmente la circulation sanguine", "Améliore le système cardiovasculaire", "Renforce le système immunitaire", "Réduit le stress et la fatigue", "Améliore l'oxygénation"],
     details: "Les rayons infrarouges accélèrent les fonctions cellulaires et contribuent à la purification de la peau. Le sauna infrarouge a des effets d'amincissement : pour une séance de 30 min, la perte totale est estimée entre 800 et 1000 Kcal."
   }];
-  const targetAreas = [
-    {
-      zone: "Cuisses (intérieur/extérieur)",
-      icon: "legs",
-      description: "Raffermissement et remodelage des cuisses"
-    },
-    {
-      zone: "Fesses et ventre", 
-      icon: "body",
-      description: "Tonification ciblée du tronc"
-    },
-    {
-      zone: "Genoux, mollets, chevilles",
-      icon: "leg",
-      description: "Affinement des membres inférieurs"
-    },
-    {
-      zone: "Dos et hanches",
-      icon: "back", 
-      description: "Remodelage de la silhouette dorsale"
-    },
-    {
-      zone: "Bras et décolleté",
-      icon: "arms",
-      description: "Raffermissement du haut du corps"
-    },
-    {
-      zone: "Contour des yeux et visage",
-      icon: "face",
-      description: "Traitement anti-âge du visage"
-    }
-  ];
+  const targetAreas = [{
+    zone: "Cuisses (intérieur/extérieur)",
+    icon: "legs",
+    description: "Raffermissement et remodelage des cuisses"
+  }, {
+    zone: "Fesses et ventre",
+    icon: "body",
+    description: "Tonification ciblée du tronc"
+  }, {
+    zone: "Genoux, mollets, chevilles",
+    icon: "leg",
+    description: "Affinement des membres inférieurs"
+  }, {
+    zone: "Dos et hanches",
+    icon: "back",
+    description: "Remodelage de la silhouette dorsale"
+  }, {
+    zone: "Bras et décolleté",
+    icon: "arms",
+    description: "Raffermissement du haut du corps"
+  }, {
+    zone: "Contour des yeux et visage",
+    icon: "face",
+    description: "Traitement anti-âge du visage"
+  }];
   return <div className="page-amincissement">
     <Layout>
-      <SEO 
-        title="Amincissement et Remodelage Corporel - Casakine Casablanca"
-        description="🔥 Techniques modernes d'amincissement à Casablanca : Radiofréquence, Cavitation 40k, Laser minceur, Cryothérapie. ✨ Résultats visibles dès les premières séances. ☎️ +212 661 67 70 96"
-        keywords="amincissement casablanca, radiofréquence casablanca, cavitation 40k, laser minceur maroc, cryothérapie amincissement, remodelage corporel, cellulite traitement, dr nawal el ghorfi"
-        canonical="https://casakine.com/services/amincissement"
-        structuredData={structuredData}
-      />
+      <SEO title="Amincissement et Remodelage Corporel - Casakine Casablanca" description="🔥 Techniques modernes d'amincissement à Casablanca : Radiofréquence, Cavitation 40k, Laser minceur, Cryothérapie. ✨ Résultats visibles dès les premières séances. ☎️ +212 661 67 70 96" keywords="amincissement casablanca, radiofréquence casablanca, cavitation 40k, laser minceur maroc, cryothérapie amincissement, remodelage corporel, cellulite traitement, dr nawal el ghorfi" canonical="https://casakine.com/services/amincissement" structuredData={structuredData} />
       {/* Fixed Return Button */}
       <div className="fixed top-6 left-6 z-50">
         
@@ -157,11 +145,7 @@ const ServicesAmincissement = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/lovable-uploads/e9466446-be50-4fdf-9b3f-4bfeb28a7576.png" 
-            alt="Équipements d'amincissement modernes" 
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src="/lovable-uploads/e9466446-be50-4fdf-9b3f-4bfeb28a7576.png" alt="Équipements d'amincissement modernes" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/85 via-blue-500/75 to-primary/80"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-purple-400/20 to-black/30"></div>
           <div className="absolute inset-0 bg-dots-pattern opacity-15"></div>
@@ -297,14 +281,12 @@ const ServicesAmincissement = () => {
 
           <div className="space-y-24">
             {techniques.map((technique, index) => {
-            const Icon = technique.icon;
-            const isEven = index % 2 === 0;
-            return <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
+              const Icon = technique.icon;
+              const isEven = index % 2 === 0;
+              return <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
                   <ScrollAnimation animation={isEven ? "slide-left" : "slide-right"}>
                     <div className={!isEven ? 'lg:col-start-2' : ''}>
-                      <Badge className="bg-secondary/10 text-secondary border-secondary/20 px-4 py-2 mb-6">
-                        {technique.duration}
-                      </Badge>
+                      
                       
                       <div className="flex items-center space-x-4 mb-6">
                         <div className="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center">
@@ -348,20 +330,14 @@ const ServicesAmincissement = () => {
                           
                           {/* Image with overlay effects */}
                           <div className="relative overflow-hidden rounded-2xl">
-                            <img 
-                              src={technique.image} 
-                              alt={`Technique ${technique.title}`} 
-                              className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-110" 
-                            />
+                            <img src={technique.image} alt={`Technique ${technique.title}`} className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-110" />
                             
                             {/* Gradient overlays */}
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                             
                             {/* Floating badge */}
-                            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-primary shadow-soft">
-                              {technique.duration}
-                            </div>
+                            
                             
                             {/* Technology icon overlay */}
                             <div className="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-500">
@@ -376,7 +352,7 @@ const ServicesAmincissement = () => {
                     </div>
                   </ScrollAnimation>
                 </div>;
-          })}
+            })}
           </div>
         </div>
       </section>
@@ -410,21 +386,25 @@ const ServicesAmincissement = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {targetAreas.map((area, index) => {
               const getIcon = (iconType: string) => {
-                switch(iconType) {
-                  case 'legs': return Activity;
-                  case 'body': return Shield;
-                  case 'leg': return MapPin;
-                  case 'back': return Target;
-                  case 'arms': return Heart;
-                  case 'face': return Eye;
-                  default: return Sparkles;
+                switch (iconType) {
+                  case 'legs':
+                    return Activity;
+                  case 'body':
+                    return Shield;
+                  case 'leg':
+                    return MapPin;
+                  case 'back':
+                    return Target;
+                  case 'arms':
+                    return Heart;
+                  case 'face':
+                    return Eye;
+                  default:
+                    return Sparkles;
                 }
               };
-              
               const IconComponent = getIcon(area.icon);
-              
-              return (
-                <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+              return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                   <Card className="group relative overflow-hidden bg-gradient-to-br from-white via-neutral-lightest to-secondary/5 border-0 shadow-soft hover:shadow-strong transition-all duration-700 hover:scale-105 h-full">
                     {/* Gradient overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -452,8 +432,7 @@ const ServicesAmincissement = () => {
                       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-t-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>
-              );
+                </ScrollAnimation>;
             })}
           </div>
 
@@ -554,10 +533,7 @@ const ServicesAmincissement = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
-                <Calendar className="w-5 h-5 mr-3" />
-                Bilan gratuit maintenant
-              </Button>
+              
               
               <Button variant="outline" onClick={() => window.open('tel:+212522398874')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 <Phone className="w-5 h-5 mr-3" />
