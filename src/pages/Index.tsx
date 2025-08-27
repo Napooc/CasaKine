@@ -99,15 +99,15 @@ const Index = () => {
     }
   }];
   const testimonials = [{
-    name: 'Sarah M.',
-    text: 'Un centre exceptionnel où professionnalisme rime avec bienveillance. Dr. Nawal est extraordinaire !',
+    name: 'Brahim S.',
+    text: 'Un centre d une grande magnificence et beauté. je le recommande',
     rating: 5,
     location: 'Casablanca'
   }, {
-    name: 'Ahmed K.',
-    text: 'Des résultats visibles dès les premières séances. L\'équipe est à l\'écoute et utilise des techniques innovantes.',
+    name: 'Jihane A.',
+    text: 'Tres compétente, professionnelle cabinet tres agreable rdv respecté, je recommande vivement',
     rating: 5,
-    location: 'Rabat'
+    location: 'Casablanca'
   }, {
     name: 'Fatima Z.',
     text: 'Après mon accident, Dr. Nawal m\'a aidée à retrouver ma mobilité. Je recommande vivement !',
