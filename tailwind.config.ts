@@ -80,6 +80,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				"kine-blue": {
+					DEFAULT: "hsl(var(--kine-blue))",
+					foreground: "hsl(var(--kine-blue-foreground))",
+				},
+				"amincissement-pink": {
+					DEFAULT: "hsl(var(--amincissement-pink))",
+					foreground: "hsl(var(--amincissement-pink-foreground))",
+				},
+				"gymnastics-light-green": {
+					DEFAULT: "hsl(var(--gymnastics-light-green))",
+					foreground: "hsl(var(--gymnastics-light-green-foreground))",
+				},
+				"pregnancy-red": {
+					DEFAULT: "hsl(var(--pregnancy-red))",
+					foreground: "hsl(var(--pregnancy-red-foreground))",
+				},
+				"massage-green": {
+					DEFAULT: "hsl(var(--massage-green))",
+					foreground: "hsl(var(--massage-green-foreground))",
 				}
 			},
 			backgroundImage: {

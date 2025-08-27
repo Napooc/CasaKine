@@ -14,8 +14,10 @@ const Services = () => {
     description: 'Amélioration de la respiration chez l\'adulte et l\'enfant',
     features: ['Kinésithérapie respiratoire nourrisson', 'Kinésithérapie respiratoire adulte', 'Désencombrement bronchique', 'Possibilité à domicile'],
     duration: '30-45 minutes',
-    color: 'text-medical-red',
-    bgGradient: 'from-red-500/10 to-red-500/5',
+    color: 'text-kine-blue',
+    bgGradient: 'from-kine-blue/20 to-kine-blue/5',
+    borderColor: 'border-kine-blue/30',
+    glowColor: 'shadow-kine-blue/20',
     route: '/services/kinesitherapie-respiratoire'
   }, {
     icon: Zap,
@@ -23,8 +25,10 @@ const Services = () => {
     description: 'Techniques modernes d\'amincissement pour sculpter votre silhouette',
     features: ['Cryothérapie/Cryolipolyse', 'Palper Rouler', 'Radiofréquence', 'Lipocavitation 40K', 'Lipolyse laser', 'Pressothérapie'],
     duration: '60-90 minutes',
-    color: 'text-secondary',
-    bgGradient: 'from-secondary/10 to-secondary/5',
+    color: 'text-amincissement-pink',
+    bgGradient: 'from-amincissement-pink/20 to-amincissement-pink/5',
+    borderColor: 'border-amincissement-pink/30',
+    glowColor: 'shadow-amincissement-pink/20',
     route: '/services/amincissement'
   }, {
     icon: Activity,
@@ -32,8 +36,10 @@ const Services = () => {
     description: 'Cours encadrés par des kinésithérapeutes pour améliorer mobilité et prévenir les douleurs',
     features: ['Gymnastique vertébrale', 'Gymnastique senior', 'Renforcement musculaire', 'Amélioration de l\'équilibre', 'Prévention des chutes', 'Ambiance conviviale'],
     duration: '45-60 minutes',
-    color: 'text-accent',
-    bgGradient: 'from-accent/10 to-accent/5',
+    color: 'text-gymnastics-light-green',
+    bgGradient: 'from-gymnastics-light-green/20 to-gymnastics-light-green/5',
+    borderColor: 'border-gymnastics-light-green/30',
+    glowColor: 'shadow-gymnastics-light-green/20',
     route: '/services/gymnastique-medicale'
   }, {
     icon: Baby,
@@ -41,8 +47,10 @@ const Services = () => {
     description: 'Accompagnement spécialisé pour la grossesse et l\'après-accouchement',
     features: ['Préparation à l\'accouchement', 'Techniques de respiration', 'Rééducation périnéale post-partum', 'Biofeedback et électrostimulation', 'Communication in utero', 'Renforcement abdominal'],
     duration: '45-60 minutes',
-    color: 'text-pink-600',
-    bgGradient: 'from-pink-500/10 to-pink-500/5',
+    color: 'text-pregnancy-red',
+    bgGradient: 'from-pregnancy-red/20 to-pregnancy-red/5',
+    borderColor: 'border-pregnancy-red/30',
+    glowColor: 'shadow-pregnancy-red/20',
     route: '/services/femme-enceinte'
   }, {
     icon: Sparkles,
@@ -50,8 +58,10 @@ const Services = () => {
     description: 'Massages thérapeutiques pour relaxation et récupération',
     features: ['Massage relaxant anti-stress', 'Massage décontracturant', 'Massage tonifiant énergisant', 'Détente musculaire profonde', 'Amélioration circulation', 'Élimination des toxines'],
     duration: '20-60 minutes',
-    color: 'text-green-600',
-    bgGradient: 'from-green-500/10 to-green-500/5',
+    color: 'text-massage-green',
+    bgGradient: 'from-massage-green/20 to-massage-green/5',
+    borderColor: 'border-massage-green/30',
+    glowColor: 'shadow-massage-green/20',
     route: '/services/massage-bien-etre'
   }];
   const specialties = [{
@@ -214,11 +224,11 @@ const Services = () => {
             {mainServices.map((service, index) => {
             const Icon = service.icon;
             return <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 200}>
-                  <Card className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full group bg-gradient-to-br ${service.bgGradient} cursor-pointer`} onClick={() => navigate(service.route)}>
+                  <Card className={`glass-card border-2 ${service.borderColor} shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full group bg-gradient-to-br ${service.bgGradient} cursor-pointer hover:shadow-2xl ${service.glowColor}`} onClick={() => navigate(service.route)}>
                     <CardContent className="p-10">
                       <div className="flex items-start space-x-6">
                         <div className="flex-shrink-0">
-                          <div className="w-20 h-20 rounded-full bg-white/50 flex items-center justify-center group-hover:animate-pulse-glow shadow-medium">
+                          <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${service.bgGradient} backdrop-blur-sm border-2 ${service.borderColor} flex items-center justify-center group-hover:animate-pulse-glow shadow-medium`}>
                             <Icon className={`w-10 h-10 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
                           </div>
                         </div>
