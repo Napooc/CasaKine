@@ -5,30 +5,36 @@ import { getServiceSchema, getBreadcrumbSchema } from '@/lib/structuredData';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Target, TrendingUp, Sparkles, Users, MapPin, Activity, Heart, Zap as Lightning, Eye, Shield } from 'lucide-react';
+import { Zap, Clock, CheckCircle, Snowflake, Radio, Waves, ArrowLeft, Phone, Calendar, Target, TrendingUp, Sparkles, Users, MapPin, Activity, Heart, Zap as Lightning, Eye, Shield, Vibrate, Scale, CircuitBoard, Thermometer, Hand } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import heroImage from '@/assets/amincissement-hero-modern.jpg';
-import radiofrequencyImage from '@/assets/radiofrequency-modern.jpg';
-import cavitationImage from '@/assets/cavitation-modern.jpg';
-import laserImage from '@/assets/laser-modern.jpg';
-import cryotherapyImage from '@/assets/cryotherapy-modern.jpg';
 import consultationImage from '@/assets/consultation-modern.jpg';
+import impedancemetreImage from '@/assets/impedancemetre-modern.jpg';
+
+// Real uploaded images
+const radiofrequencyImage = '/lovable-uploads/c95b1775-2a83-4be7-80ed-31b75042c71d.png';
+const cavitationImage = '/lovable-uploads/8b02a3ed-4f1a-4e0c-a2a1-67ff6d231bf5.png';
+const laserImage = '/lovable-uploads/a2e6bd2d-491c-4b20-a7f8-7c53cf4e2072.png';
+const cryotherapyImage = '/lovable-uploads/bf54c27e-1e0a-489a-8a28-9b086a8bba00.png';
+const starvacImage = '/lovable-uploads/af24c7b3-1936-4655-8658-942f6511b3a7.png';
+const plateauVibrantImage = '/lovable-uploads/3144c3e6-6759-4f72-bb71-1f6da879aff3.png';
+const pressotherapyImage = '/lovable-uploads/f25412e7-57c6-410e-a90d-a3c08f064423.png';
+const saunaInfrarougeImage = '/lovable-uploads/752dd68e-27de-46f2-90ed-61aa6eaee927.png';
 const ServicesAmincissement = () => {
   const navigate = useNavigate();
-  const structuredData = [getServiceSchema({
-    name: "Services d'Amincissement et Remodelage Corporel",
-    description: "Techniques modernes d'amincissement : radiofréquence, cavitation 40k, laser minceur et cryothérapie. Résultats visibles et durables à Casablanca.",
-    url: "https://casakine.com/services/amincissement"
-  }), getBreadcrumbSchema([{
-    name: "Accueil",
-    url: "https://casakine.com"
-  }, {
-    name: "Services",
-    url: "https://casakine.com/services"
-  }, {
-    name: "Amincissement",
-    url: "https://casakine.com/services/amincissement"
-  }])];
+
+  const structuredData = [
+    getServiceSchema({
+      name: "Services d'Amincissement et Remodelage Corporel",
+      description: "Techniques modernes d'amincissement : radiofréquence, cavitation 40k, laser minceur et cryothérapie. Résultats visibles et durables à Casablanca.",
+      url: "https://casakine.com/services/amincissement"
+    }),
+    getBreadcrumbSchema([
+      { name: "Accueil", url: "https://casakine.com" },
+      { name: "Services", url: "https://casakine.com/services" },
+      { name: "Amincissement", url: "https://casakine.com/services/amincissement" }
+    ])
+  ];
   const techniques = [{
     icon: Radio,
     title: "Radiofréquence",
@@ -61,35 +67,88 @@ const ServicesAmincissement = () => {
     description: "La cryothérapie est une méthode non invasive qui utilise le froid intense pour stimuler la combustion des graisses et le remodelage corporel.",
     benefits: ["Active le métabolisme et brûle les graisses localisées", "Améliore la fermeté de la peau", "Réduit la cellulite", "Favorise la récupération musculaire"],
     details: "Indolore et rapide, la cryothérapie est une solution naturelle pour affiner la silhouette sans intervention chirurgicale. Séances pratiquées sous supervision d'un professionnel qualifié."
+  }, {
+    icon: Hand,
+    title: "STARVAC",
+    image: starvacImage,
+    duration: "30-45 minutes",
+    description: "L'équilibre entre la production et l'élimination des graisses est un processus contrôlé par les adipocytes. Avec les années, ce mécanisme naturel se fragilise provoquant une augmentation du stockage graisseux.",
+    benefits: ["Décongestionne les tissus", "Déstocke les cellules graisseuses", "Résorbe les capitons", "Diminue l'effet peau d'orange", "Raffermit la peau et affine la silhouette"],
+    details: "Le massage consiste à mobiliser le tissu cutané afin de se libérer du superflu d'eau et de graisse qui s'y accumulent. Le Starvac permet d'imiter mécaniquement cette action manuelle, stimule la circulation superficielle lymphatique, soulage les jambes lourdes."
+  }, {
+    icon: Vibrate,
+    title: "Le Plateau Vibrant",
+    image: plateauVibrantImage,
+    duration: "15-20 minutes",
+    description: "Le Plateau Vibrant est efficace pour perdre du poids et réduire les graisses abdominales. Les plateformes vibrantes ou oscillantes ont des aspects bénéfiques sur la santé.",
+    benefits: ["Raffermit la peau et le tissu conjonctif", "Diminue la cellulite", "Améliore la posture et l'allure", "Temps d'entraînement réduit", "Exercices faciles à pratiquer"],
+    details: "Le plus grand avantage de la plateforme vibrante est clair : Le temps nécessaire pour obtenir des résultats satisfaisants est beaucoup plus court que pour un entraînement physique conventionnel, avec des effets pratiquement pareils, voir meilleurs."
+  }, {
+    icon: CircuitBoard,
+    title: "Pressothérapie",
+    image: pressotherapyImage,
+    duration: "30-40 minutes",
+    description: "C'est une technique de drainage mécanique et pneumatique, qui opère un véritable massage par compression et décompression d'un appareillage composé de bottes et de ceinture en vinyle.",
+    benefits: ["Active la circulation sanguine et lymphatique", "Élimine mieux les toxines", "Améliore le retour veineux", "Réduit la rétention d'eau", "Affine la silhouette"],
+    details: "Les alvéoles des bottes se remplissent d'air à rythme défini et exercent des pressions multiples et douces sur le corps. Immédiatement, la sensation de jambes lourdes disparaît. La technique est particulièrement efficace dès la première séance."
+  }, {
+    icon: Scale,
+    title: "Impédancemètre",
+    image: impedancemetreImage,
+    duration: "5-10 minutes",
+    description: "Mesurez votre masse grasse : Se peser, c'est bien. Mesurer sa masse grasse, c'est mieux ! Il existe des balances à impédance-mètre, qui permettent de connaître précisément le pourcentage exact de graisse dans votre corps.",
+    benefits: ["Mesure précise de la masse grasse", "Suivi des progrès objectif", "Analyse de la composition corporelle", "Évaluation de la masse musculaire", "Indispensable pour un régime efficace"],
+    details: "Indispensable lorsque vous suivez un régime ou essayez de gagner en masse musculaire. Cette technologie permet un suivi précis et objectif de votre évolution corporelle."
+  }, {
+    icon: Thermometer,
+    title: "Sauna Infrarouge",
+    image: saunaInfrarougeImage,
+    duration: "30 minutes",
+    description: "Le sauna infrarouge est une méthode qui propose plusieurs avantages. Le principe est le même que celui du sauna traditionnel mais vous évitez le choc thermique. La température monte entre 40 et 60 degrés.",
+    benefits: ["Augmente la circulation sanguine", "Améliore le système cardiovasculaire", "Renforce le système immunitaire", "Réduit le stress et la fatigue", "Améliore l'oxygénation"],
+    details: "Les rayons infrarouges accélèrent les fonctions cellulaires et contribuent à la purification de la peau. Le sauna infrarouge a des effets d'amincissement : pour une séance de 30 min, la perte totale est estimée entre 800 et 1000 Kcal."
   }];
-  const targetAreas = [{
-    zone: "Cuisses (intérieur/extérieur)",
-    icon: "legs",
-    description: "Raffermissement et remodelage des cuisses"
-  }, {
-    zone: "Fesses et ventre",
-    icon: "body",
-    description: "Tonification ciblée du tronc"
-  }, {
-    zone: "Genoux, mollets, chevilles",
-    icon: "leg",
-    description: "Affinement des membres inférieurs"
-  }, {
-    zone: "Dos et hanches",
-    icon: "back",
-    description: "Remodelage de la silhouette dorsale"
-  }, {
-    zone: "Bras et décolleté",
-    icon: "arms",
-    description: "Raffermissement du haut du corps"
-  }, {
-    zone: "Contour des yeux et visage",
-    icon: "face",
-    description: "Traitement anti-âge du visage"
-  }];
+  const targetAreas = [
+    {
+      zone: "Cuisses (intérieur/extérieur)",
+      icon: "legs",
+      description: "Raffermissement et remodelage des cuisses"
+    },
+    {
+      zone: "Fesses et ventre", 
+      icon: "body",
+      description: "Tonification ciblée du tronc"
+    },
+    {
+      zone: "Genoux, mollets, chevilles",
+      icon: "leg",
+      description: "Affinement des membres inférieurs"
+    },
+    {
+      zone: "Dos et hanches",
+      icon: "back", 
+      description: "Remodelage de la silhouette dorsale"
+    },
+    {
+      zone: "Bras et décolleté",
+      icon: "arms",
+      description: "Raffermissement du haut du corps"
+    },
+    {
+      zone: "Contour des yeux et visage",
+      icon: "face",
+      description: "Traitement anti-âge du visage"
+    }
+  ];
   return <div className="page-amincissement">
     <Layout>
-      <SEO title="Amincissement et Remodelage Corporel - Casakine Casablanca" description="🔥 Techniques modernes d'amincissement à Casablanca : Radiofréquence, Cavitation 40k, Laser minceur, Cryothérapie. ✨ Résultats visibles dès les premières séances. ☎️ +212 661 67 70 96" keywords="amincissement casablanca, radiofréquence casablanca, cavitation 40k, laser minceur maroc, cryothérapie amincissement, remodelage corporel, cellulite traitement, dr nawal el ghorfi" canonical="https://casakine.com/services/amincissement" structuredData={structuredData} />
+      <SEO 
+        title="Amincissement et Remodelage Corporel - Casakine Casablanca"
+        description="🔥 Techniques modernes d'amincissement à Casablanca : Radiofréquence, Cavitation 40k, Laser minceur, Cryothérapie. ✨ Résultats visibles dès les premières séances. ☎️ +212 661 67 70 96"
+        keywords="amincissement casablanca, radiofréquence casablanca, cavitation 40k, laser minceur maroc, cryothérapie amincissement, remodelage corporel, cellulite traitement, dr nawal el ghorfi"
+        canonical="https://casakine.com/services/amincissement"
+        structuredData={structuredData}
+      />
       {/* Fixed Return Button */}
       <div className="fixed top-6 left-6 z-50">
         
@@ -98,7 +157,11 @@ const ServicesAmincissement = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/lovable-uploads/e9466446-be50-4fdf-9b3f-4bfeb28a7576.png" alt="Équipements d'amincissement modernes" className="w-full h-full object-cover scale-105" />
+          <img 
+            src="/lovable-uploads/e9466446-be50-4fdf-9b3f-4bfeb28a7576.png" 
+            alt="Équipements d'amincissement modernes" 
+            className="w-full h-full object-cover scale-105" 
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/85 via-blue-500/75 to-primary/80"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-purple-400/20 to-black/30"></div>
           <div className="absolute inset-0 bg-dots-pattern opacity-15"></div>
@@ -147,7 +210,7 @@ const ServicesAmincissement = () => {
                 <div className="text-white/80 text-sm">Satisfaction</div>
               </div>
               <div className="glass-card p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">4</div>
+                <div className="text-3xl font-bold text-white mb-2">9</div>
                 <div className="text-white/80 text-sm">Technologies</div>
               </div>
               <div className="glass-card p-6 text-center">
@@ -201,7 +264,7 @@ const ServicesAmincissement = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-primary">Suivi des Progrès</h4>
-                      
+                      <p className="text-neutral-light">Mesures et évaluation régulière des résultats</p>
                     </div>
                   </div>
                 </div>
@@ -227,16 +290,16 @@ const ServicesAmincissement = () => {
                 Nos <span className="text-gradient-accent">Technologies Avancées</span>
               </h2>
               <p className="text-xl text-neutral-light max-w-3xl mx-auto">
-                Découvrez nos 4 techniques révolutionnaires pour un amincissement ciblé et durable
+                Découvrez nos 9 techniques révolutionnaires pour un amincissement ciblé et durable
               </p>
             </div>
           </ScrollAnimation>
 
           <div className="space-y-24">
             {techniques.map((technique, index) => {
-              const Icon = technique.icon;
-              const isEven = index % 2 === 0;
-              return <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
+            const Icon = technique.icon;
+            const isEven = index % 2 === 0;
+            return <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-col-dense' : ''}`}>
                   <ScrollAnimation animation={isEven ? "slide-left" : "slide-right"}>
                     <div className={!isEven ? 'lg:col-start-2' : ''}>
                       <Badge className="bg-secondary/10 text-secondary border-secondary/20 px-4 py-2 mb-6">
@@ -271,14 +334,49 @@ const ServicesAmincissement = () => {
 
                   <ScrollAnimation animation={isEven ? "slide-right" : "slide-left"}>
                     <div className={!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                      <div className="relative">
-                        <img src={technique.image} alt={`Technique ${technique.title}`} className="w-full h-96 object-cover rounded-3xl shadow-strong" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 to-transparent rounded-3xl"></div>
+                      <div className="relative group">
+                        {/* Modern frame effect */}
+                        <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-500 opacity-60 group-hover:opacity-80"></div>
+                        
+                        {/* Main image container */}
+                        <div className="relative bg-white p-6 rounded-3xl shadow-elegant group-hover:shadow-glow transition-all duration-500">
+                          {/* Decorative corners */}
+                          <div className="absolute top-3 left-3 w-8 h-8 border-l-4 border-t-4 border-primary/40 rounded-tl-lg"></div>
+                          <div className="absolute top-3 right-3 w-8 h-8 border-r-4 border-t-4 border-secondary/40 rounded-tr-lg"></div>
+                          <div className="absolute bottom-3 left-3 w-8 h-8 border-l-4 border-b-4 border-accent/40 rounded-bl-lg"></div>
+                          <div className="absolute bottom-3 right-3 w-8 h-8 border-r-4 border-b-4 border-primary/40 rounded-br-lg"></div>
+                          
+                          {/* Image with overlay effects */}
+                          <div className="relative overflow-hidden rounded-2xl">
+                            <img 
+                              src={technique.image} 
+                              alt={`Technique ${technique.title}`} 
+                              className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-110" 
+                            />
+                            
+                            {/* Gradient overlays */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                            
+                            {/* Floating badge */}
+                            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-primary shadow-soft">
+                              {technique.duration}
+                            </div>
+                            
+                            {/* Technology icon overlay */}
+                            <div className="absolute bottom-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-500">
+                              <Icon className="w-6 h-6 text-white" />
+                            </div>
+                          </div>
+                          
+                          {/* Bottom accent line */}
+                          <div className="mt-4 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center"></div>
+                        </div>
                       </div>
                     </div>
                   </ScrollAnimation>
                 </div>;
-            })}
+          })}
           </div>
         </div>
       </section>
@@ -312,25 +410,21 @@ const ServicesAmincissement = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {targetAreas.map((area, index) => {
               const getIcon = (iconType: string) => {
-                switch (iconType) {
-                  case 'legs':
-                    return Activity;
-                  case 'body':
-                    return Shield;
-                  case 'leg':
-                    return MapPin;
-                  case 'back':
-                    return Target;
-                  case 'arms':
-                    return Heart;
-                  case 'face':
-                    return Eye;
-                  default:
-                    return Sparkles;
+                switch(iconType) {
+                  case 'legs': return Activity;
+                  case 'body': return Shield;
+                  case 'leg': return MapPin;
+                  case 'back': return Target;
+                  case 'arms': return Heart;
+                  case 'face': return Eye;
+                  default: return Sparkles;
                 }
               };
+              
               const IconComponent = getIcon(area.icon);
-              return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
+              
+              return (
+                <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
                   <Card className="group relative overflow-hidden bg-gradient-to-br from-white via-neutral-lightest to-secondary/5 border-0 shadow-soft hover:shadow-strong transition-all duration-700 hover:scale-105 h-full">
                     {/* Gradient overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -358,7 +452,8 @@ const ServicesAmincissement = () => {
                       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-t-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </CardContent>
                   </Card>
-                </ScrollAnimation>;
+                </ScrollAnimation>
+              );
             })}
           </div>
 
