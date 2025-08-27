@@ -41,9 +41,9 @@ const GymnastiqueMedicale = () => {
             <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
               🧘‍♀️ Gymnastique Médicale
             </Badge>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
-              Retrouver <span className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/70 bg-clip-text text-transparent">équilibre</span><br />
-              et <span className="text-white">vitalité</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-gray-900 mb-6 leading-tight drop-shadow-2xl">
+              Retrouver <span className="text-gymnastics-light-green drop-shadow-lg">équilibre</span><br />
+              et <span className="text-gray-900">vitalité</span>
             </h1>
           </ScrollAnimation>
 
