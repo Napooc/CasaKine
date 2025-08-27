@@ -188,7 +188,7 @@ const ServicesAmincissement = () => {
 
           {/* Stats */}
           <ScrollAnimation animation="fade-up" delay={800}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-16 place-items-center justify-items-center">
               <div className="glass-card p-6 text-center">
                 <div className="text-3xl font-bold text-white mb-2">100%</div>
                 <div className="text-white/80 text-sm">Satisfaction</div>
