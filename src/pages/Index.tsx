@@ -249,7 +249,7 @@ const Index = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-4 gap-8">
             {services.map((service, index) => {
             const Icon = service.icon;
             return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
