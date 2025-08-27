@@ -15,7 +15,7 @@ const GymnastiqueMedicale = () => {
   const vertebralProgram = ['Assouplissement de la colonne vertébrale', 'Renforcement de la ceinture abdominale', 'Stabilisation du bassin', 'Mobilisation des membres supérieurs', 'Travail des membres inférieurs', 'Protection articulaire', 'Amélioration de la posture'];
   const seniorProgram = ['Maintien de l\'autonomie corporelle', 'Prévention des chutes', 'Amélioration de l\'équilibre', 'Renforcement musculaire adapté', 'Souplesse articulaire', 'Coordination motrice', 'Stimulation cognitive et sociale'];
   const equipment = ['Ballons de gymnastique', 'Élastiques de résistance', 'Plateaux d\'équilibre (Freeman)', 'Tapis de sol professionnels', 'Accessoires de proprioception', 'Matériel de coordination'];
-  return <div className="page-gymnastique">
+  return <div className="page-gymnastics-light-green">
     <Layout>
       {/* Hero Section */}
       {/* Custom Hero Section */}
@@ -26,8 +26,8 @@ const GymnastiqueMedicale = () => {
             alt="Salle de gymnastique médicale moderne avec équipements" 
             className="w-full h-full object-cover scale-105" 
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/85 via-cyan-500/75 to-primary/80"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-blue-400/20 to-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-gymnastics-light-green/85 via-gymnastics-light-green/75 to-gymnastics-light-green/80"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-gymnastics-light-green/20 to-black/40"></div>
           <div className="absolute inset-0 bg-pattern-dots opacity-10"></div>
         </div>
 
@@ -42,8 +42,8 @@ const GymnastiqueMedicale = () => {
               🧘‍♀️ Gymnastique Médicale
             </Badge>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
-              Retrouver <span className="text-gradient-accent">équilibre</span><br />
-              et <span className="text-sky-400">vitalité</span>
+              Retrouver <span className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/70 bg-clip-text text-transparent">équilibre</span><br />
+              et <span className="text-white">vitalité</span>
             </h1>
           </ScrollAnimation>
 
@@ -55,7 +55,7 @@ const GymnastiqueMedicale = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={600}>
-            <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+            <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/80 hover:shadow-gymnastics-light-green/50 hover:shadow-2xl text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
               <Activity className="w-5 h-5 mr-3" />
               Réserver une séance
             </Button>
@@ -69,11 +69,11 @@ const GymnastiqueMedicale = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimation animation="slide-left">
               <div>
-                <Badge className="bg-gradient-accent text-white mb-6">
+                <Badge className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/80 text-white mb-6">
                   Approche Personnalisée
                 </Badge>
-                <h2 className="text-4xl font-playfair font-bold text-primary mb-6">
-                  Une gymnastique <span className="text-gradient-accent">adaptée à chaque âge</span>
+                <h2 className="text-4xl font-playfair font-bold text-gymnastics-light-green mb-6">
+                  Une gymnastique <span className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/70 bg-clip-text text-transparent">adaptée à chaque âge</span>
                 </h2>
                 <p className="text-lg text-neutral-light mb-8 leading-relaxed">
                   Les séances sont adaptées à chaque âge et condition physique, dans une ambiance 
@@ -88,7 +88,7 @@ const GymnastiqueMedicale = () => {
                     </div>)}
                 </div>
 
-                <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-accent hover-accent-glow text-white px-8 py-3">
+                <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/80 hover:shadow-gymnastics-light-green/50 hover:shadow-2xl text-white px-8 py-3">
                   <Activity className="w-5 h-5 mr-2" />
                   Commencer maintenant
                 </Button>

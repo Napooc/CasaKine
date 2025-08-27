@@ -85,7 +85,8 @@ const KinesitherapieRespiratoire = () => {
     description: "Accompagnement vers l'autonomie et conseils de prévention",
     icon: Star
   }];
-  return <Layout>
+  return <div className="page-kine-blue">
+    <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -94,20 +95,20 @@ const KinesitherapieRespiratoire = () => {
             alt="Cabinet de kinésithérapie moderne" 
             className="w-full h-full object-cover scale-105" 
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/85 via-teal-500/75 to-primary/80"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-blue-400/20 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-kine-blue/85 via-kine-blue/75 to-kine-blue/80"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-kine-blue/20 to-black/30"></div>
           <div className="absolute inset-0 bg-mesh-pattern opacity-10"></div>
         </div>
 
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/6 w-20 h-20 bg-gradient-accent rounded-full opacity-20 animate-float flex items-center justify-center">
+          <div className="absolute top-1/4 left-1/6 w-20 h-20 bg-gradient-to-br from-kine-blue/30 to-kine-blue/10 rounded-full opacity-60 animate-float flex items-center justify-center">
             <Heart className="w-10 h-10 text-white" />
           </div>
-          <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-secondary rounded-full opacity-30 animate-float-delay flex items-center justify-center">
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-br from-kine-blue/40 to-kine-blue/15 rounded-full opacity-70 animate-float-delay flex items-center justify-center">
             <Activity className="w-8 h-8 text-white" />
           </div>
-          <div className="absolute bottom-1/3 left-1/3 w-18 h-18 bg-gradient-primary rounded-full opacity-25 animate-float flex items-center justify-center">
+          <div className="absolute bottom-1/3 left-1/3 w-18 h-18 bg-gradient-to-br from-kine-blue/35 to-kine-blue/12 rounded-full opacity-65 animate-float flex items-center justify-center">
             <Wind className="w-9 h-9 text-white" />
           </div>
           <div className="absolute bottom-1/4 right-1/5 w-14 h-14 bg-white/20 rounded-full opacity-40 animate-float-delay flex items-center justify-center">
@@ -143,7 +144,7 @@ const KinesitherapieRespiratoire = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
+              <Button className="morph-button bg-gradient-to-r from-kine-blue to-kine-blue/80 hover:shadow-kine-blue/50 hover:shadow-2xl text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
                 <Calendar className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
                 Réserver une Consultation
               </Button>
@@ -194,8 +195,8 @@ const KinesitherapieRespiratoire = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-                Nos <span className="text-gradient-accent">Domaines d'Expertise</span>
+              <h2 className="text-4xl md:text-6xl font-playfair font-bold text-kine-blue mb-6">
+                Nos <span className="bg-gradient-to-r from-kine-blue to-kine-blue/70 bg-clip-text text-transparent">Domaines d'Expertise</span>
               </h2>
               <p className="text-xl text-neutral-light max-w-4xl mx-auto leading-relaxed">
                 Une approche complète et spécialisée pour répondre à tous vos besoins thérapeutiques
@@ -465,6 +466,7 @@ const KinesitherapieRespiratoire = () => {
           </ScrollAnimation>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  </div>;
 };
 export default KinesitherapieRespiratoire;

@@ -476,6 +476,18 @@
   --accent: var(--femme-enceinte-accent);
 }
 
+.page-kine-blue {
+  --primary: var(--kine-blue);
+  --secondary: var(--kine-blue);
+  --accent: var(--kine-blue);
+}
+
+.page-gymnastics-light-green {
+  --primary: var(--gymnastics-light-green);
+  --secondary: var(--gymnastics-light-green);
+  --accent: var(--gymnastics-light-green);
+}
+
 /* Keyframe Animations */
 @keyframes float {
   0%, 100% {
