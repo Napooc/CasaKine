@@ -12,7 +12,7 @@ import specialtyWellnessImage from '@/assets/specialty-wellness.jpg';
 import specialtyMedicalGymnasticsImage from '@/assets/specialty-medical-gymnastics.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar } from 'lucide-react';
+import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar, Baby } from 'lucide-react';
 const Index = () => {
   const [selectedSpecialty, setSelectedSpecialty] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,17 +43,17 @@ const Index = () => {
     }
   }, {
     icon: Heart,
-    title: 'Thérapies Manuelles',
-    description: 'Massage thérapeutique, ostéopathie et techniques myofasciales',
+    title: 'Massage et Bien-être',
+    description: 'Relaxation profonde, massage décontracturant et techniques de détente spécialisées',
     color: 'text-medical-red',
     detailedInfo: {
-      overview: 'Nos thérapies manuelles combinent expertise traditionnelle et innovations modernes pour traiter les dysfonctions musculo-squelettiques. Chaque séance est personnalisée selon vos besoins spécifiques pour un soulagement durable et une récupération optimale.',
-      benefits: ['Soulagement immédiat des tensions musculaires', 'Amélioration de la circulation sanguine', 'Réduction du stress et de l\'anxiété', 'Restauration de la mobilité articulaire', 'Détoxification et régénération tissulaire'],
-      techniques: ['Massage thérapeutique suédois', 'Ostéopathie structurelle', 'Release myofascial', 'Trigger points therapy', 'Drainage lymphatique manuel'],
+      overview: 'Nos massages thérapeutiques combinent relaxation et soins pour offrir une détente profonde du corps et de l\'esprit. Chaque séance est personnalisée selon vos besoins pour un soulagement durable et une régénération complète.',
+      benefits: ['Relaxation physique et mentale profonde', 'Soulagement des tensions musculaires', 'Amélioration de la circulation sanguine', 'Réduction du stress et de l\'anxiété', 'Revitalisation et bien-être général'],
+      techniques: ['Massage relaxant anti-stress', 'Massage décontracturant ciblé', 'Massage tonifiant énergisant', 'Techniques de détente manuelle', 'Thérapies corporelles douces'],
       duration: '60-90 min',
       sessions: '6-12 séances',
       image: specialtyManualTherapyImage,
-      conditions: ['Douleurs cervicales et lombaires', 'Tensions musculaires chroniques', 'Migraines et céphalées', 'Troubles de la posture', 'Stress et fatigue chronique']
+      conditions: ['Stress et tensions quotidiennes', 'Fatigue musculaire et nerveuse', 'Contractures et raideurs', 'Besoin de relaxation profonde', 'Amélioration du bien-être général']
     }
   }, {
     icon: Zap,
@@ -82,6 +82,20 @@ const Index = () => {
       sessions: '12-24 séances',
       image: specialtyMedicalGymnasticsImage,
       conditions: ['Troubles posturaux et scoliose', 'Faiblesse musculaire généralisée', 'Prévention des chutes (seniors)', 'Rééducation post-traumatique', 'Stress et troubles anxieux']
+    }
+  }, {
+    icon: Baby,
+    title: 'Femme Enceinte',
+    description: 'Préparation à l\'accouchement et rééducation périnéale post-partum',
+    color: 'text-red-500',
+    detailedInfo: {
+      overview: 'Un accompagnement complet pour vivre sereinement votre grossesse et retrouver votre bien-être après l\'accouchement. Préparation personnalisée et rééducation spécialisée pour chaque étape de la maternité.',
+      benefits: ['Préparation physique et mentale à l\'accouchement', 'Techniques de respiration et positions optimales', 'Rééducation périnéale post-partum', 'Récupération du tonus abdominal', 'Accompagnement et soutien personnalisé'],
+      techniques: ['Techniques de respiration adaptées', 'Positions d\'accouchement favorables', 'Renforcement périnéal', 'Biofeedback et électrostimulation', 'Communication prénatale'],
+      duration: '45-60 min',
+      sessions: '8-15 séances',
+      image: '/lovable-uploads/ae898483-0049-4459-bd35-4ca9c46d6852.png',
+      conditions: ['Préparation à l\'accouchement', 'Rééducation périnéale', 'Incontinence post-partum', 'Récupération post-accouchement', 'Douleurs pelviennes']
     }
   }];
   const testimonials = [{
