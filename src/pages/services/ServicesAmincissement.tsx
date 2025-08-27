@@ -201,10 +201,7 @@ const ServicesAmincissement = () => {
                 <div className="text-3xl font-bold text-white mb-2">0</div>
                 <div className="text-white/80 text-sm">Chirurgie</div>
               </div>
-              <div className="glass-card p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">20-45</div>
-                <div className="text-white/80 text-sm">Minutes</div>
-              </div>
+              
             </div>
           </ScrollAnimation>
         </div>
