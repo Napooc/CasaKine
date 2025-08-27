@@ -188,7 +188,24 @@ const ServicesAmincissement = () => {
 
           {/* Stats */}
           <ScrollAnimation animation="fade-up" delay={800}>
-            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-16">
+              <div className="glass-card p-6 text-center">
+                <div className="text-3xl font-bold text-white mb-2">100%</div>
+                <div className="text-white/80 text-sm">Satisfaction</div>
+              </div>
+              <div className="glass-card p-6 text-center">
+                <div className="text-3xl font-bold text-white mb-2">9</div>
+                <div className="text-white/80 text-sm">Technologies</div>
+              </div>
+              <div className="glass-card p-6 text-center">
+                <div className="text-3xl font-bold text-white mb-2">0</div>
+                <div className="text-white/80 text-sm">Chirurgie</div>
+              </div>
+              <div className="glass-card p-6 text-center">
+                <div className="text-3xl font-bold text-white mb-2">20-45</div>
+                <div className="text-white/80 text-sm">Minutes</div>
+              </div>
+            </div>
           </ScrollAnimation>
         </div>
       </section>
