@@ -249,29 +249,29 @@ const Index = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="flex flex-wrap lg:flex-nowrap gap-6 justify-center overflow-x-auto px-4">
+          <div className="grid grid-cols-4 gap-8">
             {services.map((service, index) => {
-              const Icon = service.icon;
-              return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
-                <Card className="group glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full flex-shrink-0 w-80 lg:w-64">
-                  <CardContent className="p-8 text-center h-full flex flex-col">
-                    <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-accent/10 flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300`}>
-                      <Icon className={`w-8 h-8 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
-                    </div>
-                    <h3 className="text-xl font-playfair font-bold text-primary mb-4">
-                      {service.title}
-                    </h3>
-                    <p className="text-neutral-light leading-relaxed flex-grow">
-                      {service.description}
-                    </p>
-                    <Button variant="ghost" className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300" onClick={() => handleSpecialtyClick(service)}>
-                      En savoir plus
-                      <ChevronRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </ScrollAnimation>;
-            })}
+            const Icon = service.icon;
+            return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
+                  <Card className="group glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full">
+                    <CardContent className="p-8 text-center h-full flex flex-col">
+                      <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-accent/10 flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300`}>
+                        <Icon className={`w-8 h-8 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
+                      </div>
+                      <h3 className="text-xl font-playfair font-bold text-primary mb-4">
+                        {service.title}
+                      </h3>
+                      <p className="text-neutral-light leading-relaxed flex-grow">
+                        {service.description}
+                      </p>
+                      <Button variant="ghost" className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300" onClick={() => handleSpecialtyClick(service)}>
+                        En savoir plus
+                        <ChevronRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </ScrollAnimation>;
+          })}
           </div>
         </div>
       </section>
