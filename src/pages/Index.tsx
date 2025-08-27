@@ -430,7 +430,7 @@ const Index = () => {
                   </p>
                   <p>
                     Tous les soins sont personnellement assurés par Mme EL GHORFI, 
-                    garantissant un suivi rigoureux et individualisé – 
+                    garantissant un suivi rigoureux et individualisé ,
                     aucune délégation à des assistantes.
                   </p>
                 </div>
