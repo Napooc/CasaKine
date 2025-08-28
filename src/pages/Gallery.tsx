@@ -223,8 +223,8 @@ const Gallery = () => {
             {achievements.map((achievement, index) => {
             const Icon = achievement.icon;
             return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
-                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow text-center group">
-                    <CardContent className="p-8">
+                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow text-center group h-full">
+                    <CardContent className="p-8 h-full flex flex-col justify-center">
                       <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-primary/10 flex items-center justify-center group-hover:animate-pulse-glow">
                         <Icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
                       </div>
