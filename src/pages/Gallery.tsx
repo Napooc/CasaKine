@@ -9,17 +9,6 @@ import { Play, Camera, Award, Users, Stethoscope, Heart, Activity, Shield, Eye, 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('tous');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-  // Navigation functions for hero gallery
-  const navigateHeroImage = (direction: 'prev' | 'next') => {
-    const heroImages = galleryItems.slice(0, 6);
-    if (direction === 'prev') {
-      setCurrentImageIndex(prev => prev === 0 ? heroImages.length - 1 : prev - 1);
-    } else {
-      setCurrentImageIndex(prev => prev === heroImages.length - 1 ? 0 : prev + 1);
-    }
-  };
   
   // Navigation functions for lightbox
   const navigateLightboxImage = (direction: 'prev' | 'next') => {
@@ -215,58 +204,26 @@ const Gallery = () => {
             </div>
           </ScrollAnimation>
 
-          {/* Gallery Preview Thumbnails with Navigation */}
+          {/* Gallery Preview Thumbnails */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="relative max-w-4xl mx-auto">
-              {/* Navigation Buttons */}
-              <Button
-                onClick={() => navigateHeroImage('prev')}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0 shadow-lg"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </Button>
-              
-              <Button
-                onClick={() => navigateHeroImage('next')}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0 shadow-lg"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </Button>
-              
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto px-16">
-                {galleryItems.slice(0, 6).map((item, i) => (
-                  <div key={item.id} className="relative group cursor-pointer" onClick={() => openLightbox(item.image)}>
-                    <div className={`aspect-square rounded-xl overflow-hidden glass-card border-2 transition-all duration-300 ${
-                      i === currentImageIndex ? 'border-accent/60 ring-2 ring-accent/40' : 'border-white/20 hover:border-white/40'
-                    }`}>
-                      <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <ZoomIn className="w-6 h-6 text-white drop-shadow-lg" />
-                    </div>
-                    {/* Mini category badge */}
-                    <div className="absolute bottom-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Badge className="text-xs bg-white/90 text-primary border-0 px-2 py-1">
-                        {filters.find(f => f.id === item.category)?.label}
-                      </Badge>
-                    </div>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto">
+              {galleryItems.slice(0, 6).map((item, i) => (
+                <div key={item.id} className="relative group cursor-pointer" onClick={() => openLightbox(item.image)}>
+                  <div className="aspect-square rounded-xl overflow-hidden glass-card border-2 border-white/20 hover:border-white/40 transition-all duration-300">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                ))}
-              </div>
-              
-              {/* Image Counter */}
-              <div className="flex justify-center mt-4 space-x-2">
-                {galleryItems.slice(0, 6).map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setCurrentImageIndex(i)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      i === currentImageIndex ? 'bg-accent' : 'bg-white/40 hover:bg-white/60'
-                    }`}
-                  />
-                ))}
-              </div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <ZoomIn className="w-6 h-6 text-white drop-shadow-lg" />
+                  </div>
+                  {/* Mini category badge */}
+                  <div className="absolute bottom-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Badge className="text-xs bg-white/90 text-primary border-0 px-2 py-1">
+                      {filters.find(f => f.id === item.category)?.label}
+                    </Badge>
+                  </div>
+                </div>
+              ))}
             </div>
           </ScrollAnimation>
         </div>
@@ -416,15 +373,6 @@ const Gallery = () => {
             >
               ×
             </Button>
-            
-            {/* Image Info */}
-            <div className="absolute bottom-4 left-4 right-4 text-center">
-              <div className="bg-black/50 backdrop-blur-sm rounded-lg px-4 py-2">
-                <p className="text-white text-sm">
-                  {galleryItems.findIndex(item => item.image === selectedImage) + 1} / {galleryItems.length}
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       )}
