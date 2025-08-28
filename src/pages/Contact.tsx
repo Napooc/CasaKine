@@ -43,7 +43,7 @@ const Contact = () => {
   }, {
     icon: MapPin,
     title: 'Adresse',
-    value: '19 Rue De Masmouda',
+    value: '19 Rue De Masmouda ,Hay El Hana',
     description: 'Casablanca 20210',
     color: 'text-accent',
     action: 'https://maps.google.com/?q=Kinésithérapie+Nawal+EL+GHORFI,Casablanca,Morocco'
