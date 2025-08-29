@@ -158,7 +158,7 @@ const KinesitherapieRespiratoire = () => {
 
           {/* Quick Stats */}
           <ScrollAnimation animation="fade-up" delay={800}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[{
               value: "7",
               label: "Spécialités",
@@ -167,10 +167,6 @@ const KinesitherapieRespiratoire = () => {
               value: "100%",
               label: "Personnalisé",
               icon: Heart
-            }, {
-              value: "24h",
-              label: "Urgences",
-              icon: Clock
             }, {
               value: "🏠",
               label: "Domicile",
