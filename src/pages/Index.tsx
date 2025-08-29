@@ -13,11 +13,13 @@ import specialtyMedicalGymnasticsImage from '@/assets/specialty-medical-gymnasti
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Stethoscope, Users, Award, Clock, MapPin, Phone, Star, ChevronRight, Activity, Shield, Zap, Calendar, Baby } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 const Index = () => {
+  const navigate = useNavigate();
   const [selectedSpecialty, setSelectedSpecialty] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handleBookAppointment = () => {
-    window.location.href = '/contact';
+    navigate('/contact');
   };
   const handleSpecialtyClick = specialty => {
     setSelectedSpecialty(specialty);
@@ -190,7 +192,7 @@ const Index = () => {
                 Réservez Votre Consultation
               </Button>
               
-              <Button variant="outline" onClick={() => window.location.href = '/services'} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
+              <Button variant="outline" onClick={() => navigate('/services')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 En savoir plus
               </Button>
             </div>
@@ -312,7 +314,7 @@ const Index = () => {
                 </div>
 
                 <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105" onClick={() => {
-                window.location.href = '/about#nawal-profile';
+                navigate('/about#nawal-profile');
               }}>
                   Découvrir notre histoire
                 </Button>

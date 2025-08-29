@@ -55,7 +55,7 @@ const GymnastiqueMedicale = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={600}>
-            <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/80 hover:shadow-gymnastics-light-green/50 hover:shadow-2xl text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+            <Button onClick={() => navigate('/contact')} className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/80 hover:shadow-gymnastics-light-green/50 hover:shadow-2xl text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
               <Activity className="w-5 h-5 mr-3" />
               Réserver une séance
             </Button>
@@ -88,7 +88,7 @@ const GymnastiqueMedicale = () => {
                     </div>)}
                 </div>
 
-                <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/80 hover:shadow-gymnastics-light-green/50 hover:shadow-2xl text-white px-8 py-3">
+                <Button onClick={() => navigate('/contact')} className="bg-gradient-to-r from-gymnastics-light-green to-gymnastics-light-green/80 hover:shadow-gymnastics-light-green/50 hover:shadow-2xl text-white px-8 py-3">
                   <Activity className="w-5 h-5 mr-2" />
                   Commencer maintenant
                 </Button>
@@ -268,7 +268,7 @@ const GymnastiqueMedicale = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button onClick={() => window.location.href = '/contact'} className="bg-gradient-accent hover-accent-glow text-white font-semibold px-8 py-4 text-lg">
+              <Button onClick={() => navigate('/contact')} className="bg-gradient-accent hover-accent-glow text-white font-semibold px-8 py-4 text-lg">
                 <Activity className="w-5 h-5 mr-3" />
                 Réserver une séance d'essai
               </Button>

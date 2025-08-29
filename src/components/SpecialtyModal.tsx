@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Clock, Users, Award, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 interface SpecialtyData {
   icon: React.ComponentType<any>;
   title: string;
@@ -27,6 +28,7 @@ const SpecialtyModal: React.FC<SpecialtyModalProps> = ({
   isOpen,
   onClose
 }) => {
+  const navigate = useNavigate();
   if (!isOpen || !specialty) return null;
   const Icon = specialty.icon;
   return <div className="fixed inset-0 z-50 overflow-hidden">
@@ -137,7 +139,7 @@ const SpecialtyModal: React.FC<SpecialtyModalProps> = ({
                 {/* Action Button */}
                 <div className="mt-10 text-center">
                   <Button className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 py-4 rounded-full shadow-strong transition-all duration-300 hover:scale-105" onClick={() => {
-                  window.location.href = '/contact';
+                  navigate('/contact');
                   onClose();
                 }}>
                     Prendre Rendez-vous pour cette spécialité
