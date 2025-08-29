@@ -70,8 +70,8 @@ const About = () => {
         {/* Background with parallax effect */}
         <div className="absolute inset-0">
           <img src="/lovable-uploads/852e8ad3-0a8e-44f2-a33d-675c40d512b4.png" alt="Centre de kinésithérapie - Nawal EL GHORFI" className="w-full h-full object-cover scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/60"></div>
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-primary/10 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/40"></div>
         </div>
 
         {/* Animated particles */}
@@ -81,39 +81,65 @@ const About = () => {
           <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-white rounded-full opacity-80 animate-bounce"></div>
         </div>
 
-        {/* Centered Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 text-center">
-          <ScrollAnimation animation="fade-up">
-            <div className="text-white">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-playfair font-bold mb-8 leading-tight drop-shadow-2xl">
-                L'<span className="text-gradient-accent drop-shadow-lg">Excellence</span><br />
-                au Service de<br />
-                <span className="text-secondary drop-shadow-lg">Votre Santé</span>
-              </h1>
-              
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-montserrat font-light text-white mb-12 opacity-90 drop-shadow-lg max-w-4xl mx-auto">
-                Découvrez l'histoire et l'expertise de Nawal EL GHORFI
-              </h2>
-              
-              <p className="text-xl md:text-2xl lg:text-3xl mb-16 leading-relaxed text-white/90 drop-shadow-lg max-w-4xl mx-auto font-light">
-                Plus de 25 années d'expertise dédiées à votre bien-être et votre rétablissement, 
-                avec une approche moderne et personnalisée. Centre opérationnel depuis 2001.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                <Button onClick={() => window.location.href = '/contact'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-6 text-xl rounded-full shadow-strong transition-all duration-300 hover:scale-110">
-                  <Users className="w-6 h-6 mr-4" />
-                  Prendre Rendez-vous
-                </Button>
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollAnimation animation="slide-left">
+              <div className="text-white">
+                <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-8 leading-tight drop-shadow-2xl">
+                  L'<span className="text-gradient-accent drop-shadow-lg">Excellence</span><br />
+                  au Service de<br />
+                  <span className="text-secondary drop-shadow-lg">Votre Santé</span>
+                </h1>
                 
-                <Button variant="outline" onClick={() => document.getElementById('timeline')?.scrollIntoView({
-                behavior: 'smooth'
-              })} className="glass-effect border-white/40 hover:bg-white/20 text-white hover:text-white font-montserrat font-medium px-10 py-6 text-xl rounded-full transition-all duration-300 hover:scale-105">
-                  Notre parcours
-                </Button>
+                <h2 className="text-2xl md:text-3xl font-montserrat font-light text-white mb-8 opacity-90 drop-shadow-lg">
+                  Découvrez l'histoire et l'expertise de Nawal EL GHORFI
+                </h2>
+                
+                <p className="text-lg md:text-xl mb-12 leading-relaxed text-white/90 drop-shadow-lg">
+                  Plus de 25 années d'expertise dédiées à votre bien-être et votre rétablissement, 
+                  avec une approche moderne et personnalisée. Centre opérationnel depuis 2001.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-6 mb-12">
+                  <Button onClick={() => window.location.href = '/contact'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                    <Users className="w-5 h-5 mr-3" />
+                    Prendre Rendez-vous
+                  </Button>
+                  
+                  <Button variant="outline" onClick={() => document.getElementById('timeline')?.scrollIntoView({
+                  behavior: 'smooth'
+                })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
+                    Notre parcours
+                  </Button>
+                </div>
               </div>
-            </div>
-          </ScrollAnimation>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="fade-up" delay={400}>
+              <div className="relative">
+                {/* Main facility image with modern design */}
+                <div className="relative group">
+                  {/* Background glow effect */}
+                  
+                  
+                  {/* Main image container with unique perspective */}
+                  
+                  
+                  {/* Decorative elements */}
+                  <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-primary/30 to-transparent rounded-full blur-2xl animate-pulse"></div>
+                  <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-secondary/30 to-transparent rounded-full blur-2xl animate-pulse delay-1000"></div>
+                </div>
+                
+                {/* Floating achievement cards */}
+                 
+                
+                
+                
+                 
+              </div>
+            </ScrollAnimation>
+          </div>
         </div>
 
         {/* Scroll Indicator */}
