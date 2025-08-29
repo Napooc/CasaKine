@@ -63,7 +63,7 @@ const Navbar = () => {
               <div className="relative">
                 <img 
                   src="/lovable-uploads/b842a1de-fa46-46d8-a692-ed9011b6ba3f.png" 
-                  alt="Dr. Nawal El Ghorfi" 
+                  alt="Nawal El Ghorfi" 
                   className="h-16 w-auto transition-transform duration-300 group-hover:scale-105 shadow-lg" 
                 />
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>

@@ -136,7 +136,7 @@ const About = () => {
             <ScrollAnimation animation="slide-left">
               <div className="relative">
                 <div className="glass-card p-4 rounded-3xl shadow-strong">
-                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi - Kinésithérapeute" className="w-full h-auto rounded-2xl" />
+                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt=" Nawal El Ghorfi - Kinésithérapeute" className="w-full h-auto rounded-2xl" />
                 </div>
                 
                 {/* Floating Achievement */}

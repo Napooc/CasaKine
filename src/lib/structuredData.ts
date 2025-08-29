@@ -3,7 +3,7 @@
 export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "Casakine - Dr. Nawal El Ghorfi",
+  "name": "Casakine - Nawal El Ghorfi",
   "description": "Centre de kinésithérapie premium à Casablanca spécialisé en rééducation fonctionnelle, amincissement et bien-être.",
   "url": "https://casakine.com",
   "image": "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
@@ -34,7 +34,7 @@ export const getLocalBusinessSchema = () => ({
   "foundingDate": "2010",
   "founder": {
     "@type": "Person",
-    "name": "Dr. Nawal El Ghorfi",
+    "name": " Nawal El Ghorfi",
     "jobTitle": "Kinésithérapeute Diplômée d'État",
     "alumniOf": "École de Kinésithérapie",
     "awards": "15 ans d'expérience en kinésithérapie"
@@ -94,7 +94,7 @@ export const getLocalBusinessSchema = () => ({
         "@type": "Rating",
         "ratingValue": "5"
       },
-      "reviewBody": "Excellent centre de kinésithérapie. Dr. Nawal est très professionnelle et attentive. Les résultats de ma rééducation ont dépassé mes attentes."
+      "reviewBody": "Excellent centre de kinésithérapie. Nawal est très professionnelle et attentive. Les résultats de ma rééducation ont dépassé mes attentes."
     }
   ]
 });
@@ -104,7 +104,7 @@ export const getWebsiteSchema = () => ({
   "@type": "WebSite",
   "name": "Casakine - Centre de Kinésithérapie Casablanca",
   "url": "https://casakine.com",
-  "description": "Centre de kinésithérapie premium à Casablanca. Soins spécialisés en rééducation, amincissement et bien-être par Dr. Nawal El Ghorfi.",
+  "description": "Centre de kinésithérapie premium à Casablanca. Soins spécialisés en rééducation, amincissement et bien-être par Nawal El Ghorfi.",
   "publisher": {
     "@type": "MedicalBusiness",
     "name": "Casakine"
@@ -125,7 +125,7 @@ export const getOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
   "name": "Casakine",
-  "alternateName": "Centre de Kinésithérapie Dr. Nawal El Ghorfi",
+  "alternateName": "Centre de Kinésithérapie  Nawal El Ghorfi",
   "url": "https://casakine.com",
   "logo": "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
   "contactPoint": {

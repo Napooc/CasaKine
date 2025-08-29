@@ -36,7 +36,7 @@ const Map: React.FC<MapProps> = ({
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         className="absolute inset-0"
-        title="Localisation Dr. Nawal El Ghorfi"
+        title="Localisation Nawal El Ghorfi"
       />
       
       {/* Modern Glass Overlay Card */}
@@ -50,7 +50,7 @@ const Map: React.FC<MapProps> = ({
               </div>
               <div>
                 <h3 className="text-lg font-playfair font-bold text-primary">
-                  Dr. Nawal El Ghorfi
+                  Nawal El Ghorfi
                 </h3>
                 <p className="text-sm text-neutral-light">
                   Cabinet de Kinésithérapie

@@ -112,7 +112,7 @@ const Index = () => {
     location: 'Casablanca'
   }, {
     name: 'Fatima Z.',
-    text: 'Après mon accident, Dr. Nawal m\'a aidée à retrouver ma mobilité. Je recommande vivement !',
+    text: 'Après mon accident, Nawal m\'a aidée à retrouver ma mobilité. Je recommande vivement !',
     rating: 5,
     location: 'Casablanca'
   }];
@@ -128,7 +128,7 @@ const Index = () => {
   }];
   const structuredData = [getLocalBusinessSchema(), getWebsiteSchema(), getOrganizationSchema(), getFAQSchema(faqs)];
   return <Layout>
-      <SEO title="Dr. Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca" description="🏥 Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne." keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport" canonical="https://casakine.com/" structuredData={structuredData} />
+      <SEO title=" Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca" description="🏥 Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne." keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport" canonical="https://casakine.com/" structuredData={structuredData} />
       <GoogleVerification />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
@@ -324,7 +324,7 @@ const Index = () => {
             <ScrollAnimation animation="slide-right">
               <div className="relative">
                 <div className="glass-card p-2 rounded-3xl">
-                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="w-full h-auto rounded-2xl" />
+                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt=" Nawal El Ghorfi" className="w-full h-auto rounded-2xl" />
                 </div>
                 
                 {/* Floating Stats */}
@@ -402,14 +402,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Dr. Nawal Section */}
+      {/* About Nawal Section */}
       <section className="py-32 bg-background relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollAnimation animation="slide-left">
               <div className="relative">
                 <div className="glass-card p-2 rounded-3xl">
-                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt="Dr. Nawal El Ghorfi" className="w-full h-auto rounded-2xl" />
+                  <img src="/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png" alt=" Nawal El Ghorfi" className="w-full h-auto rounded-2xl" />
                 </div>
                 
                 {/* Floating Badge */}

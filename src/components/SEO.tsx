@@ -12,8 +12,8 @@ interface SEOProps {
 }
 
 export const SEO = ({
-  title = "Dr. Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca | Casakine",
-  description = "Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi vous accompagne vers un rétablissement optimal avec des soins personnalisés et des techniques modernes. Prise de rendez-vous en ligne.",
+  title = "Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca | Casakine",
+  description = "Centre de kinésithérapie premium à Casablanca. Nawal El Ghorfi vous accompagne vers un rétablissement optimal avec des soins personnalisés et des techniques modernes. Prise de rendez-vous en ligne.",
   keywords = "kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport, femme enceinte kinésithérapie, gymnastique médicale",
   canonical,
   ogImage = "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
@@ -30,7 +30,7 @@ export const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Dr. Nawal El Ghorfi - Casakine" />
+      <meta name="author" content=" Nawal El Ghorfi - Casakine" />
       <meta name="robots" content={noindex ? "noindex,nofollow" : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"} />
       <link rel="canonical" href={currentUrl} />
 

@@ -66,7 +66,7 @@ const BlogPost = () => {
         <h2>Conclusion</h2>
         <p>La régularité est la clé du succès. Intégrez ces exercices dans votre routine quotidienne pour un dos en bonne santé.</p>
       `,
-    author: 'Dr. Nawal El Ghorfi',
+    author: ' Nawal El Ghorfi',
     date: '15 Mars 2024',
     readTime: '8 min',
     category: 'Exercices',
@@ -106,7 +106,7 @@ const BlogPost = () => {
         <h2>L'importance du suivi professionnel</h2>
         <p>Un kinésithérapeute qualifié adapte le programme selon votre évolution et vos besoins spécifiques.</p>
       `,
-    author: 'Dr. Nawal El Ghorfi',
+    author: ' Nawal El Ghorfi',
     date: '12 Mars 2024',
     readTime: '6 min',
     category: 'Conseils',
@@ -161,7 +161,7 @@ const BlogPost = () => {
           <li>Oméga-3 : anti-inflammatoire</li>
         </ul>
       `,
-    author: 'Dr. Nawal El Ghorfi',
+    author: ' Nawal El Ghorfi',
     date: '10 Mars 2024',
     readTime: '5 min',
     category: 'Nutrition',
@@ -203,7 +203,7 @@ const BlogPost = () => {
         <h2>Impact sur la pratique</h2>
         <p>Ces innovations permettent une prise en charge plus précise, motivante et efficace.</p>
       `,
-    author: 'Dr. Nawal El Ghorfi',
+    author: ' Nawal El Ghorfi',
     date: '8 Mars 2024',
     readTime: '7 min',
     category: 'Actualités',
@@ -260,7 +260,7 @@ const BlogPost = () => {
         <h2>Matériel et environnement</h2>
         <p>Utilisez un équipement adapté et vérifiez les conditions de pratique.</p>
       `,
-    author: 'Dr. Nawal El Ghorfi',
+    author: ' Nawal El Ghorfi',
     date: '5 Mars 2024',
     readTime: '6 min',
     category: 'Conseils',
@@ -309,7 +309,7 @@ const BlogPost = () => {
         <h2>Intégration au quotidien</h2>
         <p>Pratiquez 5-10 minutes par jour pour des bénéfices durables.</p>
       `,
-    author: 'Dr. Nawal El Ghorfi',
+    author: ' Nawal El Ghorfi',
     date: '3 Mars 2024',
     readTime: '4 min',
     category: 'Exercices',
