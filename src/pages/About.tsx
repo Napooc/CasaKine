@@ -82,9 +82,9 @@ const About = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <ScrollAnimation animation="slide-left">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-center text-center">
+            <ScrollAnimation animation="fade-up">
               <div className="text-white">
                 <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-8 leading-tight drop-shadow-2xl">
                   L'<span className="text-gradient-accent drop-shadow-lg">Excellence</span><br />
@@ -96,12 +96,12 @@ const About = () => {
                   Découvrez l'histoire et l'expertise de Nawal EL GHORFI
                 </h2>
                 
-                <p className="text-lg md:text-xl mb-12 leading-relaxed text-white/90 drop-shadow-lg">
+                <p className="text-lg md:text-xl mb-12 leading-relaxed text-white/90 drop-shadow-lg max-w-4xl mx-auto">
                   Plus de 25 années d'expertise dédiées à votre bien-être et votre rétablissement, 
                   avec une approche moderne et personnalisée. Centre opérationnel depuis 2001.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-6 mb-12">
+                <div className="flex flex-col sm:flex-row gap-6 mb-12 justify-center">
                   <Button onClick={() => window.location.href = '/contact'} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
                     <Users className="w-5 h-5 mr-3" />
                     Prendre Rendez-vous
@@ -113,30 +113,6 @@ const About = () => {
                     Notre parcours
                   </Button>
                 </div>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation animation="fade-up" delay={400}>
-              <div className="relative">
-                {/* Main facility image with modern design */}
-                <div className="relative group">
-                  {/* Background glow effect */}
-                  
-                  
-                  {/* Main image container with unique perspective */}
-                  
-                  
-                  {/* Decorative elements */}
-                  <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-primary/30 to-transparent rounded-full blur-2xl animate-pulse"></div>
-                  <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-secondary/30 to-transparent rounded-full blur-2xl animate-pulse delay-1000"></div>
-                </div>
-                
-                {/* Floating achievement cards */}
-                 
-                
-                
-                
-                 
               </div>
             </ScrollAnimation>
           </div>
