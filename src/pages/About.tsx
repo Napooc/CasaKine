@@ -87,18 +87,18 @@ const About = () => {
             <ScrollAnimation animation="slide-left">
               <div className="text-white">
                 <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-8 leading-tight drop-shadow-2xl">
-                  Votre <span className="text-gradient-accent drop-shadow-lg">Refuge</span><br />
-                  de Bien-être<br />
-                  <span className="text-secondary drop-shadow-lg">Naturel</span>
+                  L'<span className="text-gradient-accent drop-shadow-lg">Excellence</span><br />
+                  au Service de<br />
+                  <span className="text-secondary drop-shadow-lg">Votre Santé</span>
                 </h1>
                 
                 <h2 className="text-2xl md:text-3xl font-montserrat font-light text-white mb-8 opacity-90 drop-shadow-lg">
-                  Un havre de paix où nature et thérapie se rencontrent
+                  Découvrez l'histoire et l'expertise de Nawal EL GHORFI
                 </h2>
                 
                 <p className="text-lg md:text-xl mb-12 leading-relaxed text-white/90 drop-shadow-lg">
-                  Dans notre centre thérapeutique unique, entouré de jardins luxuriants et d'espaces zen, 
-                  Nawal EL GHORFI vous accueille dans un environnement naturel propice à la guérison et au ressourcement.
+                  Plus de 25 années d'expertise dédiées à votre bien-être et votre rétablissement, 
+                  avec une approche moderne et personnalisée. Centre opérationnel depuis 2001.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 mb-12">
