@@ -121,24 +121,10 @@ const About = () => {
                 {/* Main facility image with modern design */}
                 <div className="relative group">
                   {/* Background glow effect */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
                   
                   {/* Main image container with unique perspective */}
-                  <div className="relative glass-card p-4 rounded-3xl shadow-strong transform hover:scale-[1.02] transition-all duration-500">
-                    <div className="relative overflow-hidden rounded-2xl">
-                      <img src="/lovable-uploads/773ffcce-f925-4582-93e3-1195ae7de410.png" alt="Centre de kinésithérapie moderne - Équipements thérapeutiques" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
-                      {/* Overlay gradient for better text visibility */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                      
-                      {/* Professional badge */}
-                      <div className="absolute top-4 right-4 glass-card px-3 py-2 rounded-full">
-                        <div className="flex items-center space-x-2">
-                          <Stethoscope className="w-4 h-4 text-primary" />
-                          <span className="text-xs font-medium text-zinc-50">Centre Moderne</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  
                   
                   {/* Decorative elements */}
                   <div className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-primary/30 to-transparent rounded-full blur-2xl animate-pulse"></div>
@@ -146,19 +132,9 @@ const About = () => {
                 </div>
                 
                 {/* Floating achievement cards */}
-                 <div className="absolute -top-8 -left-8 glass-card p-6 rounded-2xl shadow-glow animate-float">
-                   <div className="text-center">
-                     <div className="text-3xl font-playfair font-bold text-gold  ">25+</div>
-                     <div className="text-sm text-black/90">Années</div>
-                   </div>
-                 </div>
+                 
                 
-                <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-glow animate-float-delay">
-                  <div className="text-center">
-                    <div className="text-3xl font-playfair font-bold text-secondary mb-1">2000+</div>
-                    <div className="text-sm text-black/90">Patients</div>
-                  </div>
-                </div>
+                
                 
                  
               </div>
