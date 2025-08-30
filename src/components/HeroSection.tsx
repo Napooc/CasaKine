@@ -95,7 +95,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </ScrollAnimation>
 
         <ScrollAnimation animation="slide-left" delay={400}>
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-montserrat font-light text-neutral-lightest mb-6 sm:mb-8 opacity-90 px-2">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-montserrat text-neutral-lightest mb-6 sm:mb-8 opacity-90 px-2 font-bold">
             {subtitle}
           </h2>
         </ScrollAnimation>
