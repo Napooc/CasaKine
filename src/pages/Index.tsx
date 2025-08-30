@@ -49,8 +49,8 @@ const Index = () => {
     description: 'Programmes minceur, drainage lymphatique et électrothérapie',
     color: 'text-secondary',
     detailedInfo: {
-      overview: 'Nos programmes d\'amincissement et bien-être associent techniques manuelles et technologies avancées pour sculpter votre silhouette tout en améliorant votre bien-être général. Une approche holistique pour des résultats durables et visibles.',
-      benefits: ['Réduction du tour de taille et des cuisses','Réduction visible de la cellulite', 'Amélioration du tonus et de l\'élasticité', 'Stimulation du métabolisme', 'Élimination des toxines et rétention d\'eau', 'Relaxation profonde et revitalisation'],
+      overview: 'Nos programmes d\'amincissement et bien-être utilisent des technologies avancées pour sculpter votre silhouette tout en améliorant votre bien-être général. Une approche holistique pour des résultats durables et visibles.',
+      benefits: ['Réduction visible de la cellulite', 'Amélioration du tonus et de l\'élasticité', 'Stimulation du métabolisme', 'Élimination des toxines et rétention d\'eau', 'Relaxation profonde et revitalisation'],
       techniques: ['Cryolipolyse', 'Lipo-laser thérapie', 'Lipo-cavitation 40k', 'Radiofréquence ', 'Électrolipolyse', 'Palper-rouler', 'Pressothérapie'],
       duration: '75-90 min',
       sessions: '10-20 séances',
