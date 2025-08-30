@@ -32,7 +32,7 @@ const Index = () => {
   const services = [{
     icon: Activity,
     title: 'Kinésithérapie',
-    description: 'Récupération post-traumatique et rééducation neurologique personnalisée',
+    description: 'Récupération post-traumatique et physiologie neurologique personnalisée',
     color: 'text-primary',
     detailedInfo: {
       overview: 'Une approche thérapeutique complète visant à restaurer les capacités physiques et fonctionnelles après un traumatisme, une chirurgie ou une pathologie neurologique. Notre centre utilise des techniques avancées et des équipements de pointe pour optimiser votre récupération.',
