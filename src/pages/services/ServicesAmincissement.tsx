@@ -474,7 +474,7 @@ const ServicesAmincissement = () => {
                     Suivi Personnalisé
                   </h3>
                   <p className="text-neutral-light">
-                    Accompagnement individualisé par nos kinésithérapeutes spécialisés
+                    Accompagnement individualisé 
                   </p>
                 </CardContent>
               </Card>

@@ -424,7 +424,7 @@ const KinesitherapieRespiratoire = () => {
               <span className="text-white/80 block">Rétablissement Aujourd'hui</span>
             </h2>
             <p className="text-xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Nos kinésithérapeutes experts sont prêts à vous accompagner dans votre parcours de guérison. 
+             Notre expertise pour vous accompagner dans votre parcours de guérison. 
               Réservez votre consultation personnalisée ou contactez-nous pour plus d'informations.
             </p>
             
