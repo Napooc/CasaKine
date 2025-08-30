@@ -115,10 +115,6 @@ const Gallery = () => {
   }];
   const filteredItems = activeFilter === 'tous' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
   const achievements = [{
-    icon: Award,
-    title: 'Centre Certifié',
-    description: 'Certification qualité ISO 9001'
-  }, {
     icon: Users,
     title: '2000+ Patients',
     description: 'Accompagnés vers la guérison'
