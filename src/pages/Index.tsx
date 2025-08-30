@@ -179,7 +179,7 @@ const Index = () => {
               label: 'Années d\'expérience'
             }, {
               icon: Users,
-              value: '2000+',
+              value: '+6000',
               label: 'Patients satisfaits'
             }].map((stat, index) => {
               const Icon = stat.icon;
@@ -301,7 +301,7 @@ const Index = () => {
                 
                 {/* Floating Stats */}
                 <div className="absolute -top-6 -left-6 glass-card p-4 rounded-2xl">
-                  <div className="text-accent text-2xl font-playfair font-bold">2000+</div>
+                  <div className="text-accent text-2xl font-playfair font-bold">+6000</div>
                   <div className="text-black text-sm">Patients</div>
                 </div>
                 

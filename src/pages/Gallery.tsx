@@ -116,7 +116,7 @@ const Gallery = () => {
   const filteredItems = activeFilter === 'tous' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
   const achievements = [{
     icon: Users,
-    title: '2000+ Patients',
+    title: '+6000 Patients',
     description: 'Accompagnés vers la guérison'
   }, {
     icon: Stethoscope,
