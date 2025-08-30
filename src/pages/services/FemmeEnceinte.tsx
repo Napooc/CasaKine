@@ -2,7 +2,7 @@ import Layout from '@/components/Layout';
 import ScrollAnimation from '@/components/ScrollAnimation';
 const femmeEnceinteHero = '/lovable-uploads/ae898483-0049-4459-bd35-4ca9c46d6852.png';
 import femmeEnceintePreparation from '@/assets/femme-enceinte-preparation.jpg';
-import femmeEnceinteRehabilitation from '@/assets/femme-enceinte-rehabilitation.jpg';
+import femmeEnceinteWithKinesiotherapist from '@/assets/femme-enceinte-with-kinesiotherapist.jpg';
 import femmeEnceinteBonding from '@/assets/femme-enceinte-bonding.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -327,7 +327,7 @@ const FemmeEnceinte = () => {
             <ScrollAnimation animation="slide-right">
               <div className="relative group">
                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-3xl blur-xl scale-105"></div>
-                <img src={femmeEnceinteRehabilitation} alt="Rééducation périnéale post-partum" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
+                <img src={femmeEnceinteWithKinesiotherapist} alt="Femme enceinte avec kinésithérapeute" className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-red-600/80 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </ScrollAnimation>
