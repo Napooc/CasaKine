@@ -21,7 +21,7 @@ const Services = () => {
     route: '/services/kinesitherapie-respiratoire'
   }, {
     icon: Zap,
-    title: 'Services d\'Amincissement et d\'Esthétique',
+    title: 'Amincissement et d\'Esthétique',
     description: 'Techniques modernes d\'amincissement pour sculpter votre silhouette',
     features: ['Cryothérapie/Cryolipolyse', 'Palper Rouler', 'Radiofréquence', 'Lipocavitation 40K', 'Lipolyse laser', 'Pressothérapie'],
     duration: '60-90 minutes',
