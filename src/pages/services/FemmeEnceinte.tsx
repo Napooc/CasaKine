@@ -175,12 +175,6 @@ const FemmeEnceinte = () => {
                   }, {
                     icon: Users,
                     text: "Positions d'accouchement optimales"
-                  }, {
-                    icon: Baby,
-                    text: "Communication prénatale avec bébé"
-                  }, {
-                    icon: Shield,
-                    text: "Préparation du partenaire"
                   }].map((item, idx) => <div key={idx} className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
                         <item.icon className="w-5 h-5 text-white" />
