@@ -126,10 +126,7 @@ const KinesitherapieRespiratoire = () => {
                 </Button>
               </Link>
               
-              <Button variant="outline" className="w-full sm:w-auto glass-effect border-white/30 font-montserrat font-medium px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 group text-zinc-950 bg-violet-50">
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:animate-pulse" />
-                Contact Urgent
-              </Button>
+              
             </div>
           </ScrollAnimation>
 
