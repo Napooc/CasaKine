@@ -386,7 +386,7 @@ const Index = () => {
                 
                 {/* Floating Badge */}
                 <div className="absolute -top-6 -right-6 glass-card p-4 rounded-2xl">
-                  <div className="text-accent text-lg font-playfair font-bold">+25 ans</div>
+                  <div className="text-accent text-lg font-playfair font-bold">20+ ans</div>
                   <div className="text-primary text-sm">D'expérience</div>
                 </div>
               </div>
@@ -400,7 +400,7 @@ const Index = () => {
                 <div className="space-y-6 text-lg text-neutral leading-relaxed">
                   <p>
                     Le centre est dirigé par <strong className="text-primary">Mme Nawal EL GHORFI    </strong>, 
-                    Diplômée d'État en Kinésithérapie et Physiothérapie, avec plus de 20 ans d'expérience.
+                    Diplômée d'État en Kinésithérapie et Physiothérapie, avec plus de 25 ans d'expérience.
                   </p>
                   <p>
                     Tous les soins sont personnellement assurés par Mme EL GHORFI, 
