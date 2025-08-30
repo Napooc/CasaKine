@@ -386,7 +386,7 @@ const Index = () => {
                 
                 {/* Floating Badge */}
                 <div className="absolute -top-6 -right-6 glass-card p-4 rounded-2xl">
-                  <div className="text-accent text-lg font-playfair font-bold">20+ ans</div>
+                  <div className="text-accent text-lg font-playfair font-bold">+25 ans</div>
                   <div className="text-primary text-sm">D'expérience</div>
                 </div>
               </div>
