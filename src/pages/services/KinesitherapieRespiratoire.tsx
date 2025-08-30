@@ -336,16 +336,7 @@ const KinesitherapieRespiratoire = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-6">
-                  
-                  <div className="text-center p-6 bg-white/50 rounded-2xl">
-                    <Home className="w-8 h-8 text-secondary mx-auto mb-3" />
-                    <div className="text-lg font-playfair font-semibold text-primary mb-1">
-                      Domicile
-                    </div>
-                    <div className="text-sm text-neutral-light">Disponible</div>
-                  </div>
-                </div>
+                
               </div>
             </ScrollAnimation>
           </div>
