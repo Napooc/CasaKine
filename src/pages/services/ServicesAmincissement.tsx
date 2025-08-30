@@ -129,10 +129,6 @@ const ServicesAmincissement = () => {
     zone: "Bras et décolleté",
     icon: "arms",
     description: "Raffermissement du haut du corps"
-  }, {
-    zone: "Contour des yeux et visage",
-    icon: "face",
-    description: "Traitement anti-âge du visage"
   }];
   return <div className="page-amincissement">
     <Layout>
@@ -474,7 +470,7 @@ const ServicesAmincissement = () => {
                     Suivi Personnalisé
                   </h3>
                   <p className="text-neutral-light">
-                    Accompagnement individualisé 
+                    Accompagnement individualisé par nos kinésithérapeutes spécialisés
                   </p>
                 </CardContent>
               </Card>
