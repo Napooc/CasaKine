@@ -277,7 +277,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-glow"></div>
-                    <span className="text-neutral-lightest">Spécialisée en Kinésithérapie</span>
+                    <span className="text-neutral-lightest">Spécialisé en Physiothérapie</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-3 h-3 bg-accent rounded-full animate-pulse-glow"></div>
