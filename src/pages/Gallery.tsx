@@ -28,19 +28,15 @@ const Gallery = () => {
   const filters = [{
     id: 'tous',
     label: 'Tous',
-    count: 14
+    count: 12
   }, {
     id: 'cabinet',
     label: 'Notre Cabinet',
-    count: 3
+    count: 5
   }, {
     id: 'equipements',
     label: 'Équipements',
     count: 9
-  }, {
-    id: 'soins',
-    label: 'Soins',
-    count: 2
   }];
   const galleryItems = [
   // Cabinet & Reception
@@ -143,11 +139,11 @@ const Gallery = () => {
     image: '/lovable-uploads/7a6cf888-73e3-4cc3-bada-cc4d9b194fbd.png',
     featured: false
   },
-  // Soins & Treatment Rooms
+  // Treatment Rooms
   {
     id: 13,
     type: 'image',
-    category: 'soins',
+    category: 'cabinet',
     title: 'Cabine de Soins Premium',
     description: 'Salle de traitement avec équipements professionnels',
     image: '/lovable-uploads/2bd54587-ea00-4374-b9f5-371be9b68918.png',
@@ -155,7 +151,7 @@ const Gallery = () => {
   }, {
     id: 14,
     type: 'image',
-    category: 'soins',
+    category: 'cabinet',
     title: 'Espace Thérapie Multiple',
     description: 'Salle polyvalente pour différents types de soins',
     image: '/lovable-uploads/cf1d218b-53a4-4f82-bf1a-75ed799fb472.png',
