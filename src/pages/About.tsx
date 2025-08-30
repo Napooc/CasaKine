@@ -7,7 +7,6 @@ import { Award, GraduationCap, Heart, Users, Clock, Star, Stethoscope, Shield } 
 import { useNavigate } from 'react-router-dom';
 const About = () => {
   const navigate = useNavigate();
-  
   const qualifications = [{
     icon: GraduationCap,
     title: 'Kinésithérapeute D.E.',
@@ -95,7 +94,7 @@ const About = () => {
                   <span className="text-secondary drop-shadow-lg">Votre Santé</span>
                 </h1>
                 
-                <h2 className="text-2xl md:text-3xl font-montserrat font-light text-white mb-8 opacity-90 drop-shadow-lg">
+                <h2 className="text-2xl font-montserrat text-white mb-8 opacity-90 drop-shadow-lg font-thin md:text-3xl">
                   Découvrez l'histoire et l'expertise de Nawal EL GHORFI
                 </h2>
                 
