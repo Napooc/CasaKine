@@ -28,7 +28,7 @@ const Gallery = () => {
   const filters = [{
     id: 'tous',
     label: 'Tous',
-    count: 8
+    count: 14
   }, {
     id: 'cabinet',
     label: 'Notre Cabinet',
@@ -36,7 +36,7 @@ const Gallery = () => {
   }, {
     id: 'equipements',
     label: 'Équipements',
-    count: 3
+    count: 9
   }, {
     id: 'soins',
     label: 'Soins',
@@ -74,30 +74,78 @@ const Gallery = () => {
     id: 4,
     type: 'image',
     category: 'equipements',
-    title: 'Salle de Gym Médicale',
-    description: 'Équipements modernes pour la Kinésithérapie',
-    image: '/lovable-uploads/e446b0d4-2529-4b49-a68d-d9a89f3dbaa6.png',
+    title: 'Radiofréquence',
+    description: 'Traitement par radiofréquence pour le raffermissement cutané',
+    image: '/lovable-uploads/86678569-c641-417b-a5df-23f9a93213d1.png',
     featured: true
   }, {
     id: 5,
     type: 'image',
     category: 'equipements',
-    title: 'Barres Parallèles',
-    description: 'Équipement spécialisé pour la rééducation de la marche',
-    image: '/lovable-uploads/32d8daa1-6c67-4431-a3c8-1a193c6d427b.png',
+    title: 'Cavitation 40K',
+    description: 'Technologie de cavitation ultrasonique pour l\'amincissement',
+    image: '/lovable-uploads/a33ed5d7-3823-4768-8d85-2995db57a0cb.png',
     featured: false
   }, {
     id: 6,
     type: 'image',
     category: 'equipements',
-    title: 'Technologies Avancées',
-    description: 'Appareils de dernière génération pour soins spécialisés',
-    image: '/lovable-uploads/91f452dd-3b25-47be-93c8-697714ebdb8d.png',
+    title: 'Laser Minceur',
+    description: 'Traitement laser pour la réduction localisée de graisse',
+    image: '/lovable-uploads/b1c97d78-fa4e-4cba-9b2a-b4b86d824455.png',
+    featured: false
+  }, {
+    id: 7,
+    type: 'image',
+    category: 'equipements',
+    title: 'Cryothérapie',
+    description: 'Thérapie par le froid pour l\'amincissement et la récupération',
+    image: '/lovable-uploads/6030a18c-6945-4ffa-81b1-6697e6e83cae.png',
+    featured: false
+  }, {
+    id: 8,
+    type: 'image',
+    category: 'equipements',
+    title: 'STARVAC',
+    description: 'Système de drainage lymphatique et d\'amincissement',
+    image: '/lovable-uploads/6dd7c7aa-ae26-47ab-a9b0-0cec2da544a4.png',
+    featured: false
+  }, {
+    id: 9,
+    type: 'image',
+    category: 'equipements',
+    title: 'Le Plateau Vibrant',
+    description: 'Plateforme vibrante pour tonification et drainage',
+    image: '/lovable-uploads/6030a18c-6945-4ffa-81b1-6697e6e83cae.png',
+    featured: false
+  }, {
+    id: 10,
+    type: 'image',
+    category: 'equipements',
+    title: 'Pressothérapie',
+    description: 'Compression pneumatique pour améliorer la circulation',
+    image: '/lovable-uploads/6dd7c7aa-ae26-47ab-a9b0-0cec2da544a4.png',
+    featured: false
+  }, {
+    id: 11,
+    type: 'image',
+    category: 'equipements',
+    title: 'Impédancemètre',
+    description: 'Analyse précise de la composition corporelle',
+    image: '/lovable-uploads/c73bb5cb-9c36-43c4-87db-a17998ea1b47.png',
+    featured: false
+  }, {
+    id: 12,
+    type: 'image',
+    category: 'equipements',
+    title: 'Sauna Infrarouge',
+    description: 'Détoxification et relaxation par chaleur infrarouge',
+    image: '/lovable-uploads/7a6cf888-73e3-4cc3-bada-cc4d9b194fbd.png',
     featured: false
   },
   // Soins & Treatment Rooms
   {
-    id: 7,
+    id: 13,
     type: 'image',
     category: 'soins',
     title: 'Cabine de Soins Premium',
@@ -105,7 +153,7 @@ const Gallery = () => {
     image: '/lovable-uploads/2bd54587-ea00-4374-b9f5-371be9b68918.png',
     featured: true
   }, {
-    id: 8,
+    id: 14,
     type: 'image',
     category: 'soins',
     title: 'Espace Thérapie Multiple',
