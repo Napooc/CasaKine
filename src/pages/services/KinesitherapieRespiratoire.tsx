@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Calendar, Phone, CheckCircle, Heart, Brain, Wind, Droplets, Activity, Hand, Baby, Clock, Star, Stethoscope, Target, Shield, Users, Home, ArrowRight, Zap, Sparkles } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import specialtyImage from '@/assets/specialty-medical-gymnastics.jpg';
 import kinesitherapieImage1 from '@/assets/kinesitherapie-respiratoire-1.jpg';
 import kinesitherapieImage2 from '@/assets/kinesitherapie-respiratoire-2.jpg';
@@ -119,10 +119,12 @@ const KinesitherapieRespiratoire = () => {
 
           <ScrollAnimation animation="scale-up" delay={600}>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4">
-              <Button className="w-full sm:w-auto morph-button bg-gradient-to-r from-kine-blue to-kine-blue/80 hover:shadow-kine-blue/50 hover:shadow-2xl text-white font-montserrat font-semibold px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
-                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:rotate-12 transition-transform duration-300" />
-                Réserver une Consultation
-              </Button>
+              <Link to="/contact">
+                <Button className="w-full sm:w-auto morph-button bg-gradient-to-r from-kine-blue to-kine-blue/80 hover:shadow-kine-blue/50 hover:shadow-2xl text-white font-montserrat font-semibold px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                  Réserver une Consultation
+                </Button>
+              </Link>
               
               <Button variant="outline" className="w-full sm:w-auto glass-effect border-white/30 font-montserrat font-medium px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 group text-zinc-950 bg-violet-50">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:animate-pulse" />
@@ -408,10 +410,12 @@ const KinesitherapieRespiratoire = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
-                <Calendar className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
-                Réserver une Consultation 
-              </Button>
+              <Link to="/contact">
+                <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
+                  <Calendar className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                  Réserver une Consultation 
+                </Button>
+              </Link>
               
               
             </div>

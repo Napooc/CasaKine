@@ -62,9 +62,9 @@ const Navbar = () => {
             >
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/b842a1de-fa46-46d8-a692-ed9011b6ba3f.png" 
-                  alt="Nawal El Ghorfi" 
-                  className="h-16 w-auto transition-transform duration-300 group-hover:scale-105 shadow-lg" 
+                  src="/lovable-uploads/2ec7b69f-f1c0-407c-86f7-2cd51b0c338d.png" 
+                  alt="Nawal El Ghorfi - Kinésithérapeute D.E." 
+                  className="h-16 w-auto transition-transform duration-300 group-hover:scale-105" 
                 />
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
