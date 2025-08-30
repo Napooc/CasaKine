@@ -90,11 +90,7 @@ const KinesitherapieRespiratoire = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src="/lovable-uploads/2544f454-85c1-4bb9-bbf0-21105732eb3d.png" 
-            alt="Cabinet de kinésithérapie moderne" 
-            className="w-full h-full object-cover scale-105" 
-          />
+          <img src="/lovable-uploads/2544f454-85c1-4bb9-bbf0-21105732eb3d.png" alt="Cabinet de kinésithérapie moderne" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-kine-blue/85 via-kine-blue/75 to-kine-blue/80"></div>
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-kine-blue/20 to-black/30"></div>
           <div className="absolute inset-0 bg-mesh-pattern opacity-10"></div>
@@ -160,25 +156,25 @@ const KinesitherapieRespiratoire = () => {
           <ScrollAnimation animation="fade-up" delay={800}>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[{
-              value: "7",
-              label: "Spécialités",
-              icon: Target
-            }, {
-              value: "100%",
-              label: "Personnalisé",
-              icon: Heart
-            }, {
-              value: "🏠",
-              label: "Domicile",
-              icon: Home
-            }].map((stat, index) => {
-              const Icon = stat.icon;
-              return <div key={index} className="glass-card p-6 text-center group hover:scale-110 transition-all duration-300">
+                value: "7",
+                label: "Spécialités",
+                icon: Target
+              }, {
+                value: "100%",
+                label: "Personnalisé",
+                icon: Heart
+              }, {
+                value: "🏠",
+                label: "Domicile",
+                icon: Home
+              }].map((stat, index) => {
+                const Icon = stat.icon;
+                return <div key={index} className="glass-card p-6 text-center group hover:scale-110 transition-all duration-300">
                     <Icon className="w-6 h-6 text-accent mx-auto mb-3 group-hover:animate-pulse" />
                     <div className="text-2xl font-playfair font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-white/80 text-sm">{stat.label}</div>
                   </div>;
-            })}
+              })}
             </div>
           </ScrollAnimation>
         </div>
@@ -202,8 +198,8 @@ const KinesitherapieRespiratoire = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => {
-            const Icon = service.icon;
-            return <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 150}>
+              const Icon = service.icon;
+              return <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 150}>
                   <Card className={`glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-[1.02] hover-glow h-full group bg-gradient-to-br ${service.gradient}`}>
                     <CardContent className="p-8">
                       <div className="flex items-start space-x-6">
@@ -229,28 +225,24 @@ const KinesitherapieRespiratoire = () => {
                           </div>
                           
                           {/* Additional content for shockwave therapy */}
-                          {service.highlight && (
-                            <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200/50">
+                          {service.highlight && <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border border-blue-200/50">
                               <p className="text-blue-800 text-sm leading-relaxed font-medium">
                                 {service.highlight}
                               </p>
-                            </div>
-                          )}
+                            </div>}
                           
-                          {service.timing && (
-                            <div className="mt-4 flex items-center space-x-3 p-3 bg-white/60 rounded-lg">
+                          {service.timing && <div className="mt-4 flex items-center space-x-3 p-3 bg-white/60 rounded-lg">
                               <Clock className="w-4 h-4 text-blue-600 flex-shrink-0" />
                               <span className="text-blue-700 text-sm font-medium">
                                 {service.timing}
                               </span>
-                            </div>
-                          )}
+                            </div>}
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 </ScrollAnimation>;
-          })}
+            })}
           </div>
         </div>
       </section>
@@ -275,8 +267,8 @@ const KinesitherapieRespiratoire = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => {
-            const Icon = step.icon;
-            return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
+              const Icon = step.icon;
+              return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
                   <div className="text-center group">
                     <div className="relative mb-8">
                       <div className="w-24 h-24 mx-auto bg-gradient-accent rounded-2xl flex items-center justify-center shadow-accent-glow group-hover:scale-110 transition-all duration-300 backdrop-blur-sm">
@@ -298,7 +290,7 @@ const KinesitherapieRespiratoire = () => {
                     </p>
                   </div>
                 </ScrollAnimation>;
-          })}
+            })}
           </div>
         </div>
       </section>
@@ -345,13 +337,7 @@ const KinesitherapieRespiratoire = () => {
                 </div>
 
                 <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center p-6 bg-white/50 rounded-2xl">
-                    <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <div className="text-lg font-playfair font-semibold text-primary mb-1">
-                      Durée
-                    </div>
-                    <div className="text-sm text-neutral-light">45-60 min</div>
-                  </div>
+                  
                   <div className="text-center p-6 bg-white/50 rounded-2xl">
                     <Home className="w-8 h-8 text-secondary mx-auto mb-3" />
                     <div className="text-lg font-playfair font-semibold text-primary mb-1">
