@@ -37,7 +37,7 @@ const Index = () => {
     detailedInfo: {
       overview: 'Une approche thérapeutique complète visant à restaurer les capacités physiques et fonctionnelles après un traumatisme, une chirurgie ou une pathologie neurologique. Notre centre utilise des techniques avancées et des équipements de pointe pour optimiser votre récupération.',
       benefits: ['Récupération optimisée des fonctions motrices', 'Réduction significative de la douleur', 'Amélioration de la qualité de vie au quotidien', 'Prévention des récidives et complications', 'Renforcement musculaire ciblé et progressif'],
-      techniques: ['Rééducation proprioceptive', 'Thérapie par ondes de choc', 'Électrostimulation thérapeutique', 'Mobilisation articulaire', 'Renforcement isokinétique'],
+      techniques: ['Physiologie proprioceptive', 'Thérapie par ondes de choc', 'Électrostimulation thérapeutique', 'Mobilisation articulaire', 'Renforcement isokinétique'],
       duration: '45-60 min',
       sessions: '8-15 séances',
       image: specialtyRehabilitationImage,
@@ -400,7 +400,7 @@ const Index = () => {
                 <div className="space-y-6 text-lg text-neutral leading-relaxed">
                   <p>
                     Le centre est dirigé par <strong className="text-primary">Mme Nawal EL GHORFI    </strong>, 
-                    Diplômée d'État en Kinésithérapie et Physiothérapie, avec plus de 25 ans d'expérience.
+                    Diplômée d'État en Kinésithérapie et Physiothérapie, avec plus de 20 ans d'expérience.
                   </p>
                   <p>
                     Tous les soins sont personnellement assurés par Mme EL GHORFI, 
