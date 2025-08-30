@@ -87,7 +87,7 @@ const Services = () => {
         </div>
 
         {/* Floating Service Icons - Hidden on mobile */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block z-0">
           <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-gradient-accent rounded-full opacity-20 animate-float flex items-center justify-center">
             <Activity className="w-8 h-8 text-white" />
           </div>
