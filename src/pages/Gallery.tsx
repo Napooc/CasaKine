@@ -1,6 +1,8 @@
 import Layout from '@/components/Layout';
 import ScrollAnimation from '@/components/ScrollAnimation';
 import heroGalleryImage from '@/assets/hero-gallery.jpg';
+import impedancemetreImage from '@/assets/impedancemetre-modern.jpg';
+import saunaInfrarougeImage from '@/assets/sauna-infrarouge-modern.jpg';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -13,13 +15,14 @@ const Gallery = () => {
   // Navigation functions for lightbox
   const navigateLightboxImage = (direction: 'prev' | 'next') => {
     const currentImageSrc = selectedImage;
-    const currentIndex = galleryItems.findIndex(item => item.image === currentImageSrc);
+    const allItems = activeFilter === 'equipements' ? equipmentItems : galleryItems;
+    const currentIndex = allItems.findIndex(item => item.image === currentImageSrc);
     if (direction === 'prev') {
-      const prevIndex = currentIndex === 0 ? galleryItems.length - 1 : currentIndex - 1;
-      setSelectedImage(galleryItems[prevIndex].image);
+      const prevIndex = currentIndex === 0 ? allItems.length - 1 : currentIndex - 1;
+      setSelectedImage(allItems[prevIndex].image);
     } else {
-      const nextIndex = currentIndex === galleryItems.length - 1 ? 0 : currentIndex + 1;
-      setSelectedImage(galleryItems[nextIndex].image);
+      const nextIndex = currentIndex === allItems.length - 1 ? 0 : currentIndex + 1;
+      setSelectedImage(allItems[nextIndex].image);
     }
   };
   const openLightbox = (image: string) => {
@@ -28,7 +31,7 @@ const Gallery = () => {
   const filters = [{
     id: 'tous',
     label: 'Tous',
-    count: 8
+    count: 3
   }, {
     id: 'cabinet',
     label: 'Notre Cabinet',
@@ -36,14 +39,10 @@ const Gallery = () => {
   }, {
     id: 'equipements',
     label: 'Équipements',
-    count: 3
-  }, {
-    id: 'soins',
-    label: 'Soins',
-    count: 2
+    count: 9
   }];
   const galleryItems = [
-  // Cabinet & Reception
+  // Cabinet & Reception (shown in 'tous')
   {
     id: 1,
     type: 'image',
@@ -68,52 +67,88 @@ const Gallery = () => {
     description: 'Espace extérieur zen pour la relaxation',
     image: '/lovable-uploads/706b90bc-891b-4530-8baf-a984ca929e0e.png',
     featured: true
-  },
-  // Équipements & Technology
-  {
-    id: 4,
-    type: 'image',
-    category: 'equipements',
-    title: 'Salle de Gym Médicale',
-    description: 'Équipements modernes pour la Kinésithérapie',
-    image: '/lovable-uploads/e446b0d4-2529-4b49-a68d-d9a89f3dbaa6.png',
-    featured: true
-  }, {
-    id: 5,
-    type: 'image',
-    category: 'equipements',
-    title: 'Barres Parallèles',
-    description: 'Équipement spécialisé pour la rééducation de la marche',
-    image: '/lovable-uploads/32d8daa1-6c67-4431-a3c8-1a193c6d427b.png',
-    featured: false
-  }, {
-    id: 6,
-    type: 'image',
-    category: 'equipements',
-    title: 'Technologies Avancées',
-    description: 'Appareils de dernière génération pour soins spécialisés',
-    image: '/lovable-uploads/91f452dd-3b25-47be-93c8-697714ebdb8d.png',
-    featured: false
-  },
-  // Soins & Treatment Rooms
-  {
-    id: 7,
-    type: 'image',
-    category: 'soins',
-    title: 'Cabine de Soins Premium',
-    description: 'Salle de traitement avec équipements professionnels',
-    image: '/lovable-uploads/2bd54587-ea00-4374-b9f5-371be9b68918.png',
-    featured: true
-  }, {
-    id: 8,
-    type: 'image',
-    category: 'soins',
-    title: 'Espace Thérapie Multiple',
-    description: 'Salle polyvalente pour différents types de soins',
-    image: '/lovable-uploads/cf1d218b-53a4-4f82-bf1a-75ed799fb472.png',
-    featured: false
   }];
-  const filteredItems = activeFilter === 'tous' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
+
+  // Equipment items (only shown in 'equipements' filter, NOT in 'tous')
+  const equipmentItems = [
+  {
+    id: 10,
+    type: 'image',
+    category: 'equipements',
+    title: 'Radiofréquence',
+    description: 'Technologie de radiofréquence pour le raffermissement et la stimulation du collagène',
+    image: '/lovable-uploads/dd7a452b-4de9-4e92-a7f2-90ccef1f273c.png',
+    featured: true
+  }, {
+    id: 11,
+    type: 'image',
+    category: 'equipements',
+    title: 'Cavitation 40K',
+    description: 'Ultrasons de cavitation pour la réduction des amas graisseux localisés',
+    image: '/lovable-uploads/d35e6646-fc16-4038-b7e5-4a4dd3f4c775.png',
+    featured: false
+  }, {
+    id: 12,
+    type: 'image',
+    category: 'equipements',
+    title: 'Laser Minceur',
+    description: 'Technologie laser de dernière génération pour la sculpte corporelle',
+    image: '/lovable-uploads/b6db2820-78b2-4a9c-b470-e63bd5cf2d3f.png',
+    featured: true
+  }, {
+    id: 13,
+    type: 'image',
+    category: 'equipements',
+    title: 'Cryothérapie',
+    description: 'Traitement par le froid pour la réduction des graisses et la tonification',
+    image: '/lovable-uploads/78f00049-3df6-4d73-9481-738cf6c96b27.png',
+    featured: false
+  }, {
+    id: 14,
+    type: 'image',
+    category: 'equipements',
+    title: 'STARVAC',
+    description: 'Aspiration pulsée pour le drainage lymphatique et la cellulite',
+    image: '/lovable-uploads/7fb51010-78ed-4df1-8896-1869ba86b002.png',
+    featured: true
+  }, {
+    id: 15,
+    type: 'image',
+    category: 'equipements',
+    title: 'Le Plateau Vibrant',
+    description: 'Vibrations pour le renforcement musculaire et la stimulation circulatoire',
+    image: '/lovable-uploads/050d816d-91d8-42bb-8be4-195e60941d91.png',
+    featured: false
+  }, {
+    id: 16,
+    type: 'image',
+    category: 'equipements',
+    title: 'Pressothérapie',
+    description: 'Massage pneumatique pour l\'amélioration de la circulation et le drainage',
+    image: '/lovable-uploads/efac2d5e-ff0b-40f5-97f4-0365ced52d3d.png',
+    featured: true
+  }, {
+    id: 17,
+    type: 'image',
+    category: 'equipements',
+    title: 'Impédancemètre',
+    description: 'Analyse précise de la composition corporelle pour un suivi personnalisé',
+    image: impedancemetreImage,
+    featured: false
+  }, {
+    id: 18,
+    type: 'image',
+    category: 'equipements',
+    title: 'Sauna Infrarouge',
+    description: 'Détoxification et relaxation par infrarouge pour le bien-être global',
+    image: saunaInfrarougeImage,
+    featured: true
+  }];
+  const filteredItems = activeFilter === 'tous' 
+    ? galleryItems 
+    : activeFilter === 'equipements' 
+      ? equipmentItems 
+      : galleryItems.filter(item => item.category === activeFilter);
   const achievements = [{
     icon: Users,
     title: '+6000 Patients',
@@ -227,7 +262,19 @@ const Gallery = () => {
             {achievements.map((achievement, index) => {
             const Icon = achievement.icon;
             return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
-                  
+                  <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow text-center group h-full">
+                    <CardContent className="p-8 h-full flex flex-col justify-center">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-primary/10 flex items-center justify-center group-hover:animate-pulse-glow">
+                        <Icon className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
+                      </div>
+                      <h3 className="text-lg font-playfair font-bold text-primary mb-2">
+                        {achievement.title}
+                      </h3>
+                      <p className="text-neutral-light text-sm">
+                        {achievement.description}
+                      </p>
+                    </CardContent>
+                  </Card>
                 </ScrollAnimation>;
           })}
           </div>
