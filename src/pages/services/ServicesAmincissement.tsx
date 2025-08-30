@@ -335,13 +335,13 @@ const ServicesAmincissement = () => {
       {/* Target Areas Section */}
       <section className="py-32 bg-gradient-to-br from-neutral-lightest via-background to-secondary/5 relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-5 z-0">
           <div className="absolute top-20 left-10 w-32 h-32 border border-primary/20 rounded-full"></div>
           <div className="absolute bottom-20 right-10 w-24 h-24 border border-accent/20 rounded-full"></div>
           <div className="absolute top-1/2 left-1/4 w-16 h-16 border border-secondary/20 rounded-full"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20">
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-20">
               <Badge className="bg-accent/15 text-accent border-accent/30 px-8 py-4 text-lg mb-8 backdrop-blur-sm shadow-soft">
