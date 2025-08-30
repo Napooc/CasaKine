@@ -140,7 +140,7 @@ const Services = () => {
 
           {/* Quick Service Stats */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-xs sm:max-w-6xl mx-auto px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-md sm:max-w-6xl mx-auto px-4">
             {[{
               icon: Heart,
               label: 'Kinésithérapie',
@@ -155,9 +155,9 @@ const Services = () => {
               route: '/services/femme-enceinte'
             }].map((service, index) => {
               const Icon = service.icon;
-              return <div key={index} className="glass-card p-3 sm:p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>
-                    <Icon className="w-5 h-5 sm:w-8 sm:h-8 text-accent mx-auto mb-2 sm:mb-3" />
-                    <div className="text-white font-montserrat text-xs sm:text-sm opacity-90">
+              return <div key={index} className="glass-card p-4 sm:p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent mx-auto mb-3 sm:mb-3" />
+                    <div className="text-white font-montserrat text-sm sm:text-sm opacity-90">
                       {service.label}
                     </div>
                   </div>;
