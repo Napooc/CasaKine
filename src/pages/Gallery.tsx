@@ -25,19 +25,7 @@ const Gallery = () => {
   const openLightbox = (image: string) => {
     setSelectedImage(image);
   };
-  const filters = [{
-    id: 'tous',
-    label: 'Tous',
-    count: 12
-  }, {
-    id: 'cabinet',
-    label: 'Notre Cabinet',
-    count: 5
-  }, {
-    id: 'equipements',
-    label: 'Équipements',
-    count: 9
-  }];
+  
   const galleryItems = [
   // Cabinet & Reception
   {
@@ -157,6 +145,21 @@ const Gallery = () => {
     image: '/lovable-uploads/cf1d218b-53a4-4f82-bf1a-75ed799fb472.png',
     featured: false
   }];
+
+  const filters = [{
+    id: 'tous',
+    label: 'Tous',
+    count: galleryItems.length
+  }, {
+    id: 'cabinet',
+    label: 'Notre Cabinet',
+    count: galleryItems.filter(item => item.category === 'cabinet').length
+  }, {
+    id: 'equipements',
+    label: 'Équipements',
+    count: galleryItems.filter(item => item.category === 'equipements').length
+  }];
+
   const filteredItems = activeFilter === 'tous' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
   const achievements = [{
     icon: Users,
