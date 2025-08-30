@@ -14,7 +14,7 @@ interface SEOProps {
 export const SEO = ({
   title = "Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca | Casakine",
   description = "Centre de kinésithérapie premium à Casablanca. Nawal El Ghorfi vous accompagne vers un rétablissement optimal avec des soins personnalisés et des techniques modernes. Prise de rendez-vous en ligne.",
-  keywords = "kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport, femme enceinte kinésithérapie, gymnastique médicale",
+  keywords = "kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, traumatologie sport, femme enceinte kinésithérapie",
   canonical,
   ogImage = "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
   ogType = "website",

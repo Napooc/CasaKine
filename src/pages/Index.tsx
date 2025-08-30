@@ -44,20 +44,6 @@ const Index = () => {
       conditions: ['Traumatismes sportifs et accidents', 'Post-chirurgie orthopédique', 'Pathologies neurologiques (AVC, sclérose)', 'Troubles de l\'équilibre et de la coordination', 'Rééducation post-fracture']
     }
   }, {
-    icon: Heart,
-    title: 'Massage et Bien-être',
-    description: 'Relaxation profonde, massage décontracturant et techniques de détente spécialisées',
-    color: 'text-medical-red',
-    detailedInfo: {
-      overview: 'Nos massages thérapeutiques combinent relaxation et soins pour offrir une détente profonde du corps et de l\'esprit. Chaque séance est personnalisée selon vos besoins pour un soulagement durable et une régénération complète.',
-      benefits: ['Relaxation physique et mentale profonde', 'Soulagement des tensions musculaires', 'Amélioration de la circulation sanguine', 'Réduction du stress et de l\'anxiété', 'Revitalisation et bien-être général'],
-      techniques: ['Massage relaxant anti-stress', 'Massage décontracturant ciblé', 'Massage tonifiant énergisant', 'Techniques de détente manuelle', 'Thérapies corporelles douces'],
-      duration: '60-90 min',
-      sessions: '6-12 séances',
-      image: specialtyManualTherapyImage,
-      conditions: ['Stress et tensions quotidiennes', 'Fatigue musculaire et nerveuse', 'Contractures et raideurs', 'Besoin de relaxation profonde', 'Amélioration du bien-être général']
-    }
-  }, {
     icon: Zap,
     title: 'Amincissement & Bien-être',
     description: 'Programmes minceur, drainage lymphatique et électrothérapie',
@@ -70,20 +56,6 @@ const Index = () => {
       sessions: '10-20 séances',
       image: specialtyWellnessImage,
       conditions: ['Cellulite et rétention d\'eau', 'Surpoids localisé', 'Troubles circulatoires', 'Post-grossesse et vergetures', 'Jambes lourdes et œdèmes']
-    }
-  }, {
-    icon: Shield,
-    title: 'Gymnastique Médicale',
-    description: 'Renforcement musculaire, Pilates thérapeutique et yoga adapté',
-    color: 'text-accent',
-    detailedInfo: {
-      overview: 'La gymnastique médicale combine exercices thérapeutiques, Pilates et yoga adaptés pour renforcer votre corps en douceur. Nos programmes sur-mesure améliorent votre condition physique tout en respectant vos limitations et objectifs personnels.',
-      benefits: ['Renforcement musculaire progressif', 'Amélioration de la flexibilité et mobilité', 'Correction des déséquilibres posturaux', 'Prévention des blessures futures', 'Gestion du stress et relaxation mentale'],
-      techniques: ['Pilates thérapeutique', 'Yoga médical adapté', 'Gymnastique corrective', 'Stretching postural', 'Renforcement fonctionnel'],
-      duration: '60 min',
-      sessions: '12-24 séances',
-      image: specialtyMedicalGymnasticsImage,
-      conditions: ['Troubles posturaux et scoliose', 'Faiblesse musculaire généralisée', 'Prévention des chutes (seniors)', 'Rééducation post-traumatique', 'Stress et troubles anxieux']
     }
   }, {
     icon: Baby,

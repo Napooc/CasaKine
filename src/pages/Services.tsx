@@ -31,17 +31,6 @@ const Services = () => {
     glowColor: 'shadow-amincissement-pink/20',
     route: '/services/amincissement'
   }, {
-    icon: Activity,
-    title: 'Gymnastique médicale',
-    description: 'Cours encadrés par des kinésithérapeutes pour améliorer mobilité et prévenir les douleurs',
-    features: ['Gymnastique vertébrale', 'Gymnastique senior', 'Renforcement musculaire', 'Amélioration de l\'équilibre', 'Prévention des chutes', 'Ambiance conviviale'],
-    duration: '45-60 minutes',
-    color: 'text-gymnastics-light-green',
-    bgGradient: 'from-gymnastics-light-green/20 to-gymnastics-light-green/5',
-    borderColor: 'border-gymnastics-light-green/30',
-    glowColor: 'shadow-gymnastics-light-green/20',
-    route: '/services/gymnastique-medicale'
-  }, {
     icon: Baby,
     title: 'Femme enceinte',
     description: 'Accompagnement spécialisé pour la grossesse et l\'après-accouchement',
@@ -52,17 +41,6 @@ const Services = () => {
     borderColor: 'border-pregnancy-red/30',
     glowColor: 'shadow-pregnancy-red/20',
     route: '/services/femme-enceinte'
-  }, {
-    icon: Sparkles,
-    title: 'Massage et Bien-être',
-    description: 'Massages thérapeutiques pour relaxation et récupération',
-    features: ['Massage relaxant anti-stress', 'Massage décontracturant', 'Massage tonifiant énergisant', 'Détente musculaire profonde', 'Amélioration circulation', 'Élimination des toxines'],
-    duration: '20-60 minutes',
-    color: 'text-massage-green',
-    bgGradient: 'from-massage-green/20 to-massage-green/5',
-    borderColor: 'border-massage-green/30',
-    glowColor: 'shadow-massage-green/20',
-    route: '/services/massage-bien-etre'
   }];
   const specialties = [{
     icon: Stethoscope,
@@ -177,14 +155,6 @@ const Services = () => {
               icon: Baby,
               label: 'Femme Enceinte',
               route: '/services/femme-enceinte'
-            }, {
-              icon: Activity,
-              label: 'Gymnastique médicale',
-              route: '/services/gymnastique-medicale'
-            }, {
-              icon: Sparkles,
-              label: 'Massage & Bien-être',
-              route: '/services/massage-bien-etre'
             }].map((service, index) => {
               const Icon = service.icon;
               return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>

@@ -11,9 +11,7 @@ const routeLabels: Record<string, string> = {
   'reeducation-specialisee': 'Rééducation Spécialisée',
   'amincissement': 'Amincissement',
   'kinesitherapie-respiratoire': 'Kinésithérapie Respiratoire',
-  'massage-bien-etre': 'Massage Bien-être',
   'femme-enceinte': 'Femme Enceinte',
-  'gymnastique-medicale': 'Gymnastique Médicale',
   'traumatologie': 'Traumatologie'
 };
 export const Breadcrumbs = () => {
