@@ -170,7 +170,7 @@ const Index = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slide-left" delay={400}>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat text-neutral-lightest mb-8 opacity-90 font-bold">
               Nawal EL GHORFI - Kinésithérapeute Diplômée d'État
             </h2>
           </ScrollAnimation>
