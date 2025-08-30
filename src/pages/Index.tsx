@@ -100,7 +100,7 @@ const Index = () => {
   }];
   const structuredData = [getLocalBusinessSchema(), getWebsiteSchema(), getOrganizationSchema(), getFAQSchema(faqs)];
   return <Layout>
-      <SEO title=" Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca" description="🏥 Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne." keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport" canonical="https://casakine.com/" structuredData={structuredData} />
+      <SEO title=" Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca" description="🏥 Centre de kinésithérapie premium à Casablanca.  Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne." keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport" canonical="https://casakine.com/" structuredData={structuredData} />
       <GoogleVerification />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
@@ -179,7 +179,7 @@ const Index = () => {
               label: 'Années d\'expérience'
             }, {
               icon: Users,
-              value: '+6000',
+              value: '2000+',
               label: 'Patients satisfaits'
             }].map((stat, index) => {
               const Icon = stat.icon;
@@ -301,7 +301,7 @@ const Index = () => {
                 
                 {/* Floating Stats */}
                 <div className="absolute -top-6 -left-6 glass-card p-4 rounded-2xl">
-                  <div className="text-accent text-2xl font-playfair font-bold">+6000</div>
+                  <div className="text-accent text-2xl font-playfair font-bold">2000+</div>
                   <div className="text-black text-sm">Patients</div>
                 </div>
                 

@@ -43,7 +43,7 @@ const Contact = () => {
   }, {
     icon: MapPin,
     title: 'Adresse',
-    value: '19 Rue De Masmouda ,Hay El Hana',
+    value: '19 Rue Masmouda , Hay El Hana',
     description: 'Casablanca 20210',
     color: 'text-accent',
     action: 'https://maps.google.com/?q=Kinésithérapie+Nawal+EL+GHORFI,Casablanca,Morocco'
@@ -66,7 +66,7 @@ const Contact = () => {
     heures: '09h00 - 12h30'
   }];
   return <Layout>
-      <SEO title="Contact et Rendez-vous - Centre Casakine Casablanca" description="📍 Prenez rendez-vous au centre de kinésithérapie Casakine Casablanca. 📞 +212 661 67 70 96 ✉️ info@casakine.com 📍 19 Rue De Masmouda, Casablanca. Horaires et plan d'accès." keywords="rendez vous kinésithérapeute casablanca, contact casakine, adresse kinésithérapie casablanca, horaires dr nawal el ghorfi, consultation physiothérapie" canonical="https://casakine.com/contact" structuredData={structuredData} />
+      <SEO title="Contact et Rendez-vous - Centre Casakine Casablanca" description="📍 Prenez rendez-vous au centre de kinésithérapie Casakine Casablanca. 📞 +212 661 67 70 96 ✉️ info@casakine.com 📍 19 Rue Masmouda, Casablanca. Horaires et plan d'accès." keywords="rendez vous kinésithérapeute casablanca, contact casakine, adresse kinésithérapie casablanca, horaires nawal el ghorfi, consultation physiothérapie" canonical="https://casakine.com/contact" structuredData={structuredData} />
       {/* Parallax Background */}
       <div className="fixed inset-0 w-full h-full z-0" style={{
       backgroundImage: `url(${contactParallaxBg})`,

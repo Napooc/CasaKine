@@ -136,7 +136,7 @@ const ServicesAmincissement = () => {
   }];
   return <div className="page-amincissement">
     <Layout>
-      <SEO title="Amincissement et Remodelage Corporel - Casakine Casablanca" description="🔥 Techniques modernes d'amincissement à Casablanca : Radiofréquence, Cavitation 40k, Laser minceur, Cryothérapie. ✨ Résultats visibles dès les premières séances. ☎️ +212 661 67 70 96" keywords="amincissement casablanca, radiofréquence casablanca, cavitation 40k, laser minceur maroc, cryothérapie amincissement, remodelage corporel, cellulite traitement, dr nawal el ghorfi" canonical="https://casakine.com/services/amincissement" structuredData={structuredData} />
+      <SEO title="Amincissement et Remodelage Corporel - Casakine Casablanca" description="🔥 Techniques modernes d'amincissement à Casablanca : Radiofréquence, Cavitation 40k, Laser minceur, Cryothérapie. ✨ Résultats visibles dès les premières séances. ☎️ +212 661 67 70 96" keywords="amincissement casablanca, radiofréquence casablanca, cavitation 40k, laser minceur maroc, cryothérapie amincissement, remodelage corporel, cellulite traitement,  nawal el ghorfi" canonical="https://casakine.com/services/amincissement" structuredData={structuredData} />
       {/* Fixed Return Button */}
       <div className="fixed top-6 left-6 z-50">
         
