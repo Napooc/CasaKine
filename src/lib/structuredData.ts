@@ -12,7 +12,7 @@ export const getLocalBusinessSchema = () => ({
   "email": "info@casakine.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "19 Rue  Masmouda",
+    "streetAddress": "19 Rue De Masmouda",
     "addressLocality": "Casablanca",
     "postalCode": "20210",
     "addressRegion": "Grand Casablanca",
@@ -41,10 +41,8 @@ export const getLocalBusinessSchema = () => ({
   },
   "medicalSpecialty": [
     "Kinésithérapie",
-    "Rééducation fonctionnelle",
     "Physiothérapie",
     "Amincissement",
-    "Massage thérapeutique"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -137,7 +135,7 @@ export const getOrganizationSchema = () => ({
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "19 Rue  Masmouda",
+    "streetAddress": "19 Rue De Masmouda",
     "addressLocality": "Casablanca",
     "postalCode": "20210",
     "addressCountry": "MA"
@@ -175,7 +173,7 @@ export const getServiceSchema = (service: {
     "name": "Casakine",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "19 Rue  Masmouda",
+      "streetAddress": "19 Rue De Masmouda",
       "addressLocality": "Casablanca",
       "postalCode": "20210",
       "addressCountry": "MA"
