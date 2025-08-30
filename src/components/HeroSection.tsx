@@ -85,13 +85,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollAnimation animation="fade-up" delay={200}>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-tight">
-            {title.split(' ').map((word, index) => <span key={index} className={`inline-block ${index % 2 === 0 ? 'text-gradient-accent' : 'text-white'}`} style={{
-            animationDelay: `${index * 200}ms`
-          }}>
-                {word}{' '}
-              </span>)}
-          </h1>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-relaxed">
+  {title.split(' ').map((word, index) => (
+    <span 
+      key={index} 
+      className={`inline-block ${index % 2 === 0 ? 'text-gradient-accent' : 'text-white'}`} 
+      style={{ animationDelay: `${index * 200}ms` }}
+    >
+      {word}{' '}
+    </span>
+  ))}
+</h1>
+
         </ScrollAnimation>
 
         <ScrollAnimation animation="slide-left" delay={400}>
