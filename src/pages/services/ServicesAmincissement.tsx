@@ -176,7 +176,7 @@ const ServicesAmincissement = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
                 <Calendar className="w-5 h-5 mr-3" />
-                Bilan personnalisé gratuit
+                Bilan personnalisé 
               </Button>
               
               <Button variant="outline" onClick={() => window.open('tel:+212522398874')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
@@ -507,7 +507,7 @@ const ServicesAmincissement = () => {
               Commencez Votre <span className="text-white/80">Transformation</span> Aujourd'hui
             </h2>
             <p className="text-xl text-white/90 mb-12 leading-relaxed">
-              Réservez votre bilan personnalisé gratuit et découvrez le programme 
+              Réservez votre bilan personnalisé et découvrez le programme 
               d'amincissement parfaitement adapté à vos objectifs.
             </p>
             
