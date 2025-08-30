@@ -9,12 +9,11 @@ import { Play, Camera, Award, Users, Stethoscope, Heart, Activity, Shield, Eye, 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('tous');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  
+
   // Navigation functions for lightbox
   const navigateLightboxImage = (direction: 'prev' | 'next') => {
     const currentImageSrc = selectedImage;
     const currentIndex = galleryItems.findIndex(item => item.image === currentImageSrc);
-    
     if (direction === 'prev') {
       const prevIndex = currentIndex === 0 ? galleryItems.length - 1 : currentIndex - 1;
       setSelectedImage(galleryItems[prevIndex].image);
@@ -23,7 +22,6 @@ const Gallery = () => {
       setSelectedImage(galleryItems[nextIndex].image);
     }
   };
-  
   const openLightbox = (image: string) => {
     setSelectedImage(image);
   };
@@ -45,84 +43,76 @@ const Gallery = () => {
     count: 2
   }];
   const galleryItems = [
-    // Cabinet & Reception
-    {
-      id: 1,
-      type: 'image',
-      category: 'cabinet',
-      title: 'Accueil & Réception',
-      description: 'Espace d\'accueil moderne avec comptoir professionnel',
-      image: '/lovable-uploads/05dc901e-539a-4a8c-bf3f-811024a21376.png',
-      featured: true
-    },
-    {
-      id: 2,
-      type: 'image',
-      category: 'cabinet',
-      title: 'Espace Détente',
-      description: 'Salon d\'attente confortable avec décoration chaleureuse',
-      image: '/lovable-uploads/96149297-0185-49ae-9299-0d7da455afa8.png',
-      featured: false
-    },
-    {
-      id: 3,
-      type: 'image',
-      category: 'cabinet',
-      title: 'Jardin Thérapeutique',
-      description: 'Espace extérieur zen pour la relaxation',
-      image: '/lovable-uploads/706b90bc-891b-4530-8baf-a984ca929e0e.png',
-      featured: true
-    },
-    
-    // Équipements & Technology
-    {
-      id: 4,
-      type: 'image',
-      category: 'equipements',
-      title: 'Salle de Gym Médicale',
-      description: 'Équipements modernes pour la rééducation fonctionnelle',
-      image: '/lovable-uploads/e446b0d4-2529-4b49-a68d-d9a89f3dbaa6.png',
-      featured: true
-    },
-    {
-      id: 5,
-      type: 'image',
-      category: 'equipements',
-      title: 'Barres Parallèles',
-      description: 'Équipement spécialisé pour la rééducation de la marche',
-      image: '/lovable-uploads/32d8daa1-6c67-4431-a3c8-1a193c6d427b.png',
-      featured: false
-    },
-    {
-      id: 6,
-      type: 'image',
-      category: 'equipements',
-      title: 'Technologies Avancées',
-      description: 'Appareils de dernière génération pour soins spécialisés',
-      image: '/lovable-uploads/91f452dd-3b25-47be-93c8-697714ebdb8d.png',
-      featured: false
-    },
-    
-    // Soins & Treatment Rooms
-    {
-      id: 7,
-      type: 'image',
-      category: 'soins',
-      title: 'Cabine de Soins Premium',
-      description: 'Salle de traitement avec équipements professionnels',
-      image: '/lovable-uploads/2bd54587-ea00-4374-b9f5-371be9b68918.png',
-      featured: true
-    },
-    {
-      id: 8,
-      type: 'image',
-      category: 'soins',
-      title: 'Espace Thérapie Multiple',
-      description: 'Salle polyvalente pour différents types de soins',
-      image: '/lovable-uploads/cf1d218b-53a4-4f82-bf1a-75ed799fb472.png',
-      featured: false
-    }
-  ];
+  // Cabinet & Reception
+  {
+    id: 1,
+    type: 'image',
+    category: 'cabinet',
+    title: 'Accueil & Réception',
+    description: 'Espace d\'accueil moderne avec comptoir professionnel',
+    image: '/lovable-uploads/05dc901e-539a-4a8c-bf3f-811024a21376.png',
+    featured: true
+  }, {
+    id: 2,
+    type: 'image',
+    category: 'cabinet',
+    title: 'Espace Détente',
+    description: 'Salon d\'attente confortable avec décoration chaleureuse',
+    image: '/lovable-uploads/96149297-0185-49ae-9299-0d7da455afa8.png',
+    featured: false
+  }, {
+    id: 3,
+    type: 'image',
+    category: 'cabinet',
+    title: 'Jardin Thérapeutique',
+    description: 'Espace extérieur zen pour la relaxation',
+    image: '/lovable-uploads/706b90bc-891b-4530-8baf-a984ca929e0e.png',
+    featured: true
+  },
+  // Équipements & Technology
+  {
+    id: 4,
+    type: 'image',
+    category: 'equipements',
+    title: 'Salle de Gym Médicale',
+    description: 'Équipements modernes pour la rééducation fonctionnelle',
+    image: '/lovable-uploads/e446b0d4-2529-4b49-a68d-d9a89f3dbaa6.png',
+    featured: true
+  }, {
+    id: 5,
+    type: 'image',
+    category: 'equipements',
+    title: 'Barres Parallèles',
+    description: 'Équipement spécialisé pour la rééducation de la marche',
+    image: '/lovable-uploads/32d8daa1-6c67-4431-a3c8-1a193c6d427b.png',
+    featured: false
+  }, {
+    id: 6,
+    type: 'image',
+    category: 'equipements',
+    title: 'Technologies Avancées',
+    description: 'Appareils de dernière génération pour soins spécialisés',
+    image: '/lovable-uploads/91f452dd-3b25-47be-93c8-697714ebdb8d.png',
+    featured: false
+  },
+  // Soins & Treatment Rooms
+  {
+    id: 7,
+    type: 'image',
+    category: 'soins',
+    title: 'Cabine de Soins Premium',
+    description: 'Salle de traitement avec équipements professionnels',
+    image: '/lovable-uploads/2bd54587-ea00-4374-b9f5-371be9b68918.png',
+    featured: true
+  }, {
+    id: 8,
+    type: 'image',
+    category: 'soins',
+    title: 'Espace Thérapie Multiple',
+    description: 'Salle polyvalente pour différents types de soins',
+    image: '/lovable-uploads/cf1d218b-53a4-4f82-bf1a-75ed799fb472.png',
+    featured: false
+  }];
   const filteredItems = activeFilter === 'tous' ? galleryItems : galleryItems.filter(item => item.category === activeFilter);
   const achievements = [{
     icon: Award,
@@ -181,7 +171,7 @@ const Gallery = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slide-left" delay={400}>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-neutral-lightest mb-8 opacity-90">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat text-neutral-lightest mb-8 opacity-90 font-bold">
               Plongez au cœur de notre centre moderne et de nos techniques innovantes
             </h2>
           </ScrollAnimation>
@@ -207,8 +197,7 @@ const Gallery = () => {
           {/* Gallery Preview Thumbnails */}
           <ScrollAnimation animation="fade-up" delay={1000}>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto">
-              {galleryItems.slice(0, 6).map((item, i) => (
-                <div key={item.id} className="relative group cursor-pointer" onClick={() => openLightbox(item.image)}>
+              {galleryItems.slice(0, 6).map((item, i) => <div key={item.id} className="relative group cursor-pointer" onClick={() => openLightbox(item.image)}>
                   <div className="aspect-square rounded-xl overflow-hidden glass-card border-2 border-white/20 hover:border-white/40 transition-all duration-300">
                     <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -222,8 +211,7 @@ const Gallery = () => {
                       {filters.find(f => f.id === item.category)?.label}
                     </Badge>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </ScrollAnimation>
         </div>
@@ -346,36 +334,25 @@ const Gallery = () => {
       </section>
 
       {/* Lightbox Modal with Navigation */}
-      {selectedImage && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
-          <div className="relative max-w-5xl max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+      {selectedImage && <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
+          <div className="relative max-w-5xl max-h-[90vh]" onClick={e => e.stopPropagation()}>
             {/* Navigation Buttons */}
-            <Button
-              onClick={() => navigateLightboxImage('prev')}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0 shadow-lg"
-            >
+            <Button onClick={() => navigateLightboxImage('prev')} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0 shadow-lg">
               <ChevronLeft className="w-6 h-6" />
             </Button>
             
-            <Button
-              onClick={() => navigateLightboxImage('next')}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0 shadow-lg"
-            >
+            <Button onClick={() => navigateLightboxImage('next')} className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0 shadow-lg">
               <ChevronRight className="w-6 h-6" />
             </Button>
             
             <img src={selectedImage} alt="Image agrandie" className="w-full h-full object-contain rounded-2xl shadow-strong" />
             
             {/* Close Button */}
-            <Button 
-              onClick={() => setSelectedImage(null)} 
-              className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-12 h-12 rounded-full p-0 z-10"
-            >
+            <Button onClick={() => setSelectedImage(null)} className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-12 h-12 rounded-full p-0 z-10">
               ×
             </Button>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Virtual Tour CTA */}
       <section className="py-32 bg-gradient-premium relative overflow-hidden">
