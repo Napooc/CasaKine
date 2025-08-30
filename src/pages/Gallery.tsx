@@ -223,7 +223,7 @@ const Gallery = () => {
       {/* Achievements Section */}
       <section className="py-20 bg-background relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
             {achievements.map((achievement, index) => {
             const Icon = achievement.icon;
             return <ScrollAnimation key={index} animation="scale-up" delay={index * 150}>
