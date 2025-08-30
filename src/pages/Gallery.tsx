@@ -412,14 +412,7 @@ const Gallery = () => {
               pourquoi nos patients nous font confiance.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
-                <Camera className="w-5 h-5 mr-3" />
-                Réserver une Visite
-              </Button>
-              
-              
-            </div>
+            
           </ScrollAnimation>
         </div>
       </section>
