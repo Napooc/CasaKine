@@ -357,17 +357,17 @@ const KinesitherapieRespiratoire = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
             <ScrollAnimation animation="scale-up" delay={200}>
-              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
-                <div className="aspect-video overflow-hidden">
+              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full flex flex-col">
+                <div className="aspect-video overflow-hidden flex-shrink-0">
                   <img src={kinesitherapieImage1} alt="Séance de kinésithérapie respiratoire moderne" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-playfair font-bold text-primary mb-3">
                     Séances Personnalisées
                   </h3>
-                  <p className="text-neutral-light leading-relaxed">
+                  <p className="text-neutral-light leading-relaxed flex-grow">
                     Accompagnement individuel avec équipements spécialisés pour optimiser votre rétablissement respiratoire.
                   </p>
                 </CardContent>
@@ -375,15 +375,15 @@ const KinesitherapieRespiratoire = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="scale-up" delay={400}>
-              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
-                <div className="aspect-video overflow-hidden">
+              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full flex flex-col">
+                <div className="aspect-video overflow-hidden flex-shrink-0">
                   <img src={kinesitherapieImage2} alt="Équipements de rééducation respiratoire" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-playfair font-bold text-primary mb-3">
                     Équipements Modernes
                   </h3>
-                  <p className="text-neutral-light leading-relaxed">
+                  <p className="text-neutral-light leading-relaxed flex-grow">
                     Technologies de pointe pour un diagnostic précis et des traitements efficaces adaptés à chaque patient.
                   </p>
                 </CardContent>
@@ -391,15 +391,15 @@ const KinesitherapieRespiratoire = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animation="scale-up" delay={600}>
-              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group">
-                <div className="aspect-video overflow-hidden">
+              <Card className="glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden group h-full flex flex-col">
+                <div className="aspect-video overflow-hidden flex-shrink-0">
                   <img src={kinesitherapieImage3} alt="Environnement thérapeutique professionnel" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <CardContent className="p-6">
+                <CardContent className="p-6 flex-grow flex flex-col">
                   <h3 className="text-xl font-playfair font-bold text-primary mb-3">
                     Environnement Apaisant
                   </h3>
-                  <p className="text-neutral-light leading-relaxed">
+                  <p className="text-neutral-light leading-relaxed flex-grow">
                     Cadre professionnel et chaleureux conçu pour votre confort et votre bien-être durant les soins.
                   </p>
                 </CardContent>
