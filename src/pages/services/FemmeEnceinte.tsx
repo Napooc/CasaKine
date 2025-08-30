@@ -413,7 +413,7 @@ const FemmeEnceinte = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button className="bg-white text-red-600 hover:bg-red-50 font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-xl transition-all duration-300 hover:scale-110">
                 <Star className="w-5 h-5 mr-3" />
-                Consultation Gratuite
+                Consultation 
               </Button>
               
               
