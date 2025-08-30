@@ -139,7 +139,7 @@ const Services = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={400}>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat font-light text-white mb-8 opacity-90 drop-shadow-lg">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat text-white mb-8 opacity-90 drop-shadow-lg font-bold">
               Découvrez notre gamme complète de services thérapeutiques
             </h2>
           </ScrollAnimation>
