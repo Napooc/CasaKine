@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Star, Users, Award } from 'lucide-react';
 import ScrollAnimation from './ScrollAnimation';
 import { useParallax } from '@/hooks/useScrollAnimation';
-
 interface HeroSectionProps {
   title: string;
   subtitle: string;
@@ -14,7 +13,6 @@ interface HeroSectionProps {
   backgroundType?: 'gradient' | 'image' | 'video';
   backgroundSrc?: string;
 }
-
 const HeroSection: React.FC<HeroSectionProps> = ({
   title,
   subtitle,
@@ -36,7 +34,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     value: '2000+',
     label: 'Patients satisfaits'
   }];
-
   useEffect(() => {
     if (showStats) {
       const interval = setInterval(() => {
@@ -45,7 +42,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       return () => clearInterval(interval);
     }
   }, [showStats]);
-
   const renderBackground = () => {
     switch (backgroundType) {
       case 'gradient':
@@ -71,7 +67,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>;
     }
   };
-
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
       {/* Dynamic Background */}
       {renderBackground()}
@@ -91,10 +86,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollAnimation animation="fade-up" delay={200}>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-tight">
-            {title.split(' ').map((word, index) => <span key={index} className={`inline-block mr-3 md:mr-6 ${index % 2 === 0 ? 'text-gradient-accent' : 'text-white'}`} style={{
+            {title.split(' ').map((word, index) => <span key={index} className={`inline-block ${index % 2 === 0 ? 'text-gradient-accent' : 'text-white'}`} style={{
             animationDelay: `${index * 200}ms`
           }}>
-                {word}
+                {word}{' '}
               </span>)}
           </h1>
         </ScrollAnimation>
@@ -151,5 +146,4 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
     </section>;
 };
-
 export default HeroSection;
