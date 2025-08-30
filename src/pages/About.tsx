@@ -68,7 +68,7 @@ const About = () => {
   }];
   return <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         {/* Background with parallax effect */}
         <div className="absolute inset-0">
           <img src="/lovable-uploads/852e8ad3-0a8e-44f2-a33d-675c40d512b4.png" alt="Centre de kinésithérapie - Nawal EL GHORFI" className="w-full h-full object-cover scale-105" />
@@ -76,42 +76,42 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/40"></div>
         </div>
 
-        {/* Animated particles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Animated particles - Hidden on mobile */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
           <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-accent rounded-full opacity-60 animate-pulse"></div>
           <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-secondary rounded-full opacity-40 animate-ping"></div>
           <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-white rounded-full opacity-80 animate-bounce"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-center text-center">
             <ScrollAnimation animation="fade-up">
               <div className="text-white">
-                <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-8 leading-tight drop-shadow-2xl">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 sm:mb-8 leading-tight drop-shadow-2xl">
                   L'<span className="text-gradient-accent drop-shadow-lg">Excellence</span><br />
                   au Service de<br />
                   <span className="text-secondary drop-shadow-lg">Votre Santé</span>
                 </h1>
                 
-                <h2 className="text-2xl font-montserrat text-white mb-8 opacity-90 drop-shadow-lg font-thin md:text-3xl">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-montserrat text-white mb-6 sm:mb-8 opacity-90 drop-shadow-lg font-thin px-2">
                   Découvrez l'histoire et l'expertise de Nawal EL GHORFI
                 </h2>
                 
-                <p className="text-lg md:text-xl mb-12 leading-relaxed text-white/90 drop-shadow-lg max-w-4xl mx-auto">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 sm:mb-12 leading-relaxed text-white/90 drop-shadow-lg max-w-4xl mx-auto px-2">
                   Plus de 25 années d'expertise dédiées à votre bien-être et votre rétablissement, 
                   avec une approche moderne et personnalisée. Centre opérationnel depuis 2001.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-6 mb-12 justify-center">
-                  <Button onClick={() => navigate('/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-10 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
-                    <Users className="w-5 h-5 mr-3" />
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12 justify-center px-4">
+                  <Button onClick={() => navigate('/contact')} className="w-full sm:w-auto morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                    <Users className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                     Prendre Rendez-vous
                   </Button>
                   
                   <Button variant="outline" onClick={() => document.getElementById('timeline')?.scrollIntoView({
                   behavior: 'smooth'
-                })} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
+                })} className="w-full sm:w-auto glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 text-zinc-950">
                     Notre parcours
                   </Button>
                 </div>
@@ -237,27 +237,27 @@ const About = () => {
           </ScrollAnimation>
 
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-accent opacity-30"></div>
+            {/* Timeline Line - Hidden on mobile, shown on larger screens */}
+            <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-accent opacity-30"></div>
 
             {timeline.map((item, index) => <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 200}>
-                <div className={`flex items-center mb-16 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8 order-2'}`}>
-                    <div className="glass-card p-8 rounded-2xl shadow-strong hover:scale-105 transition-all duration-300">
-                      <div className="text-accent font-montserrat font-bold text-lg mb-2">
+                <div className={`flex items-center mb-12 sm:mb-16 ${index % 2 === 0 ? 'justify-start' : 'lg:justify-end'}`}>
+                  <div className={`w-full lg:w-5/12 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8 lg:order-2'}`}>
+                    <div className="glass-card p-4 sm:p-6 lg:p-8 rounded-2xl shadow-strong hover:scale-105 transition-all duration-300">
+                      <div className="text-accent font-montserrat font-bold text-base sm:text-lg mb-2">
                         {item.year}
                       </div>
-                      <h3 className="text-xl font-playfair font-bold text-white mb-4">
+                      <h3 className="text-lg sm:text-xl font-playfair font-bold text-white mb-3 sm:mb-4">
                         {item.title}
                       </h3>
-                      <p className="text-neutral-lightest/80 leading-relaxed">
+                      <p className="text-sm sm:text-base text-neutral-lightest/80 leading-relaxed">
                         {item.description}
                       </p>
                     </div>
                   </div>
                   
-                  {/* Timeline Dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-accent rounded-full border-4 border-white shadow-glow"></div>
+                  {/* Timeline Dot - Hidden on mobile */}
+                  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-accent rounded-full border-4 border-white shadow-glow"></div>
                 </div>
               </ScrollAnimation>)}
           </div>

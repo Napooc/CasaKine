@@ -78,7 +78,7 @@ const Services = () => {
   }];
   return <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         {/* Dynamic Background */}
         <div className="absolute inset-0">
           <img src="/lovable-uploads/ff593693-5ff7-4abc-a290-5896e5cada6e.png" alt="Centre de kinésithérapie - Équipements modernes" className="w-full h-full object-cover scale-105" />
@@ -86,8 +86,8 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/40"></div>
         </div>
 
-        {/* Floating Service Icons */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Floating Service Icons - Hidden on mobile */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
           <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-gradient-accent rounded-full opacity-20 animate-float flex items-center justify-center">
             <Activity className="w-8 h-8 text-white" />
           </div>
@@ -103,13 +103,13 @@ const Services = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <div className="mb-8">
-              <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-6 py-2 text-sm mb-6">
+            <div className="mb-6 sm:mb-8">
+              <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-4 sm:px-6 py-2 text-xs sm:text-sm mb-4 sm:mb-6">
                 Nos Services Spécialisés
               </Badge>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-2xl">
                 Des Soins <span className="text-gradient-accent drop-shadow-lg">Personnalisés</span><br />
                 pour Chaque <span className="text-sky-400 drop-shadow-lg">Besoin</span>
               </h1>
@@ -117,32 +117,30 @@ const Services = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={400}>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat text-white mb-8 opacity-90 drop-shadow-lg font-bold">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-montserrat text-white mb-6 sm:mb-8 opacity-90 drop-shadow-lg font-bold px-2">
               Découvrez notre gamme complète de services thérapeutiques
             </h2>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={600}>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-white/90 drop-shadow-lg">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed text-white/90 drop-shadow-lg px-2">
               Du traitement de la douleur à l'optimisation des performances, nos services s'adaptent 
               à tous vos besoins de santé et de bien-être avec une approche scientifique et humaine.
             </p>
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={800}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button onClick={() => navigate('/contact')} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
-                <Activity className="w-5 h-5 mr-3" />
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4">
+              <Button onClick={() => navigate('/contact')} className="w-full sm:w-auto morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110">
+                <Activity className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                 Réserver une Consultation
               </Button>
-              
-              
             </div>
           </ScrollAnimation>
 
           {/* Quick Service Stats */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-xs sm:max-w-6xl mx-auto px-4">
             {[{
               icon: Heart,
               label: 'Kinésithérapie',
@@ -157,9 +155,9 @@ const Services = () => {
               route: '/services/femme-enceinte'
             }].map((service, index) => {
               const Icon = service.icon;
-              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>
-                    <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
-                    <div className="text-white font-montserrat text-sm opacity-90">
+              return <div key={index} className="glass-card p-3 sm:p-6 text-center transition-all duration-500 hover:scale-110 hover-glow cursor-pointer" onClick={() => navigate(service.route)}>
+                    <Icon className="w-5 h-5 sm:w-8 sm:h-8 text-accent mx-auto mb-2 sm:mb-3" />
+                    <div className="text-white font-montserrat text-xs sm:text-sm opacity-90">
                       {service.label}
                     </div>
                   </div>;
@@ -190,39 +188,38 @@ const Services = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {mainServices.map((service, index) => {
             const Icon = service.icon;
             return <ScrollAnimation key={index} animation={index % 2 === 0 ? "slide-left" : "slide-right"} delay={index * 200}>
                   <Card className={`glass-card border-2 ${service.borderColor} shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 h-full group bg-gradient-to-br ${service.bgGradient} cursor-pointer hover:shadow-2xl ${service.glowColor}`} onClick={() => navigate(service.route)}>
-                    <CardContent className="p-10">
-                      <div className="flex items-start space-x-6">
-                        <div className="flex-shrink-0">
-                          <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${service.bgGradient} backdrop-blur-sm border-2 ${service.borderColor} flex items-center justify-center group-hover:animate-pulse-glow shadow-medium`}>
-                            <Icon className={`w-10 h-10 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
+                    <CardContent className="p-4 sm:p-6 lg:p-10">
+                      <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                        <div className="flex-shrink-0 mx-auto sm:mx-0">
+                          <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br ${service.bgGradient} backdrop-blur-sm border-2 ${service.borderColor} flex items-center justify-center group-hover:animate-pulse-glow shadow-medium`}>
+                            <Icon className={`w-8 h-8 sm:w-10 sm:h-10 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
                           </div>
                         </div>
                         
-                        <div className="flex-grow">
-                          <h3 className="text-2xl font-playfair font-bold text-primary mb-4">
+                        <div className="flex-grow text-center sm:text-left">
+                          <h3 className="text-xl sm:text-2xl font-playfair font-bold text-primary mb-3 sm:mb-4">
                             {service.title}
                           </h3>
-                          <p className="text-neutral-light mb-6 leading-relaxed">
+                          <p className="text-sm sm:text-base text-neutral-light mb-4 sm:mb-6 leading-relaxed">
                             {service.description}
                           </p>
                           
-                          <div className="space-y-3 mb-6">
-                            {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center space-x-3">
-                                <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                                <span className="text-neutral text-sm">{feature}</span>
+                          <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                            {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center space-x-3 justify-center sm:justify-start">
+                                <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0" />
+                                <span className="text-neutral text-xs sm:text-sm">{feature}</span>
                               </div>)}
                           </div>
                           
-                          <div className="flex items-center justify-between">
-                            
-                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300`}>
+                          <div className="flex items-center justify-center sm:justify-between">
+                            <Button variant="ghost" className={`${service.color} hover:bg-white/20 hover:text-black group-hover:translate-x-2 transition-all duration-300 text-sm sm:text-base`}>
                               En savoir plus
-                              <ArrowRight className="w-4 h-4 ml-2" />
+                              <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                             </Button>
                           </div>
                         </div>

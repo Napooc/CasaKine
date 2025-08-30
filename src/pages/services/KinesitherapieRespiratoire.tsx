@@ -88,7 +88,7 @@ const KinesitherapieRespiratoire = () => {
   return <div className="page-kine-blue">
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         <div className="absolute inset-0">
           <img src="/lovable-uploads/2544f454-85c1-4bb9-bbf0-21105732eb3d.png" alt="Cabinet de kinésithérapie moderne" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-kine-blue/85 via-kine-blue/75 to-kine-blue/80"></div>
@@ -96,42 +96,21 @@ const KinesitherapieRespiratoire = () => {
           <div className="absolute inset-0 bg-mesh-pattern opacity-10"></div>
         </div>
 
-        {/* Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/6 w-20 h-20 bg-gradient-to-br from-kine-blue/30 to-kine-blue/10 rounded-full opacity-60 animate-float flex items-center justify-center">
-            <Heart className="w-10 h-10 text-white" />
-          </div>
-          <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-br from-kine-blue/40 to-kine-blue/15 rounded-full opacity-70 animate-float-delay flex items-center justify-center">
-            <Activity className="w-8 h-8 text-white" />
-          </div>
-          <div className="absolute bottom-1/3 left-1/3 w-18 h-18 bg-gradient-to-br from-kine-blue/35 to-kine-blue/12 rounded-full opacity-65 animate-float flex items-center justify-center">
-            <Wind className="w-9 h-9 text-white" />
-          </div>
-          <div className="absolute bottom-1/4 right-1/5 w-14 h-14 bg-white/20 rounded-full opacity-40 animate-float-delay flex items-center justify-center">
-            <Brain className="w-7 h-7 text-white" />
-          </div>
-        </div>
-
-        <div className="fixed top-4 left-4 z-50">
-          
-        </div>
-
-        <div className="relative z-10 text-center max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            
-            <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-8 py-3 text-sm mb-8 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 mr-2" />
+            <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-4 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm mb-6 sm:mb-8 backdrop-blur-sm">
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
               Services Complets de Kinésithérapie
             </Badge>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-6 sm:mb-8 leading-tight">
               Kinésithérapie <br />
               <span className="text-gradient-accent">Globale</span>
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={400}>
-            <p className="text-xl md:text-2xl lg:text-3xl text-neutral-lightest/90 max-w-5xl mx-auto mb-12 leading-relaxed font-light">
+            <p className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl text-neutral-lightest/90 max-w-5xl mx-auto mb-8 sm:mb-12 leading-relaxed font-light px-2">
               Nos services de kinésithérapie nous proposons une prise en charge 
               <span className="text-white font-medium"> globale et personnalisée </span>
               dans différents domaines, adaptée à chaque besoin et à chaque patient
@@ -139,14 +118,14 @@ const KinesitherapieRespiratoire = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={600}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button className="morph-button bg-gradient-to-r from-kine-blue to-kine-blue/80 hover:shadow-kine-blue/50 hover:shadow-2xl text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
-                <Calendar className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4">
+              <Button className="w-full sm:w-auto morph-button bg-gradient-to-r from-kine-blue to-kine-blue/80 hover:shadow-kine-blue/50 hover:shadow-2xl text-white font-montserrat font-semibold px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 group">
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:rotate-12 transition-transform duration-300" />
                 Réserver une Consultation
               </Button>
               
-              <Button variant="outline" className="glass-effect border-white/30 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 group text-zinc-950 bg-violet-50">
-                <Phone className="w-5 h-5 mr-3 group-hover:animate-pulse" />
+              <Button variant="outline" className="w-full sm:w-auto glass-effect border-white/30 font-montserrat font-medium px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 group text-zinc-950 bg-violet-50">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 group-hover:animate-pulse" />
                 Contact Urgent
               </Button>
             </div>
@@ -154,7 +133,7 @@ const KinesitherapieRespiratoire = () => {
 
           {/* Quick Stats */}
           <ScrollAnimation animation="fade-up" delay={800}>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-xs sm:max-w-4xl mx-auto px-4">
               {[{
                 value: "7",
                 label: "Spécialités",
@@ -169,10 +148,10 @@ const KinesitherapieRespiratoire = () => {
                 icon: Home
               }].map((stat, index) => {
                 const Icon = stat.icon;
-                return <div key={index} className="glass-card p-6 text-center group hover:scale-110 transition-all duration-300">
-                    <Icon className="w-6 h-6 text-accent mx-auto mb-3 group-hover:animate-pulse" />
-                    <div className="text-2xl font-playfair font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-white/80 text-sm">{stat.label}</div>
+                return <div key={index} className="glass-card p-3 sm:p-6 text-center group hover:scale-110 transition-all duration-300">
+                    <Icon className="w-4 h-4 sm:w-6 sm:h-6 text-accent mx-auto mb-2 sm:mb-3 group-hover:animate-pulse" />
+                    <div className="text-lg sm:text-2xl font-playfair font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-white/80 text-xs sm:text-sm">{stat.label}</div>
                   </div>;
               })}
             </div>

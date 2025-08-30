@@ -103,7 +103,7 @@ const Index = () => {
       <SEO title=" Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca" description="🏥 Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne." keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport" canonical="https://casakine.com/" structuredData={structuredData} />
       <GoogleVerification />
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         {/* Background with clinic interior */}
         <div className="absolute inset-0">
           <img src="/lovable-uploads/54b9c91c-1c3e-4a0e-a202-1a3b5ac89a6b.png" alt="Centre de kinésithérapie moderne - Intérieur professionnel" className="w-full h-full object-cover scale-105 transition-transform duration-700" />
@@ -111,8 +111,8 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/30 to-black/50"></div>
         </div>
 
-        {/* Creative floating clinic elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Creative floating clinic elements - Hidden on mobile */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block">
           {/* Medical cross icons */}
           <div className="absolute top-20 left-20 w-8 h-8 text-accent/40 animate-pulse">
             <Stethoscope className="w-full h-full" />
@@ -133,38 +133,38 @@ const Index = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-6 leading-tight">
               Centre de <span className="text-gradient-accent">Kinésithérapie</span><br />
               et d'<span className="text-white">Amincissement</span>
             </h1>
           </ScrollAnimation>
 
           <ScrollAnimation animation="slide-left" delay={400}>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-montserrat text-neutral-lightest mb-8 opacity-90 font-bold">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-montserrat text-neutral-lightest mb-6 sm:mb-8 opacity-90 font-bold px-2">
               Nawal EL GHORFI - Kinésithérapeute Diplômée d'État
             </h2>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={600}>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed text-white">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed text-white px-2">
                Bienvenue au Centre Nawal EL GHORFI
               <br />Kinésithérapie & Amincissement à Casablanca
-              <br />Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
+              <br className="hidden sm:block" />Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
               moderne, au cœur de Casablanca, pour des soins de kinésithérapie,
               d'amincissement personnalisé.
             </p>
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={800}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <Button onClick={handleBookAppointment} className="morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 hover:shadow-accent-glow">
-                <Calendar className="w-5 h-5 mr-3" />
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 px-4">
+              <Button onClick={handleBookAppointment} className="w-full sm:w-auto morph-button bg-gradient-accent hover-accent-glow text-white font-montserrat font-semibold px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110 hover:shadow-accent-glow">
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                 Réservez Votre Consultation
               </Button>
               
-              <Button variant="outline" onClick={() => navigate('/services')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
+              <Button variant="outline" onClick={() => navigate('/services')} className="w-full sm:w-auto glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-6 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
                 En savoir plus
               </Button>
             </div>
@@ -172,7 +172,7 @@ const Index = () => {
 
           {/* Stats Section */}
           <ScrollAnimation animation="fade-up" delay={1000}>
-            <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 gap-4 sm:gap-8 max-w-xs sm:max-w-2xl mx-auto px-4">
               {[{
               icon: Star,
               value: '+25',
@@ -183,12 +183,12 @@ const Index = () => {
               label: 'Patients satisfaits'
             }].map((stat, index) => {
               const Icon = stat.icon;
-              return <div key={index} className="glass-card p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
-                    <Icon className="w-8 h-8 text-accent mx-auto mb-3" />
-                    <div className="text-3xl font-playfair font-bold text-white mb-2">
+              return <div key={index} className="glass-card p-3 sm:p-6 text-center transition-all duration-500 hover:scale-110 hover-glow">
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent mx-auto mb-2 sm:mb-3" />
+                    <div className="text-xl sm:text-3xl font-playfair font-bold text-white mb-1 sm:mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-sm font-montserrat text-neutral-lightest/80">
+                    <div className="text-xs sm:text-sm font-montserrat text-neutral-lightest/80">
                       {stat.label}
                     </div>
                   </div>;
@@ -223,24 +223,24 @@ const Index = () => {
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((service, index) => {
             const Icon = service.icon;
             return <ScrollAnimation key={index} animation="scale-up" delay={index * 200}>
                   <Card className="group glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow h-full">
-                    <CardContent className="p-8 text-center h-full flex flex-col">
-                      <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-accent/10 flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300`}>
-                        <Icon className={`w-8 h-8 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
+                    <CardContent className="p-4 sm:p-6 lg:p-8 text-center h-full flex flex-col">
+                      <div className={`w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-gradient-accent/10 flex items-center justify-center group-hover:animate-pulse-glow transition-all duration-300`}>
+                        <Icon className={`w-6 h-6 sm:w-8 sm:h-8 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
                       </div>
-                      <h3 className="text-xl font-playfair font-bold text-primary mb-4">
+                      <h3 className="text-lg sm:text-xl font-playfair font-bold text-primary mb-3 sm:mb-4">
                         {service.title}
                       </h3>
-                      <p className="text-neutral-light leading-relaxed flex-grow">
+                      <p className="text-sm sm:text-base text-neutral-light leading-relaxed flex-grow">
                         {service.description}
                       </p>
-                      <Button variant="ghost" className="mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300" onClick={() => handleSpecialtyClick(service)}>
+                      <Button variant="ghost" className="mt-4 sm:mt-6 text-accent hover:text-accent-dark hover:bg-accent/10 group-hover:translate-x-2 transition-all duration-300 text-sm sm:text-base" onClick={() => handleSpecialtyClick(service)}>
                         En savoir plus
-                        <ChevronRight className="w-4 h-4 ml-2" />
+                        <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
                       </Button>
                     </CardContent>
                   </Card>

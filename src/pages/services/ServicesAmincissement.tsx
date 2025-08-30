@@ -139,7 +139,7 @@ const ServicesAmincissement = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
         <div className="absolute inset-0">
           <img src="/lovable-uploads/e9466446-be50-4fdf-9b3f-4bfeb28a7576.png" alt="Équipements d'amincissement modernes" className="w-full h-full object-cover scale-105" />
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/85 via-blue-500/75 to-primary/80"></div>
@@ -147,13 +147,13 @@ const ServicesAmincissement = () => {
           <div className="absolute inset-0 bg-dots-pattern opacity-15"></div>
         </div>
 
-        <div className="relative z-10 text-center max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
-            <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-8 py-3 text-base mb-8 backdrop-blur-sm">
+            <Badge className="bg-white/20 text-white border-white/30 font-montserrat px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base mb-6 sm:mb-8 backdrop-blur-sm">
               💆‍♀️ Amincissement Personnalisé
             </Badge>
             
-            <h1 className="text-5xl md:text-7xl font-playfair font-bold text-white mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-white mb-6 sm:mb-8 leading-tight">
               <span className="text-white">Cure d'</span>
               <span className="text-gradient-accent">Amincissement</span><br />
               <span className="text-white/90">Personnalisée</span>
@@ -161,7 +161,7 @@ const ServicesAmincissement = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={400}>
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed px-2">
               Vous souhaitez affiner votre silhouette et perdre quelques centimètres de manière ciblée ? 
               Découvrez nos cures d'amincissement sur mesure, avec un taux de satisfaction de 100 % 
               constaté chez nos patients.
@@ -169,14 +169,14 @@ const ServicesAmincissement = () => {
           </ScrollAnimation>
 
           <ScrollAnimation animation="scale-up" delay={600}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
-                <Calendar className="w-5 h-5 mr-3" />
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
+              <Button className="w-full sm:w-auto morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => window.location.href = '/contact'}>
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                 Bilan personnalisé 
               </Button>
               
-              <Button variant="outline" onClick={() => window.open('tel:+212522398874')} className="glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-10 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
-                <Phone className="w-5 h-5 mr-3" />
+              <Button variant="outline" onClick={() => window.open('tel:+212522398874')} className="w-full sm:w-auto glass-effect border-white/30 hover:bg-white/20 font-montserrat font-medium px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg rounded-full transition-all duration-300 hover:scale-105 text-gray-950">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                 Consultation immédiate
               </Button>
             </div>
