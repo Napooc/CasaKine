@@ -85,7 +85,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Content */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollAnimation animation="fade-up" delay={200}>
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-relaxed">
+ <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair font-bold text-white mb-4 sm:mb-6 leading-relaxed tracking-wide">
   {title.split(' ').map((word, index) => (
     <span 
       key={index} 
@@ -96,6 +96,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     </span>
   ))}
 </h1>
+
 
         </ScrollAnimation>
 
