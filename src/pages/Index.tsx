@@ -31,11 +31,11 @@ const Index = () => {
   };
   const services = [{
     icon: Activity,
-    title: 'Kinésithérapie',
+    title: 'Rééducation Fonctionnelle',
     description: 'Récupération post-traumatique et rééducation neurologique personnalisée',
     color: 'text-primary',
     detailedInfo: {
-      overview: 'Une approche thérapeutique complète visant à restaurer les capacités physiques et fonctionnelles après un traumatisme, une chirurgie ou une pathologie neurologique. Notre centre utilise des techniques avancées et des équipements de pointe pour optimiser votre récupération.',
+      overview: 'La rééducation fonctionnelle est une approche thérapeutique complète visant à restaurer les capacités physiques et fonctionnelles après un traumatisme, une chirurgie ou une pathologie neurologique. Notre centre utilise des techniques avancées et des équipements de pointe pour optimiser votre récupération.',
       benefits: ['Récupération optimisée des fonctions motrices', 'Réduction significative de la douleur', 'Amélioration de la qualité de vie au quotidien', 'Prévention des récidives et complications', 'Renforcement musculaire ciblé et progressif'],
       techniques: ['Rééducation proprioceptive', 'Thérapie par ondes de choc', 'Électrostimulation thérapeutique', 'Mobilisation articulaire', 'Renforcement isokinétique'],
       duration: '45-60 min',
@@ -153,7 +153,7 @@ const Index = () => {
               <br />Kinésithérapie & Amincissement à Casablanca
               <br />Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
               moderne, au cœur de Casablanca, pour des soins de kinésithérapie,
-              d'amincissement personnalisé.
+              rééducation fonctionnelle et amincissement personnalisé.
             </p>
           </ScrollAnimation>
 
@@ -179,7 +179,7 @@ const Index = () => {
               label: 'Années d\'expérience'
             }, {
               icon: Users,
-              value: '2000+',
+              value: '+6000',
               label: 'Patients satisfaits'
             }].map((stat, index) => {
               const Icon = stat.icon;
@@ -277,7 +277,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-glow"></div>
-                    <span className="text-neutral-lightest">Spécialisée en Kinésithérapie</span>
+                    <span className="text-neutral-lightest">Spécialisée en rééducation fonctionnelle</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-3 h-3 bg-accent rounded-full animate-pulse-glow"></div>
@@ -301,7 +301,7 @@ const Index = () => {
                 
                 {/* Floating Stats */}
                 <div className="absolute -top-6 -left-6 glass-card p-4 rounded-2xl">
-                  <div className="text-accent text-2xl font-playfair font-bold">2000+</div>
+                  <div className="text-accent text-2xl font-playfair font-bold">+6000</div>
                   <div className="text-black text-sm">Patients</div>
                 </div>
                 

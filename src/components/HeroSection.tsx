@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     label: 'Années d\'expérience'
   }, {
     icon: Users,
-    value: '2000+',
+    value: '+6000',
     label: 'Patients satisfaits'
   }];
   useEffect(() => {
