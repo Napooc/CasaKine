@@ -31,11 +31,11 @@ const Index = () => {
   };
   const services = [{
     icon: Activity,
-    title: 'Rééducation Fonctionnelle',
+    title: 'Kinésithérapie',
     description: 'Récupération post-traumatique et rééducation neurologique personnalisée',
     color: 'text-primary',
     detailedInfo: {
-      overview: 'La rééducation fonctionnelle est une approche thérapeutique complète visant à restaurer les capacités physiques et fonctionnelles après un traumatisme, une chirurgie ou une pathologie neurologique. Notre centre utilise des techniques avancées et des équipements de pointe pour optimiser votre récupération.',
+      overview: 'Une approche thérapeutique complète visant à restaurer les capacités physiques et fonctionnelles après un traumatisme, une chirurgie ou une pathologie neurologique. Notre centre utilise des techniques avancées et des équipements de pointe pour optimiser votre récupération.',
       benefits: ['Récupération optimisée des fonctions motrices', 'Réduction significative de la douleur', 'Amélioration de la qualité de vie au quotidien', 'Prévention des récidives et complications', 'Renforcement musculaire ciblé et progressif'],
       techniques: ['Rééducation proprioceptive', 'Thérapie par ondes de choc', 'Électrostimulation thérapeutique', 'Mobilisation articulaire', 'Renforcement isokinétique'],
       duration: '45-60 min',
@@ -100,7 +100,7 @@ const Index = () => {
   }];
   const structuredData = [getLocalBusinessSchema(), getWebsiteSchema(), getOrganizationSchema(), getFAQSchema(faqs)];
   return <Layout>
-      <SEO title=" Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca" description="🏥 Centre de kinésithérapie premium à Casablanca.  Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne." keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport" canonical="https://casakine.com/" structuredData={structuredData} />
+      <SEO title=" Nawal El Ghorfi - Kinésithérapeute D.E. Casablanca" description="🏥 Centre de kinésithérapie premium à Casablanca. Dr. Nawal El Ghorfi, 15+ ans d'expérience. Rééducation, amincissement, bien-être. ☎️ +212 661 67 70 96. Rendez-vous en ligne." keywords="kinésithérapeute casablanca, physiothérapie maroc, rééducation casablanca, dr nawal el ghorfi, amincissement casablanca, massage thérapeutique, traumatologie sport" canonical="https://casakine.com/" structuredData={structuredData} />
       <GoogleVerification />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
@@ -153,7 +153,7 @@ const Index = () => {
               <br />Kinésithérapie & Amincissement à Casablanca
               <br />Depuis 2001, notre centre vous accueille dans un cadre chaleureux et
               moderne, au cœur de Casablanca, pour des soins de kinésithérapie,
-              rééducation fonctionnelle et amincissement personnalisé.
+              d'amincissement personnalisé.
             </p>
           </ScrollAnimation>
 
@@ -277,7 +277,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-3 h-3 bg-secondary rounded-full animate-pulse-glow"></div>
-                    <span className="text-neutral-lightest">Spécialisée en rééducation fonctionnelle</span>
+                    <span className="text-neutral-lightest">Spécialisée en Kinésithérapie</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-3 h-3 bg-accent rounded-full animate-pulse-glow"></div>

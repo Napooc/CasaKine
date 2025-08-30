@@ -4,7 +4,7 @@ export const getLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   "name": "Casakine - Nawal El Ghorfi",
-  "description": "Centre de kinésithérapie premium à Casablanca spécialisé en rééducation fonctionnelle, amincissement et bien-être.",
+  "description": "Centre de kinésithérapie premium à Casablanca , amincissement et bien-être.",
   "url": "https://casakine.com",
   "image": "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
   "logo": "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
@@ -40,7 +40,7 @@ export const getLocalBusinessSchema = () => ({
     "awards": "15 ans d'expérience en kinésithérapie"
   },
   "medicalSpecialty": [
-    "Kinésithérapie",
+    "Kinésithérapie", 
     "Physiothérapie",
     "Amincissement",
   ],
