@@ -75,7 +75,7 @@ const Gallery = () => {
     type: 'image',
     category: 'equipements',
     title: 'Salle de Gym Médicale',
-    description: 'Équipements modernes pour la rééducation fonctionnelle',
+    description: 'Équipements modernes pour la Kinésithérapie',
     image: '/lovable-uploads/e446b0d4-2529-4b49-a68d-d9a89f3dbaa6.png',
     featured: true
   }, {
