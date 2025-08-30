@@ -65,7 +65,7 @@ const Index = () => {
     detailedInfo: {
       overview: 'Un accompagnement complet pour vivre sereinement votre grossesse et retrouver votre bien-être après l\'accouchement. Préparation personnalisée et rééducation spécialisée pour chaque étape de la maternité.',
       benefits: ['Préparation physique et mentale à l\'accouchement', 'Techniques de respiration et positions optimales', 'Rééducation périnéale post-partum', 'Récupération du tonus abdominal', 'Accompagnement et soutien personnalisé'],
-      techniques: ['Techniques de respiration adaptées', 'Positions d\'accouchement favorables', 'Renforcement périnéal', 'Biofeedback et électrostimulation', 'Communication prénatale'],
+      techniques: ['Techniques de respiration adaptées', 'Positions d\'accouchement favorables', 'Renforcement périnéal', 'Biofeedback et électrostimulation'],
       duration: '45-60 min',
       sessions: '8-15 séances',
       image: '/lovable-uploads/ae898483-0049-4459-bd35-4ca9c46d6852.png',
