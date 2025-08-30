@@ -298,14 +298,7 @@ const Services = () => {
               Réservez votre consultation personnalisée dès maintenant.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button className="morph-button bg-white text-primary hover:bg-neutral-lightest font-montserrat font-semibold px-12 py-4 text-lg rounded-full shadow-strong transition-all duration-300 hover:scale-110" onClick={() => navigate('/contact')}>
-                <Star className="w-5 h-5 mr-3" />
-                Consultation Gratuite
-              </Button>
-              
-              
-            </div>
+            
           </ScrollAnimation>
         </div>
       </section>
