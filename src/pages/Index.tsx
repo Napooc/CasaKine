@@ -55,7 +55,7 @@ const Index = () => {
       duration: '75-90 min',
       sessions: '10-20 séances',
       image: specialtyWellnessImage,
-      conditions: ['Cellulite et rétention d\'eau', 'Surpoids localisé', 'Troubles circulatoires', 'Post-grossesse et vergetures', 'Jambes lourdes et œdèmes']
+      conditions: ['Cellulite et rétention d\'eau', 'Surpoids localisé', 'Troubles circulatoires', 'Post-grossesse ', 'Jambes lourdes et œdèmes']
     }
   }, {
     icon: Baby,
