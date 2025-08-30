@@ -349,7 +349,7 @@ const KinesitherapieRespiratoire = () => {
           <ScrollAnimation animation="fade-up">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6">
-                Nos <span className="text-gradient-accent">outils</span>
+                Notre <span className="text-gradient-accent">Environnement de Soins</span>
               </h2>
               <p className="text-xl text-neutral-light max-w-4xl mx-auto leading-relaxed">
                 Découvrez nos installations modernes et nos équipements de pointe pour votre rétablissement
@@ -368,7 +368,7 @@ const KinesitherapieRespiratoire = () => {
                     Séances Personnalisées
                   </h3>
                   <p className="text-neutral-light leading-relaxed">
-                    Accompagnement individuel avec équipements spécialisés pour optimiser votre rétablissement respiratoire.
+                    Accompagnement individuel avec équipements spécialisés pour optimiser votre rétablissement .
                   </p>
                 </CardContent>
               </Card>
