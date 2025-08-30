@@ -41,7 +41,7 @@ const Index = () => {
       duration: '45-60 min',
       sessions: '8-15 séances',
       image: specialtyRehabilitationImage,
-      conditions: ['Traumatismes sportifs et accidents', 'Post-chirurgie orthopédique', 'Pathologies neurologiques (AVC, sclérose)', 'Troubles de l\'équilibre et de la coordination', 'Rééducation post-fracture']
+      conditions: ['Kinésithérapie respiratoire', 'Rééducation rhumatologie', 'Rééducation périnéale', 'Drainage lymphatique']
     }
   }, {
     icon: Zap,
