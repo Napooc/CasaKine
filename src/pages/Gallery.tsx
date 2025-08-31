@@ -378,20 +378,33 @@ const Gallery = () => {
 
       {/* Lightbox Modal with Navigation */}
       {selectedImage && <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
-          <div className="relative max-w-5xl max-h-[90vh]" onClick={e => e.stopPropagation()}>
-            {/* Navigation Buttons */}
-            <Button onClick={() => navigateLightboxImage('prev')} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0 shadow-lg">
+          <div className="relative max-w-5xl max-h-[90vh] flex items-center justify-center" onClick={e => e.stopPropagation()}>
+            {/* Navigation Buttons - Single set only */}
+            <Button 
+              onClick={() => navigateLightboxImage('prev')} 
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 border-0 shadow-xl transition-all duration-300"
+            >
               <ChevronLeft className="w-6 h-6" />
             </Button>
             
-            <Button onClick={() => navigateLightboxImage('next')} className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 border-0 shadow-lg">
+            <Button 
+              onClick={() => navigateLightboxImage('next')} 
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 border-0 shadow-xl transition-all duration-300"
+            >
               <ChevronRight className="w-6 h-6" />
             </Button>
             
-            <img src={selectedImage} alt="Image agrandie" className="w-full h-full object-contain rounded-2xl shadow-strong" />
+            <img 
+              src={selectedImage} 
+              alt="Image agrandie" 
+              className="max-w-full max-h-full object-contain rounded-2xl shadow-strong" 
+            />
             
             {/* Close Button */}
-            <Button onClick={() => setSelectedImage(null)} className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-12 h-12 rounded-full p-0 z-10">
+            <Button 
+              onClick={() => setSelectedImage(null)} 
+              className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white hover:bg-black/70 w-12 h-12 rounded-full p-0 z-20 transition-all duration-300"
+            >
               ×
             </Button>
           </div>
