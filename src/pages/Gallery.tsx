@@ -100,7 +100,7 @@ const Gallery = () => {
     category: 'equipements',
     title: 'Le Plateau Vibrant',
     description: 'Plateforme vibrante pour tonification et drainage',
-    image: '/lovable-uploads/6030a18c-6945-4ffa-81b1-6697e6e83cae.png',
+    image: '/lovable-uploads/ecd647fc-ba5c-4cf9-a9fe-9902a056946e.png',
     featured: false
   }, {
     id: 10,
@@ -108,7 +108,7 @@ const Gallery = () => {
     category: 'equipements',
     title: 'Pressothérapie',
     description: 'Compression pneumatique pour améliorer la circulation',
-    image: '/lovable-uploads/6dd7c7aa-ae26-47ab-a9b0-0cec2da544a4.png',
+    image: '/lovable-uploads/67ad261c-a0bd-4cad-9e2d-70f464ba5b87.png',
     featured: false
   }, {
     id: 11,
