@@ -100,7 +100,7 @@ const Gallery = () => {
     category: 'equipements',
     title: 'Le Plateau Vibrant',
     description: 'Plateforme vibrante pour tonification et drainage',
-    image: '/lovable-uploads/c2e44c8f-f23e-4e0b-9633-54cee5ac81f2.png',
+    image: '/lovable-uploads/e2229cb1-0d17-4c74-911c-15ef2c3ea69d.png',
     featured: false
   }, {
     id: 10,
