@@ -84,7 +84,7 @@ const Gallery = () => {
     category: 'equipements',
     title: 'Cryothérapie',
     description: 'Thérapie par le froid pour l\'amincissement et la récupération',
-    image: '/lovable-uploads/6030a18c-6945-4ffa-81b1-6697e6e83cae.png',
+    image: '/lovable-uploads/eadba95f-2bcc-4f83-ab65-91596799cdb7.png',
     featured: false
   }, {
     id: 8,
@@ -92,7 +92,7 @@ const Gallery = () => {
     category: 'equipements',
     title: 'STARVAC',
     description: 'Système de drainage lymphatique et d\'amincissement',
-    image: '/lovable-uploads/6dd7c7aa-ae26-47ab-a9b0-0cec2da544a4.png',
+    image: '/lovable-uploads/852e8ad3-0a8e-44f2-a33d-675c40d512b4.png',
     featured: false
   }, {
     id: 9,
@@ -100,7 +100,7 @@ const Gallery = () => {
     category: 'equipements',
     title: 'Le Plateau Vibrant',
     description: 'Plateforme vibrante pour tonification et drainage',
-    image: '/lovable-uploads/ecd647fc-ba5c-4cf9-a9fe-9902a056946e.png',
+    image: '/lovable-uploads/c2e44c8f-f23e-4e0b-9633-54cee5ac81f2.png',
     featured: false
   }, {
     id: 10,
@@ -108,7 +108,7 @@ const Gallery = () => {
     category: 'equipements',
     title: 'Pressothérapie',
     description: 'Compression pneumatique pour améliorer la circulation',
-    image: '/lovable-uploads/67ad261c-a0bd-4cad-9e2d-70f464ba5b87.png',
+    image: '/lovable-uploads/c333295e-ea40-4caf-bfe9-a00707f87004.png',
     featured: false
   }, {
     id: 11,
@@ -242,7 +242,7 @@ const Gallery = () => {
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto">
               {galleryItems.slice(0, 6).map((item, i) => <div key={item.id} className="relative group cursor-pointer" onClick={() => openLightbox(item.image)}>
                   <div className="aspect-square rounded-xl overflow-hidden glass-card border-2 border-white/20 hover:border-white/40 transition-all duration-300">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -325,8 +325,8 @@ const Gallery = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item, index) => <ScrollAnimation key={item.id} animation="fade-up" delay={index * 100}>
                 <Card className="group glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden">
-                  <div className="relative overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="relative overflow-hidden aspect-video">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" />
                     
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
