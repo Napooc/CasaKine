@@ -325,7 +325,7 @@ const Gallery = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item, index) => <ScrollAnimation key={item.id} animation="fade-up" delay={index * 100}>
                 <Card className="group glass-card border-0 shadow-soft hover:shadow-strong transition-all duration-500 hover:scale-105 hover-glow overflow-hidden">
-                  <div className="relative overflow-hidden aspect-video">
+                  <div className="relative overflow-hidden h-64 w-full">
                     <img src={item.image} alt={item.title} className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" />
                     
                     {/* Overlay */}
