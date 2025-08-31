@@ -108,7 +108,7 @@ const Gallery = () => {
     category: 'equipements',
     title: 'Pressothérapie',
     description: 'Compression pneumatique pour améliorer la circulation',
-    image: '/lovable-uploads/c333295e-ea40-4caf-bfe9-a00707f87004.png',
+    image: '/lovable-uploads/eb73797f-96ef-48ad-9e09-9eee7cbadb16.png',
     featured: false
   }, {
     id: 11,
