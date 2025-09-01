@@ -6,8 +6,8 @@ export const getLocalBusinessSchema = () => ({
   "name": "Casakine - Nawal El Ghorfi",
   "description": "Centre de kinésithérapie premium à Casablanca , amincissement et bien-être.",
   "url": "https://casakine.com",
-  "image": "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
-  "logo": "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
+  "image": "https://casakine.com/lovable-uploads/2ec7b69f-f1c0-407c-86f7-2cd51b0c338d.png",
+  "logo": "https://casakine.com/lovable-uploads/2ec7b69f-f1c0-407c-86f7-2cd51b0c338d.png",
   "telephone": "+212661677096",
   "email": "info@casakine.com",
   "address": {
@@ -125,7 +125,7 @@ export const getOrganizationSchema = () => ({
   "name": "Casakine",
   "alternateName": "Centre de Kinésithérapie  Nawal El Ghorfi",
   "url": "https://casakine.com",
-  "logo": "https://casakine.com/lovable-uploads/9fea51bb-283e-4627-919e-c5778bf17144.png",
+  "logo": "https://casakine.com/lovable-uploads/2ec7b69f-f1c0-407c-86f7-2cd51b0c338d.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+212661677096",

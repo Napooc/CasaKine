@@ -48,7 +48,7 @@ const Navbar = () => {
   return <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'glass-effect shadow-strong' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-center h-24 md:h-28">
+          <div className="flex justify-between items-center h-28 md:h-32">
             {/* Logo Premium */}
             <Link 
               to="/" 
@@ -64,11 +64,10 @@ const Navbar = () => {
                 <img 
                   src="/lovable-uploads/2ec7b69f-f1c0-407c-86f7-2cd51b0c338d.png" 
                   alt="Nawal El Ghorfi - Kinésithérapeute D.E." 
-                  className="h-20 md:h-24 w-auto transition-transform duration-300 group-hover:scale-105" 
+                  className="h-24 md:h-28 lg:h-32 w-auto object-contain rounded-none transition-transform duration-300 group-hover:scale-105" 
                 />
-                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
-              <div className="flex flex-col">
+              <div className="hidden md:flex flex-col">
                 <span className="font-montserrat font-bold text-lg text-left text-foreground">Kinésithérapie Nawal El GHORFI</span>
               </div>
             </Link>
@@ -134,7 +133,7 @@ const Navbar = () => {
       </nav>
 
       {/* Navbar Spacer */}
-      <div className="h-24 md:h-28"></div>
+      <div className="h-28 md:h-32"></div>
     </>;
 };
 export default Navbar;
