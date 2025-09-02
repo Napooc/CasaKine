@@ -22,7 +22,7 @@ export const SEO = ({
   structuredData = []
 }: SEOProps) => {
   const fullTitle = title.includes('Casakine') ? title : `${title} | Casakine`;
-  const currentUrl = canonical || `https://casakine.com${window.location.pathname}`;
+  const currentUrl = canonical || `https://casakine.vercel.app${window.location.pathname}`;
 
   return (
     <Helmet>

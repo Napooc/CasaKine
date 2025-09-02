@@ -13,10 +13,10 @@ const Contact = () => {
   const scrollY = useParallax();
   const structuredData = [getLocalBusinessSchema(), getBreadcrumbSchema([{
     name: "Accueil",
-    url: "https://casakine.com"
+    url: "https://casakine.vercel.app"
   }, {
     name: "Contact",
-    url: "https://casakine.com/contact"
+    url: "https://casakine.vercel.app/contact"
   }])];
   const contactInfo = [{
     icon: Phone,
