@@ -164,12 +164,23 @@
 @layer base {
   * {
     @apply border-border;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    outline: none;
+  }
+
+  button, a, input, textarea, select {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+  }
+
+  button:focus, a:focus, input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 
   body {
