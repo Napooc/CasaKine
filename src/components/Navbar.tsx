@@ -67,8 +67,11 @@ const Navbar = () => {
                   className="h-24 md:h-28 lg:h-32 w-auto object-contain rounded-none transition-transform duration-300 group-hover:scale-105" 
                 />
               </div>
-              <div className="hidden md:flex flex-col">
-                <span className="font-montserrat font-bold text-lg text-left text-foreground">Kinésithérapie Nawal El GHORFI</span>
+              <div className="flex flex-col justify-center ml-3">
+                <span className="font-montserrat font-bold text-base md:text-lg text-left text-foreground leading-tight">
+                  <span className="block">Kinésithérapie</span>
+                  <span className="block text-sm md:text-base text-primary">Nawal El GHORFI</span>
+                </span>
               </div>
             </Link>
 
