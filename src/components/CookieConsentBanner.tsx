@@ -3,14 +3,7 @@ import { useCookieConsent } from '@/contexts/CookieConsentContext';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Cookie, Settings, X, Globe } from 'lucide-react';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 const translations = {
   en: {
     title: "We use cookies",
@@ -25,7 +18,7 @@ const translations = {
     title: "Nous utilisons des cookies",
     description: "Nous utilisons des cookies pour améliorer votre expérience de navigation, servir du contenu personnalisé et analyser notre trafic. En cliquant sur 'Accepter tout', vous consentez à notre utilisation des cookies conformément aux réglementations CNDP marocaines.",
     acceptAll: "Accepter tout",
-    rejectAll: "Tout rejeter", 
+    rejectAll: "Tout rejeter",
     customize: "Personnaliser",
     privacyPolicy: "Politique de confidentialité",
     closeAriaLabel: "Fermer la bannière de cookies"
@@ -40,23 +33,19 @@ const translations = {
     closeAriaLabel: "إغلاق شريط ملفات تعريف الارتباط"
   }
 };
-
 export function CookieConsentBanner() {
-  const { showBanner, language, setLanguage, acceptAll, rejectAll, openModal } = useCookieConsent();
-  
+  const {
+    showBanner,
+    language,
+    setLanguage,
+    acceptAll,
+    rejectAll,
+    openModal
+  } = useCookieConsent();
   if (!showBanner) return null;
-
   const t = translations[language];
   const isRTL = language === 'ar';
-
-  return (
-    <div 
-      className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-sm border-t shadow-lg"
-      role="dialog"
-      aria-live="polite"
-      aria-label={t.title}
-      dir={isRTL ? 'rtl' : 'ltr'}
-    >
+  return <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-sm border-t shadow-lg" role="dialog" aria-live="polite" aria-label={t.title} dir={isRTL ? 'rtl' : 'ltr'}>
       <Card className="max-w-6xl mx-auto p-6">
         <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center">
           {/* Icon and Content */}
@@ -66,11 +55,7 @@ export function CookieConsentBanner() {
               <h2 className="text-lg font-semibold mb-2">{t.title}</h2>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {t.description}{' '}
-                <a 
-                  href="/privacy-policy" 
-                  className="text-primary hover:underline font-medium"
-                  aria-label={`${t.privacyPolicy} (opens in new tab)`}
-                >
+                <a href="/privacy-policy" className="text-primary hover:underline font-medium" aria-label={`${t.privacyPolicy} (opens in new tab)`}>
                   {t.privacyPolicy}
                 </a>
               </p>
@@ -78,51 +63,24 @@ export function CookieConsentBanner() {
           </div>
 
           {/* Language Selector */}
-          <div className="flex items-center gap-2">
-            <Globe className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
-            <Select value={language} onValueChange={setLanguage}>
-              <SelectTrigger className="w-20" aria-label="Select language">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="fr">FR</SelectItem>
-                <SelectItem value="ar">ع</SelectItem>
-                <SelectItem value="en">EN</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
+          
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-2 w-full lg:w-auto">
-            <Button
-              variant="outline"
-              onClick={rejectAll}
-              className="w-full sm:w-auto"
-              aria-label={t.rejectAll}
-            >
+            <Button variant="outline" onClick={rejectAll} className="w-full sm:w-auto" aria-label={t.rejectAll}>
               {t.rejectAll}
             </Button>
             
-            <Button
-              variant="outline"
-              onClick={openModal}
-              className="w-full sm:w-auto"
-              aria-label={t.customize}
-            >
+            <Button variant="outline" onClick={openModal} className="w-full sm:w-auto" aria-label={t.customize}>
               <Settings className="h-4 w-4 mr-2" aria-hidden="true" />
               {t.customize}
             </Button>
             
-            <Button
-              onClick={acceptAll}
-              className="w-full sm:w-auto"
-              aria-label={t.acceptAll}
-            >
+            <Button onClick={acceptAll} className="w-full sm:w-auto" aria-label={t.acceptAll}>
               {t.acceptAll}
             </Button>
           </div>
         </div>
       </Card>
-    </div>
-  );
+    </div>;
 }
